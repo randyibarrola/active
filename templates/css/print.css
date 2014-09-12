@@ -1,0 +1,49 @@
+@media print {
+    
+    * {
+        
+        font-size: 9px !important;
+    }
+    
+    p {
+        text-align: justify;
+    }
+    
+    a {
+        appearance: field;
+    }
+    
+    .form-control, input[type=text], select, textarea {
+        border: 0;
+        height: auto;
+        padding: 0;
+    } 
+    
+    .form-group {
+        margin-bottom: 5px !important;
+    }
+    
+    .div, .row-hotel-content > div {
+        min-height: 1px !important;
+    }
+    
+    .page-content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .form-group label {
+        height: auto;
+        margin: 0;
+        color: #4B8DF8 !important;
+    }
+    
+    div.portlet.box {
+        border: 0 !important;
+    }
+ 
+  a[href]:after {
+    content: none !important;
+    }    
+}
+

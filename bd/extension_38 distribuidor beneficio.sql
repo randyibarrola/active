@@ -1,0 +1,1 @@
+alter table empresa add porcentaje_beneficio double null;

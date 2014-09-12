@@ -1,0 +1,1 @@
+ALTER TABLE hotel ADD login_code VARCHAR(200) NULL;

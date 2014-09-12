@@ -1,0 +1,1 @@
+ALTER TABLE hotel ADD web_oficial TINYINT NULL;

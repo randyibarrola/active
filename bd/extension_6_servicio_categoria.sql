@@ -1,0 +1,1 @@
+ALTER TABLE servicio_categoria CHANGE nombre nombre TEXT NULL; 

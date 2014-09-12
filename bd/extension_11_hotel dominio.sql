@@ -1,0 +1,1 @@
+ALTER TABLE hotel ADD dominio VARCHAR(200) NULL; 

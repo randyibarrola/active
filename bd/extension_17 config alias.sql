@@ -1,0 +1,1 @@
+ALTER TABLE configuracion ADD alias VARCHAR(200) NULL;

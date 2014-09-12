@@ -1,0 +1,1 @@
+insert into usuario_grupo(id, nombre) values(4, 'Usuario')

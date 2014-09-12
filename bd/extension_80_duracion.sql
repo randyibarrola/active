@@ -1,0 +1,1 @@
+ALTER TABLE  `evento` ADD  `duracion` DOUBLE NULL ;

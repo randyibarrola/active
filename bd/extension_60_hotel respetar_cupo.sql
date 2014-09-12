@@ -1,0 +1,1 @@
+ALTER TABLE hotel ADD respetar_cupo TINYINT NULL;

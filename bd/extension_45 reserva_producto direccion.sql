@@ -1,0 +1,1 @@
+ALTER TABLE reserva_producto ADD direccion TEXT NULL;

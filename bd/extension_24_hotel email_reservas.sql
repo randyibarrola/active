@@ -1,0 +1,1 @@
+alter table hotel add email_reservas TEXT NULL;

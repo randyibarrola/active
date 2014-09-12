@@ -1,0 +1,1 @@
+alter table hotel add telefono_reservas varchar(200) null;

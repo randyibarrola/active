@@ -1,0 +1,302 @@
+.hotel_container{
+    /*background: rgba(111, 111, 111, 0.7);*/
+    padding: 12px 0;
+    
+    margin: 0px;
+}
+.hotel_container .hotel_search_form{
+    /*width: 72%;*/
+    margin: 0 auto;
+}
+.hotel_container .hotel_search_form label{
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Ubuntu Condensed',sans-serif;
+}
+.hotel_container .hotel_search_form input{
+    text-align: center;
+}
+#mapa {
+    height: 600px;
+    border: 1px solid #eeeeee;
+}
+.hotel_container .hotel_list{}
+.hotel_container .hotel_list h3{
+    margin: 0px 0;
+   
+}
+.hotel_container .hotel_list h3 a,
+#mapa .hotel_item h3 a {
+     font-size: 17px;
+    font-weight: bold !important;
+    
+     color: #fe8400;
+}
+.hotel_container .hotel_list h3 span,
+#mapa .hotel_item h3 span {
+    margin: 5px 0;
+    font-size: 12px;
+}
+.hotel_container .hotel_list h4,
+#mapa .hotel_item h4 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 7px;
+    color: #000;
+    font-weight: bold !important;
+    height: 18px;
+}
+
+#mapa .hotel_item p {
+    max-width: 300px;
+}
+
+.hotel_container .hotel_list .hotel_item.mix{
+    opacity: 0;
+    padding: 5px 0;
+    border: 1px solid #eeeeee;
+    width: 100%;
+    background: #FFF;
+    margin-bottom: 5px;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+    padding-right: 10px;
+}
+
+
+.hotel_container .hotel_list .hotel_item.mix > div {
+    display: table;
+    width: 100%;
+}
+
+.hotel_container .hotel_list .hotel_item.mix > div > div {
+    display: table-row;
+}
+
+.hotel_container .hotel_list .hotel_item.mix > div > div > div {
+    display: inline-block;
+    width: 49.5%;
+    padding: 0 4px;
+    vertical-align: top;
+    overflow: hidden;
+    height: 160px;
+    position: relative;
+}
+
+.hotel_container .hotel_list a.btn-warning {
+    float: right;
+}
+.hotel_container .hotel_list a.hotel_desde{
+    color:#0900E0;
+}
+
+.hotel_container .hotel_list p {
+    text-align: justify;
+    font-size: 12px;
+}.hotel_container .hotel_list p.rating {
+    position: absolute;
+    top: 6px;
+    right: 4px;
+}
+.hotel_container .hotel_list p.rating {
+    color: #fe8400;
+    
+    background: #FFF;
+    -webkit-border-top-left-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-bottomleft: 5px; border-top-left-radius: 5px; border-bottom-left-radius: 5px;
+    padding-left: 3px;
+    padding-right: 2px;
+}
+.hotel_container .hotel_list .hotel_item img{
+    width: 100%;
+    
+    height: auto;
+    margin-top: 0px;
+}
+.hotel_container .hotel_list .hotel_item .hotel_item_image_container{
+    height: 245px;
+    overflow: hidden;
+}
+
+header.vikahotel-logo {
+    height: 100px;
+    background-image: url(../../img/vikahotel-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: #fff;
+}
+
+body.hoteles {
+    background-color: #fff !important;
+    color: #000000;
+}
+
+#hoteles_container {
+    border-radius: 10px;
+    padding-bottom: 15px;
+}
+
+.hotel_search_form .typeahead.dropdown-menu {
+    width: 96%;
+}
+
+.hotel-logo-movil {
+    
+}
+
+.hotel-logo-nomovil h3 {
+    font-weight: normal;
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.pagination {
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.pagination ul {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding: 0;
+}
+
+.pagination-right {
+    text-align: right;
+}
+
+.pagination-centered {
+    text-align: center;
+}
+
+.pagination ul > li {
+    display: inline;
+}
+
+.pagination ul > li:first-child > a, .pagination ul > li:first-child > span {
+    border-bottom-left-radius: 4px;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-top-left-radius: 4px;
+}
+.pagination ul > li > a, .pagination ul > li > span {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: solid;
+    background-color: #FFFFFF;
+    border-bottom-color: #DDDDDD;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #DDDDDD;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 0;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #DDDDDD;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: #DDDDDD;
+    border-top-style: solid;
+    border-top-width: 1px;
+    float: left;
+    line-height: 20px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 4px;
+    color: #0900E0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.pagination ul > li:last-child > a, .pagination ul > li:last-child > span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.pagination ul > .active > a, .pagination ul > .active > span {
+    color: #999999;
+    cursor: default;
+}
+.pagination ul > li > a:hover, 
+.pagination ul > li > a:focus, 
+.pagination ul > .active > a, 
+.pagination ul > .active > span {
+    background-color: #F5F5F5;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (min-width: 250px){
+    .hotel_container .hotel_list .hotel_item .hotel_item_image_container{
+        height: 150px;
+        overflow: hidden;
+    }   
+}
+@media (min-width: 400px){
+    .hotel_container .hotel_list .hotel_item .hotel_item_image_container{
+        height: 200px;
+        overflow: hidden;
+    }   
+}
+@media (min-width: 992px){
+    .hotel_container .hotel_list .hotel_item .hotel_item_image_container{
+        height: 112px;
+        overflow: hidden;
+    }   
+}
+@media (min-width: 1200px){
+    .hotel_container .hotel_list .hotel_item .hotel_item_image_container{
+        height: 140px;
+        overflow: hidden;
+    }   
+}
+@media (min-width: 1400px){
+    .hotel_container .hotel_list .hotel_item .hotel_item_image_container{
+        height: 167px;
+        overflow: hidden;
+    }   
+}
+@media (min-width: 1600px){
+    .hotel_container .hotel_list .hotel_item .hotel_item_image_container{
+        height: 223px;
+        overflow: hidden;
+    }   
+}
+@media (min-width: 1800px){
+    .hotel_container .hotel_list .hotel_item .hotel_item_image_container{
+        height: 240px;
+        overflow: hidden;
+    }   
+}

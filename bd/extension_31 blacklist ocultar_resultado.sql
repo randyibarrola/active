@@ -1,0 +1,1 @@
+alter table blacklist add ocultar_resultado TINYINT NULL;

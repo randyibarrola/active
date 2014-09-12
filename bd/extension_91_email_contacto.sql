@@ -1,0 +1,1 @@
+ALTER TABLE  `hotel` ADD  `email_contacto` VARCHAR( 200 ) NULL ;

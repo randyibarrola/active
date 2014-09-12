@@ -1,0 +1,286 @@
+/* here you can put your own css to customize and override the theme */
+
+#blocker
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background-color: #000;
+    z-index: 10000000000;
+    display: none;
+}
+    #blocker div
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 6em;
+        height: 2em;
+        margin: -1em 0 0 -2.5em;
+        color: #fff;
+        font-weight: bold;
+        font-size: 33px;
+    }
+    
+    .centered {
+        text-align: center;
+    }
+    
+#idiomasDiv, #monedasDiv,
+#promocionesDiv, #contratoDiv, #finalizarDiv , #configuracionDiv{
+    display: none;
+}
+
+.delimiter {
+    clear: both;
+}
+
+label.control-label {
+    text-align: right;
+}
+
+.register-form .form-group a {
+    color: #dedede;
+    font-weight: bold;
+}
+
+/*Preloader*/
+.bubblingG {
+    text-align: center;
+    width:80px;
+    height:50px;
+    margin: 0 auto;
+}
+
+.bubblingG span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin: 25px auto;
+    background: #000000;
+    -moz-border-radius: 50px;
+    -moz-animation: bubblingG 1.3s infinite alternate;
+    -webkit-border-radius: 50px;
+    -webkit-animation: bubblingG 1.3s infinite alternate;
+    -ms-border-radius: 50px;
+    -ms-animation: bubblingG 1.3s infinite alternate;
+    -o-border-radius: 50px;
+    -o-animation: bubblingG 1.3s infinite alternate;
+    border-radius: 50px;
+    animation: bubblingG 1.3s infinite alternate;
+}
+
+#bubblingG_1 {
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+#bubblingG_2 {
+    -moz-animation-delay: 0.39s;
+    -webkit-animation-delay: 0.39s;
+    -ms-animation-delay: 0.39s;
+    -o-animation-delay: 0.39s;
+    animation-delay: 0.39s;
+}
+
+#bubblingG_3 {
+    -moz-animation-delay: 0.78s;
+    -webkit-animation-delay: 0.78s;
+    -ms-animation-delay: 0.78s;
+    -o-animation-delay: 0.78s;
+    animation-delay: 0.78s;
+}
+
+@-moz-keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color:#000000;
+        -moz-transform: translateY(0);
+    }
+
+    100% {
+        width: 24px;
+        height: 24px;
+        background-color:#FFFFFF;
+        -moz-transform: translateY(-21px);
+    }
+
+}
+
+@-webkit-keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color:#000000;
+        -webkit-transform: translateY(0);
+    }
+
+    100% {
+        width: 24px;
+        height: 24px;
+        background-color:#FFFFFF;
+        -webkit-transform: translateY(-21px);
+    }
+
+}
+
+@-ms-keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color:#000000;
+        -ms-transform: translateY(0);
+    }
+
+    100% {
+        width: 24px;
+        height: 24px;
+        background-color:#FFFFFF;
+        -ms-transform: translateY(-21px);
+    }
+
+}
+
+@-o-keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color:#000000;
+        -o-transform: translateY(0);
+    }
+
+    100% {
+        width: 24px;
+        height: 24px;
+        background-color:#FFFFFF;
+        -o-transform: translateY(-21px);
+    }
+
+}
+
+@keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color:#000000;
+        transform: translateY(0);
+    }
+
+    100% {
+        width: 24px;
+        height: 24px;
+        background-color:#FFFFFF;
+        transform: translateY(-21px);
+    }
+
+}
+/*Preloader*/
+/*End ajax loader*/
+
+.ver-campania label{
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.ver-campania .terms p {
+    font-size: 12px;
+}
+
+.ver-campania .form-section{
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.ver-campania .col-md-1, 
+.ver-campania .col-md-2, 
+.ver-campania .col-md-3, 
+.ver-campania .col-md-4, 
+.ver-campania .col-md-5, 
+.ver-campania .col-md-6, 
+.ver-campania .col-md-7, 
+.ver-campania .col-md-8, 
+.ver-campania .col-md-9, 
+.ver-campania .col-md-10, 
+.ver-campania .col-md-11 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.form-wizard span.desc {
+    font-size: 1.6em !important;
+}
+
+.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#table_reservas td i {
+    display: none;
+}
+
+table td input[type=text] {
+    border: none;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    padding: 4px 6px;
+}
+
+table td input[type=text]:focus {    
+    background-color: white;
+}
+
+#table_hoteles td.nombre, 
+#table_hoteles td.email,
+#table_hoteles td.telefono{
+    width: 100%;
+}
+
+#table_hoteles td.nombre {
+    min-width: 200px;
+}
+
+#table_hoteles td.dominios {
+    font-size: 11px;
+}
+
+.dataTables_processing {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    border: 1px solid #dddddd;
+    color: #999999;
+    font-size: 14px;
+    height: 30px;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -15px;
+    padding-bottom: 14px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 14px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 250px;
+    height: auto;
+}
+.delete_container .delete {
+position: absolute;
+right: 6%;
+top: 35px;
+}
+.delete_container .delete span {
+font-size: 16px;
+}

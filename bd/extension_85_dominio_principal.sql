@@ -1,0 +1,1 @@
+ALTER TABLE  `hotel` ADD  `dominio_principal` VARCHAR( 150 ) NULL

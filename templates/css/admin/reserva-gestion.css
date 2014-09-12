@@ -1,0 +1,28 @@
+.pago {
+    margin: 0 20px;
+    padding: 10px 0;
+}
+.delimiter {
+    clear: both;
+}
+h5{
+    margin: 10px 0;
+}
+#add_pago {
+    margin-top: 25px;
+}
+#pago_efectivo, #pago_tarjeta {
+    display: none;
+}
+.delete-pago-container {
+    position: absolute;
+    right: 32px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #dddddd;
+    border-radius: 10px !important;
+    box-shadow: 2px 0 5px;
+    padding: 2px 6px;
+    cursor: pointer;
+    z-index: 999;
+}

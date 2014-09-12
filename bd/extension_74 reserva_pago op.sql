@@ -1,0 +1,1 @@
+ALTER TABLE reserva_pago ADD op varchar(200) NULL;

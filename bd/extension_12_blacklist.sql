@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS blacklist;
+
+CREATE TABLE IF NOT EXISTS `blacklist` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `palabra` TEXT NULL,
+  PRIMARY KEY (`id`)
+  )
+ENGINE = InnoDB;

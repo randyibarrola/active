@@ -1,0 +1,758 @@
+.main_content{
+    margin-top: 10px;
+    margin-bottom: 70px;
+    padding: 15px;
+}
+.breadcrumb-custom{
+    background: none;
+    border-bottom: none;
+}
+.flexslider .slides img {
+display: block;
+height: 133px;
+margin: 0 auto;
+}
+.ssl_seal_container{
+padding-top: 27px;
+margin-bottom: 0;
+text-align: right;
+padding-right: 29px;
+}
+.flex-control-nav{
+    display: none;
+}
+.breadcrumb-custom .bread-row{
+    margin-bottom: 10px;
+    width: 49.5%;
+    margin-right: 1%;
+}
+.breadcrumb-custom .bread-row:last-child{
+    margin-right: 0;
+}
+.nav.nav-tabs.breadcrumb-custom > .active a{
+    background: #F1F1F1;
+    cursor: default;
+}
+
+.nav.nav-tabs.breadcrumb-custom a{
+    display: block;
+    min-width: 170px;
+    background: rgba(255, 255, 255, 0.6);
+    color: #000;
+    padding: 0;
+    height: 42px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+}
+.nav.nav-tabs.breadcrumb-custom a:hover{
+    border: 1px solid #DDD;
+}
+
+.nav.nav-tabs .bread-number{
+    float: left;
+    width: 50px;
+    padding-left: 5px;
+    padding-right: 15px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-right: 1px solid #CCC;
+}
+.nav.nav-tabs .bread-text{
+    float: left;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.reserva-left-side{
+    margin-bottom: 10px;
+}
+.reserva-right-side{
+    position: relative;
+}
+.reserva-right-side .reservacion-list-content{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #62A0F1;
+}
+.reserva-right-side .reservacion-list > div{
+    border-top: 1px solid #62A0F1;
+    padding-top: 5px;
+    padding: 5px 15px;
+    padding-bottom: 0;
+}
+.reserva-right-side .reservacion-list > div:first-child{
+    border-top: none;
+    padding: 8px;
+    background: #428BCA;
+    color: #FFF;
+    -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px;
+    border: 1px solid #357EBD;
+}
+.reserva-right-side p.text-info{
+    text-align: right;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+.reserva-right-side p.text-info #precio-total-label .subprice{
+    font-size: 14px;
+    font-weight: normal;
+}
+.subprice{
+    font-size: 11px;
+    
+    font-weight: normal;
+}
+.reserva-right-side p.name{
+
+}
+.reserva-right-side a.view_details{
+
+}
+.reserva-right-side h3{
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.reservas-list-main .table thead{
+    background: #eeeeee;
+}
+.reservas-list-main .selecting-car, .reservas-list-main .details-tour{
+    margin-top: 10px;
+    /*display: none;*/
+}
+.reservas-list-main .selecting-car .table thead{
+    background: #fafafa;
+}
+.reservas-list-main .selecting-car .table{
+    background: #fafafa;
+}
+.reservas-list-main .table-responsive{
+    border: 1px solid #eeeeee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.table-reserva-info img.reserva-img{
+    width: 100%;
+
+}
+.table-reserva-info.autos-table{
+    margin-bottom: 0;
+}
+.table-reserva-info.tours-table .table-tours-details{
+    margin-bottom: 0;
+}
+.table-reserva-info.tours-table .table-tours-details tbody{
+    background: white;
+}
+.table-reserva-info.tours-table .table-tours-details tr:first-child td{
+    /*border-bottom: 1px solid #dddddd;*/
+}
+.details-tour .table-responsive{
+    background: #f2f6f7;
+    padding: 15px;
+}
+.details-tour .table.table-tours-details thead{
+    background: white;
+}
+.details-tour h4{
+    padding-bottom: 5px;
+}
+.table-reserva-info .row{
+    margin: 0;
+}
+.table-reserva-info h4{
+    margin: 0 0 3px 0;
+}
+.table-reserva-info p{
+    margin: 0 0 2px 0;
+    font-size: 12px;
+}
+.show-more-content{
+    padding: 10px;
+    background: #eeeeee;
+    text-align: center;
+}
+.show-more-content .caret{
+    border-top: 4px solid #428bca;
+}
+.reserva-options{
+    text-align: right;
+}
+.caret.caret-inverse{
+    border-top: 0 dotted;
+    border-bottom: 4px solid #000;
+    content: "";
+}
+.recotizar-content{
+    border-top: 1px solid #eeeeee;
+    padding: 15px 0 20px;
+    margin-top: 20px;
+}
+
+.panel-content{
+    margin-bottom: 10px;
+}
+.panel-content .panel-heading{
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 2px solid #dddddd;
+    background: #eeeeee;
+    padding: 8px;
+}
+.panel-content .panel-heading p{
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.panel-content .panel-body{
+    padding: 8px 23px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #eeeeee;
+}
+.discount-container-main{
+    background: #428bca;
+    width: 65px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    float: right;
+}
+.discount-container-main p{
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+}
+.puntuation-container span{
+    line-height: 34px;
+}
+.puntuation-container span.puntuation-val{
+    line-height: 34px;
+    background: #565656;
+    color: white;
+    padding: 2px 15px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.puntuation-container a{
+    line-height: 34px;
+}
+.inline-block{
+    display: inline-block;
+}
+.opinions-list{
+    margin: 10px 0 0 0;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.opinions-list .opinion-val{
+    background: #565656;
+    color: white;
+    font-weight: bold;
+    padding: 2px 0;
+    font-size: 16px;
+    width: 40px;
+    float: left;
+    text-align: center;
+}
+.opinions-list ul{
+    list-style: none;
+    width: 100%;
+    float: left;
+}
+.opinions-list li{
+    width: 100%;
+    float: left;
+    padding: 5px 0;
+    background: #f7f7f7;
+}
+.opinions-list li p{
+    margin: 0;
+    padding-left: 10px;
+    width: 80%;
+}
+.opinions-list li:nth-child(2n){
+    background: transparent;
+}
+.add-cart-content{
+    margin-top: 20px;
+}
+.when-you-go-date .datepicker-inline{
+    width: auto;
+}
+.when-you-go-date .datepicker-inline table{
+    width: 100%;
+}
+.when-you-go-content{
+    background: #e7edf5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 15px;
+    width: 330px;
+    margin: 35px auto;
+}
+.when-you-go-content p{
+    color: #3A87AD;
+}
+.when-you-go-content p .form-control{
+    display: inline-block;
+    width: 90px;
+    padding: 0 6px;
+    height: 25px;
+    margin-left: 10px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: -2px;
+}
+#tarifas-table div.tarifa_container {
+    /*display: none;*/
+    width: 100%;
+    border-bottom: 1px solid #ECECEC;
+    overflow: hidden;
+    margin-bottom: 7px;
+    padding-bottom: 0px;
+}
+.tarifas-table{
+    overflow-x: auto;
+}
+.cupon-total-content {
+    color: #468847;
+    background-color: #DFF0D8;
+    border: 1px solid #D6E9C6;
+    border-radius: 4px;
+    min-width: 425px;
+}
+.cupon-total {
+    /*display: none;*/
+    padding-right: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    border-top: 1px solid #A0C7A0;
+    margin-top: 10px;
+    padding-top: 6px;
+}
+.cupon-total > div > div {
+    display: table-row;
+}
+.cupon-total label {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.cupon-container {
+    /*display: none;*/
+    padding-top: 6px;
+}
+.cupon-container > div, .cupon-total > div{
+    display: table;
+    width: 100%;
+    padding: 0;
+}
+.select-cell {
+    width: 85px;
+}
+.subtotal-cell {
+    width: 148px;
+}
+.subtotal-cell small{
+    font-size: 9px;
+    
+}
+label.cupon {
+    padding-top: 6px;
+    padding-right: 16px;
+}
+.cupon-container > div > div, .cupon-total > div > div{
+    display: table-row;
+}
+.cupon-container > div > div > div, .cupon-total > div > div > div{
+    display: table-cell;
+}
+#tarifas-table{
+    display: table;
+    width: 100%;
+    min-width: 455px;
+}
+#tarifas-table .tarifa_container{
+    display: table-row;
+}
+#tarifas-table .tarifa_container > div{
+    display: table-cell;
+}
+#tarifas-table label.precio {
+    text-align: right;
+    padding-top: 8px;
+    margin-bottom: 20px;
+    padding-right: 16px;
+    font-weight: normal;
+}
+div.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.totalEntradas {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.select-cell {
+    width: 85px;
+}
+.select-tickets {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.entrada-selected {
+    background-color: #e7edf5;
+}
+.tarifas-message{
+    background-color: #f2f6f7;
+    padding: 15px;
+    margin: 15px 0 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.tarifas-message p{
+    color: #525252;
+}
+#data_step .reserva-img{
+    margin-bottom: 20px;
+}
+#data_step .set-special-data, #data_step .add-other-tel{
+    background: #f2f6f7;
+    padding: 0 10px;
+}
+#data_step .set-special-data.closed, #data_step .add-other-tel.closed{
+    background: none;
+    padding: 0;
+}
+#data_step .special-data-content, #data_step .other-tel-content{
+    padding: 10px;
+    background: #f2f6f7;
+    margin: 0;
+    margin-top: -1px;
+}
+#pay_step .forma-pago-select small{
+    display: block;
+    font-weight: normal;
+}
+#pay_step .forma-pago-content{
+    margin: 0;
+    padding: 20px;
+    background: #f2f6f7;
+    margin-bottom: 15px;
+}
+#pay_step .table-responsive{
+    border: 0;
+}
+#pay_step .table tbody{
+    background: white;
+}
+#pay_step .table tbody tr:first-child td{
+    border-top: 0;
+}
+#pay_step .table thead{
+    background: transparent;
+
+}
+#pay_step .mensualidades-table th small{
+    display: block;
+    font-weight: normal;
+}
+#pay_step .total-pago{
+    margin: 0;
+}
+#pay_step .table thead > tr > th{
+    border-bottom: 0;
+}
+#pay_step select.vencimiento-option{
+    width: 45%;
+    float: left;
+    margin-right: 1%;
+}
+#pay_step .total-bottom-content p{
+    text-align: right;
+    margin-bottom: 5px;
+}
+#pay_step .datos-pago-content.for-2-pays{
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #eeeeee;
+}
+.total-td, .total-mensualidad-td{
+    width: 150px;
+    text-align: center;
+}
+.table-reserva-info{
+    margin-bottom: 0px;
+}
+.font-s24{
+    font-size: 24px;
+}
+.font-w-bold{
+    font-weight: bold;
+}
+.tours_container p{
+margin-bottom: 1px;
+}
+.display-block{
+    display: block;
+}
+.w25per{
+    width: 25% !important;
+}
+.w50per{
+    width: 50%;
+}
+.w70per{
+    width: 70%;
+}
+.w100per{
+    width: 100%;
+}
+.tours_container .excursion-title{
+    font-size: 24px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: bold;
+}
+.tours_container .parthenon-caption{
+    padding: 5px 0px;
+
+    list-style: none;
+}
+.tours_container .parthenon-caption li{
+    margin-bottom: 3px;
+}.tours_container .parthenon-caption li img{
+    vertical-align: baseline;
+}
+.reserva-description h3{
+    margin-top: 0px;
+}
+.reserva-description p{
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: #585858;
+}
+.reserva-description p.lead{
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 7px;
+    float: right;
+}
+.reserva-description h4{
+     margin-bottom: 2px;
+    
+     font-size: 15px;
+     margin-top: 0px;
+}
+.impuestos_incluidos_label{
+    clear: both;
+    font-size: 13px;
+    margin: 0;
+    text-align: right;
+    color: #999;
+}.continuar_container {
+  clear:both;  
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.reserva-description .subprice{
+    font-size: 12px;
+    
+    font-weight: normal;
+}
+#resumen-reserva-otros .reserva-description {
+    border-top: 1px solid #62A0F1;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.a-que-hora, .completa-datos {
+    display: none;
+}
+
+.eliminar-excursion {
+    margin-right: 10px;
+    margin-top: 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+ul.cards {
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+
+ul.cards li {
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    background-image: url(../images/card_logos.png);
+    background-position: 0 0;
+    float: left;
+    height: 32px;
+    margin-right: 8px;
+    text-indent: -9999px;
+    width: 51px;
+}
+
+.cards .visa_electron {
+    background-position: 255px 0;
+}
+
+.cards .visa_electron.off {
+    background-position: 255px 32px;
+    /*opacity: 0.7;*/
+}
+
+.cards .mastercard {
+    background-position: 204px 0;
+}
+
+.cards .mastercard.off {
+  opacity: 0.5;
+  background-position: 204px 0;
+}
+.cards .amex {
+    background-position: 51px 0;
+}
+
+.cards .amex.off {
+  background-position: 51px 32px;
+  opacity: 0.5;
+  background-position: 51px 0px;
+}
+.cards .maestro {
+    background-position: 153px 0;
+}
+
+.cards .maestro.off {
+    background-position: 153px 32px;
+    /*opacity: 0.7;*/
+}
+
+.cards li:last-child {
+    margin-right: 0;
+}
+
+.cards .discover {
+    background-position: 102px 0;
+}
+
+.cards .discover.off {
+    background-position: 102px 32px;
+    /*opacity: 0.7;*/
+}
+
+.cards .visa.off {
+    opacity: 0.5;
+    background-position: 0 0px;
+}
+
+.delimiter {clear: both;}
+
+
+.validCreditCard {
+    background: url(../images/tick.png) 98% center no-repeat;
+}
+
+#form_data {
+    height: 1220px;
+    overflow: hidden;
+}
+.pago_informacion_carrito{
+    color: #3A87AD;
+    border-top: 1px solid #5f9ef4;
+    font-size: 11px;
+    padding-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+#form_data body {
+    background-color: #fff !important;
+}
+
+#frameBlocker {
+    background-color: #000000;
+    border-radius: 6px;
+    
+    height: calc(100% - 150px);
+    margin-left: 15px;
+    margin-right: 15px;
+    opacity: 0.5;
+    padding: 20%;
+    position: absolute;
+    top: 52px;
+    width: calc(100% - 30px);
+}
+  .reserva-description{
+        padding-top: 10px;
+    }
+    
+    #tpvContainer {
+        background-color: #e7edf5;
+        background-image: url("../images/candado.png");
+        background-position: 93.5% 25px;
+        background-repeat: no-repeat;
+        background-size: 143px auto;
+    }
+    
+    #showServices {
+        font-size: 12px;
+        margin: 6px;
+    }
+    
+@media (max-width: 570px) {
+    .nav.nav-tabs.breadcrumb-custom .bread-row{
+        width: 100%;
+        margin-right: 0;
+    }
+  
+}
+@media (max-width: 768px) {
+    .table-reserva-info img.reserva-img {
+        width: 100%;
+    }
+    .table-reserva-info .reserva-description{
+        margin-top: 10px;
+    }
+    .reserva-options{
+        text-align: left;
+    }
+}
+@media (max-width: 992px) {
+    .main_content{
+        padding: 15px !important;
+    }
+    .when-you-go-content{
+        width: auto;
+        margin: 20px auto;
+    }
+}

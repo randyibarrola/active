@@ -1,0 +1,1 @@
+alter table configuracion CHANGE vika_canal vika_canal VARCHAR(200) NULL;

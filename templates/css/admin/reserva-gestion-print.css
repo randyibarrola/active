@@ -1,0 +1,10 @@
+.form-group{
+	margin-bottom: 5px;
+}
+.form-group label{
+	font-size: 12px;
+}
+.form-group input{
+	padding: 0px 5px;
+height: 28px;
+}

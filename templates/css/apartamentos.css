@@ -1,0 +1,379 @@
+#apartamentos_container .flexslider .flex-control-nav{
+    display: none;
+}
+.main_content form .btn{
+    margin-top:25px;
+}
+.filtros_list{
+    border-bottom: 1px solid #F1F1F1;
+    padding-bottom: 10px;
+}
+.popover{
+    z-index: 99999!important;
+    opacity: 1!important;
+    background: #FFF!important;
+}
+.filtros_list .item_filtros{
+    display: inline-block;
+    float: right;
+    padding: 1px 4px;
+    padding-bottom: 0px;
+}
+h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+p.by_this_booking{
+    padding: 5px;
+    font-size: 12px;
+    background: none;
+    color: #58b957;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 0;
+    display: block;
+    font-weight: normal;
+    padding-top: 0px;
+}
+.main_content{
+    margin-top: 11px;
+    width: 100%;
+    min-height: 500px;
+    padding-top: 10px;
+    border-top: 10px solid #fe8400;
+}
+.main_content h1{
+    margin-top: 5px;
+}
+.flexslider .slides img {
+    display: block;
+    height: 128px;
+    margin: 0 auto;
+}
+.room_info_container img{
+    width: 100%;
+}
+.room_info_container .pax{
+    margin-bottom: 0;
+    
+    color: #fe8400;
+    font-weight: bold;
+}
+.room_info_container{
+    clear: both;;
+}
+.room_container{
+    /*border-top: 1px dotted #B9B9B9;*/
+    padding-bottom: 10px;
+}
+
+.room_container.hasnt_description {
+    border-bottom: 1px dotted #B9B9B9;
+}
+.room_container.hasnt_description:last-child {
+    border-bottom: none;
+}
+.room_container.has_description{
+    border-top: 1px solid #F1F1F1;
+    
+}
+.room_container:last-child{
+    border-bottom: 0px;
+}
+.room_container h5{ font-size: 14px;
+ vertical-align: bottom; display: block; background: none; color: #A5A5A5; text-align: left; margin: 0; padding-left: 0; font-weight: bold; padding-top: 5px; padding-bottom: 4px;}
+#apartamentos_container .slider-arrow--left{
+    bottom: 77%;
+    left: 5px;
+}
+#apartamentos_container .slider-arrow--right{
+    bottom: 77%;
+    right: 5px;
+}
+#apartamentos_container .slider-arrow {
+    position: absolute;
+    display: block;
+    padding: 4px 9px;
+    margin-bottom: -46px;
+    border-radius: 10px;
+    color: #FFF;
+    text-decoration: none;
+    background: rgba(95, 95, 95, 0.62);
+    font-size: 10px;
+    font-weight: normal;
+}
+.descripcion_table{
+    display: none;
+}
+#apartamentos_container .slider-nav__item {
+    width: 7px;
+    height: 7px;
+    float: left;
+    clear: none;
+    display: block;
+    margin: 0 5px;
+    border: 1px solid #FFF;
+    border-radius: 8px;
+}
+.comparison-content{
+    text-align: right;
+    margin-top: 5px;
+    float: right;
+    min-width: 100%;
+}
+.comparison-content > div {
+    min-height: 20px;
+    width: 100%;
+    clear: both;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    float: right;
+}
+.oasis-comparison > div{
+    float: left;
+}
+.booking-comparison > div{
+    float: left;
+}
+.booking-comparison img{
+    height: 15px !important;
+}
+.comparison-content .oasis-comparison > div:first-child{
+    border: none;
+}
+.oasis-comparison > div:first-child, .booking-comparison > div:first-child{
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    padding-right: 1%;
+    line-height: 45px;
+    height: 46px;
+    display: inline-block;
+    padding-left: 1%;
+    width: 50%;
+}
+.booking-comparison > div:first-child{
+    color: #333;
+}
+.comparison-content img{
+    height: 30px;
+    width: auto;
+    margin-right: 3px;
+    display: none;
+}
+.comparison-content .oasis-comparison .per-night{
+    background: none;
+     
+    position: relative;
+}
+.comparison-content .oasis-comparison .per-night button{
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 48px;
+    background: #3d89cd;
+    color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+}
+.comparison-content .oasis-comparison .per-night:hover{
+    opacity: 0.9;
+    box-shadow: 0 0 5px rgba(70,70,70,0.5);
+    -webkit-box-shadow: 0 0 5px rgba(70,70,70,0.5);
+    -moz-box-shadow: 0 0 5px rgba(70,70,70,0.5);
+}
+
+.comparison-content .oasis-comparison .popover-content,
+.comparison-content .booking-comparison .popover-content {
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.comparison-content .oasis-comparison .popover,
+.comparison-content .booking-comparison .popover {
+    background-color: #fefefe;
+}
+
+.comparison-content .oasis-comparison .per-night span.glyphicon{
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    border-left: 1px dashed #FFF;
+    height: 45px;
+    line-height: 42px;
+    padding-left: 10px;
+}
+.comparison-content .booking-comparison .per-night span{
+    padding-left: 25px;
+    background: url('../images/black-uncheck.png') left center no-repeat;
+    background-size: 20px;
+}
+.comparison-content .per-night{
+    height: 46px;
+    text-align: center;
+    width: 50%;      
+    min-width: 121px;
+    display: inline-block;
+    background: #F8F8F8;
+}
+.comparison-content .per-night span{
+    margin-bottom: 0;
+    margin-top: 0px;
+    line-height: 16px;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 16px;
+}
+.comparison-content .per-night small{
+    clear: both;
+    width: 100%;
+    display: block;
+}
+
+div.publicitary-text {
+    
+    border: none;
+    border-top: none !important;
+    padding: 2px;
+    text-align: left;
+    padding-left: 0;
+    margin-bottom: 5px;
+}
+
+.booking-comparison {
+    margin-top: 5px;
+}
+
+#excursiones-sidebar-movil {
+        display: none;
+}
+
+.hotel_container > div {
+    max-width: 600px;
+    margin: auto;
+}
+.hotel_container .hotel_list .hotel_item.mix{
+    background: #F7F0E6!important;   
+}
+.hotel_container_big > div{
+    max-width: 70%;    
+}
+.hotel_container_big .hotel_list .hotel_item.mix > div > div > div{
+    height: 150px!important;
+}
+.hotel_container_big .hotel_list p{
+}
+.hotel_container_big .hotel_list h3 a{
+    font-size: 20px!important;
+}
+.hotel_container_big .hotel_list .hotel_item.mix > div > div > div.hotel_item_image_container{
+    width: 44.5%!important;
+}
+.hotel_container_big .hotel_list .hotel_item.mix > div > div > div.hotel_item_description_container{
+    width: 55.5%!important;
+}
+
+#apartamentos_container .popover{
+    background: #FFF!important;
+    opacity: 1!important;
+}
+#apartamentos_container .popover p{
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.filtros_list h2, .dontfind h2 {
+    color: #fe8400;
+    font-size: 25px;
+    padding-top: 0px;
+    margin-top: 5px;
+}
+
+.filtros_list p.legend,  .dontfind p.legend {
+    font-style: italic;
+}
+
+.dontfind a.btn-warning {
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 552px) {
+    
+    #excursiones-sidebar-movil {
+        display: block;
+    }
+    
+    #excursiones-sidebar-movil > div.hidden-xs.hidden-sm {
+        display: block !important;
+    }
+    
+    .flexslider .slides img {
+        height: 250px;
+    }
+    
+    .room_container {
+        padding: 5px 20px 10px;
+    }
+}
+
+@media screen and (max-width: 551px) {
+    
+    #excursiones-sidebar-movil {
+        display: block;
+    }
+    
+    #excursiones-sidebar-movil > div.hidden-xs.hidden-sm {
+        display: block !important;
+    }
+    
+    .flexslider .slides img {
+        height: 175px;
+    }
+    
+    .room_container {
+        padding: 5px 10px 10px;
+    }
+    
+    .comparison-content {
+        padding-right: 0;
+    
+        min-width: 100%;
+}
+    
+    .comparison-content div  {
+    }
+    
+    .comparison-content .per-night {
+        width: 100%;
+    }
+    
+    .oasis-comparison > div:first-child, .booking-comparison > div:first-child {
+        width: 100%;
+    
+        font-size: 13px;
+        text-align: left;
+}
+    .oasis-comparison > div:first-child img, 
+    .booking-comparison > div:first-child img{
+        display:none;
+        
+    }
+    .comparison-content > div {
+        min-width: 200px;
+        width: 100%;
+    }
+    
+    div.publicitary-text {
+        width: 96%;
+        margin-right: 2%;
+    }
+}

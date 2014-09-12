@@ -1,0 +1,1 @@
+ALTER TABLE reserva ADD localizador VARCHAR(50) NULL;

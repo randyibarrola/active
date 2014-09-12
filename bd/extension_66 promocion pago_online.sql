@@ -1,0 +1,1 @@
+ALTER TABLE promocion ADD pago_online DOUBLE NULL;

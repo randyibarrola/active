@@ -1,0 +1,1 @@
+alter table promocion add palabras TEXT null;

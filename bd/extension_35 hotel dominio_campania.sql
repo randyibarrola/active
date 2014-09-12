@@ -1,0 +1,1 @@
+alter table hotel add dominio_campania varchar(200) null;

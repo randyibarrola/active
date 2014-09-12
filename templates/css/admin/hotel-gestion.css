@@ -1,0 +1,111 @@
+#mapa {
+    height: 280px;
+}
+
+.delimiter {
+    clear: both;
+}
+.agregar_rango_fecha_ticket{
+    margin-left: 5px;    
+}
+.generar_cupones{
+    margin: 0px auto 0px;
+    text-align: center;
+    display: block;
+    width: 68%;
+}
+.delete-pago-container, .delete-blacklist-container {
+    position: absolute;
+    right: 32px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #dddddd;
+    border-radius: 10px !important;
+    box-shadow: 2px 0 5px;
+    padding: 2px 6px;
+    cursor: pointer;
+    z-index: 999;
+    margin-top: -10px;
+}
+#cupones_body ul li{
+    list-style: none;
+}
+.horario_container .form-group{
+    position: relative;
+}
+.horario_container .form-group .delete{
+    position: absolute;
+
+    right: 10px;
+    top: 35px;
+}
+.horario_container .form-group .delete span{
+    font-size: 16px;
+}
+.regla-descuento {
+    padding: 0 15px;
+}
+
+#regla-descuento-hidden {
+    display: none;
+}
+
+.red {
+    background: red;
+    color: #fff;
+}
+.calendario .green,.calendario .datepicker .active.green{
+background: green!important;
+color: #FFF!important;
+}
+
+.calendario .datepicker .active{
+    background: transparent!important;
+    color: #000!important;
+}
+
+#calendario {
+    text-align: center;
+}
+#calendario .datepicker-inline, #calendario table {
+    width: 100%;
+}
+#calendario .datepicker td, #calendario .datepicker th {
+    width: auto;
+    font-size: 1em;
+}
+#calendario .datepicker table tr td.day.red:hover {
+    color: #000;
+}
+#calendario .datepicker td.day.active {
+    background-color: #fff !important;
+}
+#calendario .datepicker td.day.red {
+    background-color: red !important;
+}
+.file_uploader_container > div:last-child {
+    margin-left: 20% !important;
+}
+.blacklist-item {
+    width: calc(100% - 30px);
+    border-bottom: 1px solid #dddddd;
+    padding-top: 15px;
+    margin-left: 15px;
+}
+#blacklist > div:last-child {
+    border-bottom: 0;
+}
+#promociones .promocion:first-child h3 {
+    display: none;
+}
+#deleteLogoContainer {
+    margin-top: 6px;
+    margin-left: calc(20% + 46px);
+    display: none;
+}
+ul#hoteles-importar-bl li {
+    list-style: none;
+}
+.actions.favorito {
+    margin-top: 0 !important;
+}

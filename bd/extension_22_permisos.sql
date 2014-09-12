@@ -1,0 +1,1 @@
+delete from permiso;INSERT INTO permiso (id, nombre) VALUES(1, 'hotel'),(2, 'empresa'),(3, 'reservas'),(4, 'usuarios'),(5, 'configuracion'),(6, 'blacklist'),(7, 'campania'),(8, 'contrato');

@@ -1,0 +1,1 @@
+ALTER TABLE hotel ADD logo_id INT NULL;ALTER TABLE `hotel`  ADD CONSTRAINT `fk_hotel_logo1` FOREIGN KEY (`logo_id`) REFERENCES `archivo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;

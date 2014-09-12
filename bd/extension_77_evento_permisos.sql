@@ -1,0 +1,2 @@
+INSERT INTO `vikahotel`.`permiso` (`id`, `nombre`) VALUES (NULL, 'evento');
+INSERT INTO `vikahotel`.`usuario_permiso` (`id`, `usuario_grupo_id`, `permiso_id`) VALUES (NULL, '1', '9'), (NULL, '3', '9');

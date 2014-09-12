@@ -1,0 +1,2111 @@
+
+@charset "utf-8";
+.texto_gris {
+    color: #71828E;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.texto_gris_claro {
+    color: #ADB0B3;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.texto_gris_oscuro {
+    color: #666666;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.texto_gris_oscuro_chico {
+    color: #666666;
+    font-family: tahoma,helvetica,arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+.texto_gris_oscuro_grande {
+    color: #666666;
+    font-family: tahoma,helvetica,arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+.texto_gris_chico {
+    color: #71828E;
+    font-family: tahoma,helvetica,arial;
+    font-size: 9px;
+    text-decoration: none;
+}
+.texto_azul {
+    color: #003366;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.texto_azul_chico {
+    color: #003366;
+    font-family: tahoma,helvetica,arial;
+    font-size: 9px;
+    text-decoration: none;
+}
+.texto_azul_grande {
+    color: #003366;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+}
+.texto_error {
+    color: #FF0000;
+    font-family: tahoma,helvetica,arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+.texto_rojo_chico {
+    color: #FF0000;
+    font-family: tahoma,helvetica,arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+.texto_verde_chico {
+    color: #006600;
+    font-family: tahoma,helvetica,arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+.texto_blanco {
+    color: #FFFFFF;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.texto_rojo {
+    color: #FF0000;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.texto_verde {
+    color: #006600;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.texto_negro {
+    color: #333333;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.texto_negro_chico {
+    color: #333333;
+    font-family: tahoma,helvetica,arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+.texto_negro_grande {
+    color: #333333;
+    font-family: tahoma,helvetica,arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+.texto_amarillo {
+    color: #FF9900;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.texto_naranja {
+    color: #FF6600;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.link_rojo {
+    color: #FF0000;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_rojo:hover {
+    color: #FF0000;
+    text-decoration: none;
+}
+.link_azul {
+    color: #006699;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_azul:hover {
+    color: #006699;
+    text-decoration: none;
+}
+.link_azul_chico {
+    color: #006699;
+    font-family: tahoma,helvetica,arial;
+    font-size: 10px;
+    text-decoration: underline;
+}
+.link_azul_chico:hover {
+    color: #006699;
+    text-decoration: none;
+}
+.link_default {
+    color: #0000FF;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_default:hover {
+    color: #0000FF;
+    text-decoration: none;
+}
+.link_negro {
+    color: #000000;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_negro:hover {
+    color: #000000;
+    text-decoration: none;
+}
+.link_gris_oscuro {
+    color: #71828E;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_gris_oscuro:hover {
+    color: #71828E;
+    text-decoration: none;
+}
+.link_gris_oscuro_arial {
+    color: #71828E;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.link_gris_oscuro_arial:hover {
+    color: #71828E;
+    text-decoration: none;
+}
+.link_gris_claro_arial {
+    color: #999999;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.link_gris_claro_arial:hover {
+    color: #999999;
+    text-decoration: none;
+}
+.link_blanco {
+    color: #FFFFFF;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_blanco:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.link_desrayado {
+    text-decoration: none;
+}
+.form_validator_warn {
+    color: #2400FF;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.form_validator_error {
+    color: #FF0000;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.input_error {
+    background-color: #FAF5F5;
+    background-image: url("../images/fondo_inputs_error.gif");
+    border: 1px solid #FF0000;
+    color: #666666;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+    padding-left: 2px;
+}
+.textarea_error {
+    background-color: #FAF5F5;
+    background-position: center top;
+    background-repeat: repeat-x;
+    border: 1px solid #FF0000;
+    color: #666666;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+    padding-left: 4px;
+    width: 100%;
+}
+.rb_error {
+    background-color: #FAF5F5;
+    border: 1px solid #FF0000;
+    color: #666666;
+}
+.chk_error {
+    background-color: #FAF5F5;
+    border: 1px solid #FF0000;
+    color: #666666;
+}
+.texto_apartados_oscuro {
+    color: #666666;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.texto_apartados_gris_claro {
+    color: #999999;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.texto_apartados_claro {
+    color: #999999;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.texto_nombre_hotel {
+    color: #666666;
+    font-family: arial;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.texto_apartados_oscuro_agentes {
+    color: #2A60AE;
+}
+.link_agentes {
+    color: #2A60AE;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_agentes:hover {
+    color: #2A60AE;
+    text-decoration: none;
+}
+.texto_apartados_oscuro_clientes {
+    color: #AC3636;
+}
+.link_clientes {
+    color: #AC3636;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_clientes:hover {
+    color: #AC3636;
+    text-decoration: none;
+}
+.texto_apartados_oscuro_proveedores {
+    color: #5C8559;
+}
+.link_proveedores {
+    color: #5C8559;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_proveedores:hover {
+    color: #5C8559;
+    text-decoration: none;
+}
+.texto_apartados_oscuro_productos {
+    color: #AB7715;
+}
+.link_productos {
+    color: #AB7715;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_productos:hover {
+    color: #AB7715;
+    text-decoration: none;
+}
+.texto_apartados_oscuro_presupuestos {
+    color: #376098;
+}
+.link_presupuestos {
+    color: #376098;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_presupuestos:hover {
+    color: #376098;
+    text-decoration: none;
+}
+.texto_apartados_oscuro_obras {
+    color: #BE7001;
+}
+.link_obras {
+    color: #BE7001;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.link_obras:hover {
+    color: #BE7001;
+    text-decoration: none;
+}
+.texto_footer {
+    color: #666666;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+.texto_ruta_1 {
+    color: #6C6C6C;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: bold;
+}
+.texto_ruta_2 {
+    color: #2D6195;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: bold;
+}
+.texto_ruta_chico_1 {
+    color: #6C6C6C;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: bold;
+}
+.texto_ruta_chico_2 {
+    color: #2D6195;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: bold;
+}
+.titulo_formularios {
+    color: #333333;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.label {
+    color: #333333;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    font-style: normal;
+}
+.listado_over {
+    background-color: #F1F1F1;
+    cursor: pointer;
+}
+.listado_out {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.show_errors_div {
+    background-color: #FFFFCC;
+    border: 1px solid #FF7F7F;
+    color: #FF0000;
+    font-family: tahoma,helvetica,arial;
+    font-size: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 2px;
+    text-decoration: none;
+}
+.show_errors_div_title {
+    background-color: #000000;
+    background-image: url("../images/fondo_resumen_errores.jpg");
+    color: #FFFFFF;
+    font-family: tahoma,helvetica,arial;
+    font-size: 11px;
+    height: 18px;
+    margin-bottom: 3px;
+    margin-top: 1px;
+    padding: 2px;
+    text-decoration: none;
+}
+.details_div_popup {
+    background-color: #FFFFFF;
+    color: #CCCCCC;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    left: 20%;
+    position: absolute;
+    top: 100px;
+}
+.table_baja_cliente {
+    background-color: #FAFAFA;
+}
+.tdceldaactiva {
+    background-image: url("../images/solapa_on_forms_centro.gif");
+    border-left: 1px solid #FFBD0F;
+    border-right: 1px solid #FFBD0F;
+}
+.tdceldainactiva {
+    background-image: url("../images/boton_fondo.gif");
+}
+.dhtmltooltip {
+    background-color: #FFFFE0;
+    border: 1px solid #8B8B8B;
+    cursor: help;
+    margin-left: 5px;
+    padding: 3px;
+    position: absolute;
+    width: 200px;
+    z-index: 100;
+}
+#dhtmltooltip {
+    background-color: #FFFFE0;
+    border: 1px solid #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    left: -300px;
+    padding: 2px;
+    position: absolute;
+    visibility: hidden;
+    width: 150px;
+    z-index: 100;
+}
+#dhtmlpointer {
+    left: -300px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 101;
+}
+.texttab {
+    background-image: url("../images/botones/textbutton_blue_left.gif");
+    background-position: left top;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 11px;
+    height: 24px;
+    line-height: 24px;
+    overflow: visible;
+    padding-left: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.texttab:hover {
+    background-position: left center;
+    text-decoration: none;
+}
+.texttab span {
+    background-image: url("../images/botones/textbutton_blue_right.gif");
+    background-position: right top;
+    background-repeat: no-repeat;
+    color: #333333;
+    float: left;
+    font-family: arial,helvetica,sans-serif;
+    height: 24px;
+    padding-right: 8px;
+    text-align: center;
+}
+.texttab:hover span {
+    background-position: right center;
+    color: #333333;
+}
+.redtexttab {
+    background-image: url("../images/botones/textbutton_red_left.gif");
+}
+.redtexttab span {
+    background-image: url("../images/botones/textbutton_red_right.gif");
+}
+.greentexttab {
+    background-image: url("../images/botones/textbutton_green_left.gif");
+}
+.greentexttab span {
+    background-image: url("../images/botones/textbutton_green_right.gif");
+}
+.bluetexttab {
+    background-image: url("../images/botones/textbutton_blue_left.gif");
+}
+.bluetexttab span {
+    background-image: url("../images/botones/textbutton_blue_right.gif");
+}
+.silvertexttab {
+    background-image: url("../images/botones/textbutton_silver_left.gif");
+}
+.silvertexttab span {
+    background-image: url("../images/botones/textbutton_silver_right.gif");
+}
+.input_select {
+    background-color: #F7F7F7;
+    color: #666666;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+}
+.input_select_form {
+    border-color: #7F9DB9;
+    border-width: 1px;
+    color: #333333;
+    font-family: tahoma,arial,helvetica;
+    font-size: 10px;
+}
+.input {
+    background-color: #FFFFFF;
+    background-image: url("../images/fondo_inputs.jpg");
+    border: 1px solid #B5B8C8;
+    color: #666666;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+    padding-left: 4px;
+}
+.input_onfocus {
+    background-color: #FFFFCC;
+    background-image: url("../images/fondo_inputs.jpg");
+    border: 1px solid #FFB400;
+    color: #969595;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+    padding-left: 2px;
+}
+.input_disabled {
+    background-color: #F6F6F6;
+    border: 1px solid;
+    color: #EEECEC;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+    padding-left: 2px;
+}
+.input_print {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    border-style: solid;
+    border-width: 0 0 1px;
+    color: #666666;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+    padding-left: 4px;
+}
+.input_print_gris {
+    background-color: #F3F3F3;
+    border-bottom: 1px solid #CCCCCC;
+    border-style: solid;
+    border-width: 0 0 1px;
+    color: #666666;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+    padding-left: 4px;
+}
+.input_print_bold {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #000000;
+    border-style: solid;
+    border-width: 0 0 1px;
+    color: #666666;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 4px;
+}
+.textarea {
+    background-color: #FFFFFF;
+    background-image: url("../images/fondo_inputs.jpg");
+    background-position: center top;
+    background-repeat: repeat-x;
+    border: 1px solid #CCCCCC;
+    color: #666666;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+    padding-left: 4px;
+    width: 100%;
+}
+.textarea_onfocus {
+    background-image: url("../images/fondo_inputs.jpg");
+    background-position: center top;
+    background-repeat: repeat-x;
+    border: 1px solid #FFB400;
+    color: #666666;
+    font-family: tahoma,arial,helvetica;
+    font-size: 12px;
+    padding-left: 4px;
+    width: 100%;
+}
+.btnlogin {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btnlogin a {
+    background: url("../images/botones/boton_login_verde.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btnlogin a span {
+    background: url("../images/botones/boton_fondo_verde.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #5C8559;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btnlogin a span {
+    float: none;
+}
+.btnlogin a:hover span {
+    color: #295925;
+    text-decoration: none;
+}
+.btnlogin a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btnlogin a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btnAgregar {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btnAgregar a {
+    background: url("../images/botones/boton_agregar_verde.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btnAgregar a span {
+    background: url("../images/botones/boton_fondo_verde.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #5C8559;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btnAgregar a span {
+    float: none;
+}
+.btnAgregar a:hover span {
+    color: #295925;
+    text-decoration: none;
+}
+.btnAgregar a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btnAgregar a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btngrabar {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btngrabar a {
+    background: url("../images/botones/boton_aceptar_verde.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btngrabar a span {
+    background: url("../images/botones/boton_fondo_verde.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #5C8559;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btngrabar a span {
+    float: none;
+}
+.btngrabar a:hover span {
+    color: #295925;
+    text-decoration: none;
+}
+.btngrabar a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btngrabar a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btngrabarChico {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 12px;
+    margin: 0 auto;
+}
+.btngrabarChico a {
+    background: url("../images/botones/boton_aceptar_verde_chico.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 19px;
+    text-decoration: none;
+}
+.btngrabarChico a span {
+    background: url("../images/botones/fondo_verde_chico.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #5C8559;
+    display: block;
+    float: left;
+    padding: 4px 8px 4px 4px;
+}
+.btngrabarChico a span {
+    float: none;
+}
+.btngrabarChico a:hover span {
+    color: #295925;
+    text-decoration: none;
+}
+.btngrabarChico a:hover {
+    background-position: 0 -20px;
+    text-decoration: none;
+}
+.btngrabarChico a:hover span {
+    background-position: 100% -20px;
+    text-decoration: none;
+}
+.btngrabar_off {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btngrabar_off a {
+    background: url("../images/botones/boton_aceptar_gris.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btngrabar_off a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #7B7B7B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btngrabar_off a span {
+    float: none;
+}
+.btngrabar_off a:hover span {
+    color: #7B7B7B;
+    text-decoration: none;
+}
+.btngrabar_off a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btngrabar_off a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btncancelar {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btncancelar a {
+    background: url("../images/botones/boton_cancelar_rojo.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btncancelar a span {
+    background: url("../images/botones/boton_fondo_rojo.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #AC3636;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btncancelar a span {
+    float: none;
+}
+.btncancelar a:hover span {
+    color: #770505;
+    text-decoration: none;
+}
+.btncancelar a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btncancelar a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btncancelarChico {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 12px;
+    margin: 0 auto;
+}
+.btncancelarChico a {
+    background: url("../images/botones/boton_cancelar_rojo_chico.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 19px;
+    text-decoration: none;
+}
+.btncancelarChico a span {
+    background: url("../images/botones/boton_fondo_rojo_chico.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #AC3636;
+    display: block;
+    float: left;
+    padding: 4px 8px 4px 4px;
+}
+.btncancelarChico a span {
+    float: none;
+}
+.btncancelarChico a:hover span {
+    color: #770505;
+    text-decoration: none;
+}
+.btncancelarChico a:hover {
+    background-position: 0 -20px;
+    text-decoration: none;
+}
+.btncancelarChico a:hover span {
+    background-position: 100% -20px;
+    text-decoration: none;
+}
+.btncancelar_off {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btncancelar_off a {
+    background: url("../images/botones/boton_cancelar_gris.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btncancelar_off a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #7B7B7B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btncancelar_off a span {
+    float: none;
+}
+.btncancelar_off a:hover span {
+    color: #7B7B7B;
+    text-decoration: none;
+}
+.btncancelar_off a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btncancelar_off a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btnbuscar {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btnbuscar a {
+    background: url("../images/botones/boton_buscar_gris.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btnbuscar a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #7B7B7B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btnbuscar a span {
+    float: none;
+}
+.btnbuscar a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btnbuscar a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btnbuscar a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btnAtras {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btnAtras a {
+    background: url("../images/botones/boton_atras_gris.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btnAtras a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #7B7B7B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btnAtras a span {
+    float: none;
+}
+.btnAtras a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btnAtras a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btnAtras a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btnEditarPrecioChico {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 12px;
+    margin: 0 auto;
+}
+.btnEditarPrecioChico a {
+    background: url("../images/botones/boton_calc_edit_gris_chico.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btnEditarPrecioChico a span {
+    background: url("../images/botones/boton_fondo_gris_chico.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #7B7B7B;
+    display: block;
+    float: left;
+    padding: 4px 8px 4px 4px;
+}
+.btnEditarPrecioChico a span {
+    float: none;
+}
+.btnEditarPrecioChico a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btnEditarPrecioChico a:hover {
+    background-position: 0 -20px;
+    text-decoration: none;
+}
+.btnEditarPrecioChico a:hover span {
+    background-position: 100% -20px;
+    text-decoration: none;
+}
+.btn_imprimir {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_imprimir a {
+    background: url("../images/botones/btn_ico_imprimir.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_imprimir a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_imprimir a span {
+    float: none;
+}
+.btn_imprimir a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_imprimir a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_imprimir a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btnflecha {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btnflecha a {
+    background: url("../images/botones/boton_flecha_verde.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btnflecha a span {
+    background: url("../images/botones/boton_fondo_verde.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #5C8559;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btnflecha a span {
+    float: none;
+}
+.btnflecha a:hover span {
+    color: #295925;
+    text-decoration: none;
+}
+.btnflecha a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btnflecha a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_realizar_reserva {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_realizar_reserva a {
+    background: url("../images/botones/btn_ico_realizar_reserva.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_realizar_reserva a span {
+    background: url("../images/botones/btn_fondo_verde.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #5C8559;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_realizar_reserva a span {
+    float: none;
+}
+.btn_realizar_reserva a:hover span {
+    color: #295925;
+    text-decoration: none;
+}
+.btn_realizar_reserva a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_realizar_reserva a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_realizar_otra_reserva {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_realizar_otra_reserva a {
+    background: url("../images/botones/btn_ico_realizar_otra_reserva.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_realizar_otra_reserva a span {
+    background: url("../images/botones/btn_fondo_verde.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #5C8559;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_realizar_otra_reserva a span {
+    float: none;
+}
+.btn_realizar_otra_reserva a:hover span {
+    color: #295925;
+    text-decoration: none;
+}
+.btn_realizar_otra_reserva a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_realizar_otra_reserva a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_confirmar_reserva {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_confirmar_reserva a {
+    background: url("../images/botones/btn_ico_confirmar_reserva.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_confirmar_reserva a span {
+    background: url("../images/botones/btn_fondo_verde.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #5C8559;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_confirmar_reserva a span {
+    float: none;
+}
+.btn_confirmar_reserva a:hover span {
+    color: #295925;
+    text-decoration: none;
+}
+.btn_confirmar_reserva a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_confirmar_reserva a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_cancelar_reserva {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_cancelar_reserva a {
+    background: url("../images/botones/boton_cancelar_rojo.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_cancelar_reserva a span {
+    background: url("../images/botones/boton_fondo_rojo.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #AC3636;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_cancelar_reserva a span {
+    float: none;
+}
+.btn_cancelar_reserva a:hover span {
+    color: #770505;
+    text-decoration: none;
+}
+.btn_cancelar_reserva a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_cancelar_reserva a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_modificar_reserva {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_modificar_reserva a {
+    background: url("../images/botones/btn_ico_modificar.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_modificar_reserva a span {
+    background: url("../images/botones/boton_fondo_amarillo.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #AC3636;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_modificar_reserva a span {
+    float: none;
+}
+.btn_modificar_reserva a:hover span {
+    color: #770505;
+    text-decoration: none;
+}
+.btn_modificar_reserva a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_modificar_reserva a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_enviar_email {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_enviar_email a {
+    background: url("../images/botones/btn_ico_enviar_email.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_enviar_email a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_enviar_email a span {
+    float: none;
+}
+.btn_enviar_email a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_enviar_email a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_enviar_email a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_arriba {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_arriba a {
+    background: url("../images/botones/boton_gris_arriba.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_arriba a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 0;
+}
+.btn_arriba a span {
+    float: none;
+}
+.btn_arriba a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_arriba a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_arriba a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_abajo {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_abajo a {
+    background: url("../images/botones/boton_gris_abajo.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_abajo a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 0;
+}
+.btn_abajo a span {
+    float: none;
+}
+.btn_abajo a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_abajo a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_abajo a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_adelante {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_adelante a {
+    background: url("../images/botones/boton_gris_adelante.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_adelante a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 0;
+}
+.btn_adelante a span {
+    float: none;
+}
+.btn_adelante a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_adelante a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_adelante a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_mas {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_mas a {
+    background: url("../images/botones/boton_gris_mas.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_mas a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 0;
+}
+.btn_mas a span {
+    float: none;
+}
+.btn_mas a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_mas a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_mas a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_menos {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_menos a {
+    background: url("../images/botones/boton_gris_menos.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_menos a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 0;
+}
+.btn_menos a span {
+    float: none;
+}
+.btn_menos a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_menos a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_menos a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_hoy {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_hoy a {
+    background: url("../images/botones/boton_gris_hoy.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_hoy a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_hoy a span {
+    float: none;
+}
+.btn_hoy a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_hoy a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_hoy a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_parada_de_venta {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_parada_de_venta a {
+    background: url("../images/botones/boton_gris_parada_venta.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_parada_de_venta a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_parada_de_venta a span {
+    float: none;
+}
+.btn_parada_de_venta a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_parada_de_venta a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_parada_de_venta a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_eliminar {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_eliminar a {
+    background: url("../images/botones/boton_gris_eliminar.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_eliminar a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_eliminar a span {
+    float: none;
+}
+.btn_eliminar a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_eliminar a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_eliminar a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_reactivar {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_reactivar a {
+    background: url("../images/botones/boton_gris_reactivar.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_reactivar a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_reactivar a span {
+    float: none;
+}
+.btn_reactivar a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_reactivar a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_reactivar a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_desactivar {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_desactivar a {
+    background: url("../images/botones/boton_gris_desactivar.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 21px;
+    text-decoration: none;
+}
+.btn_desactivar a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 13px 4px 4px;
+}
+.btn_desactivar a span {
+    float: none;
+}
+.btn_desactivar a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_desactivar a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_desactivar a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.boton_reservar_chico {
+    background-image: url("../images/fondo_boton_reservar.jpg");
+    border: 1px solid #CCCCCC;
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 25px;
+    margin: 2px;
+    width: auto;
+}
+.boton_reservar_grande {
+    background-color: #009500;
+    background-image: url("../images/fondo_boton_reservar.jpg");
+    background-position: center top;
+    background-repeat: repeat-x;
+    border: 0 none;
+    border-spacing: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    height: 35px;
+    margin: 0;
+    width: auto;
+}
+.IpodTextButton {
+    font-size: 90%;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+}
+.IpodTextButton a {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 8px;
+    text-decoration: none;
+}
+.IpodTextButton a span {
+    display: block;
+    float: none;
+    padding: 4px 13px 4px 4px;
+}
+.IpodTextButton a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.IpodTextDarkButton a span {
+    background: url("http://www.tpvbooking.net/images/apis/buttons/ipodDarkButtonRight.png") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #ECECEC;
+}
+.IpodTextDarkButton a:hover span {
+    background-position: 100% -24px;
+    color: #DEDEE0;
+}
+.IpodTextDarkButton a {
+    background: url("http://www.tpvbooking.net/images/apis/buttons/ipodDarkButtonLeft.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+.IpodTextDarkButtonActive a span {
+    background: url("http://www.tpvbooking.net/images/apis/buttons/ipodDarkButtonRightA.png") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #ECECEC;
+}
+.IpodTextDarkButtonActive a:hover span {
+    background-position: 100% -24px;
+    color: #DEDEE0;
+}
+.IpodTextDarkButtonActive a {
+    background: url("http://www.tpvbooking.net/images/apis/buttons/ipodDarkButtonLeftA.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+.btn_cal_gris {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_cal_gris a {
+    background: url("../images/botones/textButton_silver_left.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 2px;
+    text-decoration: none;
+}
+.btn_cal_gris a span {
+    background: url("../images/botones/boton_fondo_gris.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 2px 4px 0;
+}
+.btn_cal_gris a span {
+    float: none;
+}
+.btn_cal_gris a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_cal_gris a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_cal_gris a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_cal_amarillo {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_cal_amarillo a {
+    background: url("../images/botones/textButton_yellow_left.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 2px;
+    text-decoration: none;
+}
+.btn_cal_amarillo a span {
+    background: url("../images/botones/boton_fondo_amarillo.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 2px 4px 0;
+}
+.btn_cal_amarillo a span {
+    float: none;
+}
+.btn_cal_amarillo a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_cal_amarillo a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_cal_amarillo a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.btn_cal_verde {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn_cal_verde a {
+    background: url("../images/botones/textButton_green_left.gif") no-repeat scroll left top rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px 0 2px;
+    text-decoration: none;
+}
+.btn_cal_verde a span {
+    background: url("../images/botones/boton_fondo_verde.gif") no-repeat scroll right top rgba(0, 0, 0, 0);
+    color: #3B3B3B;
+    display: block;
+    float: left;
+    padding: 4px 2px 4px 0;
+}
+.btn_cal_verde a span {
+    float: none;
+}
+.btn_cal_verde a:hover span {
+    color: #3B3B3B;
+    text-decoration: none;
+}
+.btn_cal_verde a:hover {
+    background-position: 0 -24px;
+    text-decoration: none;
+}
+.btn_cal_verde a:hover span {
+    background-position: 100% -24px;
+    text-decoration: none;
+}
+.dpdiv {
+}
+.dptable {
+    background-color: #ECE9D8;
+    border: 1px solid #AAAAAA;
+    color: #505050;
+    font-family: tahoma,arial,helvetica,sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+.dptr {
+}
+.dptitletr {
+}
+.dpdaytr {
+}
+.dptodaybuttontr {
+}
+.dptd {
+    border: 1px solid #ECE9D8;
+}
+.dpdayhighlighttd {
+    background-color: #CCCCCC;
+    border: 1px solid #AAAAAA;
+}
+.dptdhover {
+    background-color: #ACA998;
+    border: 1px solid #888888;
+    color: #FF0000;
+    cursor: pointer;
+}
+.dptitletd {
+}
+.dpbuttontd {
+}
+.dptodaybuttontd {
+}
+.dpdaytd {
+    background-color: #CCCCCC;
+    border: 1px solid #AAAAAA;
+    color: #FFFFFF;
+}
+.dptitletext {
+    color: #808080;
+    font-size: 12px;
+    font-weight: bold;
+}
+.dpdayhighlight {
+    color: #4060FF;
+    font-weight: bold;
+}
+.dpbutton {
+    background: none repeat scroll 0 0 #D8E8FF;
+    color: #808080;
+    font-family: verdana,tahoma,arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0;
+}
+.dptodaybutton {
+    background: none repeat scroll 0 0 #D8E8FF;
+    color: #808080;
+    font-family: verdana,tahoma,arial,helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+.dpDiv {
+    margin: 0;
+    padding: 0;
+}
+.dpTable {
+    background-color: #FFFFFF;
+    border: 1px solid #608FD3;
+    color: #505050;
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    height: 160px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 180px;
+}
+.dpTR {
+}
+.dpTitleTR {
+    background-image: url("../images/calendario/cal_bg_top.gif");
+    height: 25px;
+}
+.dpDayTR {
+    height: 18px;
+}
+.dpDayTD {
+    background-image: url("../images/calendario/cal_bg_days.gif");
+    border: 0 solid #AAAAAA;
+    color: #000000;
+    font-size: 9px;
+    margin: 0;
+    padding: 0;
+}
+.dpTitleText {
+    color: #FFFFFF;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+}
+.dpTodayButtonTR {
+    margin: 0;
+    padding: 0;
+}
+.dpTD {
+    border: 1px solid #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+.dpDayHighlightTD {
+    margin: 0;
+    padding: 0;
+}
+.dpDayHighlight {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.dpTDHover {
+    border: 1px solid #2D4B82;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+.dpTitleTD {
+    margin: 0;
+    padding: 0;
+}
+.dpButtonTD {
+    margin: 0;
+    padding: 0;
+}
+.dpTodayButtonTD {
+}
+.dpButton {
+    background: none repeat scroll 0 0 #D8E8FF;
+    color: #808080;
+    font-family: Verdana,Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0;
+}
+.dpTodayButton {
+    background: none repeat scroll 0 0 #D8E8FF;
+    color: #808080;
+    font-family: Verdana,Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+.multiPriceList {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.multiPriceListBase {
+}
+.multiPriceListConvertion {
+    font-size: 0.7em;
+}

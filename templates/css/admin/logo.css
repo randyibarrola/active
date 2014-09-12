@@ -1,0 +1,75 @@
+.logotipo_container{
+    height: 132px;
+    margin-left: 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+.logotipo_container span{
+    text-align: center;
+    display: block;
+    color: #FFF;
+    font-weight: bold;
+    padding-top: 55px;
+    font-size: 18px;
+}
+#uniform-logo {
+    height: 46px;
+    margin-left: 3px;
+    width: 178px;
+}
+.actions_image_preview_container {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    width: 275px;
+}
+.cancelar_crop {
+    cursor: pointer;
+    display: block;
+    float: left;
+    line-height: 38px;
+    margin-left: 37px;
+    margin-top: 11px;
+}
+.submit_cartelera {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #3A0203;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 15px;
+    margin-left: 44px;
+    margin-top: 17px !important;
+    padding-bottom: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 4px;
+}
+#logo_image_file_png {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 130px;
+    position: absolute;
+    top: 0;
+    width: auto;
+    z-index: 1;
+}

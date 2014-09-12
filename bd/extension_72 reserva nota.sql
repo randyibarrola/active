@@ -1,0 +1,1 @@
+ALTER TABLE reserva ADD nota TEXT NULL;

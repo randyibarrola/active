@@ -1,0 +1,1 @@
+ALTER TABLE hotel ADD idioma_id INT NULL;

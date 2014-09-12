@@ -1,0 +1,90 @@
+h3.text-info{
+    margin: 0!important;
+    margin-bottom: 10px!important;
+    font-size: 19px;
+}
+.panel-heading{
+    padding: 5px 12px;
+}
+.panel-body{
+    padding: 4px 9px!important;
+}
+.book-confirmation-inner{
+    padding: 0 15px;
+}
+hr{
+    margin: 5px 0;
+}
+.panel-body h3{
+margin: 5px;
+font-size: 18px;
+}
+.book-confirmation .panel-title{
+    font-size: 18px;
+    font-weight: normal;
+}
+.book-confirmation .panel-body > div > .row:first-child{
+    margin-bottom: 10px;
+    border-bottom: 0;
+}
+.book-confirmation .panel-body .no-margin{
+    margin-bottom: 0 !important;
+}
+.book-confirmation .panel-body .no-border{
+    border: 0 !important;
+}
+.book-confirmation .panel-body > div > .row{
+    border-bottom: 1px solid #f7f7f7;
+    padding-top: 10px;
+}
+.book-confirmation .panel-body > div > .row.divider{
+    border-bottom: 2px solid #428bca;
+    padding: 0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.row.cargos > div > div{
+    background: #e6f4ff;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.book-confirmation .panel-body img{
+    width: 100%;
+    height: auto;
+}
+.book-confirmation .panel-body h4{
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+.book-confirmation .panel-body .check{
+    padding-left: 25px;
+    background: url("../images/icon-check.png") left top no-repeat;
+    background-size: 15px;
+    background-position: 0 2px;
+}
+.checklist{
+    list-style: none;
+    padding: 0 20px;
+}
+.checklist li{
+
+}
+.checklist li img{
+
+}
+.checklist li p{
+    padding-left: 35px;
+    background: url("../images/icon-check.png") left top no-repeat;
+    line-height: 24px;
+}
+
+.text-primary.red {
+    color: red;
+}
+
+@media (max-width: 992px){
+    .main_content.book-confirmation {
+        width: 98%;
+        padding: 1%;
+    }
+}

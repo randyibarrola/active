@@ -1,0 +1,1 @@
+alter table usuario add porcentaje_beneficio double null;alter table campania add porcentaje_beneficio double null;

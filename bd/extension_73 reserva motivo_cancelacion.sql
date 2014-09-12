@@ -1,0 +1,1 @@
+ALTER TABLE reserva ADD motivo_cancelacion TEXT NULL;
