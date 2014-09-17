@@ -2,4 +2,7 @@
 .DS_Store
 
 .DS_Store
+
+/nbproject/
+/config.php
 /.idea
