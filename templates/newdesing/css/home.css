@@ -1,0 +1,579 @@
+#simple-search-offers legend {
+    border-bottom: dashed 1px #D1D1D1;
+    padding-bottom: 20px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#simple-search-offers legend span {
+    font-size: 18px;
+    text-transform: uppercase;
+    display: block;
+    font-family: "Gotham Rounded Medium";
+}
+
+#simple-search-offers label {
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+#simple-search-offers .form-control {
+    background: #FBFCFC;
+    border-color: #F4F5F5;
+    cursor: auto;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#simple-search-offers p.info {
+    color: #9A9A9A;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#simple-search-offers .app-btn-pink {
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#home-free-offer .media-object {
+    border-radius: 4px;
+}
+
+#home-free-offer .media-heading {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#home-free-offer .home-free-offer-price {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+#home-free-offer .btn {
+    display: none;
+}
+
+#home-book-services ul {
+    margin-top: 15px;
+}
+
+#home-book-services ul li {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+#home-prompt-scroll {
+    max-height: 555px;
+    overflow: auto;
+}
+
+#home-prompt-scroll .home-prompt-item {
+    padding-bottom: 15px;
+    margin-top: 15px;
+    border-bottom: 1px dashed #D1D1D1;
+}
+
+#home-prompt-scroll .home-prompt-item:last-child {
+    border-bottom: none;
+}
+
+#home-prompt-scroll .home-prompt-item h3 {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+#home-prompt-scroll .home-prompt-item .media-object {
+    border-radius: 4px;
+}
+
+#home-prompt-scroll .home-prompt-item .media .pull-left {
+    position: relative;
+    margin-right: 15px;
+}
+
+#home-prompt-scroll .home-prompt-item .rating {
+    background: #FFFFFF;
+    padding: 0 3px 5px 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+}
+
+#home-prompt-scroll .home-prompt-item .rating > i.full {
+    color: #167FB8;
+}
+
+#home-prompt-scroll .home-prompt-item .rating > i.empty {
+    color: #CFC8BC;
+}
+
+#home-prompt-scroll .home-prompt-item .media-heading {
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+#details .text {
+    color: #9A9A9A;
+    text-align: justify;
+}
+
+#details .social-actions {
+    margin-top: 20px;
+}
+
+#details .social-actions > a {
+    color: #282828;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#details .social-actions > .social-likes {
+    margin-top: 3px;
+}
+
+#details .social-actions > .social-likes .social-likes__widget {
+    margin: 0 !important;
+    float: none !important;
+}
+
+#home-excursions > h1 {
+    font-family: "Gotham Rounded Medium";
+    color: #9A9A9A;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#home-excursions > .list {
+    margin-top: 20px;
+}
+
+#home-excursions > .list > .item > .title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#home-excursions > .list > .item > img {
+    border-radius: 4px;
+    max-height: 105px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#home-excursions > .list > .item > .price {
+    margin-bottom: 0;
+    font-family: "Gotham Rounded Medium";
+}
+
+#home-excursions > .list > .item > .saving {
+    font-size: 12px;
+}
+
+iframe#gmap {
+    width: 100%;
+    height: 350px !important;
+}
+
+#faqs {
+    color: #9A9A9A;
+}
+
+#faqs strong em {
+    font-family: "Gotham Rounded Medium";
+    margin: 0 10px 20px 0;
+    float: left;
+    max-width: 22%;
+    text-align: left;
+}
+
+#tour-booking-form .price-per-person {
+    margin-bottom: 20px;
+}
+
+#tour-booking-form .price-per-person > p {
+    font-family: "Gotham Rounded Medium";
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+#tour-booking-form .price-per-person > p > span {
+    color: #C72684;
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+#tour-booking-form ol {
+    padding-left: 20px;
+}
+
+#tour-booking-form ol > li {
+}
+
+#tour-booking-form ol > li > p.title {
+    font-family: "Gotham Rounded Medium";
+    letter-spacing: -0.5px;
+}
+
+#tour-booking-form ol > li > a.flexible-guaranty {
+    font-family: "Gotham Rounded Medium";
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 10px;
+    color: #157EB7;
+}
+
+#tour-booking-form ol > li > a.flexible-guaranty:hover,
+#tour-booking-form ol > li > a.flexible-guaranty:focus {
+    text-decoration: none;
+    color: #085A86;
+}
+
+#tour-booking-form ol > li > a.flexible-guaranty > i {
+    font-size: 10px;
+    top: 0;
+}
+
+#tour-booking-form hr {
+    height: 2px;
+    background: #DDDDDD;
+}
+
+#tour-booking-form hr:last-child {
+    margin-bottom: 5px;
+}
+
+#tour-booking-form ol > li .form-group {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#tour-booking-form ol > li .form-group > label {
+    min-width: 62%;
+    margin-right: 10px;
+}
+
+#tour-booking-form ol > li .form-group > label > span {
+    font-size: 12px;
+}
+
+#tour-booking-form .total-price {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#tour-booking-form .total-price > p {
+    font-family: "Gotham Rounded Medium";
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+#tour-booking-form .total-price > p > span {
+    color: #C72684;
+    font-size: 28px;
+}
+
+#tour-booking-form .total-price > p > span:first-child {
+    margin-left: 10px;
+}
+
+#tour-booking-form .total-price > p > span:last-child {
+    margin-right: 10px;
+}
+
+#tour-booking-form .app-btn-pink {
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#tour-booking-form .note {
+    font-size: 10px;
+    margin-top: 15px;
+    color: #525252;
+}
+
+.flags-languages p {
+    font-family: "Gotham Rounded Medium";
+}
+
+.flags-languages > ul.list-inline {
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding-top: 0;
+    padding-bottom: 5px;
+}
+
+.flags-languages > ul.list-inline > li {
+    margin-right: 3px;
+    padding: 0;
+}
+
+#home-slider-hotel-slider,
+#home-slider-tour-slider,
+#home-slider-hotel-carousel,
+#home-slider-tour-carousel {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 7px;
+}
+
+#home-slider-hotel,
+#home-slider-tour {
+    margin-bottom: 25px;
+}
+
+#home-slider-hotel-slider .flex-viewport {
+    max-height: 440px;
+}
+
+#home-slider-hotel-slider .flex-direction-nav a {
+    top: 95%;
+}
+
+#home-slider-hotel-slider .flex-direction-nav a.flex-prev,
+#home-slider-tour-slider .flex-direction-nav a.flex-prev {
+    margin-right: 33px;
+    left: auto;
+    right: 0;
+}
+
+#home-slider-hotel-slider .slider-info,
+#home-slider-tour-slider .slider-info {
+    padding-right: 25px;
+    background: none;
+    overflow: visible;
+}
+
+#home-slider-hotel-slider .slider-info > .background,
+#home-slider-tour-slider .slider-info > .background {
+    border-color: #157EB8 transparent transparent;
+    border-style: solid;
+    border-width: 100px 210px 0 0;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 1;
+}
+
+#home-slider-hotel-slider .slider-info > .info,
+#home-slider-tour-slider .slider-info > .info {
+    padding: 5px;
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+}
+
+#home-slider-hotel-slider .slider-info > .info > p,
+#home-slider-tour-slider .slider-info > .info > p {
+    margin-bottom: 0;
+}
+
+#home-slider-hotel-slider .slider-info > .info > p > span,
+#home-slider-tour-slider .slider-info > .info > p > span {
+    font-size: 22px;
+}
+
+#home-slider-hotel-carousel .flex-viewport,
+#home-slider-tour-carousel .flex-viewport {
+    max-height: 80px;
+    height: 80px;
+}
+
+#home-slider-hotel-carousel .flex-viewport > .slides > li {
+    margin-right: 3px;
+}
+
+#home-slider-hotel-carousel .slides img,
+#home-slider-tour-carousel .slides img {
+    height: 75px;
+}
+
+#home-slider-hotel-carousel .flex-direction-nav a,
+#home-slider-tour-carousel .flex-direction-nav a {
+    display: none;
+}
+
+#home-slider-tour-carousel .flex-viewport > .slides > li {
+    margin-bottom: 3px;
+}
+
+#home-slider-tour-slider {
+    overflow: hidden;
+}
+
+#home-slider-tour-slider .flex-viewport {
+    max-height: 370px;
+    float: left;
+    width: 85%;
+}
+
+#home-slider-tour-slider .flex-control-nav {
+    width: 15%;
+    overflow: hidden;
+    max-height: 370px;
+    margin-top: 0;
+}
+
+@media (max-width: 728px) {
+    #home-slider-tour-slider .flex-viewport {
+        max-height: 370px;
+        float: none;
+        width: 100%;
+    }
+
+    #home-slider-tour-slider .flex-control-nav {
+        display: none;
+    }
+
+    #home-slider-tour-slider .flex-direction-nav a.flex-prev,
+    #home-slider-tour-slider .flex-direction-nav a.flex-next {
+        right: 3% !important;
+    }
+}
+
+#home-slider-tour-slider .flex-control-thumbs li {
+    float: none;
+    height: auto;
+    margin: 0 0 3px 5px;
+    width: 100%;
+    display: block;
+}
+
+#home-slider-tour-slider .flex-control-thumbs li img {
+    opacity: 1;
+}
+
+#home-slider-tour-slider .flex-direction-nav a {
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+}
+
+#home-excursions h1.title-tour {
+    font-family: inherit;
+}
+
+#home-slider-tour-slider .flex-direction-nav a.flex-prev {
+    right: 20%;
+    margin-right: 25px;
+}
+
+
+#home-slider-tour-slider .flex-direction-nav a.flex-next {
+    right: 20%;
+}
+
+@media (min-width: 728px) and (max-width: 1170px) {
+    #home-free-offer .media .pull-left,
+    #home-prompt-scroll .home-prompt-item .media .pull-left {
+        float: none !important;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    #home-free-offer .media .pull-left > .media-object,
+    #home-prompt-scroll .home-prompt-item .media .pull-left > .media-object {
+        width: 100%;
+    }
+}
+
+@media (min-width: 728px) and (max-width: 940px) {
+    .well-left .title h3 {
+        font-size: 15px;
+    }
+
+    .well-left .title h4 {
+        font-size: 12px;
+    }
+
+    #simple-search-offers legend {
+        font-size: 11px;
+    }
+
+    #simple-search-offers legend span,
+    #tour-booking-form .app-btn-pink {
+        font-size: 14px;
+    }
+
+    #simple-search-offers p.info,
+    #simple-search-offers .app-btn-pink,
+    #tour-booking-form ol > li > a.flexible-guaranty,
+    #tour-booking-form ol > li > p.title,
+    #tour-booking-form ol > li .form-group > label {
+        font-size: 12px;
+    }
+
+    #tour-booking-form .total-price > p > span {
+        font-size: 22px;
+    }
+
+    #tour-booking-form .input-group-addon:last-child {
+        padding-right: 7px;
+        padding-left: 7px;
+    }
+
+    #details .social-actions {
+        float: right;
+        margin-top: 0;
+        width: 31%;
+    }
+
+    #details .tripadvisor-content {
+        float: left;
+        width: 65%;
+    }
+
+    #details .social-actions-tour {
+        float: none;
+        width: auto;
+    }
+}
+
+@media (min-width: 940px) and (max-width: 1170px) {
+    #simple-search-offers p.info {
+        font-size: 12px;
+    }
+
+    #tour-booking-form ol > li > a.flexible-guaranty {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 728px) {
+    #home-excursions > h1 {
+        font-size: 30px;
+    }
+
+    #details .social-actions > a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    #details .social-actions > .social-likes {
+        float: left;
+    }
+}
+
+#search-best-prices-modal .modal-body h1 {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+#search-best-prices-modal .modal-body p {
+    margin-top: 20px;
+    font-size: 12px;
+}

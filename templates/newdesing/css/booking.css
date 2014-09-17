@@ -1,0 +1,881 @@
+#booking-info > .booking-info-step > h4.title {
+    font-weight: normal;
+    border-bottom: 2px solid #DDDDDD;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    font-size: 16px;
+}
+
+#booking-info > .active > h4.title {
+    font-family: "Gotham Rounded Medium";
+}
+
+#booking-info > .booking-info-step > .content {
+    margin-bottom: 15px;
+}
+
+#booking-info > .booking-info-step > .content p,
+#booking-info > .booking-info-step > .content label {
+    margin-bottom: 0;
+    /*line-height: 1.15;*/
+}
+
+#booking-info > .booking-info-step > .content .pay {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+#booking-info > .booking-info-step > .content .pay p {
+    float: left;
+}
+
+#booking-info > .booking-info-step > .content .pay p:first-child {
+    width: 55%;
+}
+
+#booking-info > .booking-info-step > .content .pay p:last-child {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: right;
+    font-family: "Gotham Rounded Medium";
+    width: 45%;
+}
+
+#booking-info > .booking-info-step > .content .pay p.block {
+    float: none !important;
+    width: 100% !important;
+}
+
+#booking-info > .booking-info-step > .content .pay p.prepay {
+    color: #C62583;
+    font-size: 22px;
+}
+
+#booking-info > .booking-info-step > .content .pay p > .saving {
+    color: #525252;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+}
+
+@media (min-width: 728px) and (max-width: 940px) {
+    #booking-info > .booking-info-step > .content .pay p {
+        float: none;
+        width: 100%;
+    }
+
+    #booking-info > .booking-info-step > .content .pay p:last-child {
+        text-align: left;
+    }
+}
+
+#booking-search-room {
+    margin-bottom: 1px;
+}
+
+#booking-search-room .head {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #DDDDDD;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#booking-search-room .head .search-title {
+    font-size: 28px;
+    margin-right: 3px;
+    font-weight: normal;
+}
+
+#booking-search-room .head-dates .toggle-dates {
+    padding: 5px 20px;
+    font-size: 16px;
+}
+
+#booking-search-room .head-dates .toggle-dates-menu {
+    margin-top: 2px;
+    padding: 5px;
+    top: auto;
+    max-width: 100%;
+    left: 25px;
+    right: auto;
+    text-align: left;
+}
+
+#booking-search-room .head-dates .toggle-dates-menu input[readonly] {
+    background: #FFFFFF;
+    cursor: auto;
+    margin-bottom: 3px;
+}
+
+#booking-search-room .head-dates .toggle-dates-menu label {
+    display: block;
+}
+
+#booking-search-room .head-dates .toggle-dates-menu p.info {
+    color: #9A9A9A;
+    clear: both;
+    font-size: inherit;
+}
+
+@media (min-width: 1170px) {
+    #booking-search-room .head-text {
+        float: left;
+        width: 70%;
+    }
+
+    #booking-search-room .head-dates {
+        float: left;
+        text-align: right;
+        padding-right: 5px;
+        width: 30%;
+    }
+
+    #booking-search-room .head-dates .toggle-dates {
+        font-size: 20px;
+    }
+
+    #booking-search-room .head-dates .toggle-dates-menu {
+        right: 30px;
+        left: auto;
+    }
+
+    #booking-search-room .head-dates .toggle-dates-menu div {
+        float: left;
+        width: 49%;
+    }
+
+    #booking-search-room .head-dates .toggle-dates-menu div:first-child {
+        margin-right: 1%;
+    }
+}
+
+#booking-content .jumbotron {
+    background: #FFFFFF;
+    border-radius: 0;
+    padding: 30px 10px 60px 10px;
+}
+
+#booking-content .jumbotron h1 {
+    font-size: 42px;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+#booking-content .jumbotron p {
+    font-size: 24px;
+}
+
+#booking-content .jumbotron p img {
+    max-width: 90px;
+}
+
+#booking-content .jumbotron .app-btn-blue {
+    font-size: 20px;
+    padding: 5px 20px;
+}
+
+#booking-content .jumbotron .head-dates {
+    float: none !important;
+    text-align: inherit !important;
+    padding-right: 0 !important;
+    width: auto !important;
+}
+
+#booking-content .jumbotron .head-dates .toggle-dates-menu {
+    right: 25px;
+    left: 25px;
+}
+
+@media (min-width: 1170px) {
+    #booking-search-room .jumbotron .head-dates .toggle-dates-menu {
+        right: 30%;
+        left: 28%;
+    }
+}
+
+@media (min-width: 940px) and (max-width: 1170px) {
+    #booking-search-room .jumbotron .head-dates .toggle-dates-menu {
+        right: 26%;
+        left: 23%;
+    }
+}
+
+@media (min-width: 728px) and (max-width: 940px) {
+    #booking-search-room .jumbotron .head-dates .toggle-dates-menu {
+        right: 17%;
+        left: 17%;
+    }
+}
+
+#booking-search-room .jumbotron .head-dates .toggle-dates-menu div {
+    float: left;
+    width: 49%;
+}
+
+#booking-search-room .jumbotron .head-dates .toggle-dates-menu div:first-child {
+    margin-right: 1%;
+}
+
+#booking-search-room .well-gray label,
+#booking-search-tour .well-gray label,
+#booking-search-room .well-gray .select2,
+#booking-search-tour .well-gray .select2 {
+    width: 49%;
+}
+
+
+#booking-search-room .well-gray .select2 .select2-choice,
+#booking-search-tour .well-gray .select2 .select2-choice {
+    height: inherit;
+}
+
+#booking-search-room .well-gray label,
+#booking-search-tour .well-gray label {
+    text-align: left;
+}
+
+#booking-search-room .well-gray .select2:first-child,
+#booking-search-tour .well-gray .select2:first-child {
+    margin-bottom: 5px;
+}
+
+@media (min-width: 940px) {
+    #booking-search-room .well-gray label,
+    #booking-search-tour .well-gray label,
+    #booking-search-room .well-gray .select2,
+    #booking-search-tour .well-gray .select2 {
+        width: 24%;
+    }
+
+    #booking-search-room .well-gray label,
+    #booking-search-tour .well-gray label {
+        text-align: center;
+    }
+
+    #booking-search-room .well-gray .select2:first-child,
+    #booking-search-tour .well-gray .select2:first-child {
+        margin-bottom: 0;
+    }
+}
+
+#search-room-result > .item,
+#search-tour-result > .item {
+    margin-bottom: 1px;
+    border-top: solid 1px #F5F4F4;
+    border-bottom: solid 1px #F5F4F4;
+    padding: 10px 0;
+}
+
+#search-room-result > .item h5.available {
+    font-family: "Gotham Rounded Medium";
+    color: #C62583;
+    margin: 0 0 5px 0;
+}
+
+#search-room-result > .item .media {
+    margin-top: 0;
+}
+
+#search-room-result > .item .media .media-heading {
+    font-size: 14px;
+    font-family: "Gotham Rounded Medium";
+    color: #232323;
+    margin-bottom: 10px;
+}
+
+#search-room-result > .item .media .media-heading > span {
+    font-family: "Gotham Rounded Light";
+    font-size: 12px;
+    color: #626262;
+    display: block;
+}
+
+#search-room-result > .item .media p.max-persons {
+    color: #626262;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#search-room-result > .item .media p.free-cancel,
+#search-tour-result > .item .booking-options .option p.free-cancel {
+    color: #4E7900;
+    background: url("../images/list-style-dove-green.png") no-repeat;
+    margin-bottom: 0;
+    background-position: left;
+    padding-left: 18px;
+}
+
+#search-room-result > .item .media p.max-persons > label {
+    margin-bottom: 0;
+}
+
+#search-room-result > .item .media .more-info {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    color: #126998;
+}
+
+#search-room-result > .item .media .more-info i {
+    font-size: 8px;
+}
+
+@media (min-width: 940px) and (max-width: 1170px) {
+    #search-room-result > .item .media .more-info {
+        bottom: auto;
+        position: inherit;
+    }
+}
+
+@media (max-width: 728px) {
+    #search-room-result > .item .media .pull-left {
+        margin: 0 0 5px 0;
+        float: none !important;
+    }
+
+    #search-room-result > .item .media .media-object {
+        width: 100%;
+    }
+
+    #search-room-result > .item .media .more-info {
+        bottom: auto;
+        position: inherit;
+    }
+}
+
+#search-room-result > .item .more-info-content {
+    padding: 20px 15px 0;
+}
+
+#search-room-result > .item .booking-options .option {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #DDDDDD;
+}
+
+#search-room-result > .item .booking-options .option:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+#search-room-result > .item .booking-options .option > h5 {
+    font-family: "Gotham Rounded Medium";
+    margin: 0 0 2px;
+}
+
+
+#search-room-result > .item .booking-options .option > label.current-price {
+    font-family: "Gotham Rounded Medium";
+    color: #C62583;
+    font-size: 26px;
+    margin-right: 7px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+#search-room-result > .item .booking-options .option > label.old-price {
+    text-decoration: line-through;
+    margin-bottom: 0;
+}
+
+#recommendation-hotels > .title > h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.booking-prompt .booking-prompt-item {
+    padding-bottom: 15px;
+    margin-top: 15px;
+    border-right: 1px dashed #D1D1D1;
+}
+
+@media (max-width: 728px) {
+    .booking-prompt .booking-prompt-item {
+        border-right: 0;
+        border-bottom: 1px dashed #D1D1D1;
+    }
+}
+
+@media (min-width: 728px) and (max-width: 1170px) {
+    .booking-prompt .booking-prompt-item:nth-child(2n) {
+        border-right: 0;
+    }
+}
+
+@media (min-width: 1170px) {
+    .booking-prompt .booking-prompt-item:nth-child(3n) {
+        border-right: 0;
+    }
+}
+
+/*#home-prompt-scroll .home-prompt-item:last-child {*/
+    /*border-bottom: none;*/
+/*}*/
+
+.booking-prompt .booking-prompt-item h3 {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.booking-prompt .booking-prompt-item .media-object {
+    border-radius: 4px;
+    width: 120px;
+    height: 65px;
+}
+
+.booking-prompt .booking-prompt-item .media .pull-left {
+    position: relative;
+    margin-right: 15px;
+}
+
+.booking-prompt .booking-prompt-item .rating {
+    background: #FFFFFF;
+    padding: 0 3px 5px 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+}
+
+.booking-prompt .booking-prompt-item .rating > i.full {
+    color: #167FB8;
+}
+
+.booking-prompt .booking-prompt-item .rating > i.empty {
+    color: #CFC8BC;
+}
+
+.booking-prompt .booking-prompt-item .media-heading {
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+@media (min-width: 728px) {
+    #booking-room-modal .modal-dialog {
+        width: 520px;
+    }
+}
+
+#booking-room-modal .modal-body {
+    overflow: hidden;
+}
+
+#booking-room-modal .modal-body p {
+    margin-bottom: 0;
+}
+
+#booking-room-modal .modal-body p label {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+#booking-room-modal .modal-body .clearfix {
+    margin-bottom: 20px;
+}
+
+#booking-room-modal .modal-body .app-widget-count,
+#booking-room-modal .modal-body .prices {
+    float: left;
+    width: 50%;
+}
+
+#booking-room-modal .modal-body .app-widget-count {
+    margin-top: 10px;
+}
+
+#booking-room-modal .modal-body .app-widget-count .title {
+    margin-bottom: 7px;
+}
+
+#booking-room-modal .modal-body .app-widget-count .title > sup {
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+#booking-room-modal .modal-body .app-widget-count .widget {
+    padding-left: 20px;
+}
+
+#booking-room-modal .modal-body .app-widget-count .widget i {
+    font-size: 18px;
+    color: #157EB8;
+    cursor: pointer;
+}
+
+#booking-room-modal .modal-body .app-widget-count .widget i.disabled {
+    color: #9A9A9A !important;
+}
+
+#booking-room-modal .modal-body .app-widget-count .widget i:hover,
+#booking-room-modal .modal-body .app-widget-count .widget i:focus {
+    color: #126998;
+}
+
+#booking-room-modal .modal-body .app-widget-count .widget span {
+    margin: 0 7px;
+    font-size: 20px;
+    min-width: 25px;
+    display: inline-block;
+}
+
+#booking-room-modal .modal-body .prices p label:first-child {
+    color: #C62583;
+    font-family: "Gotham Rounded Medium";
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-right: 7px;
+}
+
+#booking-room-modal .modal-body .prices p label:last-child {
+    margin-bottom: 0;
+    text-decoration: line-through;
+}
+
+#booking-room-modal .modal-body .prices button {
+    font-weight: 700;
+    margin-top: 5px;
+    padding: 7px 25px;
+}
+
+#booking-confirm-form .well-white .head {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+#booking-confirm-form .well-white .head > h1 {
+    margin: 0;
+    font-size: 28px;
+    overflow: hidden;
+}
+
+#booking-confirm-form .well-white .head > h1 > span {
+    margin: 0;
+    font-size: 14px;
+}
+
+#booking-confirm-form .well-white .head > h1 > .card-logos > img {
+    display: inline-block;
+    margin-left: 0;
+    max-height: 25px;
+    vertical-align: bottom;
+}
+
+#booking-confirm-form fieldset label.control-label {
+    font-size: 12px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+#booking-confirm-form fieldset label.control-label > .required {
+    font-size: 5px;
+    vertical-align: super;
+}
+
+#booking-confirm-form fieldset label.control-label > .tooltip {
+    font-weight: normal;
+}
+
+#booking-confirm-form fieldset .checkbox {
+    font-size: 12px;
+}
+
+#booking-confirm-form fieldset .checkbox label {
+    vertical-align: middle;
+}
+
+#booking-confirm-form .well-green-light {
+    margin-top: 3px;
+}
+
+#booking-confirm-form .well-green-light label {
+    display: block;
+    margin-bottom: 0;
+}
+
+#booking-confirm-form .well-green-light a {
+    color: #157EB8;
+    text-decoration: underline;
+}
+
+#booking-confirm-form .well-green-light a:hover,
+#booking-confirm-form .well-green-light a:focus {
+    text-decoration: none;
+}
+
+#booking-confirm-form .secure-data-info * {
+    font-size: 11px;
+}
+
+#booking-confirm-form input[type="submit"] {
+    margin: 10px 0 15px;
+    font-size: 14px;
+    padding: 5px 25px;
+    font-family: "Gotham Rounded Light";
+    font-weight: 600;
+}
+
+#booking-confirm-form .well-gray .required {
+    font-size: 5px !important;
+    vertical-align: super;
+}
+
+#booking-confirm-form .well-gray i.glyphicon-new-window {
+    font-size: 9px;
+}
+
+#booking-confirm-form .well-gray a {
+    color: #157EB8;
+}
+
+#booking-confirm-form input.card-number {
+    width: 70px;
+}
+
+#booking-confirm-form .caducity-date {
+    display: table-cell !important;
+    padding-right: 10px;
+    width: 100px;
+}
+
+#booking-confirm-form .caducity-date:last-child {
+    width: 85px;
+}
+
+.booking-tour-content .head {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DDDDDD;
+    overflow: hidden;
+}
+
+.booking-tour-content .head > h1 {
+    margin: 0;
+    font-size: 28px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.booking-tour-content .head > h1 > span {
+    margin: 0;
+    font-size: 20px;
+    color: #C62583;
+    font-family: "Gotham Rounded Medium";
+}
+
+#booking-tour-form input[type="submit"] {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    vertical-align: sub;
+}
+
+#booking-search-tour {
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+
+#search-tour-result > .item h5 {
+    font-family: "Gotham Rounded Medium";
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+
+#search-tour-result > .item .media {
+    margin-top: 0;
+}
+
+#search-tour-result > .item .media .media-object {
+    width: 100%;
+    border-radius: 4px;
+    max-height: 300px;
+}
+
+@media (min-width: 728px) {
+    #search-tour-result > .item .media .media-object {
+        width: 165px;
+        max-height: 110px;
+    }
+}
+
+@media (max-width: 728px) {
+    #search-tour-result > .item .media .pull-left {
+        float: none !important;
+    }
+}
+
+#search-tour-result > .item .media .media-body a {
+    color: #157EB8;
+}
+
+#search-tour-result > .item .media .media-body .description {
+    margin-bottom: 3px;
+}
+
+@media (min-width: 1170px) {
+    #search-tour-result > .item .media .media-body .description {
+        margin-bottom: 15px;
+    }
+}
+
+#search-tour-result > .item .media .media-body .guide-languages {
+    display: table-cell;
+    width: auto;
+    border-bottom: 1px solid #E5E5E5;
+    border-top: 1px solid #E5E5E5;
+    padding-right: 10px;
+}
+
+#search-tour-result > .item .media .media-body .guide-languages > label {
+    display: inline-block;
+    background: #F5F5F5;
+    font-weight: 500;
+    margin: 0;
+    padding: 3px 15px 5px 15px;
+    width: 110px;
+    font-size: 12px;
+}
+
+#search-tour-result > .item .media .media-body .guide-languages > label i {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+#search-tour-result > .item .media .media-body .guide-languages .flags {
+    display: inline-block;
+    margin: 0;
+}
+
+#search-tour-result > .item .media .media-body .guide-languages .flags > li {
+    padding: 0;
+    margin-left: 5px;
+}
+
+#search-tour-result > .item .media .more-info {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    color: #126998;
+}
+
+#search-tour-result > .item .media .more-info i {
+    font-size: 8px;
+}
+
+@media (max-width: 940px) {
+    #search-tour-result > .item .media .more-info {
+        bottom: auto;
+        position: inherit;
+    }
+}
+
+#search-tour-result > .item .booking-options .option > h5 {
+    font-family: "Gotham Rounded Medium";
+    margin: 20px 0 2px;
+}
+
+
+#search-tour-result > .item .booking-options .option > label.current-price {
+    font-family: "Gotham Rounded Medium";
+    color: #C62583;
+    font-size: 26px;
+    margin-right: 7px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+#search-tour-result > .item .booking-options .option > label.old-price {
+    text-decoration: line-through;
+    margin-bottom: 0;
+}
+
+#search-tour-result > .item .booking-options .option > button {
+    padding: 5px 15px;
+    margin-top: 5px;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+#search-tour-result > .item .booking-options .option > p.free-cancel {
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+#search-tour-result > .item .more-info-content .well-white .btn {
+    margin-top: 7px;
+    font-size: 16px;
+    padding: 5px 15px;
+}
+
+.booking-add-tour-form div.datepicker {
+    background: none !important;
+}
+
+.booking-add-tour-form div.form-group {
+    display: block;
+    margin-top: 15px;
+}
+
+.booking-add-tour-form h4 {
+    font-weight: normal;
+    font-size: 18px;
+    text-align: left;
+}
+
+.booking-add-tour-form .input-group-btn > button {
+    padding-top: 8px !important;
+    padding-bottom: 7px !important;
+}
+
+.booking-add-tour-form input[type="submit"] {
+    font-size: 16px;
+    padding: 7px 35px;
+}
+
+.booking-add-tour-form .control-label {
+    font-weight: 700 !important;
+}
+
+.booking-add-tour-form .discount-validate {
+    font-size: 20px;
+}
+
+.booking-add-tour-form .discount-validate > i {
+    font-size: 14px;
+    color: #157EB8;
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.booking-add-tour-form label.sub-price {
+    color: #C62583;
+    font-family: "Gotham Rounded Medium";
+    font-size: 20px;
+    font-weight: 500;
+    width: 90px;
+}
+
+.booking-add-tour-form label.total-price {
+    color: #C62583;
+    font-family: "Gotham Rounded Medium";
+    font-size: 26px;
+    font-weight: 500;
+    min-width: 100px;
+}
+
+.booking-add-tour-form .form-group .select2 {
+    text-align: center;
+    width: 85px;
+    margin-left: 20px;
+}
+
+@media (min-width: 940px) {
+    .booking-add-tour-form .label-hours {
+        width: 110px;
+    }
+}

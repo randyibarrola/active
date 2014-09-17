@@ -47,6 +47,6 @@ $republickey = "6LcY-uYSAAAAACBIaBBmfEdbYqJxCkDdtOONaeIE";
 $reprivatekey = "6LcY-uYSAAAAABRFFQn56OhwJwhDVGciLO6W_KcQ";
 
 //url de vikahotel
-$vikahotel_url = 'https://www.vikahotel.com';
+$vikahotel_url = 'https://madridactive.local';
 
 ?>
