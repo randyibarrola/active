@@ -44,8 +44,8 @@
 
         {*Este Bloque se reemplaza completo en las páginas independiente por el bloque style_level y style_plugins_level*}
         {block "style"}
-          <link href="{$template_url}/css/flexslider.css" rel="stylesheet">
-          <link href="{$template_url}/css/datepicker.css" rel="stylesheet">
+          {*<link href="{$template_url}/css/flexslider.css" rel="stylesheet">*}
+          {*<link href="{$template_url}/css/datepicker.css" rel="stylesheet">*}
           {*<link href="{$template_url}/css/style.css" rel="stylesheet">*}
           <link rel="stylesheet" type="text/css" href="{$template_url}/css/validationEngine.jquery.css" />
           <link rel="stylesheet" type="text/css" href="{$template_url}/css/toastr.css" />
@@ -66,9 +66,11 @@
         {include file="header.tpl"}
         <!-- End header -->
 
-        <div class="theme-showcase" id="main-content-theme">
+        <!-- Begin content -->
+        <div class="container" id="main-content-theme">
           {block "main_content"}{/block}
         </div>
+        <!-- End content -->
 
         <!-- Begin footer -->
         {include file="footer.tpl"}
@@ -202,11 +204,11 @@
         {*Este bloque se reemplaza completo en cada página individual en los bleques script_plugins_level y script_level*}
         {block "script"}
             <script src="{$template_url}/js/holder.js"></script>
-            <script src="{$template_url}/js/bootstrap-datepicker.js"></script>
-            <script type="text/javascript" src="{$template_url}/js/jquery.flexslider-min.js"></script>
+            {*<script src="{$template_url}/js/bootstrap-datepicker.js"></script>*}
+            {*<script type="text/javascript" src="{$template_url}/js/jquery.flexslider-min.js"></script>*}
             <script type="text/javascript" src="{$template_url}/js/jquery.raty.min.js"></script>
             <script src="{$template_url}/js/main.js"></script>
-            <script src="{$template_url}/js/bootstrap-datepicker.{$lang}.js"></script>
+            {*<script src="{$template_url}/js/bootstrap-datepicker.{$lang}.js"></script>*}
             <script src="{$template_url}/js/jquery.validationEngine-es.js"></script>
             <script src="{$template_url}/js/jquery.validationEngine.js"></script>
             <script src="{$template_url}/js/toastr.js"></script>

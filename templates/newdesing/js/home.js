@@ -5,7 +5,10 @@ var Home = function() {
             App.bookingDateWidget(form);
 
             form.bind('app.event.form.submit.before', function(e, data) {
-                $('#search-best-prices-modal').modal('show');
+                $('#search-best-prices-modal').modal({
+                    backdrop: "static",
+                    keyboard: false
+                });
             });
 
             form.submit(function() {

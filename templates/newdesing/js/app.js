@@ -199,7 +199,7 @@ var App = function () {
     };
 
     return {
-        dateFormat: "dd/mm/yyyy",
+        dateFormat: "dd-mm-yyyy",
         locale: 'es',
         currency: '€',
         baseUrl: 'http://localhost',
