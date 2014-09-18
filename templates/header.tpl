@@ -76,9 +76,9 @@
                 <img src="{$template_url}/newdesing/images/logo-mini.png" />
                 <h1>{if $hotel->webOficial}{$hotel->nombre}{else}{$hotel->distribuidor->nombreComercial}{/if}</h1>
                 <div class="rating">
-                    {*{for i = 1; i <= 5; i++}*}
-                        {*<i class="glyphicon glyphicon-star {if $hotel->calidad >= i}full{else}empty{/if}"></i>*}
-                    {*{/for}*}
+                    {for $i = 1 to 5 }
+                        <i class="glyphicon glyphicon-star {if $hotel->calidad >= $i}full{else}empty{/if}"></i>
+                    {/for}
                 </div>
                 <span>Madrid</span>
             </div>
