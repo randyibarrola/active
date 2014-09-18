@@ -735,3 +735,26 @@ form#contact-form input[type="submit"] {
         margin-top: 10px;
     }
 }
+
+/*** Cookie bar ***/
+#app-accept-cookies {
+    display: none;
+    color: #FFFFFF;
+    border-top: 1px solid #303030;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: normal;
+    background: #157EB8;
+    position: fixed;
+    bottom: 0;
+    z-index: 22;
+    width: 100%;
+    font-size: 13px;
+}
+
+#app-accept-cookies a {
+    color: #FFFFFF;
+    padding: 2px 0 2px 10px;
+    font-size: 12px;
+    font-family: "Gotham Rounded Medium";
+}

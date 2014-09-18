@@ -155,10 +155,54 @@ var App = function () {
         });
     };
 
+    var initModals = function() {
+        $('#cookies_modal, #privacidad_modal').each(function() {
+            var modal = $(this);
+            var modalBody = modal.find('.modal-body').eq(0);
+            modal.on('show.bs.modal', function (e) {
+                if(modalBody.children().length == 0) {
+                    modalBody.append(App.imgLoading);
+                    var idTarget = '#' + modal.attr('id');
+                    var relatedTarget = $("a[data-target=" + idTarget + "]").eq(0);
+                    $.ajax({
+                        url: App.baseUrl + '/ajax-popup',
+                        data: {id: relatedTarget.attr('data-content')},
+                        type: 'get',
+                        dataType: 'json',
+                        success: function(response) {
+                            modalBody.html(response.data);
+                        }
+                    });
+                }
+            });
+        });
+    };
+
+    var handleAppCookies = function() {
+        var vikahotelCookie = function() {
+            $('#app-accept-cookies').hide();
+            App.setCookie('accept-vikahotel-cookie', 1, 365);
+        };
+
+        if(!App.checkCookie('accept-vikahotel-cookie', 1)) {
+            $('#app-accept-cookies').slideDown('fast');
+            $('#app-accept-cookies-btn').click(function(e){
+                e.preventDefault();
+                vikahotelCookie();
+                return false;
+            });
+
+            $('#main-content-theme *').click(function(e){
+                vikahotelCookie();
+            })
+        }
+    };
+
     return {
         dateFormat: "dd/mm/yyyy",
         locale: 'es',
         currency: '€',
+        baseUrl: 'http://localhost',
 
         //main function to initiate template pages
         init: function () {
@@ -168,6 +212,8 @@ var App = function () {
             initWidgetCount();
             handleTooltips();
             initGlobalSearchForm();
+            initModals();
+            handleAppCookies();
 
             if(jQuery().datepicker) {
                 jQuery().datepicker.defaults.format = App.dateFormat;
@@ -377,6 +423,30 @@ var App = function () {
             } catch (e) {
                 return false;
             }
+        },
+
+        setCookie: function(name, value, expire) {
+            var date = new Date();
+            date.setTime(date.getTime()+(expire * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + date.toGMTString();
+            document.cookie = name + "=" + value + "; " + expires;
+        },
+
+        getCookie: function(name) {
+            name = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++)
+            {
+                var cookie = $.trim(ca[i]);
+                if (cookie.indexOf(name) == 0)
+                    return cookie.substring(name.length, cookie.length);
+            }
+            return "";
+        },
+
+        checkCookie: function(name, value) {
+            var c = App.getCookie(name);
+            return c == value;
         }
     };
 

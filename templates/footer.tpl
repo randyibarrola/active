@@ -101,10 +101,10 @@
                             <a href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">{#contacto#} & {#mapa#}</a>
                         </li>
                         <li>
-                            <a href="#">{#politica_de_cookies#}</a>
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#cookies_modal" data-content="cookies">{#politica_de_cookies#}</a>
                         </li>
                         <li>
-                            <a href="#">{#politica_de_privacidad#}</a>
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#privacidad_modal" data-content="privacidad">{#politica_de_privacidad#}</a>
                         </li>
                         <li>
                             <a href="#" id="scroll-top" class="dropup"><i class="caret"></i> {#top#}</a>

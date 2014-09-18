@@ -23,7 +23,7 @@ $(document).ready(function(){
   
   $(document).scroll(verificarServicioMenu);
   
-  cookiesbar();
+//  cookiesbar();
 
 
 });
@@ -89,7 +89,7 @@ function getCookie(cname)
     for(var i=0; i<ca.length; i++)
     {
         var c = $.trim(ca[i]);
-        if (c.indexOf(name)==0) 
+        if (c.indexOf(name)==0)
             return c.substring(name.length,c.length);
     }
     return "";

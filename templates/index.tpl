@@ -62,14 +62,6 @@
     </head>
 
     <body class="{if $hotel->logo && false}official{/if}" {if $hotel && $hotel->backgroundColor}style="background-color: #{$hotel->backgroundColor};"{/if}>
-        <div id="blocker" style="display: none;">
-            <div>{#buscando_disponibilidad#}...</div>
-        </div>
-        {*<div class="navbar-collapse" id="accept-cookies">*}
-            {*<div>{#aceptar_cookies#} <a href="" id="accept-cookies-btn">{#Aceptar#}</a>*}
-            {*<a href="" id="readCookiesBtn">{#leer_politica_de_cookies#}</a></div>*}
-        {*</div>*}
-
         <!-- Begin header -->
         {include file="header.tpl"}
         <!-- End header -->
@@ -85,7 +77,38 @@
         <!-- Begin extra content -->
         {block "extra_content"}
             <img id="ajax-loading" src="{$template_url}/newdesing/images/ajax-loading.gif" style="display: none;" class="" />
+
+            <div id="blocker" style="display: none;">
+                <div>{#buscando_disponibilidad#}...</div>
+            </div>
+
+            <!-- Begin Cookie Bar -->
+            <div id="app-accept-cookies">
+                <div class="text-center">
+                    {#aceptar_cookies#}
+                    <a href="javascript:void(0);" id="app-accept-cookies-btn" class="app-upper-text">{#Aceptar#}</a>
+                    <a href="javascript:void(0);" class="app-upper-text" data-toggle="modal" data-target="#cookies_modal" data-content="cookies">{#leer_politica_de_cookies#}</a>
+                </div>
+            </div>
+            <!-- End Cookie Bar -->
+
             <!-- Begin modals -->
+            <div class="modal fade" id="detalle_modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">{#detalles_del_servicio#}</h4>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">{#cerrar#}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="modal fade" id="cookies_modal">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -103,16 +126,17 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="detalle_modal">
+            <div class="modal fade" id="privacidad_modal">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">{#detalles_del_servicio#}</h4>
+                            <h4 class="modal-title">{#politica_de_privacidad#}</h4>
                         </div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
+                            <a href="{$base_url}/ajax-popup/id:privacidad/print:1" class="btn btn-success" target="_blank">{#imprimir#}</a>
                             <button type="button" class="btn btn-default" data-dismiss="modal">{#cerrar#}</button>
                         </div>
                     </div>
@@ -160,9 +184,10 @@
             <script src="{$template_url}/newdesing/js/form.js" type="text/javascript"></script>
             <script type="text/javascript">
                 $(document).ready(function() {
-                    App.init();
                     App.locale = "{$lang}";
                     App.currency = "{$hotel->moneda->simbolo}";
+                    App.baseUrl = "{$base_url}";
+                    App.init();
                     Form.init();
                 });
             </script>

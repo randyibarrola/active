@@ -186,7 +186,7 @@ $(document).ready(function() {
             }
         });
     })
-    
+
     $('#cookies_link').click(function(e){
         e.preventDefault();
         $('#blocker').fadeIn().find('div').html('Loading...');
