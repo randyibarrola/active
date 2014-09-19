@@ -72,40 +72,7 @@
                 </ul>
             </div>
             {if $hotel->mostrarHotelesRelacionados && $hotel->relacionados && count($hotel->relacionados) && !$movile}
-            <div class="well-white well-divider well-left">
-                <div class="title">
-                    <h3>Otros hoteles recomendados</h3>
-                </div>
-                <div id="home-prompt-scroll" class="scroll-content">
-                    {foreach from=$hotel->relacionados item=r name=r}
-                        {if $smarty.foreach.r.iteration <= 10}
-                        <div class="home-prompt-item">
-                            <h3>{$r->nombre}</h3>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img class="media-object" src="tmp/hotel-recomendado.png" alt="">
-                                    <div class="rating">
-                                        <i class="glyphicon glyphicon-star full"></i>
-                                        <i class="glyphicon glyphicon-star full"></i>
-                                        <i class="glyphicon glyphicon-star full"></i>
-                                        <i class="glyphicon glyphicon-star empty"></i>
-                                        <i class="glyphicon glyphicon-star empty"></i>
-                                    </div>
-                                </div>
-                                <div class="media-body">
-                                    {if $r->precioMinimo->precioMinimo}
-                                        <h4 class="media-heading">{#Desde#} {$currency} {$r->precioMinimo->precioMinimo}</h4>
-                                        <a href="{if strpos($r->campania->subdominio, 'http') eq FALSE}http://{/if}{$r->campania->subdominio}{if $r->precioMinimo->inicio && strtotime($r->precioMinimo->inicio) > time()}/{$lang}/{#disponibilidad_url#}{$end_url}?inicio={$r->precioMinimo->inicio|date_format:"%d-%m-%Y"}&salida={$r->precioMinimo->fin|date_format:"%d-%m-%Y"}{/if}" class="btn app-btn-blue">Ver hotel</a>
-                                    {else}
-                                        <a href="{if strpos($r->campania->subdominio, 'http') eq FALSE}http://{/if}{$r->campania->subdominio}" class="btn app-btn-blue">Ver hotel</a>
-                                    {/if}
-                                </div>
-                            </div>
-                        </div>
-                        {/if}
-                    {/foreach}
-                </div>
-            </div>
+                {include file="hotel_prompt.tpl"}
             {/if}
         </div>
         <div class="col-md-9 col-sm-9 column-xs-divider">
