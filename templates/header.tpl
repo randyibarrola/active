@@ -80,7 +80,7 @@
                         <i class="glyphicon glyphicon-star {if $hotel->calidad >= $i}full{else}empty{/if}"></i>
                     {/for}
                 </div>
-                <span>Madrid</span>
+                <span>{$hotel->destino->nombre}</span>
             </div>
             <address class="pull-right">
                 <span>{#reserva_online_text#}:</span><br/>
