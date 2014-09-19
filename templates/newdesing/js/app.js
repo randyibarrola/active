@@ -202,7 +202,16 @@ var App = function () {
         dateFormat: "dd-mm-yyyy",
         locale: 'es',
         currency: '€',
+        userCurrency: '€',
+        changeTax: {},
         baseUrl: 'http://localhost',
+        endUrl: '',
+        configBooking: {
+            minSojourn: 1,
+            prevSelling: 0,
+            dateStopSelling: [],
+            agreementEndDate: false
+        },
 
         //main function to initiate template pages
         init: function () {
@@ -259,6 +268,16 @@ var App = function () {
             return format;
         },
 
+        parseDate: function(str) {
+            var format = App.dateFormat;
+
+            var rangeDay = [format.search(/dd/g), format.search(/dd/g) + 2];
+            var rangeMonth = [format.search(/mm/g), format.search(/mm/g) + 2];
+            var rangeYear = [format.search(/yyyy/g), format.search(/yyyy/g) + 4];
+
+            return new Date(parseInt(str.substring(rangeYear[0], rangeYear[1])), parseInt(str.substring(rangeMonth[0], rangeMonth[1])) - 1, parseInt(str.substring(rangeDay[0], rangeDay[1])), 0, 0, 0, 0);
+        },
+
         imgLoading: "",
 
         contentAjaxLoad: function(selector) {
@@ -276,19 +295,24 @@ var App = function () {
             var spanDateDiff = $(form).find('.app-booking-date-diff').eq(0);
             var nowTemp = new Date();
             var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
+            var start_check_in = widgetCheckin.val().trim() != ''
+                ? App.parseDate(widgetCheckin.val())
+                : new Date(new Date(now).setDate(now.getDate() + App.configBooking.prevSelling));
+
             var checkin = widgetCheckin.datepicker({
-                startDate: "today",
+                startDate: start_check_in,
                 autoclose: true,
                 onRender: function(date) {
                     return date.valueOf() < now.valueOf() ? 'disabled' : '';
                 },
                 beforeShowDay: function(date) {
                     var formated_day = App.formatDate(date);
-                    return $.inArray(formated_day, []) > 0 ? 'disabled' : '';
+                    return $.inArray(formated_day, App.configBooking.dateStopSelling) > 0 ? 'disabled' : '';
                 }
             }).on('changeDate', function(ev) {
                     var newDate = new Date(ev.date);
-                    newDate.setDate(newDate.getDate() + 1);
+                    newDate.setDate(newDate.getDate() + App.configBooking.minSojourn);
                     if (newDate.valueOf() > checkout.getDate().valueOf()) {
                         checkout.update(newDate);
                     }
@@ -300,22 +324,23 @@ var App = function () {
                 }).data('datepicker');
 
 
-            var diff_days_checks = 1;
-            var start_check_out = new Date(new Date(now).setDate(now.getDate() + diff_days_checks));
+            var start_check_out = widgetCheckout.val().trim() != ''
+                ? App.parseDate(widgetCheckout.val())
+                : new Date(new Date(start_check_in).setDate(new Date(start_check_in).getDate() + App.configBooking.minSojourn));
 
             var checkout = widgetCheckout.datepicker({
                 startDate: start_check_out,
                 autoclose: true,
                 onRender: function(date) {
                     var newDate = new Date(checkin.getDate());
-                    newDate.setDate(newDate.getDate() + 1);
+                    newDate.setDate(newDate.getDate() + App.configBooking.minSojourn);
                     return date.valueOf() < newDate.valueOf() ? 'disabled' : '';
                 },
                 beforeShowDay: function(date) {
                     var checkinDate = new Date(checkin.getDate());
-                    checkinDate.setDate(checkinDate.getDate() + 1);
+                    checkinDate.setDate(checkinDate.getDate() + App.configBooking.minSojourn);
                     var formated_day = App.formatDate(date);
-                    return date.valueOf() < checkinDate.valueOf() || $.inArray(formated_day, []) > 0 ? 'disabled' : '';
+                    return date.valueOf() < checkinDate.valueOf() || $.inArray(formated_day, App.configBooking.dateStopSelling) > 0 ? 'disabled' : '';
                 }
             }).on('changeDate', function(ev) {
                     updateDateDiff();
@@ -325,9 +350,13 @@ var App = function () {
                 spanDateDiff.text(parseInt((checkout.getDate().getTime() - checkin.getDate().getTime()) / 86400000));
             };
 
-            if(widgetCheckin.val() == '') {
-                checkin.setDate(now);
-                checkout.setDate(start_check_out);
+            checkin.setDate(start_check_in);
+            checkout.setDate(start_check_out);
+
+            if(App.configBooking.agreementEndDate) {
+                var endDateCheckin = new Date(App.parseDate(App.configBooking.agreementEndDate).getTime());
+                checkin.setEndDate(endDateCheckin);
+                checkout.setEndDate(new Date(endDateCheckin.getTime() + (parseInt(App.configBooking.minSojourn) * 86400000)));
             }
 
             updateDateDiff();

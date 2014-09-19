@@ -1,15 +1,15 @@
 $(document).ready(function(){
-	$('.flexslider').flexslider({
-    animation: "fade",
-    controlNav: "thumbnails",
-    slideshow: false,
-    after: function(slider){
-      $('.outlet_price_background, .outlet_price_container').fadeOut();  
-    }
-  });
-  window.setTimeout(function (argument) {
-      $('.outlet_price_background, .outlet_price_container').fadeIn();
-  },500);
+//	$('.flexslider').flexslider({
+//    animation: "fade",
+//    controlNav: "thumbnails",
+//    slideshow: false,
+//    after: function(slider){
+//      $('.outlet_price_background, .outlet_price_container').fadeOut();
+//    }
+//  });
+//  window.setTimeout(function (argument) {
+//      $('.outlet_price_background, .outlet_price_container').fadeIn();
+//  },500);
   
   $('#servicios_scroll').click(function(){
     $("html, body").animate({ scrollTop: $('#'+SERVICIO_ID).offset().top-57}, 400);
