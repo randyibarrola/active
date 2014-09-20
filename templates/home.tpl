@@ -78,49 +78,54 @@
         <div class="col-md-9 col-sm-9 column-xs-divider">
             <section id="home-slider-hotel" class="slider">
                 <div id="home-slider-hotel-slider" class="flexslider flexslider-scn-slider" data-sync="#home-slider-hotel-carousel">
-                    <div class="slider-info">
-                        <div class="info">
-                            <p>Disponible desde:</p>
-                            <p><span>75</span>&euro;</p>
+                    {if $hotel->precioMinimo && !$movile}
+                        <div class="slider-info">
+                            <div class="info">
+                                <p>{#disponible_desde#}</p>
+                                <p><span>{$hotel->precioMinimo->precioMinimo|number_format:2:',':' '}</span>{$currency}</p>
+                            </div>
+                            <div class="background"></div>
                         </div>
-                        <div class="background"></div>
-                    </div>
+                    {/if}
                     <ul class="slides">
-                        <li>
-                            <img src="tmp/hotel.jpg" />
-                        </li>
-                        <li>
-                            <img src="tmp/slide1.jpg" />
-                        </li>
-                        <li>
-                            <img src="tmp/slide2.jpg" />
-                        </li>
-                        <li>
-                            <img src="tmp/slide3.jpg" />
-                        </li>
-                        <li>
-                            <img src="tmp/slide4.jpg" />
-                        </li>
+                        {if $images} 
+                            {for $i=0 to count($images) - 1}
+                            <li>
+                                <img src="{$images[$i]->ruta}" alt="Photo {$i}" title="{$images[0]->nombre}">
+                            </li> 
+                            {/for}
+                        {else}
+                            <li>
+                                <img src="{$template_url}/imagenes/slider1.jpg" alt="Photo 1">
+                            </li>
+                        {/if} 
+                        {if $imagesDestino}                         
+                            {for $i=0 to count($imagesDestino) - 1}
+                            <li>
+                                <img src="{$imagesDestino[count($imagesDestino) - 1 - $i]->ruta}" alt="Photo destino {$i}">
+                            </li>
+                            {/for} 
+                        {/if}                        
                     </ul>
                 </div>
                 <div id="home-slider-hotel-carousel" class="flexslider flexslider-scn-carousel hidden-xs" data-asnavfor="#home-slider-hotel-slider" data-itemwidth="80">
                     <ul class="slides">
+                    {if $images}
+                        {for $i=0 to count($images) - 1}
+                            <li>
+                                <img src="{$images[$i]->ruta}" alt="Photo {$i}" title="{$images[$i]->nombre}">
+                            </li>
+                        {/for}
+                    {/if} 
+                    {if $imagesDestino}                         
+                        {for $i=0 to count($imagesDestino) - 1}
                         <li>
-                            <img src="tmp/hotel.jpg" />
+                            <img src="{$imagesDestino[count($imagesDestino) - 1 - $i]->ruta}" alt="Photo destino {$i}">
                         </li>
-                        <li>
-                            <img src="tmp/slide1.jpg" />
-                        </li>
-                        <li>
-                            <img src="tmp/slide2.jpg" />
-                        </li>
-                        <li>
-                            <img src="tmp/slide3.jpg" />
-                        </li>
-                        <li>
-                            <img src="tmp/slide4.jpg" />
-                        </li>
+                        {/for} 
+                    {/if}
                     </ul>
+                    
                 </div>
             </section>
             <!-- Begin tabs -->

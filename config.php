@@ -41,7 +41,7 @@ $init_prefix = '/selector';
 $init_url = "http://" . $_SERVER['SERVER_NAME'].$site_prefix.$init_prefix;
 
 
-$service_url = "http://localhost/vikatickets";
+$service_url = "http://madridactive.local";
 
 $republickey = "6LcY-uYSAAAAACBIaBBmfEdbYqJxCkDdtOONaeIE";
 $reprivatekey = "6LcY-uYSAAAAABRFFQn56OhwJwhDVGciLO6W_KcQ";
