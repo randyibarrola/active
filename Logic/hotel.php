@@ -998,8 +998,8 @@ function getHotelById($id, $convertirMonedas = true){
                             $precio_moneda_seleccionada = convertFromMonedaToMoneda($precio_minimo_val, $hotel->moneda->codigo, $money);
                             $precioMinimo[0]->precioMinimo = $precio_moneda_seleccionada;
                             $h->precioMinimo = $precioMinimo[0];
-                        }
-                            
+                            $h->logo = DAOFactory::getArchivoDAO()->load($h->logoId);
+                        }                            
                         
                         $h->campania = DAOFactory::getCampaniaDAO()->load($h->campaniaId);
                         $relacionados[] = $h;

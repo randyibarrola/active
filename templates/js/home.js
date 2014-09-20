@@ -21,10 +21,13 @@ $(document).ready(function(){
     return false;
   });
   
+  /*Quitando lo del scroll de los servicios, no aplica
   $(document).scroll(verificarServicioMenu);
+  */
   
 //  cookiesbar();
 
+    initialize();
 
 });
 
@@ -100,3 +103,8 @@ function checkCookie()
     var c=getCookie("accept-vikahotel-cookie");
     return c == 1;
 }
+
+
+
+
+

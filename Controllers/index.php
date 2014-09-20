@@ -33,6 +33,10 @@ if($hotel) {
     
     $condiciones = getAllHotelCondiciones($hotel->id);
     $smarty->assign('condiciones',$condiciones);
+    
+    $faq = getFaq(1);
+    $contenido = json_decode($faq->contenido);
+    $smarty->assign("contenido", $contenido->$lang_set);
 
     if($hotel->config->id) {
         $productos = getProductosFullByConfiguracionId($hotel->config->id, 5, true);
@@ -62,7 +66,6 @@ if($hotel) {
             $smarty->assign('excursiones', $destacados);
         }*/
     }
-
 
 
 $smarty->assign('active_menu', 'home');

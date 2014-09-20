@@ -9,7 +9,7 @@
                     <h3>{$r->nombre}</h3>
                     <div class="media">
                         <div class="pull-left">
-                            <img class="media-object" src="tmp/hotel-recomendado.png" alt="">
+                            <img class="media-object" src="{$r->logo->ruta}" alt="">
                             <div class="rating">
                                 {for $i = 1 to 5 }
                                     <i class="glyphicon glyphicon-star {if $r->calidad >= $i}full{else}empty{/if}"></i>

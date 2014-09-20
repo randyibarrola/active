@@ -601,3 +601,8 @@
     margin-top: 20px;
     font-size: 12px;
 }
+
+#contact-map {
+    height: 350px !important;
+    width: 100%;
+}
