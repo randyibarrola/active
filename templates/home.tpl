@@ -4,6 +4,7 @@
     <link href="{$template_url}/assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" media="screen">
     <link href="{$template_url}/assets/plugins/social/social-likes_classic.css" rel="stylesheet" media="screen">
     <link href="{$template_url}/assets/plugins/jquery-flexslider/flexslider.css" rel="stylesheet" media="screen">
+    <link href="{$template_url}/assets/plugins/select2/select2_metro.css" rel="stylesheet" media="screen">
 {/block}
 
 {block "style_level" append}
@@ -16,28 +17,29 @@
     <script src="{$template_url}/assets/plugins/jquery-nicescroll/jquery.nicescroll.min.js"></script>
     <script src="{$template_url}/assets/plugins/social/social-likes.min.js"></script>
     <script src="{$template_url}/assets/plugins/jquery-flexslider/jquery.flexslider-min.js"></script>
+    <script src="{$template_url}/assets/plugins/select2/select2.min.js"></script>
+    <script src="{$template_url}/assets/plugins/select2/select2_locale_{$lang}.js"></script>
 {/block}
 
 {block "script_level" append}
     <script src="{$template_url}/newdesing/js/home.js" type="text/javascript"></script>
+    <script src="{$template_url}/newdesing/js/contact.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             Home.init();
         });
     </script>
-{/block}
-
-{*Este se debe eliminar*}
-{block name="script" append}
-    <script src="{$template_url}/js/home.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script type="text/javascript">
-      var SERVICIO_ID = '{#servicios#}';
+        $(document).ready(function() {
+            Home.handleMap();
+        });
     </script>
+    {*<script type="text/javascript" src="https://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>*}
 {/block}
 
-{*Este se debe eliminar*}
-{block name="style" append}
-    <link rel="stylesheet" href="{$template_url}/css/home.css">
+{block "lasted_load" append}
+    <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=273&amp;locationId=288566&amp;lang=es&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;langversion=2"></script>
 {/block}
 
 {block name="main_content" append}
@@ -127,55 +129,94 @@
             <ul class="nav nav-tabs app-tabs">
                 <li class="active">
                     <a href="#details" data-toggle="tab">
-                        <i class="glyphicon glyphicon-info-sign tooltips" data-original-title="Detalles"></i> <span class="hidden-xs">Detalles</span>
+                        <i class="glyphicon glyphicon-info-sign tooltips" data-original-title="{#detalles#|capitalize}"></i> <span class="hidden-xs">{#detalles#|capitalize}</span>
                     </a>
                 </li>
                 <li>
                     <a href="#conditions" data-toggle="tab">
-                        <i class="glyphicon glyphicon-file tooltips" data-original-title="Condiciones"></i> <span class="hidden-xs">Condiciones</span>
+                        <i class="glyphicon glyphicon-file tooltips" data-original-title="{#condiciones#|capitalize}"></i> <span class="hidden-xs">{#condiciones#|capitalize}</span>
                     </a>
                 </li>
                 <li>
                     <a href="#map" data-toggle="tab">
-                        <i class="glyphicon glyphicon-map-marker tooltips" data-original-title="Localización"></i> <span class="hidden-xs">Localización</span>
+                        <i class="glyphicon glyphicon-map-marker tooltips" data-original-title="{#localizacion#|capitalize}"></i> <span class="hidden-xs">{#localizacion#|capitalize}</span>
                     </a>
                 </li>
                 <li>
                     <a href="#opinions" data-toggle="tab">
-                        <i class="glyphicon glyphicon-star tooltips" data-original-title="Opiniones"></i> <span class="hidden-xs">Opiniones</span>
+                        <i class="glyphicon glyphicon-star tooltips" data-original-title="{#opiniones#|capitalize}"></i> <span class="hidden-xs">{#opiniones#|capitalize}</span>
                     </a>
                 </li>
                 <li>
                     <a href="#faqs" data-toggle="tab">
-                        <i class="glyphicon glyphicon-info-sign tooltips" data-original-title="FAQS"></i> <span class="hidden-xs">FAQS</span>
+                        <i class="glyphicon glyphicon-info-sign tooltips" data-original-title="{#faqs#|capitalize}"></i> <span class="hidden-xs">{#faqs#|capitalize}</span>
                     </a>
                 </li>
                 <li>
                     <a href="#contact" data-toggle="tab">
-                        <i class="glyphicon glyphicon-envelope tooltips" data-original-title="Contacto"></i> <span class="hidden-xs">Contacto</span>
+                        <i class="glyphicon glyphicon-envelope tooltips" data-original-title="{#contacto#|capitalize}"></i> <span class="hidden-xs">{#contacto#|capitalize}</span>
                     </a>
                 </li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content app-tab-content">
-                <!--<div class="tab-pane active app-ajax-load" data-href="tab-detalles.html" id="details">-->
-                <!--</div>-->
                 <div class="tab-pane active" id="details">
                     <div class="row">
                         <div class="col-md-10 col-sm-12 text">
-                            <p>
-                                El establecimiento Villas Alicia está situado en Caletas de Fuste, cerca del campo de golf de Fuerteventura. Ofrece villas modernas y elegantes equipadas con una piscina y un jardín privados, conexión Wi-Fi gratuita y una TV de pantalla plana.
-                            </p>
-                            <p>
-                                Las luminosas villas del Villas Alicia cuentan con un dormitorio con una cama doble y un dormitorio con 2 camas individuales con vistas al jardín. Disponen además de una amplia sala de estar y comedor con un reproductor de DVD y un sofá grande.
-                            </p>
-                            <p>
-                                La cocina cuenta con fogones, microondas, cafetera, lavavajillas y lavadora. El jardín privado incluye un solárium con una barbacoa y una piscina y ofrece vistas al océano Atlántico.
-                            </p>
-                            <p>
-                                Este moderno complejo de villas está a solo 600 metros de la playa y a 8 km del aeropuerto de Fuerteventura. En Caleta de Fuste hay varios cines y un casino.
-                            </p>
+                            {if $hotel->descripcionesLargas}
+                                {if $lang}
+                                    {$hotel->descripcionesLargas->$lang}
+                                {else}
+                                    {$hotel->descripcionesLargas->es}
+                                {/if}
+                            {else}
+                                {$hotel->descripcionLarga}
+                            {/if}
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>{#servicio#}</th>
+                                        <th>{#descripcion#}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {foreach from=$servicios key=c item=categoria}
+                                    {if $categoria['categoria']->es != ''}
+                                        <tr>
+                                            <td>
+                                                {if $lang}
+                                                    {$categoria['categoria']->$lang}
+                                                {else}
+                                                    {$categoria['categoria']->es}
+                                                {/if}
+                                            </td>
+                                            <td>
+                                                {foreach from=$categoria['servicios'] item=s name=servicios}
+                                                    {if $lang}
+                                                        {$s->descripciones->$lang}
+                                                    {else}
+                                                        {$s->descripciones->es}
+                                                    {/if}
+                                                    {if not $smarty.foreach.servicios.last}, {/if}
+                                                {/foreach}
+                                            </td>
+                                        </tr>
+                                    {/if}
+                                {/foreach}
+                                {if $lugares}
+                                    <tr class="lugares_interes">
+                                        <td>{#lugares_de_interes#}</td>
+                                        <td>
+                                            {foreach from=$lugares item=lugar}
+                                                <span class="lugar_interes">{$lugar}</span>
+                                            {/foreach}
+                                        </td>
+                                    </tr>
+                                {/if}
+                                </tbody>
+                            </table>
                         </div>
                         <div class="col-md-2 col-sm-12">
                             <div class="tripadvisor-content">
@@ -191,97 +232,90 @@
                             </div>
                             <div class="social-actions">
                                 <a href="#">
-                                    <i class="glyphicon glyphicon-envelope"></i> Correo electrónico
+                                    <i class="glyphicon glyphicon-envelope"></i> {#correo_electronico#}
                                 </a>
                                 <a href="#">
-                                    <i class="glyphicon glyphicon-print"></i> Imprimir
+                                    <i class="glyphicon glyphicon-print"></i> {#imprimir#}
                                 </a>
                                 <div class="social-likes">
-                                    <div class="facebook" title="Comparte este link en Facebook">Me gusta</div>
-                                    <div class="twitter" title="Comparte este link en Twitter">Twittear</div>
-                                    <div class="plusone" title="Comparte este link en Google+">Compartir</div>
+                                    <div class="facebook" title="{#comparte_este_link#} Facebook">{#me_gusta#}</div>
+                                    <div class="twitter" title="{#comparte_este_link#} Twitter">{#twittear#}</div>
+                                    <div class="plusone" title="{#comparte_este_link#} Google+">{#compartir#}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane" id="conditions">...</div>
+                <div class="tab-pane" id="conditions">
+                    {if $condiciones && count($condiciones) > 0}
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>{#condicion#}</th>
+                                    <th>{#descripcion#}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {foreach from=$condiciones key=c item=categoria}
+                                {if strlen(trim($categoria['categoria']->$lang)) || strlen(trim($categoria['categoria']->es))}
+                                    {if $categoria['categoria']->es != 'Tarjetas aceptadas en este alojamiento' }
+                                        <tr>
+                                            <td>
+                                                {if $lang}
+                                                    {$categoria['categoria']->$lang}
+                                                {else}
+                                                    {$categoria['categoria']->es}
+                                                {/if}
+                                            </td>
+                                            <td>
+                                                {foreach from=$categoria['servicios'] item=s name=servicios}
+                                                    {if $lang}
+                                                        {$s->descripciones->$lang}
+                                                    {else}
+                                                        {$s->descripciones->es}
+                                                    {/if}
+                                                    {if not $smarty.foreach.servicios.last}, {/if}
+                                                {/foreach}
+                                            </td>
+                                        </tr>
+                                    {else}
+                                        <tr>
+                                            <td>{$categoria['categoria']->$lang}</td>
+                                            <td>
+                                                <ul class="list-inline">
+                                                    <li><img src="{$template_url}/newdesing/images/visa.png"></li>
+                                                    <li><img src="{$template_url}/newdesing/images/master-card.png"></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    {/if}
+                                {/if}
+                            {/foreach}
+                            </tbody>
+                        </table>
+                    {/if}
+                </div>
                 <div class="tab-pane" id="map">
-                    <iframe id="gmap" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;geocode=+&amp;ie=UTF8&amp;hq=&amp;ll=21.1619080,-86.8515280&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+                    <input type="hidden" name="lat" value="{$hotel->direccion->lat}">
+                    <input type="hidden" name="lon" value="{$hotel->direccion->lon}">
+                    <div id="gmap"></div>
                 </div>
                 <div class="tab-pane" id="opinions">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div id="TA_selfserveprop273" class="TA_selfserveprop">
+                                <ul id="8n8wH28pXi" class="TA_links 19qElIAWMgP">
+                                    <li id="stzcn0qrb" class="mE3OZ7X">
+                                        <a target="_blank" href="http://www.tripadvisor.es/"><img src="http://www.tripadvisor.es/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="tab-pane" id="faqs">
-                    <p>
-                        <strong><em>¿Qué es Madrid Active?</em></strong>
-                        Madrid Active es una agencia OnLine de intermediación turística, que te ayuda a reservar tu hotel ideal de forma fácil y segura.
-                        Además te ofrecemos la mejor selección de actividades para descubrir tu destino.
-                        Las excursiones han sido seleccionadas cuidadosamente para poder asegurar una gran calidad en el servicio.
-                        Madrid Active te ayuda a vivir días inolvidables durante tus vacaciones.
-                    </p>
+                <div class="tab-pane app-ajax-load" id="faqs" data-href="{$base_url}/{$lang}/faq{$end_url}">
                 </div>
-                <div class="tab-pane" id="contact">
-                    <form action="#" id="contact-form" class="form-horizontal" role="form" method="post">
-                        <fieldset>
-                            <h1 class="text-center">¿No encuentras lo que buscas?</h1>
-                            <p class="text-center">Déjanos tu email y un operador te ofrecerá la mejor opción disponible según tu búsqueda.</p>
-                            <div class="row">
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    <label for="contactFormNombre" class="control-label">Nombre: <span class="required">(*)</span></label>
-                                    <input type="text" class="form-control" id="contactFormNombre" />
-                                </div>
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    <label for="contactFormEmail" class="control-label">Email: <span class="required">(*)</span></label>
-                                    <input type="text" class="form-control" id="contactFormEmail" />
-                                </div>
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    <label for="contactFormtelefono" class="control-label">Teléfono:</label>
-                                    <input type="text" class="form-control" id="contactFormtelefono" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 col-sm-6 col-xs-6">
-                                    <label for="contactFormLlegada" class="control-label">Fecha llegada: </label>
-                                    <input type="text" class="form-control datepicker" id="contactFormLlegada" readonly="readonly" />
-                                </div>
-                                <div class="col-md-2 col-sm-6 col-xs-6">
-                                    <label for="contactFormSalida" class="control-label">Fecha salida: </label>
-                                    <input type="text" class="form-control datepicker" id="contactFormSalida" readonly="readonly" />
-                                </div>
-                                <div class="col-md-2 col-sm-6 col-xs-6">
-                                    <label for="contactFormAdultos" class="control-label">Adultos: </label>
-                                    <input type="text" class="form-control" id="contactFormAdultos" />
-                                </div>
-                                <div class="col-md-2 col-sm-6 col-xs-6">
-                                    <label for="contactFormNinos" class="control-label">Niños: </label>
-                                    <input type="text" class="form-control" id="contactFormNinos" />
-                                </div>
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    <div class="checkbox" id="contactFormFechasFlaxibles">
-                                        <label>
-                                            <input type="checkbox" value="">
-                                            Mis fechas son flexibles.
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8 col-sm-12 col-xs-12">
-                                    <label for="contactFormComentario" class="control-label">Comentarios: </label>
-                                    <textarea class="form-control" id="contactFormComentario" rows="3"></textarea>
-                                </div>
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    <input type="submit" class="btn app-btn-blue" value="Recibir presupuesto" />
-                                    <div class="checkbox" id="">
-                                        <label>
-                                            <input type="checkbox" value="">
-                                            Acepto la política de privacidad y datos.
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
+                <div class="tab-pane app-ajax-load" id="contact" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">
                 </div>
             </div>
             <!-- End tabs -->

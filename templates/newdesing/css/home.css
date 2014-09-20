@@ -131,7 +131,7 @@
 }
 
 #details .text {
-    color: #9A9A9A;
+    /*color: #9A9A9A;*/
     text-align: justify;
 }
 
@@ -187,21 +187,33 @@
     font-size: 12px;
 }
 
-iframe#gmap {
+#map > div#gmap {
     width: 100%;
     height: 350px !important;
+    overflow: hidden;
 }
 
 #faqs {
-    color: #9A9A9A;
+    /*color: #9A9A9A;*/
 }
 
-#faqs strong em {
-    font-family: "Gotham Rounded Medium";
-    margin: 0 10px 20px 0;
+#faqs > ul {
     float: left;
-    max-width: 22%;
-    text-align: left;
+    font-family: "Gotham Rounded Medium";
+    font-style: italic;
+    list-style: none outside none;
+    margin-right: 15px;
+    max-width: 23%;
+    padding-left: 0;
+    clear: both;
+}
+
+@media(max-width: 728px) {
+    #faqs > ul {
+        float: none;
+        margin-right: 0;
+        max-width: 100%;
+    }
 }
 
 #tour-booking-form .price-per-person {

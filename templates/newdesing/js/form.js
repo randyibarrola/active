@@ -1,7 +1,8 @@
 var Form = function () {
-    var initDatePickers = function() {
+    var initDatePickers = function(selector) {
+        selector = selector != undefined ? selector : $('.datepicker');
         if(jQuery().datepicker) {
-            $('.datepicker').each(function() {
+            selector.each(function() {
                 var widget = $(this);
 
                 widget.datepicker({
@@ -12,10 +13,18 @@ var Form = function () {
                     if(widget.data('sync')) {
                         $(widget.data('sync')).val(App.formatDate(new Date(ev.date)));
                     }
+
+                    widget.triggerHandler('app.event.datepicker.changeDate', ev);
                 });
 
-                if(widget.data('date') == undefined) {
-                    widget.datepicker('setDate', widget.data('start-date') ? widget.data('start-date') : "today")
+                if(widget.attr('value') != undefined && widget.val().trim() != '') {
+                    widget.datepicker('setDate', widget.val().trim());
+                }
+                else if(widget.data('date') == undefined) {
+                    widget.datepicker('setDate', widget.data('start-date') ? widget.data('start-date') : "today");
+                }
+                else if(widget.attr('type') != undefined && widget.data('date') != undefined) {
+                    widget.datepicker('setDate', widget.data('date'));
                 }
 
                 if(widget.data('sync')) {
@@ -28,6 +37,10 @@ var Form = function () {
     return {
         init: function () {
             initDatePickers();
+        },
+
+        handleDatepicker: function(selector) {
+            initDatePickers($(selector));
         }
     };
 

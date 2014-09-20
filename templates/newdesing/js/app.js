@@ -198,6 +198,18 @@ var App = function () {
         }
     };
 
+    var initSelect2 = function(selector) {
+        selector = selector != undefined ? $(selector) : $('.select2');
+
+        if(jQuery().select2) {
+            selector.each(function() {
+                $(this).select2({
+                    allowClear: true
+                });
+            });
+        }
+    };
+
     return {
         dateFormat: "dd-mm-yyyy",
         locale: 'es',
@@ -223,16 +235,11 @@ var App = function () {
             initGlobalSearchForm();
             initModals();
             handleAppCookies();
+            initSelect2();
 
             if(jQuery().datepicker) {
                 jQuery().datepicker.defaults.format = App.dateFormat;
                 jQuery().datepicker.defaults.language = App.locale;
-            }
-
-            if(jQuery().select2) {
-                $('.select2').select2({
-                    allowClear: true
-                });
             }
 
             var ajaxLoading = $('#ajax-loading').clone();
@@ -284,8 +291,8 @@ var App = function () {
             var href = $(selector).attr('data-href') != 'undefined' ? $(selector).attr('data-href') : $(selector).attr('href');
 
             selector.append(App.imgLoading);
-            $(selector).load(href, function() {
-                $(selector).triggerHandler('app.event.load.success');
+            $(selector).load(href, function(response, status, xhr) {
+                $(selector).triggerHandler('app.event.load.success', [selector, response, status, xhr]);
             });
         },
 
@@ -476,6 +483,37 @@ var App = function () {
         checkCookie: function(name, value) {
             var c = App.getCookie(name);
             return c == value;
+        },
+
+        blockUI: function (el, centerY) {
+            el = jQuery(el);
+            el.block({
+                message: App.imgLoading,
+                centerY: centerY != undefined ? centerY : true,
+                css: {
+                    top: '10%',
+                    border: 'none',
+                    padding: '2px',
+                    backgroundColor: 'none'
+                },
+                overlayCSS: {
+                    backgroundColor: '#000',
+                    opacity: 0.05,
+                    cursor: 'wait'
+                }
+            });
+        },
+
+        unblockUI: function (el) {
+            jQuery(el).unblock({
+                onUnblock: function () {
+                    jQuery(el).removeAttr("style");
+                }
+            });
+        },
+
+        handleSelect2: function(selector) {
+            initSelect2($(selector));
         }
     };
 

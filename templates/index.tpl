@@ -17,6 +17,8 @@
         <!--Begin css plugins base-->
         {block "style_plugins_base"}
             <link href="{$template_url}/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" type="text/css">
+            <link rel="stylesheet" type="text/css" href="{$template_url}/css/validationEngine.jquery.css" />
+            <link rel="stylesheet" type="text/css" href="{$template_url}/css/toastr.css" />
         {/block}
         <!--End css plugins base-->
 
@@ -47,8 +49,6 @@
           {*<link href="{$template_url}/css/flexslider.css" rel="stylesheet">*}
           {*<link href="{$template_url}/css/datepicker.css" rel="stylesheet">*}
           {*<link href="{$template_url}/css/style.css" rel="stylesheet">*}
-          <link rel="stylesheet" type="text/css" href="{$template_url}/css/validationEngine.jquery.css" />
-          <link rel="stylesheet" type="text/css" href="{$template_url}/css/toastr.css" />
           <link href="{$template_url}/css/print.css" rel="stylesheet" type="text/css"/>
         {/block}
 
@@ -172,6 +172,10 @@
             <script src="{$template_url}/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
             <script src="{$template_url}/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
             <script src="{$template_url}/assets/plugins/bootstrap3-typeahead/bootstrap3-typeahead.min.js"></script>
+            <script src="{$template_url}/assets/plugins/jquery.blockui.min.js"></script>
+            <script src="{$template_url}/js/jquery.validationEngine-es.js"></script>
+            <script src="{$template_url}/js/jquery.validationEngine.js"></script>
+            <script src="{$template_url}/js/toastr.js"></script>
         {/block}
         <!--End javascripts plugins base-->
 
@@ -216,12 +220,8 @@
             <script type="text/javascript" src="{$template_url}/js/jquery.raty.min.js"></script>
             <script src="{$template_url}/js/main.js"></script>
             {*<script src="{$template_url}/js/bootstrap-datepicker.{$lang}.js"></script>*}
-            <script src="{$template_url}/js/jquery.validationEngine-es.js"></script>
-            <script src="{$template_url}/js/jquery.validationEngine.js"></script>
-            <script src="{$template_url}/js/toastr.js"></script>
             <script src="{$template_url}/admin/assets/plugins/bootstrap/js/bootstrap2-typeahead.min.js" type="text/javascript"></script>
         {/block}
-        {*<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>*}
 
         <!-- Begin lasted load -->
         {block "lasted_load"}

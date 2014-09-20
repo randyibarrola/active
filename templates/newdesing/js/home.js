@@ -67,6 +67,38 @@ var Home = function() {
             initSimpleSearchOffers();
             initFreeOffer();
             initTourBookingForm();
+
+            $('#contact').bind('app.event.load.success', function(ev, selector, response, status, xhr) {
+                Contact.init($(selector).find('#contact-form'));
+            });
+        },
+
+        handleMap: function() {
+            var map;
+            $('#gmap').html(App.imgLoading);
+
+            if(typeof google != "undefined") {
+                var myLatlng = new google.maps.LatLng($('input[name=lat]').val(), $('input[name=lon]').val());
+                var icon = '/templates/images/condominium.png';
+
+                var mapOptions = {
+                    zoom: 14,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    scrollwheel: false
+                };
+
+                map = new google.maps.Map(document.getElementById('gmap'), mapOptions);
+
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    icon: App.baseUrl + icon
+                });
+
+                google.maps.event.trigger(map, 'resize');
+                map.setCenter(myLatlng);
+            }
         }
     };
 }();
