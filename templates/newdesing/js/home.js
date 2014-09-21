@@ -1,5 +1,3 @@
-var map;
-
 var Home = function() {   
     
     var initSimpleSearchOffers = function() {
@@ -76,7 +74,7 @@ var Home = function() {
         },
 
         handleMap: function() {
-            
+            var map;
             $('#contact-map').html(App.imgLoading);
 
             if(typeof google != "undefined") {
