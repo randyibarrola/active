@@ -75,7 +75,7 @@ var Home = function() {
 
         handleMap: function() {
             var map;
-            $('#gmap').html(App.imgLoading);
+            $('#contact-map').html(App.imgLoading);
 
             if(typeof google != "undefined") {
                 var myLatlng = new google.maps.LatLng($('input[name=lat]').val(), $('input[name=lon]').val());
@@ -88,7 +88,7 @@ var Home = function() {
                     scrollwheel: false
                 };
 
-                map = new google.maps.Map(document.getElementById('gmap'), mapOptions);
+                map = new google.maps.Map(document.getElementById('contact-map'), mapOptions);
 
                 var marker = new google.maps.Marker({
                     position: myLatlng,
@@ -97,7 +97,9 @@ var Home = function() {
                 });
 
                 google.maps.event.trigger(map, 'resize');
-                map.setCenter(myLatlng);
+                map.setCenter(myLatlng);                
+                
+                alert(App.baseUrl + icon);
             }
         }
     };
