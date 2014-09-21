@@ -191,7 +191,7 @@
 #map > div#gmap {
     width: 100%;
     height: 350px !important;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 #faqs {
