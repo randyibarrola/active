@@ -95,10 +95,9 @@ var Home = function() {
                     map: map,
                     icon: App.baseUrl + icon
                 });
-
-                google.maps.event.trigger(map, 'resize');
-                map.setCenter(myLatlng);
                 
+                map.setCenter(myLatlng);
+                google.maps.event.trigger(map, 'resize');
             }
         }
     };
