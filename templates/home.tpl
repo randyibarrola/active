@@ -21,15 +21,18 @@
     <script src="{$template_url}/assets/plugins/select2/select2_locale_{$lang}.js"></script>    
 {/block}
 
-{block "script_level" append}
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+{block "script_level" append}    
     <script src="{$template_url}/newdesing/js/home.js" type="text/javascript"></script>
     <script src="{$template_url}/newdesing/js/contact.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {           
+        $(document).ready(function() {
             Home.init();
-            setTimeout('Home.handleMap()', 2000);
-            
+        });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+            Home.handleMap();
         });
     </script>
     {*<script type="text/javascript" src="https://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>*}
