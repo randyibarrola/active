@@ -29,7 +29,7 @@
         $(document).ready(function() {
             Home.init();
             $('#tab-map').click(function(){
-                if($('.gm-style') == "undefined")           
+                if($('.gm-style').length == 0)           
                     Home.handleMap();            
             });
         });
