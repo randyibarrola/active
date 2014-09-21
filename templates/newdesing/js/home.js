@@ -3,7 +3,7 @@ var Home = function() {
     function initialize() {
 
             if(typeof google != "undefined") {
-                $('#contact-map').empty();
+                
                 var myLatlng = new google.maps.LatLng($('input[name=lat]').val(), $('input[name=lon]').val());
                 var icon = '/templates/images/condominium.png';
 
