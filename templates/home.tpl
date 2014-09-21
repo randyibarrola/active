@@ -28,7 +28,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             Home.init();
-            //Home.handleMap();
+            Home.handleMap();
         });
     </script>
     {*<script type="text/javascript" src="https://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>*}
@@ -297,7 +297,7 @@
                     {/if}
                 </div>
                 <div class="tab-pane" id="map">
-                    <div id="contact-map"></div>
+                    <div id="gmap"></div>
                     <input type="hidden" name="lat" value="{$hotel->direccion->lat}">
                     <input type="hidden" name="lon" value="{$hotel->direccion->lon}">                    
                 </div>

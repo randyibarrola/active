@@ -1,36 +1,6 @@
 var map;
 
-var Home = function() {
-    
-    function initialize() {
-
-            if(typeof google != "undefined") {
-                
-                var myLatlng = new google.maps.LatLng($('input[name=lat]').val(), $('input[name=lon]').val());
-                var icon = '/templates/images/condominium.png';
-
-                var mapOptions = {
-                    zoom: 14,
-                    center: myLatlng,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    scrollwheel: false
-                };
-
-                map = new google.maps.Map(document.getElementById('contact-map'), mapOptions);
-
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    icon: App.baseUrl + icon
-                });
-
-                google.maps.event.trigger(map, 'resize');
-                map.setCenter(myLatlng);
-                
-            }
-       
-    }
-    
+var Home = function() {   
     
     var initSimpleSearchOffers = function() {
         var form = $('#simple-search-offers');
@@ -99,19 +69,18 @@ var Home = function() {
         init: function() {
             initSimpleSearchOffers();
             initFreeOffer();
-            initTourBookingForm();
-            initialize();
+            initTourBookingForm();            
             $('#contact').bind('app.event.load.success', function(ev, selector, response, status, xhr) {
                 Contact.init($(selector).find('#contact-form'));
             });
         },
 
         handleMap: function() {
-            var map;
+            
             $('#contact-map').html(App.imgLoading);
 
             if(typeof google != "undefined") {
-                $('#contact-map').empty();
+                $('#contact-map').html('');
                 var myLatlng = new google.maps.LatLng($('input[name=lat]').val(), $('input[name=lon]').val());
                 var icon = '/templates/images/condominium.png';
 
