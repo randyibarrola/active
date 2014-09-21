@@ -88,7 +88,7 @@ var Home = function() {
                     scrollwheel: false
                 };
 
-                map = new google.maps.Map(document.getElementById('googlemap'), mapOptions);
+                map = new google.maps.Map(document.getElementById('gmap'), mapOptions);
 
                 var marker = new google.maps.Marker({
                     position: myLatlng,

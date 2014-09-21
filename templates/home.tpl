@@ -28,7 +28,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             Home.init();
-            $('#map').click(function(){
+            $('#tab-map').click(function(){
                 Home.handleMap();            
             });
         });
@@ -142,7 +142,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#map" data-toggle="tab">
+                    <a href="#map" data-toggle="tab" id="tab-map">
                         <i class="glyphicon glyphicon-map-marker tooltips" data-original-title="{#localizacion#|capitalize}"></i> <span class="hidden-xs">{#localizacion#|capitalize}</span>
                     </a>
                 </li>
@@ -300,7 +300,7 @@
                     {/if}
                 </div>
                 <div class="tab-pane" id="map">
-                    <div id="googlemap"></div>
+                    <div id="gmap"></div>
                     <input type="hidden" name="lat" value="{$hotel->direccion->lat}">
                     <input type="hidden" name="lon" value="{$hotel->direccion->lon}">                    
                 </div>
