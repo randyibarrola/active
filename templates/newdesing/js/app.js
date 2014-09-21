@@ -117,27 +117,42 @@ var App = function () {
             source: function(query, process) {
                 items = [];
                 map = {};
-                // la variable data es temporal, debe implementarse con ajax utilizando la variable query.
-                var data = [
-                    {"code": "1", "name": "NH Eurobuilding"},
-                    {"code": "2", "name": "NH Nacional"},
-                    {"code": "3", "name": "NH Balboa"},
-                    {"code": "4", "name": "NH Puerta de Alcalá"},
-                    {"code": "5", "name": "NH Collection Palacio de Tepa"},
-                    {"code": "6", "name": "NH Collection Paseo del Prado"}
-                ];
 
-                $.each(data, function (i, item) {
-                    map[item.name] = item;
-                    items.push(item.name);
-                });
+                if(query.trim() != '') {
+                    $.ajax({
+                        url: App.baseUrl + '/admin-ajax-hoteles',
+                        type: 'post',
+                        data: { action:'search', term: query, nodestinos: 1 },
+                        dataType: 'json',
+                        success: function(response) {
+                            if(response.lista.length > 0) {
+                                for(i = 0; i< response.lista.length ; i++) {
+                                    map[response.lista[i].nombre] = response.lista[i];
+                                    items.push(response.lista[i].nombre);
+                                }
+                            } else {
+                                items = [widgetTypeahead.data("noresult")];
+                            }
 
-                widgetSelectedItem.val('');
-                process(items);
+                            console.log(items.toSource());
+
+                            widgetSelectedItem.val('');
+                            process(items);
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            items = [];
+                            widgetSelectedItem.val('');
+                            process(items);
+                        }
+                    });
+                }
+                else {
+                    process(items);
+                }
             },
             matcher: function(item) {
                 var flag = false;
-                if (item.toLowerCase().indexOf(this.query.trim().toLowerCase()) != -1) {
+                if (item.toLowerCase().indexOf(this.query.trim().toLowerCase()) != -1 || item == widgetTypeahead.data('noresult')) {
                     flag = true;
                 }
 
@@ -148,10 +163,27 @@ var App = function () {
             },
             updater: function(item) {
                 selectedItem = map[item];
-                widgetSelectedItem.val(selectedItem.code);
+
+                if(selectedItem) {
+                    var url = selectedItem.url;
+                    if(url.replace('http', '').length == url.length)
+                        url = 'http://' + url;
+
+
+                    widgetSelectedItem.val(url);
+
+                    window.location = url;
+                }
+                else {
+                    item = '';
+                }
 
                 return item;
             }
+        });
+
+        form.submit(function(e) {
+            e.preventDefault();
         });
     };
 

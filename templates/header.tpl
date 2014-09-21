@@ -91,7 +91,7 @@
             <div class="global-search pull-right text-right">
                 <form id="global-search-form" class="form-inline" role="form" action="#" method="post" style="display: none">
                     <div class="input-group">
-                        <input type="text" class="form-control typeahead" />
+                        <input type="text" class="form-control typeahead" autocomplete="off" data-noresult="{#no_se_encontraron_elementos#}"  />
                             <span class="input-group-btn">
                                 <button class="btn app-btn-blue" type="submit">{#buscar#}</button>
                             </span>
