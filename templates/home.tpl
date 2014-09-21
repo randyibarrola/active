@@ -327,7 +327,7 @@
                 <div class="row list">
                     <div class="col-md-3 col-sm-6 col-xs-6 item">
                         <p class="title">Excursión Segway</p>
-                        <img src="tmp/excursion.jpg" class="img-responsive" />
+                        <img src="{$template_url}/tmp/excursion.jpg" class="img-responsive" />
                         <p class="price">Desde 27&euro;</p>
                         <p class="saving">Te ahorras 5&euro;</p>
                         <p class="text-center">
@@ -336,7 +336,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 item">
                         <p class="title">Excursión Segway</p>
-                        <img src="tmp/excursion.jpg" class="img-responsive" />
+                        <img src="{$template_url}/tmp/excursion.jpg" class="img-responsive" />
                         <p class="price">Desde 27&euro;</p>
                         <p class="saving">Te ahorras 5&euro;</p>
                         <p class="text-center">
@@ -345,7 +345,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 item">
                         <p class="title">Excursión Segway</p>
-                        <img src="tmp/excursion.jpg" class="img-responsive" />
+                        <img src="{$template_url}/tmp/excursion.jpg" class="img-responsive" />
                         <p class="price">Desde 27&euro;</p>
                         <p class="saving">Te ahorras 5&euro;</p>
                         <p class="text-center">
@@ -354,7 +354,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6 item">
                         <p class="title">Excursión Segway</p>
-                        <img src="tmp/excursion.jpg" class="img-responsive" />
+                        <img src="{$template_url}/tmp/excursion.jpg" class="img-responsive" />
                         <p class="price">Desde 27&euro;</p>
                         <p class="saving">Te ahorras 5&euro;</p>
                         <p class="text-center">
