@@ -18,8 +18,6 @@ if($hotel) {
             array_push ($images, $image);
     }
     
-    
-    var_dump($hotel);die;
     $smarty->assign('images',$images);
     
     if($hotel->destinoId) {

@@ -751,6 +751,25 @@ function getAllHotelImages($idHotel, $all = false) {
     }
 }
 
+function getHotelLogo($idHotel, $all = false) {
+    try {
+        
+        $h_archivos = DAOFactory::getHotelArchivoDAO()->queryByHotelId($idHotel);
+        
+        if($h_archivos)
+            foreach ($h_archivos as $h_a) {
+                $archivo = DAOFactory::getArchivoDAO()->load($h_a->archivoId);
+                if($archivo->tipo == "logo")
+                    return $archivo;
+            }
+            
+        return null;
+        
+    } catch (Exception $e) {
+        return false;
+    }
+}
+
 function getAllHotelServicios($idHotel) {
     try {
         
@@ -998,15 +1017,14 @@ function getHotelById($id, $convertirMonedas = true){
                             $precio_moneda_seleccionada = convertFromMonedaToMoneda($precio_minimo_val, $hotel->moneda->codigo, $money);
                             $precioMinimo[0]->precioMinimo = $precio_moneda_seleccionada;
                             $h->precioMinimo = $precioMinimo[0];
-                            $h->logo = DAOFactory::getArchivoDAO()->load($h->logoId);
+                            $h->logo = getHotelLogo($h->id);
                         }                            
                         
                         $h->campania = DAOFactory::getCampaniaDAO()->load($h->campaniaId);
                         $relacionados[] = $h;
                     }
                 }
-                $hotel->relacionados = $relacionados;
-                var_dump($relacionados);
+                $hotel->relacionados = $relacionados;                
             }
         }
         
