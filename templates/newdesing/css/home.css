@@ -187,12 +187,12 @@
     font-size: 12px;
 }
 
-
+/*
 #map > div#gmap {
     width: 100%;
     height: 350px !important;
-    /*overflow: hidden;*/
-}
+    overflow: hidden;
+}*/
 
 #faqs {
     /*color: #9A9A9A;*/
