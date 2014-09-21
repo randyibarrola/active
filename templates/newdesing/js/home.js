@@ -75,10 +75,10 @@ var Home = function() {
 
         handleMap: function() {
             var map;
-            $('#contact-map').html(App.imgLoading);
+            $('#gmap').html(App.imgLoading);
 
             if(typeof google != "undefined") {
-                $('#contact-map').html('');
+                $('#gmap').empty();
                 var myLatlng = new google.maps.LatLng($('input[name=lat]').val(), $('input[name=lon]').val());
                 var icon = '/templates/images/condominium.png';
 
@@ -89,7 +89,7 @@ var Home = function() {
                     scrollwheel: false
                 };
 
-                map = new google.maps.Map(document.getElementById('contact-map'), mapOptions);
+                map = new google.maps.Map(document.getElementById('gmap'), mapOptions);
 
                 var marker = new google.maps.Marker({
                     position: myLatlng,
