@@ -301,7 +301,7 @@
                     {/if}
                 </div>
                 <div class="tab-pane" id="map">
-                    <div id="gmap"></div>
+                    <div id="googlemap"></div>
                     <input type="hidden" name="lat" value="{$hotel->direccion->lat}">
                     <input type="hidden" name="lon" value="{$hotel->direccion->lon}">                    
                 </div>
