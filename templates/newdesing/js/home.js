@@ -97,9 +97,8 @@ var Home = function() {
                 });
 
                 google.maps.event.trigger(map, 'resize');
-                map.setCenter(myLatlng);                
+                map.setCenter(myLatlng);
                 
-                alert(App.baseUrl + icon);
             }
         }
     };
