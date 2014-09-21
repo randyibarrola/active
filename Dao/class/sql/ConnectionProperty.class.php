@@ -7,9 +7,9 @@
  */
 class ConnectionProperty{
 	private static $host = 'localhost';
-	private static $user = 'cpvikahotel';
-	private static $password = 'N+g*#j+asdR';
-	private static $database = 'cpvikahotel';
+	private static $user = 'root';
+	private static $password = '';
+	private static $database = 'vikahotel';
 
 	public static function getHost(){
 		return ConnectionProperty::$host;

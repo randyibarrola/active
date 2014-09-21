@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-    completeHotel();
+//    completeHotel();
     
   if($('.calidad').attr('data-score')>0){
     setTimeout(function(){
@@ -223,7 +223,7 @@ function completeHotel() {
                             HOTELES[response.lista[i].nombre] = response.lista[i];
                             lista.push(response.lista[i].nombre);
                         }
-                        
+
                         return process(lista);
                     } else
                         return process([NO_ELEMENTOS_LABEL]);
@@ -238,8 +238,8 @@ function completeHotel() {
                     url = 'http://' + url;
                 window.location = url;
                 return item;
-            } 
-            
+            }
+
             return '';
         }
     });
