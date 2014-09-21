@@ -1,3 +1,5 @@
+var map;
+
 var Home = function() {   
     
     var initSimpleSearchOffers = function() {
@@ -73,8 +75,7 @@ var Home = function() {
             });
         },
 
-        handleMap: function() {
-            var map;
+        handleMap: function() {            
             
             if(typeof google != "undefined") {
                 var myLatlng = new google.maps.LatLng($('input[name=lat]').val(), $('input[name=lon]').val());
