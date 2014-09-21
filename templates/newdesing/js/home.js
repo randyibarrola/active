@@ -96,8 +96,9 @@ var Home = function() {
                     icon: App.baseUrl + icon
                 });
                 
-                map.setCenter(myLatlng);
                 google.maps.event.trigger(map, 'resize');
+                map.setCenter(myLatlng);
+                
             }
         }
     };
