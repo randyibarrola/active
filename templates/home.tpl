@@ -26,9 +26,9 @@
     <script src="{$template_url}/newdesing/js/home.js" type="text/javascript"></script>
     <script src="{$template_url}/newdesing/js/contact.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            Home.handleMap();
+        $(document).ready(function() {           
             Home.init();
+            setTimeout('Home.handleMap()', 2000);
             
         });
     </script>
