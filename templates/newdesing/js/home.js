@@ -100,7 +100,7 @@ var Home = function() {
             initSimpleSearchOffers();
             initFreeOffer();
             initTourBookingForm();
-            //initialize();
+            initialize();
             $('#contact').bind('app.event.load.success', function(ev, selector, response, status, xhr) {
                 Contact.init($(selector).find('#contact-form'));
             });
