@@ -75,7 +75,7 @@ var Home = function() {
 
         handleMap: function() {
             var map;
-            $('#gmap').html(App.imgLoading);
+            $('#contact-map').html(App.imgLoading);
 
             if(typeof google != "undefined") {
                 var myLatlng = new google.maps.LatLng($('input[name=lat]').val(), $('input[name=lon]').val());

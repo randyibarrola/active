@@ -1006,6 +1006,7 @@ function getHotelById($id, $convertirMonedas = true){
                     }
                 }
                 $hotel->relacionados = $relacionados;
+                var_dump($relacionados);
             }
         }
         
