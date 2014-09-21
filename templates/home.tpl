@@ -22,16 +22,12 @@
 {/block}
 
 {block "script_level" append}
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="{$template_url}/newdesing/js/home.js" type="text/javascript"></script>
     <script src="{$template_url}/newdesing/js/contact.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             Home.init();
-        });
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
             Home.handleMap();
         });
     </script>
@@ -263,7 +259,7 @@
                             <tbody>
                             {foreach from=$condiciones key=c item=categoria}
                                 {if strlen(trim($categoria['categoria']->$lang)) || strlen(trim($categoria['categoria']->es))}
-                                    {if $categoria['categoria']->es != 'Tarjetas aceptadas en este alojamiento' }
+                                    {if $categoria['categoria']->es != 'Tarjetas aceptadas en este alojamiento'}
                                         <tr>
                                             <td>
                                                 {if $lang}
