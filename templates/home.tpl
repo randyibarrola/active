@@ -19,10 +19,11 @@
     <script src="{$template_url}/assets/plugins/jquery-flexslider/jquery.flexslider-min.js"></script>
     <script src="{$template_url}/assets/plugins/select2/select2.min.js"></script>
     <script src="{$template_url}/assets/plugins/select2/select2_locale_{$lang}.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 {/block}
 
 {block "script_level" append}
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    
     <script src="{$template_url}/newdesing/js/home.js" type="text/javascript"></script>
     <script src="{$template_url}/newdesing/js/contact.js"></script>
     <script type="text/javascript">
