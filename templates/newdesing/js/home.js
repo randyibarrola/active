@@ -1,8 +1,6 @@
 var Home = function() {
+    var map;
     function initialize() {
-       
-            var map;
-            $('#contact-map').html(App.imgLoading);
 
             if(typeof google != "undefined") {
                 $('#contact-map').empty();
