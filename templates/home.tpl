@@ -29,7 +29,8 @@
         $(document).ready(function() {
             Home.init();
             $('#tab-map').click(function(){
-                Home.handleMap();            
+                if(!$('div.gm-style'))           
+                    Home.handleMap();            
             });
         });
     </script>
