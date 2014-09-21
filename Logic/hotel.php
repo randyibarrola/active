@@ -755,15 +755,16 @@ function getHotelLogo($idHotel, $all = false) {
     try {
         
         $h_archivos = DAOFactory::getHotelArchivoDAO()->queryByHotelId($idHotel);
-        
+        $archivo = null;
         if($h_archivos)
             foreach ($h_archivos as $h_a) {
                 $archivo = DAOFactory::getArchivoDAO()->load($h_a->archivoId);
                 if($archivo->tipo == "logo")
                     return $archivo;
             }
-            
-        return null;
+          
+        return isset($h_archivos[0]) ? DAOFactory::getArchivoDAO()->load($h_archivos[0]->archivoId) : $archivo;
+        
         
     } catch (Exception $e) {
         return false;
@@ -1017,7 +1018,7 @@ function getHotelById($id, $convertirMonedas = true){
                             $precio_moneda_seleccionada = convertFromMonedaToMoneda($precio_minimo_val, $hotel->moneda->codigo, $money);
                             $precioMinimo[0]->precioMinimo = $precio_moneda_seleccionada;
                             $h->precioMinimo = $precioMinimo[0];
-                            $h->logo = getHotelLogo($h->id);
+                            $h->logo = getHotelLogo($h->id);                            
                         }                            
                         
                         $h->campania = DAOFactory::getCampaniaDAO()->load($h->campaniaId);
