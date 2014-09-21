@@ -28,7 +28,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             Home.init();
-            Home.handleMap();
+            //Home.handleMap();
         });
     </script>
     {*<script type="text/javascript" src="https://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>*}
