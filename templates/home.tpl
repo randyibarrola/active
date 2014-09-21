@@ -297,9 +297,9 @@
                     {/if}
                 </div>
                 <div class="tab-pane" id="map">
+                    <div id="contact-map"></div>
                     <input type="hidden" name="lat" value="{$hotel->direccion->lat}">
-                    <input type="hidden" name="lon" value="{$hotel->direccion->lon}">
-                    <div id="gmap"></div>
+                    <input type="hidden" name="lon" value="{$hotel->direccion->lon}">                    
                 </div>
                 <div class="tab-pane" id="opinions">
                     <div class="row">
