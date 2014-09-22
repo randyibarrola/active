@@ -3,7 +3,8 @@
 {block "style_plugins_level" append}
     <link href="{$template_url}/assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" media="screen">
     <link href="{$template_url}/assets/plugins/social/social-likes_classic.css" rel="stylesheet" media="screen">
-    <link href="{$template_url}/assets/plugins/jquery-flexslider/flexslider.css" rel="stylesheet" media="screen">
+    {*<link href="{$template_url}/assets/plugins/jquery-flexslider/flexslider.css" rel="stylesheet" media="screen">*}
+    <link href="{$template_url}/css/flexslider.css" rel="stylesheet">
     <link href="{$template_url}/assets/plugins/select2/select2_metro.css" rel="stylesheet" media="screen">
 {/block}
 
@@ -16,7 +17,8 @@
     <script src="{$template_url}/assets/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.{$lang}.js"></script>
     <script src="{$template_url}/assets/plugins/jquery-nicescroll/jquery.nicescroll.min.js"></script>
     <script src="{$template_url}/assets/plugins/social/social-likes.min.js"></script>
-    <script src="{$template_url}/assets/plugins/jquery-flexslider/jquery.flexslider-min.js"></script>
+    {*<script src="{$template_url}/assets/plugins/jquery-flexslider/jquery.flexslider-min.js"></script>*}
+    <script type="text/javascript" src="{$template_url}/js/jquery.flexslider-min.js"></script>
     <script src="{$template_url}/assets/plugins/select2/select2.min.js"></script>
     <script src="{$template_url}/assets/plugins/select2/select2_locale_{$lang}.js"></script>    
 {/block}
