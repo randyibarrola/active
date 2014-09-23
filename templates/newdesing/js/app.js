@@ -54,7 +54,8 @@ var App = function () {
         if(jQuery().flexslider) {
             $('.flexslider-tcn').flexslider({
                 animation: "fade",
-                controlNav: "thumbnails"
+                controlNav: "thumbnails",
+                slideshow: false
             });
 
             $('.flexslider-scn-carousel').each(function() {
