@@ -76,8 +76,8 @@ var App = function () {
                     animation: "fade",
                     controlNav: false,
                     animationLoop: true,
-                    slideshow: false
-                    //sync: e.attr('data-sync')
+                    slideshow: false,
+                    sync: e.attr('data-sync')
                 })
             });
         }
