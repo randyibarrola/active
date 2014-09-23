@@ -53,15 +53,14 @@ var App = function () {
     var initSliders = function() {
         if(jQuery().flexslider) {
             $('.flexslider-tcn').flexslider({
-                animation: "fade",
-                controlNav: "thumbnails",
-                slideshow: false
+                animation: "slide",
+                controlNav: "thumbnails"
             });
 
             $('.flexslider-scn-carousel').each(function() {
                 var e = $(this);
                 e.flexslider({
-                    animation: "fade",
+                    animation: "slide",
                     controlNav: false,
                     animationLoop: false,
                     slideshow: false,
@@ -74,7 +73,7 @@ var App = function () {
             $('.flexslider-scn-slider').each(function() {
                 var e = $(this);
                 e.flexslider({
-                    animation: "fade",
+                    animation: "slide",
                     controlNav: false,
                     animationLoop: true,
                     slideshow: false,
