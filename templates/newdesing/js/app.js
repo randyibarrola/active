@@ -54,9 +54,10 @@ var App = function () {
         if(jQuery().flexslider) {
             $('.flexslider-tcn').flexslider({
                 animation: "fade",
-                controlNav: "thumbnails"
+                controlNav: "thumbnails",
+                slideshow: false
             });
-
+            /*
             $('.flexslider-scn-carousel').each(function() {
                 var e = $(this);
                 e.flexslider({
@@ -79,7 +80,7 @@ var App = function () {
                     slideshow: false,
                     sync: e.attr('data-sync')
                 })
-            });
+            });*/
         }
     };
 
