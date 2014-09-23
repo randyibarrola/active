@@ -256,6 +256,7 @@ var App = function () {
             dateStopSelling: [],
             agreementEndDate: false
         },
+        i18n: [],
 
         //main function to initiate template pages
         init: function () {
@@ -546,6 +547,14 @@ var App = function () {
 
         handleSelect2: function(selector) {
             initSelect2($(selector));
+        },
+
+        addI18n: function(key, value) {
+            App.i18n[key] = value;
+        },
+
+        getI18n: function(key) {
+            return App.i18n[key] ? App.i18n[key] : key
         }
     };
 

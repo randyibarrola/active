@@ -46,7 +46,7 @@
 
         {*Este Bloque se reemplaza completo en las páginas independiente por el bloque style_level y style_plugins_level*}
         {block "style"}
-          {*<link href="{$template_url}/css/flexslider.css" rel="stylesheet">*}
+          <link href="{$template_url}/css/flexslider.css" rel="stylesheet">
           {*<link href="{$template_url}/css/datepicker.css" rel="stylesheet">*}
           {*<link href="{$template_url}/css/style.css" rel="stylesheet">*}
           <link href="{$template_url}/css/print.css" rel="stylesheet" type="text/css"/>
@@ -216,7 +216,7 @@
         {block "script"}
             <script src="{$template_url}/js/holder.js"></script>
             {*<script src="{$template_url}/js/bootstrap-datepicker.js"></script>*}
-            {*<script type="text/javascript" src="{$template_url}/js/jquery.flexslider-min.js"></script>*}
+            <script type="text/javascript" src="{$template_url}/js/jquery.flexslider-min.js"></script>
             <script type="text/javascript" src="{$template_url}/js/jquery.raty.min.js"></script>
             <script src="{$template_url}/js/main.js"></script>
             {*<script src="{$template_url}/js/bootstrap-datepicker.{$lang}.js"></script>*}
