@@ -53,7 +53,7 @@ var App = function () {
     var initSliders = function() {
         if(jQuery().flexslider) {
             $('.flexslider-tcn').flexslider({
-                animation: "slide",
+                animation: "fade",
                 controlNav: "thumbnails"
             });
 
