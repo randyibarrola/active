@@ -35,12 +35,7 @@ var Home = function() {
     };
     
     var initSlider = function() {
-           $('.flexslider').flexslider({
-            animation: "fade",
-            controlNav: "thumbnails",
-            slideshow: false
-           
-          });
+
     };
 
     var initTourBookingForm = function() {
