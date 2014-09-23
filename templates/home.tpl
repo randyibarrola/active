@@ -48,7 +48,7 @@
     <div class="row">
         <div class="col-md-3 col-sm-3">
             {include file="simple_search_form.tpl"}
-
+            {* oculto hasta que se determine
             <div id="home-free-offer" class="well-white well-border-pink well-divider">
                 <p>Con tu reserva, te regalamos:</p>
                 <div class="media">
@@ -74,7 +74,7 @@
                     <li>Early check-in</li>
                     <li>Early check-out</li>
                 </ul>
-            </div>
+            </div>*}
             {if $hotel->mostrarHotelesRelacionados && $hotel->relacionados && count($hotel->relacionados) && !$movile}
                 {include file="hotel_prompt.tpl"}
             {/if}
@@ -225,6 +225,7 @@
                                 </tbody>
                             </table>
                         </div>
+                        {* esto lo ocultamos hasta nuevo aviso
                         <div class="col-md-2 col-sm-12">
                             <div class="tripadvisor-content">
                                 <div id="TA_selfserveprop101" class="TA_selfserveprop">
@@ -250,7 +251,8 @@
                                     <div class="plusone" title="{#comparte_este_link#} Google+">{#compartir#}</div>
                                 </div>
                             </div>
-                        </div>
+                        </div>*}
+                        
                     </div>
                 </div>
                 <div class="tab-pane" id="conditions">
@@ -308,19 +310,12 @@
                     <input type="hidden" name="lon" value="{$hotel->direccion->lon}">                    
                 </div>
                 <div class="tab-pane" id="opinions">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div id="TA_selfserveprop273" class="TA_selfserveprop">
-                                <ul id="8n8wH28pXi" class="TA_links 19qElIAWMgP">
-                                    <li id="stzcn0qrb" class="mE3OZ7X">
-                                        <a target="_blank" href="http://www.tripadvisor.es/"><img src="http://www.tripadvisor.es/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    {if $hotel->tripAdvisor}
+                        {$hotel->tripAdvisor}
+                    {/if}
                 </div>
-                <div class="tab-pane app-ajax-load" id="faqs" data-href="{$base_url}/{$lang}/faq{$end_url}">
+                <div class="tab-pane " id="faqs">
+                    {$contenido}
                 </div>
                 <div class="tab-pane app-ajax-load" id="contact" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">
                 </div>

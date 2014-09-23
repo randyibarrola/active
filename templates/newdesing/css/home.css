@@ -198,6 +198,7 @@
     /*color: #9A9A9A;*/
 }
 
+/*Esto de momento no aplica, se cargan desde el administrador
 #faqs > ul {
     float: left;
     font-family: "Gotham Rounded Medium";
@@ -216,7 +217,7 @@
         max-width: 100%;
     }
 }
-
+*/
 #tour-booking-form .price-per-person {
     margin-bottom: 20px;
 }
@@ -601,4 +602,8 @@
 #search-best-prices-modal .modal-body p {
     margin-top: 20px;
     font-size: 12px;
+}
+
+#CDSWIDSSP {
+    width: 100% !important;
 }
