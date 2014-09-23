@@ -57,7 +57,7 @@ var App = function () {
                 controlNav: "thumbnails",
                 slideshow: false
             });
-            /*
+            
             $('.flexslider-scn-carousel').each(function() {
                 var e = $(this);
                 e.flexslider({
@@ -70,7 +70,7 @@ var App = function () {
                     asNavFor: e.attr('data-asnavfor')
                 })
             });
-
+            /*
             $('.flexslider-scn-slider').each(function() {
                 var e = $(this);
                 e.flexslider({
