@@ -34,12 +34,6 @@
                 if($('.gm-style').length == 0)           
                     Home.handleMap();            
             });
-        $('.flexslider').flexslider({
-            animation: "fade",
-            controlNav: "thumbnails",
-            slideshow: false
-           
-          });
         });
     </script>
 

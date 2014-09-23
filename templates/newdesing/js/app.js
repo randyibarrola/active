@@ -53,14 +53,14 @@ var App = function () {
     var initSliders = function() {
         if(jQuery().flexslider) {
             $('.flexslider-tcn').flexslider({
-                animation: "slide",
+                animation: "fade",
                 controlNav: "thumbnails"
             });
 
             $('.flexslider-scn-carousel').each(function() {
                 var e = $(this);
                 e.flexslider({
-                    animation: "slide",
+                    animation: "fade",
                     controlNav: false,
                     animationLoop: false,
                     slideshow: false,
@@ -73,11 +73,11 @@ var App = function () {
             $('.flexslider-scn-slider').each(function() {
                 var e = $(this);
                 e.flexslider({
-                    animation: "slide",
+                    animation: "fade",
                     controlNav: false,
                     animationLoop: true,
-                    slideshow: false,
-                    sync: e.attr('data-sync')
+                    slideshow: false
+                    //sync: e.attr('data-sync')
                 })
             });
         }
