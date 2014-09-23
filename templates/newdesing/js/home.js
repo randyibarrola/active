@@ -33,6 +33,15 @@ var Home = function() {
                 holder.find('.home-free-offer-price').show();
         });
     };
+    
+    var initSlider = function() {
+           $('.flexslider').flexslider({
+            animation: "fade",
+            controlNav: "thumbnails",
+            slideshow: false
+           
+          });
+    };
 
     var initTourBookingForm = function() {
         var form = $('#tour-booking-form');
@@ -69,7 +78,8 @@ var Home = function() {
         init: function() {
             initSimpleSearchOffers();
             initFreeOffer();
-            initTourBookingForm();            
+            initTourBookingForm(); 
+            initSlider();
             $('#contact').bind('app.event.load.success', function(ev, selector, response, status, xhr) {
                 Contact.init($(selector).find('#contact-form'));
             });
