@@ -52,29 +52,15 @@ var App = function () {
 
     var initSliders = function() {
         if(jQuery().flexslider) {
-            $('#home-slider-hotel-carousel').flexslider({
-                animation: "fade",
-                controlNav: false,
-                animationLoop: false,
-                slideshow: false,
-                itemWidth: 210,
-                itemMargin: 5,
-                asNavFor: '#home-slider-hotel-slider'
-              }); 
-            
-            $('#home-slider-hotel-slider').flexslider({
-                animation: "fade",
-                controlNav: "thumbnails",
-                slideshow: false,
-                sync: "#home-slider-hotel-slider"
+            $('.flexslider-tcn').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails"
             });
-            
-           
-            /*
+
             $('.flexslider-scn-carousel').each(function() {
                 var e = $(this);
                 e.flexslider({
-                    animation: "fade",
+                    animation: "slide",
                     controlNav: false,
                     animationLoop: false,
                     slideshow: false,
@@ -83,7 +69,7 @@ var App = function () {
                     asNavFor: e.attr('data-asnavfor')
                 })
             });
-            
+
             $('.flexslider-scn-slider').each(function() {
                 var e = $(this);
                 e.flexslider({
@@ -93,7 +79,7 @@ var App = function () {
                     slideshow: false,
                     sync: e.attr('data-sync')
                 })
-            });*/
+            });
         }
     };
 
