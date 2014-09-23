@@ -53,7 +53,7 @@ var App = function () {
     var initSliders = function() {
         if(jQuery().flexslider) {
             $('.flexslider-tcn').flexslider({
-                animation: "slide",
+                animation: "fade",
                 controlNav: "thumbnails"
             });
 
@@ -73,7 +73,7 @@ var App = function () {
             $('.flexslider-scn-slider').each(function() {
                 var e = $(this);
                 e.flexslider({
-                    animation: "slide",
+                    animation: "fade",
                     controlNav: false,
                     animationLoop: true,
                     slideshow: false,
@@ -257,6 +257,7 @@ var App = function () {
             agreementEndDate: false
         },
         i18n: [],
+        property: [],
 
         //main function to initiate template pages
         init: function () {
@@ -554,7 +555,15 @@ var App = function () {
         },
 
         getI18n: function(key) {
-            return App.i18n[key] ? App.i18n[key] : key
+            return App.i18n[key] ? App.i18n[key] : key;
+        },
+
+        set: function(key, value) {
+            App.property[key] = value;
+        },
+
+        get: function(key) {
+            return App.property[key] ? App.i18n[key] : undefined;
         }
     };
 

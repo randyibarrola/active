@@ -551,7 +551,7 @@ form#contact-form input[type="submit"] {
 
 .flexslider .slider-info {
     position: absolute;
-    z-index: 2;
+    z-index: 5;
     color: #FFFFFF;
     left: 0;
     top: 0;

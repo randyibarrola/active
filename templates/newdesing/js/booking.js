@@ -9,12 +9,75 @@ var Booking = function() {
         });
 
         App.bookingDateWidget(form);
+
+        form.bind('app.event.form.submit.before', function(e, data) {
+            var modal = $('#search-best-prices-modal');
+            modal.find('.modal-body > h1').text(App.getI18n('buscando_su_mejor_tarifa'));
+            modal.modal('show');
+        });
+
+        form.submit(function() {
+            form.triggerHandler('app.event.form.submit.before', []);
+        });
     };
 
     var initSearchRoomList = function() {
-        var list = $('#search-room-result');
-        list.children('.item').each(function() {
-            initSearchRoomItem($(this));
+        var modal = $('#search-best-prices-modal');
+        modal.find('.modal-body > h1').text(App.getI18n('buscando_disponibilidad') + '...');
+        modal.on('shown.bs.modal', function (e) {
+            window.setTimeout(function(){
+                modal.find('.modal-body > h1').text(App.getI18n('calculando_tarifa') + '...');
+            },2300);
+        });
+        modal.modal('show');
+
+        $.post(App.baseUrl + '/ajax-apartamento' + App.endUrl, function(data) {
+            var container = $('#search-room-container');
+            container.html(data);
+
+            App.handleSelect2($('#search-room-filter .select2'));
+            var list = $('#search-room-result');
+            list.children('.item').each(function() {
+                initSearchRoomItem($(this));
+            });
+
+            modal.off('shown.bs.modal');
+            modal.modal('hide');
+
+//            $('.flexslider').flexslider({
+//                animation: "fade"
+//            });
+//
+//            $('.cantidad_select').change(function(){
+//                var tarifas = eval($(this).parents('.room_container').find('input.precio_tarifas').val());
+//                var tarifas_sin_descuento = eval($(this).parents('.room_container').find('input.precio_tarifas_sin_descuento').val());
+//                $(this).parents('.room_container').find('.precio_total span').html(tarifas[$(this).val()-1]);
+//                if(tarifas_sin_descuento)
+//                    $(this).parents('.room_container').find('.precio_total_sin_descuento span').html(tarifas_sin_descuento[$(this).val()-1]);
+//                calcularReglas();
+//            });
+//            $('.toggle_detalles').click(function(){
+//                var that = $(this);
+//                $(this).parents('.row').find('.descripcion_table').toggle(function(){
+//                    if($(this).is(':visible')){
+//                        that.html('- '+OCULTAR_DETALLE);
+//                    }else{
+//                        that.html('+ '+MOSTRAR_DETALLE);
+//                    }
+//                    return true;
+//                });
+//            });
+//            calcularReglas();
+//            $('select.apto-filter').change(filtros);
+//
+//            //hoteles - destino
+//            startItem = parseInt($('.hotel_list').attr('startitem'));
+//            itemsByPage = parseInt($('.hotel_list').attr('itemsbypage'));
+//            totalItems = parseInt($('.hotel_list').attr('totalitems'));
+//            showMix();
+//            paginate(parseInt(startItem/itemsByPage) + 1, parseInt(totalItems/itemsByPage) + ((totalItems%itemsByPage == 0) ? 0 : 1));
+//
+//            $('[data-toggle=popover]').popover({trigger:'hover'});
         });
     };
 
@@ -29,6 +92,30 @@ var Booking = function() {
             link.children('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-down');
             item.find('.more-info-content').slideUp();
         });
+
+        item.find('.show-booking-room-modal').each(function() {
+            var clicked = $(this);
+            clicked.click(function() {
+                var form = $('#booking-room-form');
+
+                form.find('.booking-room-form-room').val(clicked.data('room'));
+                form.find('.booking-room-form-count').val(1);
+                form.find('.booking-room-form-type').val(clicked.data('type'));
+
+                var bookingFormModal = $('#booking-room-modal');
+                bookingFormModal.find('.room-title').text(clicked.data('title'));
+                bookingFormModal.find('.widget-plus').attr('data-stop', clicked.data('stock'));
+                bookingFormModal.find('.widget-value').val(1);
+                bookingFormModal.find('.widget-text').text(1);
+                bookingFormModal.find('.current-price').attr('data-basic-price', clicked.data('current-price')).text(clicked.data('current-price').replace('.', ','));
+                bookingFormModal.find('.old-price').attr('data-basic-price', clicked.data('old-price')).text(clicked.data('old-price').replace('.', ','));
+
+                var widgetCount = bookingFormModal.find('#booking-room-modal-widget-count');
+                App.widgetCount(widgetCount);
+
+                bookingFormModal.modal('show');
+            });
+        });
     };
 
     var initModals = function(step) {
@@ -38,33 +125,13 @@ var Booking = function() {
                 bookingFormModal.modal({
                     show: false
                 }).on('show.bs.modal', function (e) {
-                        bookingFormModal.find('button').eq(0).off().click(function() {
-                            bookingFormModal.modal('hide');
-                            $('#booking-room-form').trigger('submit');
-                        });
+                    bookingFormModal.find('button').eq(0).off().click(function() {
+                        bookingFormModal.modal('hide');
+                        $('#booking-room-form').trigger('submit');
                     });
+                });
 
                 var widgetCount = bookingFormModal.find('#booking-room-modal-widget-count');
-
-                $('.show-booking-room-modal').click(function() {
-                    var clicked = $(this);
-                    var form = $('#booking-room-form');
-
-                    form.find('.booking-room-form-room').val(clicked.data('room'));
-                    form.find('.booking-room-form-count').val(1);
-                    form.find('.booking-room-form-type').val(clicked.data('type'));
-
-                    bookingFormModal.find('.room-title').text(clicked.data('title'));
-                    bookingFormModal.find('.widget-plus').attr('data-stop', clicked.data('stock'));
-                    bookingFormModal.find('.widget-value').val(1);
-                    bookingFormModal.find('.widget-text').text(1);
-                    bookingFormModal.find('.current-price').attr('data-basic-price', clicked.data('current-price')).text(clicked.data('current-price').replace('.', ','));
-                    bookingFormModal.find('.old-price').attr('data-basic-price', clicked.data('old-price')).text(clicked.data('old-price').replace('.', ','));
-
-                    App.widgetCount(widgetCount);
-
-                    bookingFormModal.modal('show');
-                });
 
                 widgetCount.bind('app.event.widget.count.change', function(event, value) {
                     var currentPrice = value * parseFloat(bookingFormModal.find('.current-price').attr('data-basic-price'));
@@ -72,6 +139,13 @@ var Booking = function() {
 
                     bookingFormModal.find('.current-price').text(App.formatPrice(currentPrice));
                     bookingFormModal.find('.old-price').text(App.formatPrice(oldPrice));
+                });
+
+                var searchRoomModal = $('#search-best-prices-modal');
+                searchRoomModal.modal({
+                    backdrop: "static",
+                    keyboard: false,
+                    show: false
                 });
 
                 break;
@@ -208,10 +282,15 @@ var Booking = function() {
             if(!step)
                 step = 1;
 
+            initModals(step);
+
             switch(step) {
                 case 1:
                     initSearchRoomForm();
                     initSearchRoomList();
+                    $('#contact').bind('app.event.load.success', function(ev, selector, response, status, xhr) {
+                        Contact.init($(selector).find('#contact-form'));
+                    });
                     break;
                 case 2:
                     initSearchTourList();
@@ -221,8 +300,6 @@ var Booking = function() {
                 default:
                     break;
             }
-
-            initModals(step);
         }
     };
 }();
