@@ -320,7 +320,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane app-ajax-load" id="faqs" data-href="{$base_url}/{$lang}/faq{$end_url}">
+                <div class="tab-pane " id="faqs">
+                    {$contenido}
                 </div>
                 <div class="tab-pane app-ajax-load" id="contact" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">
                 </div>
