@@ -308,17 +308,9 @@
                     <input type="hidden" name="lon" value="{$hotel->direccion->lon}">                    
                 </div>
                 <div class="tab-pane" id="opinions">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div id="TA_selfserveprop273" class="TA_selfserveprop">
-                                <ul id="8n8wH28pXi" class="TA_links 19qElIAWMgP">
-                                    <li id="stzcn0qrb" class="mE3OZ7X">
-                                        <a target="_blank" href="http://www.tripadvisor.es/"><img src="http://www.tripadvisor.es/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    {if $hotel->tripAdvisor}
+                        {$hotel->tripAdvisor}
+                    {/if}
                 </div>
                 <div class="tab-pane " id="faqs">
                     {$contenido}
