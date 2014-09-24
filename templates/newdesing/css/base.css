@@ -512,6 +512,9 @@ form#contact-form input[type="submit"] {
 }
 
 /*** FlexSlider ***/
+.flexslider {
+    overflow: hidden;
+}
 
 .slider {
     margin-bottom: 15px;

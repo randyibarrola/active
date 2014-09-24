@@ -52,34 +52,10 @@ var App = function () {
 
     var initSliders = function() {
         if(jQuery().flexslider) {
-            $('.flexslider-tcn').flexslider({
-                animation: "fade",
-                controlNav: "thumbnails"
-            });
-
-            $('.flexslider-scn-carousel').each(function() {
-                var e = $(this);
-                e.flexslider({
-                    animation: "slide",
-                    controlNav: false,
-                    animationLoop: false,
-                    slideshow: false,
-                    itemWidth: parseInt(e.attr('data-itemwidth')),
-                    itemMargin: 5,
-                    asNavFor: e.attr('data-asnavfor')
-                })
-            });
-
-            $('.flexslider-scn-slider').each(function() {
-                var e = $(this);
-                e.flexslider({
-                    animation: "fade",
-                    controlNav: false,
-                    animationLoop: true,
-                    slideshow: false,
-                    sync: e.attr('data-sync')
-                })
-            });
+            App.handleSlider($('.flexslider-tcn'), 'tcn');
+            App.handleSlider($('.flexslider-scn-carousel'), 'scn-carousel');
+            App.handleSlider($('.flexslider-scn-slider'), 'scn-slider');
+            App.handleSlider($('.flexslider-default'));
         }
     };
 
@@ -564,6 +540,54 @@ var App = function () {
 
         get: function(key) {
             return App.property[key] ? App.i18n[key] : undefined;
+        },
+
+        handleSlider: function(selector, type) {
+            if(jQuery().flexslider) {
+                switch(type) {
+                    case 'tcn':
+                        $(selector).each(function() {
+                            $(this).flexslider({
+                                animation: "fade",
+                                controlNav: "thumbnails"
+                            });
+                        });
+                        break;
+                    case 'scn-carousel':
+                        $(selector).each(function() {
+                            var e = $(this);
+                            e.flexslider({
+                                animation: "slide",
+                                controlNav: false,
+                                animationLoop: false,
+                                slideshow: false,
+                                itemWidth: parseInt(e.attr('data-itemwidth')),
+                                itemMargin: 5,
+                                asNavFor: e.attr('data-asnavfor')
+                            })
+                        });
+                        break;
+                    case 'scn-slider':
+                        $(selector).each(function() {
+                            var e = $(this);
+                            e.flexslider({
+                                animation: "fade",
+                                controlNav: false,
+                                animationLoop: true,
+                                slideshow: false,
+                                sync: e.attr('data-sync')
+                            })
+                        });
+                        break;
+                    default:
+                        $(selector).each(function() {
+                            $(this).flexslider({
+                                animation: "fade"
+                            });
+                        });
+                        break;
+                }
+            }
         }
     };
 

@@ -21,6 +21,49 @@ var Booking = function() {
         });
     };
 
+    var filterSearchRoomList = function(list, filters) {
+        $(filters).each(function() {
+            var e = $(this);
+            e.change(function() {
+                var pensionValue = e.attr('id') == 'search-room-filter-pension' ? e.val().trim() : $('#search-room-filter-pension').val().trim();
+                var paxValue = e.attr('id') == 'search-room-filter-pax' ? e.val().trim() : $('#search-room-filter-pax').val().trim();
+
+                $.each(list, function() {
+                    var item = $(this);
+                    var flag = true;
+
+                    var dataFilterPax = item.find('.filter-pax-value').text().trim();
+                    if(flag && paxValue != '0') {
+                        flag = dataFilterPax == paxValue;
+                    }
+
+                    if(flag && pensionValue != '0') {
+                        var bookingOptions = item.find('.booking-options .option');
+                        bookingOptions.each(function() {
+                            var option = $(this);
+                            option.removeClass('hidden');
+                            if(option.children('h5').text().trim() != pensionValue) {
+                                option.addClass('hidden');
+                            }
+                        });
+                    }
+                    else {
+                        item.find('.booking-options .option').removeClass('hidden');
+                    }
+
+                    flag = flag && item.find('.booking-options:eq(0) > .hidden').length < item.find('.booking-options:eq(0) > .option').length;
+
+                    if(flag) {
+                        item.show();
+                    }
+                    else {
+                        item.hide();
+                    }
+                });
+            });
+        });
+    };
+
     var initSearchRoomList = function() {
         var modal = $('#search-best-prices-modal');
         modal.find('.modal-body > h1').text(App.getI18n('buscando_disponibilidad') + '...');
@@ -35,18 +78,31 @@ var Booking = function() {
             var container = $('#search-room-container');
             container.html(data);
 
-            App.handleSelect2($('#search-room-filter .select2'));
-            var list = $('#search-room-result');
-            list.children('.item').each(function() {
-                initSearchRoomItem($(this));
-            });
+            var items = container.find('#search-room-result > .item');
+            if(items.length > 0) {
+                var filters = $('#search-room-filter select.select2');
+                App.handleSelect2(filters);
+                filterSearchRoomList(items, filters);
+                items.each(function() {
+                    initSearchRoomItem($(this));
+                });
+
+                App.contentAjaxLoad($('#contact'));
+            }
+            else {
+                var form = $('#booking-search-room');
+                var formFields = form.find('.head:eq(0) > .head-dates').eq(0);
+                form.find('.jumbotron:eq(0)').append(formFields.clone());
+                formFields.remove();
+                form.find('.jumbotron:eq(0)').show();
+                container.empty();
+                $('#contact').remove();
+            }
+            initSearchRoomForm();
 
             modal.off('shown.bs.modal');
             modal.modal('hide');
 
-            $('.flexslider').flexslider({
-                animation: "fade"
-            });
 //
 //            $('.cantidad_select').change(function(){
 //                var tarifas = eval($(this).parents('.room_container').find('input.precio_tarifas').val());
@@ -93,29 +149,31 @@ var Booking = function() {
             item.find('.more-info-content').slideUp();
         });
 
-        item.find('.show-booking-room-modal').each(function() {
-            var clicked = $(this);
-            clicked.click(function() {
-                var form = $('#booking-room-form');
+        App.handleSlider(item.find('.flexslider'));
 
-                form.find('.booking-room-form-room').val(clicked.data('room'));
-                form.find('.booking-room-form-count').val(1);
-                form.find('.booking-room-form-type').val(clicked.data('type'));
-
-                var bookingFormModal = $('#booking-room-modal');
-                bookingFormModal.find('.room-title').text(clicked.data('title'));
-                bookingFormModal.find('.widget-plus').attr('data-stop', clicked.data('stock'));
-                bookingFormModal.find('.widget-value').val(1);
-                bookingFormModal.find('.widget-text').text(1);
-                bookingFormModal.find('.current-price').attr('data-basic-price', clicked.data('current-price')).text(clicked.data('current-price').replace('.', ','));
-                bookingFormModal.find('.old-price').attr('data-basic-price', clicked.data('old-price')).text(clicked.data('old-price').replace('.', ','));
-
-                var widgetCount = bookingFormModal.find('#booking-room-modal-widget-count');
-                App.widgetCount(widgetCount);
-
-                bookingFormModal.modal('show');
-            });
-        });
+//        item.find('.show-booking-room-modal').each(function() {
+//            var clicked = $(this);
+//            clicked.click(function() {
+//                var form = $('#booking-room-form');
+//
+//                form.find('.booking-room-form-room').val(clicked.data('room'));
+//                form.find('.booking-room-form-count').val(1);
+//                form.find('.booking-room-form-type').val(clicked.data('type'));
+//
+//                var bookingFormModal = $('#booking-room-modal');
+//                bookingFormModal.find('.room-title').text(clicked.data('title'));
+//                bookingFormModal.find('.widget-plus').attr('data-stop', clicked.data('stock'));
+//                bookingFormModal.find('.widget-value').val(1);
+//                bookingFormModal.find('.widget-text').text(1);
+//                bookingFormModal.find('.current-price').attr('data-basic-price', clicked.data('current-price')).text(clicked.data('current-price').replace('.', ','));
+//                bookingFormModal.find('.old-price').attr('data-basic-price', clicked.data('old-price')).text(clicked.data('old-price').replace('.', ','));
+//
+//                var widgetCount = bookingFormModal.find('#booking-room-modal-widget-count');
+//                App.widgetCount(widgetCount);
+//
+//                bookingFormModal.modal('show');
+//            });
+//        });
     };
 
     var initModals = function(step) {
@@ -286,7 +344,6 @@ var Booking = function() {
 
             switch(step) {
                 case 1:
-                    initSearchRoomForm();
                     initSearchRoomList();
                     $('#contact').bind('app.event.load.success', function(ev, selector, response, status, xhr) {
                         Contact.init($(selector).find('#contact-form'));

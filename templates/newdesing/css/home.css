@@ -355,6 +355,32 @@
     margin-bottom: 7px;
 }
 
+#home-slider-hotel-slider,
+#home-slider-tour-slider {
+    max-height: 205px;
+}
+
+@media(min-width: 728px) and (max-width: 940px) {
+    #home-slider-hotel-slider,
+    #home-slider-tour-slider {
+        max-height: 290px;
+    }
+}
+
+@media(min-width: 940px) and (max-width: 1170px) {
+    #home-slider-hotel-slider,
+    #home-slider-tour-slider {
+        max-height: 380px;
+    }
+}
+
+@media(min-width: 1170px) {
+    #home-slider-hotel-slider,
+    #home-slider-tour-slider {
+        max-height: 470px;
+    }
+}
+
 #home-slider-hotel,
 #home-slider-tour {
     margin-bottom: 25px;

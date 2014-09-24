@@ -6,7 +6,7 @@
 <div id="search-room-filter" class="well-gray">
     {if count($pensiones) > 1}
         <label class="control-label">{#tipo_pension#}:</label>
-        <select class="select2">
+        <select class="select2" id="search-room-filter-pension">
             <option value="0" selected="selected">{#cualquiera#}</option>
             {foreach from=$pensiones item=pension}
                 <option value="{$pension}">{$pension}</option>
@@ -15,7 +15,7 @@
     {/if}
     {if count($paxes) > 1}
         <label class="control-label">{#cantidad_de_personas#}:</label>
-        <select class="select2">
+        <select class="select2" id="search-room-filter-pax">
             <option value="0" selected="selected">{#cualquiera#}</option>
             {foreach from=$paxes item=pax}
                 <option value="{$pax['adultos']} {#Adulto_s#} {if $pax['ninios']}+ {$pax['ninios']} {#niho_s#}{/if}">
@@ -28,19 +28,19 @@
 <div id="search-room-result" class="">    
     {assign var="apto_descripcion" value=""}
     {foreach from=$apartamentos key=k item=apartamento name=aptos}
-        {if $apartamento['descripcion']}     
+        {if $apartamento['descripcion']}
         <div class="item">
             <div class="row">
                 <div class="col-md-7 col-sm-12 col-xs-12">
                     <h5 class="available">¡Solo nos queda 1!</h5>
                     <div class="media">
-                        <div class="pull-left" style="width: 185px;height: 103px;">
+                        <div class="pull-left">
                             {*<img class="media-object" src="tmp/habitacion.jpg" alt="">*}
                             <div class="flexslider">
                                 <ul class="slides">
                                 {foreach from=$apartamento['imagenes'] item=imagen}
                                   <li class="slide">
-                                      <img width="185px" height="103px" class="media-object" src="{$imagen}" alt="{$apartamento['titulo']}">
+                                      <img class="media-object" src="{$imagen}" alt="{$apartamento['titulo']}">
                                       {*<img src="{$imagen}" alt="{$apartamento['titulo']}">  *}
                                   </li>
                                 {/foreach}
@@ -53,15 +53,15 @@
                                 {*<span>1 cama de matrimonio o Dos camas</span>*}
                             </h4>
                             <p class="max-persons">
-                                <label>Ocupación máxima:</label>
-                                {$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}
+                                <label>{#ocupacion_maxima#}:</label>
+                                <span class="filter-pax-value">{$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}</span>
                             </p>
                             {if $apartamento['condicion'] != ''}
-                                <p class="free-cancel">{$apartamento['condicion']}</p>                                
+                                <p class="free-cancel">{$apartamento['condicion']}</p>
                             {/if}
 
-                            <a href="#" class="more-info" data-more="Mostrar los datos de la habitación" data-minus="Ocultar los datos de la habitación">
-                                <span>Mostrar los datos de la habitación</span> <i class="glyphicon glyphicon-chevron-down"></i>
+                            <a href="#" class="more-info" data-more="{#mostrar_datos_habitacion#}" data-minus="{#ocultar_datos_habitacion#}">
+                                <span>{#mostrar_datos_habitacion#}</span> <i class="glyphicon glyphicon-chevron-down"></i>
                             </a>
                         </div>
                     </div>
@@ -72,27 +72,27 @@
                                 <h5>{$apartamento['pension']}</h5>
                         {else}
                                 <h5 class="free-cancel">{#solo_alojamiento#}</h5>
-                        {/if}                    
+                        {/if}
                         <label class="current-price">{$apartamento['precio_moneda_seleccionada']}</label>
                         <label class="old-price">78,20&euro;</label>
                         <button class="btn app-btn-pink pull-right show-booking-room-modal" data-stock="1" data-title="Habitación estándar sin desayuno" data-current-price="71.50" data-old-price="78.20" data-room="1" data-type="1">
-                            Reservar
+                            {#reservar#|capitalize}
                         </button>
                     </div>
-                    
+
                     {foreach from=$sub_apartamentos[$k] key=i item=apt name=apts}
                         <div class="option">
                             {if $apt['pension'] && $apt['pension'] != ''}
                                     <h5>{$apt['pension']}</h5>
                             {else}
                                     <h5 class="free-cancel">{#solo_alojamiento#}</h5>
-                            {/if}                    
+                            {/if}
                             <label class="current-price">{$apt['precio_moneda_seleccionada']}</label>
                             <label class="old-price">78,20&euro;</label>
                             <button class="btn app-btn-pink pull-right show-booking-room-modal" data-stock="1" data-title="Habitación estándar sin desayuno" data-current-price="71.50" data-old-price="78.20" data-room="1" data-type="1">
-                                Reservar
+                                {#reservar#|capitalize}
                             </button>
-                        </div>                        
+                        </div>
                     {/foreach}
                 </div>
             </div>
@@ -100,7 +100,7 @@
                 <dl>
                     <dd>{$apartamento['descripcion']}</dd>
                     <dt>{#descripcion_del_servicio#}</dt>
-                    <table class="table table-striped table-hover descripcion_table">                 
+                    <table class="table table-striped table-hover descripcion_table">
                       <tbody>
                         {foreach from=$apartamento['servicios'] item=servicio}
                           <tr>
@@ -111,11 +111,11 @@
                     </table>
                 </dl>
                 <div>
-                    <a href="#" class="btn app-btn-blue">Ver ficha de habitación</a>
+                    <a href="#" class="btn app-btn-blue">{#ver_ficha_habitacion#}</a>
                 </div>
             </div>
         </div>
         {/if}
-    {/foreach}    
+    {/foreach}
 
 </div>

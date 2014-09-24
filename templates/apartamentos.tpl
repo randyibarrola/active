@@ -70,11 +70,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="jumbotron text-center" style="display: none;">
+                            <h1>{#lo_lamentamos#},</h1>
+                            <p>{#no_disponibilidad_en_fechas#}.</p>
+                        </div>
                     </fieldset>
                 </form>
                 <div id="search-room-container">
                 </div>
-                <div id="contact" class="well-gray app-ajax-load" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">
+                <div id="contact" class="well-gray" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">
                 </div>
                 {if $hotel->destinoId}
                     <div id="recommendation-hotels" class="well-white well-divider">

@@ -223,6 +223,10 @@
     margin-right: 1%;
 }
 
+#search-room-filter {
+    margin-bottom: 10px;
+}
+
 #search-room-filter label,
 #booking-search-tour .well-gray label,
 #search-room-filter .select2,
@@ -265,12 +269,11 @@
     }
 }
 
-#search-room-result > .item,
-#search-tour-result > .item {
-    margin-bottom: 1px;
-    border-top: solid 1px #F5F4F4;
-    border-bottom: solid 1px #F5F4F4;
+#search-room-result > .item:not(:first-child),
+#search-tour-result > .item:not(:first-child) {
+    border-top: solid 3px #C3C3C3;
     padding: 10px 0;
+    margin-top: 1px;
 }
 
 #search-room-result > .item h5.available {
@@ -332,6 +335,16 @@
         bottom: auto;
         position: inherit;
     }
+}
+
+#search-room-result > .item .media .flexslider {
+    max-height: 103px;
+    max-width: 185px;
+}
+
+#search-room-result > .item .media .flexslider img {
+    width: 185px;
+    height: 103px;
 }
 
 @media (max-width: 728px) {
