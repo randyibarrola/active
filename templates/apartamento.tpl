@@ -26,9 +26,10 @@
     {/if}
 </div>
 <div id="search-room-result" class="">
-    
-    {foreach from=$apartamentos key=k item=apartamento name=aptos}
+    {assign var="apto_descripcion" value=""}
+    {foreach from=$apartamentos key=k item=apartamento name=aptos}    
     {if $apartamento['descripcion']}
+        {assign var="apto_descripcion" value="apartamento"}
     <div class="item">
         <div class="row">
             <div class="col-md-7 col-sm-12 col-xs-12">
@@ -89,7 +90,7 @@
                 </div>*}
             </div>
             {/if}
-        {if $apartamento['descripcion']}
+        {if $smarty.foreach.aptos.last}
         </div>
         <div class="more-info-content" style="display: none;">
             <dl>      
