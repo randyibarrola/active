@@ -31,9 +31,9 @@
 {foreach from=$apartamentos key=k item=apartamento name=aptos}
     {if $apartamento['descripcion']} 
         {$indice = $k}
-        {$subaptos[$k] = []}
+        
     {/else}
-       {$subaptos[$k][] = $apartamento} 
+       
     {/if}
 {/foreach}
 
