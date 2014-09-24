@@ -281,6 +281,8 @@
 
 #search-room-result > .item .media {
     margin-top: 0;
+    max-height: 103px;
+    max-width: 185px;
 }
 
 #search-room-result > .item .media .media-heading {
