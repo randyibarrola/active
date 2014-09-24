@@ -595,6 +595,11 @@ if ($hotel) {
            $subaptos[$indice][] = $apt; 
         }
     }
+    
+    foreach($subaptos as $key => $sub){
+        var_dump(count($subaptos[$key]));
+    }
+    die;
 
     $smarty->assign('condiciones', $condicionesS);
     $smarty->assign('pensiones', $pensionesS);
