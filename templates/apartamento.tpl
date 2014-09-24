@@ -85,9 +85,15 @@
                 <dt>Inclusions</dt>
                 <dd>{$apartamento['descripcion']}</dd>
                 <dt>{#descripcion_del_servicio#}</dt>
-                {foreach from=$apartamento['servicios'] item=servicio}                    
-                      <dd>{$servicio}</dd>                   
-                {/foreach}
+                <table class="table table-striped table-hover descripcion_table">                 
+                  <tbody>
+                    {foreach from=$apartamento['servicios'] item=servicio}
+                      <tr>
+                        <td>{$servicio}</td>
+                      </tr>
+                    {/foreach}
+                  </tbody>
+                </table>
             </dl>
             <div>
                 <a href="#" class="btn app-btn-blue">Ver ficha de habitación</a>

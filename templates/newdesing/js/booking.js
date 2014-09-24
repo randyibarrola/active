@@ -44,9 +44,9 @@ var Booking = function() {
             modal.off('shown.bs.modal');
             modal.modal('hide');
 
-//            $('.flexslider').flexslider({
-//                animation: "fade"
-//            });
+            $('.flexslider').flexslider({
+                animation: "fade"
+            });
 //
 //            $('.cantidad_select').change(function(){
 //                var tarifas = eval($(this).parents('.room_container').find('input.precio_tarifas').val());
