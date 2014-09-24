@@ -52,7 +52,7 @@
                         </h4>
                         <p class="max-persons">
                             <label>Ocupación máxima:</label>
-                            {#Max#}: {{#Max#}$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}
+                            2 huespedes
                         </p>
                         {if $apartamento['pension'] && $apartamento['pension'] != ''}
                             <p class="free-cancel">{$apartamento['pension']}</p>
