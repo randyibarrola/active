@@ -77,7 +77,7 @@
                         </button>
                     </div>
                     
-                    {foreach from=sub_apartamentos[$k] key=i item=apt name=apts}
+                    {foreach from=$sub_apartamentos[$k] key=i item=apt name=apts}
                         <div class="option">
                             {if $apt['pension'] && $apt['pension'] != ''}
                                     <h5>{$apt['pension']}</h5>
