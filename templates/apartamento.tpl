@@ -26,17 +26,28 @@
     {/if}
 </div>
 <div id="search-room-result" class="">
+    
+    {foreach from=$apartamentos key=k item=apartamento name=aptos}
     <div class="item">
         <div class="row">
             <div class="col-md-7 col-sm-12 col-xs-12">
                 <h5 class="available">¡Solo nos queda 1!</h5>
                 <div class="media">
                     <div class="pull-left">
-                        <img class="media-object" src="tmp/habitacion.jpg" alt="">
+                        {*<img class="media-object" src="tmp/habitacion.jpg" alt="">*}
+                        <div class="flexslider">
+                            <ul class="slides">
+                            {foreach from=$apartamento['imagenes'] item=imagen}
+                              <li class="slide">
+                                  <img src="{$imagen}" alt="{$apartamento['titulo']}">  
+                              </li>
+                            {/foreach}
+                            </ul>
+                        </div>
                     </div>
                     <div class="media-body">
                         <h4 class="media-heading">
-                            Habitación estándar
+                            {$apartamento['titulo']}
                             <span>1 cama de matrimonio o Dos camas</span>
                         </h4>
                         <p class="max-persons">
@@ -72,14 +83,23 @@
         <div class="more-info-content" style="display: none;">
             <dl>
                 <dt>Inclusions</dt>
-                <dd>Hotel pickup and drop-off</dd>
-                <dd>Certified guide</dd>
+                <dd>{$apartamento['descripcion']}</dd>
+                <dt>{#descripcion_del_servicio#}</dt>
+                {foreach from=$apartamento['servicios'] item=servicio}                    
+                      <dd>{$servicio}</dd>                   
+                {/foreach}
             </dl>
             <div>
                 <a href="#" class="btn app-btn-blue">Ver ficha de habitación</a>
             </div>
         </div>
     </div>
+    {/foreach}
+    
+    
+    
+    
+    
     <div class="item">
         <div class="row">
             <div class="col-md-7 col-sm-12 col-xs-12">
