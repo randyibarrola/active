@@ -34,7 +34,7 @@
                 <div class="col-md-7 col-sm-12 col-xs-12">
                     <h5 class="available">¡Solo nos queda 1!</h5>
                     <div class="media">
-                        <div class="pull-left">
+                        <div class="pull-left" style="width: 185px;height: 103px;">
                             {*<img class="media-object" src="tmp/habitacion.jpg" alt="">*}
                             <div class="flexslider">
                                 <ul class="slides">
