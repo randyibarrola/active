@@ -64,9 +64,10 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-5 col-sm-12 col-xs-12 booking-options">
             {/if}
             {if !$apartamento['descripcion']}
-            <div class="col-md-5 col-sm-12 col-xs-12 booking-options">
+            
                 <div class="option">
                     {if $apartamento['pension'] && $apartamento['pension'] != ''}
                             <h5>{$apartamento['pension']}</h5>
@@ -88,9 +89,10 @@
                         Reservar
                     </button>
                 </div>*}
-            </div>
+            
             {/if}
         {if $smarty.foreach.aptos.last}
+            </div>
         </div>
         <div class="more-info-content" style="display: none;">
             <dl>      
