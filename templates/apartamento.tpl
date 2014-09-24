@@ -73,7 +73,7 @@
                     {else}
                             <h5 class="free-cancel">{#solo_alojamiento#}</h5>
                     {/if}                    
-                    <label class="current-price">{foreach from=$monedas item=moneda}{if $apartamento['precios'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios'][$moneda->codigo]}</p>{/if}{/foreach}</label>
+                    <label class="current-price">74,20&euro;</label>
                     <label class="old-price">78,20&euro;</label>
                     <button class="btn app-btn-pink pull-right show-booking-room-modal" data-stock="1" data-title="Habitación estándar sin desayuno" data-current-price="71.50" data-old-price="78.20" data-room="1" data-type="1">
                         Reservar
