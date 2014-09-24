@@ -25,6 +25,26 @@
         </select>
     {/if}
 </div>
+
+{$subaptos = []}
+{$indice = 0}
+{foreach from=$apartamentos key=k item=apartamento name=aptos}
+    {if $apartamento['descripcion']} 
+        {$indice = $k}
+        {$subaptos[$k] = []}
+    {/else}
+       {$subaptos[$k][] = $apartamento} 
+    {/if}
+{/foreach}
+{foreach from=$apartamentos key=k item=apartamento name=aptos}
+    {if $apartamento['descripcion']} 
+        {$apartamento['titulo']}
+        {foreach from=$subaptos[$k] item=apt name=otro}
+            {$apt['precio_moneda_seleccionada']}
+        {/foreach}
+    {/if}
+    
+{/foreach}   
 <div id="search-room-result" class="">    
     {assign var="apto_descripcion" value=""}
     {foreach from=$apartamentos key=k item=apartamento name=aptos}
