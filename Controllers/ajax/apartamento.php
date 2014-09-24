@@ -585,13 +585,23 @@ if ($hotel) {
         $smarty->assign('hoteles',$hoteles);
     }
 
-
+    $subaptos = array();
+    $indice = 0;
+    foreach($aparts as $key=>$apt){
+        if($apt['descripcion']){
+            $subaptos[$key] = array();
+            $indice = $key;
+        } else {
+           $subaptos[$key][] = $apt; 
+        }
+    }
 
     $smarty->assign('condiciones', $condicionesS);
     $smarty->assign('pensiones', $pensionesS);
     $smarty->assign('paxes', $paxesS);
     $smarty->assign('monedas', $monedas);
     $smarty->assign('apartamentos', $aparts);
+    $smarty->assign('sub_apartamentos', $subaptos);
 
     $smarty->assign('reglas', json_encode($hotel->config->reglas));
 
