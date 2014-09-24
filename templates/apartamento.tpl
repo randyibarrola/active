@@ -55,11 +55,7 @@
                             <label>Ocupación máxima:</label>
                             2 huespedes
                         </p>
-                        {if $apartamento['pension'] && $apartamento['pension'] != ''}
-                            <p class="free-cancel">{$apartamento['pension']}</p>
-                        {else}
-                            <p class="free-cancel">{#solo_alojamiento#}</p>
-                        {/if}                        
+                                                
                         <a href="#" class="more-info" data-more="Mostrar los datos de la habitación" data-minus="Ocultar los datos de la habitación">
                             <span>Mostrar los datos de la habitación</span> <i class="glyphicon glyphicon-chevron-down"></i>
                         </a>
@@ -68,13 +64,18 @@
             </div>
             <div class="col-md-5 col-sm-12 col-xs-12 booking-options">
                 <div class="option">
-                    <h5>Solo alojamiento:</h5>
-                    <label class="current-price">71,50&euro;</label>
+                    {if $apartamento['pension'] && $apartamento['pension'] != ''}
+                            <h5>{$apartamento['pension']}</h5>
+                    {else}
+                            <h5 class="free-cancel">{#solo_alojamiento#}</h5>
+                    {/if}                    
+                    <label class="current-price">{foreach from=$monedas item=moneda}{if $apartamento['precios'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios'][$moneda->codigo]}</p>{/if}{/foreach}</label>
                     <label class="old-price">78,20&euro;</label>
                     <button class="btn app-btn-pink pull-right show-booking-room-modal" data-stock="1" data-title="Habitación estándar sin desayuno" data-current-price="71.50" data-old-price="78.20" data-room="1" data-type="1">
                         Reservar
                     </button>
                 </div>
+                {*
                 <div class="option">
                     <h5>Desayuno incluido:</h5>
                     <label class="current-price">74,50&euro;</label>
@@ -82,7 +83,7 @@
                     <button class="btn app-btn-pink pull-right show-booking-room-modal" data-stock="1" data-title="Habitación estándar con desayuno" data-current-price="74.50" data-old-price="78.20" data-room="1" data-type="2">
                         Reservar
                     </button>
-                </div>
+                </div>*}
             </div>
         </div>
         <div class="more-info-content" style="display: none;">
