@@ -54,8 +54,11 @@
                             </h4>
                             <p class="max-persons">
                                 <label>Ocupación máxima:</label>
-                                {#Max#}: {$apartamento['adultos']}  huespedes
+                                {$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}
                             </p>
+                            {if $apartamento['condicion'] != ''}
+                                <p class="free-cancel">{$apartamento['condicion']}</p>                                
+                            {/if}
 
                             <a href="#" class="more-info" data-more="Mostrar los datos de la habitación" data-minus="Ocultar los datos de la habitación">
                                 <span>Mostrar los datos de la habitación</span> <i class="glyphicon glyphicon-chevron-down"></i>
@@ -94,10 +97,7 @@
                 </div>
             </div>
             <div class="more-info-content" style="display: none;">
-                <dl>      
-                    {if $apartamento['condicion'] != ''}
-                        <dt>{$apartamento['condicion']}</dt>
-                    {/if}
+                <dl>
                     <dd>{$apartamento['descripcion']}</dd>
                     <dt>{#descripcion_del_servicio#}</dt>
                     <table class="table table-striped table-hover descripcion_table">                 
