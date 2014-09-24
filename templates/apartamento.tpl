@@ -52,9 +52,13 @@
                         </h4>
                         <p class="max-persons">
                             <label>Ocupación máxima:</label>
-                            2 huéspedes
+                            {#Max#}: {{#Max#}$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}
                         </p>
-                        <p class="free-cancel">Cancelación GRATUITA</p>
+                        {if $apartamento['pension'] && $apartamento['pension'] != ''}
+                            <p class="free-cancel">{$apartamento['pension']}</p>
+                        {else}
+                            <p class="free-cancel">{#solo_alojamiento#}</p>
+                        {/if}                        
                         <a href="#" class="more-info" data-more="Mostrar los datos de la habitación" data-minus="Ocultar los datos de la habitación">
                             <span>Mostrar los datos de la habitación</span> <i class="glyphicon glyphicon-chevron-down"></i>
                         </a>
@@ -81,8 +85,10 @@
             </div>
         </div>
         <div class="more-info-content" style="display: none;">
-            <dl>
-                <dt>Inclusions</dt>
+            <dl>      
+                {if $apartamento['condicion'] != ''}
+                    <dt>{$apartamento['condicion']}</dt>
+                {/if}
                 <dd>{$apartamento['descripcion']}</dd>
                 <dt>{#descripcion_del_servicio#}</dt>
                 <table class="table table-striped table-hover descripcion_table">                 
