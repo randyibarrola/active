@@ -39,7 +39,8 @@
                             <ul class="slides">
                             {foreach from=$apartamento['imagenes'] item=imagen}
                               <li class="slide">
-                                  <img src="{$imagen}" alt="{$apartamento['titulo']}">  
+                                  <img class="media-object" src="{$imagen}" alt="{$apartamento['titulo']}">
+                                  {*<img src="{$imagen}" alt="{$apartamento['titulo']}">  *}
                               </li>
                             {/foreach}
                             </ul>
