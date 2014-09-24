@@ -26,10 +26,9 @@
     {/if}
 </div>
 <div id="search-room-result" class="">
-    {assign var="apto_descripcion" value=""}
+    
     {foreach from=$apartamentos key=k item=apartamento name=aptos}    
-    {if $apartamento['descripcion']}
-        {assign var="apto_descripcion" value="apartamento"}
+    {if $apartamento['descripcion']}     
     <div class="item">
         <div class="row">
             <div class="col-md-7 col-sm-12 col-xs-12">

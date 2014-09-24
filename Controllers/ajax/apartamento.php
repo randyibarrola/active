@@ -585,7 +585,7 @@ if ($hotel) {
         $smarty->assign('hoteles',$hoteles);
     }
 
-
+    var_dump($aparts);die;
 
     $smarty->assign('condiciones', $condicionesS);
     $smarty->assign('pensiones', $pensionesS);
