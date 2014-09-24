@@ -50,7 +50,7 @@
                         <div class="media-body">
                             <h4 class="media-heading">
                                 {$apartamento['titulo']}
-                                <span>1 cama de matrimonio o Dos camas</span>
+                                {*<span>1 cama de matrimonio o Dos camas</span>*}
                             </h4>
                             <p class="max-persons">
                                 <label>Ocupación máxima:</label>
