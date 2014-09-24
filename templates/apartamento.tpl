@@ -30,7 +30,7 @@
     {foreach from=$apartamentos key=k item=apartamento name=aptos}
     <div class="item">
         <div class="row">
-            {if $smarty.foreach.aptos.first}
+            {if $apartamento['descripcion']}
             <div class="col-md-7 col-sm-12 col-xs-12">
                 <h5 class="available">¡Solo nos queda 1!</h5>
                 <div class="media">
@@ -63,7 +63,8 @@
                     </div>
                 </div>
             </div>
-            {/if}
+            {/else}
+            
             <div class="col-md-5 col-sm-12 col-xs-12 booking-options">
                 <div class="option">
                     {if $apartamento['pension'] && $apartamento['pension'] != ''}
@@ -87,7 +88,9 @@
                     </button>
                 </div>*}
             </div>
+            {/if}
         </div>
+        {if $apartamento['descripcion']}
         <div class="more-info-content" style="display: none;">
             <dl>      
                 {if $apartamento['condicion'] != ''}
@@ -109,6 +112,7 @@
                 <a href="#" class="btn app-btn-blue">Ver ficha de habitación</a>
             </div>
         </div>
+        {/if}
     </div>
     {/foreach}
     
