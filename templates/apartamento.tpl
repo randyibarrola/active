@@ -76,8 +76,8 @@
                             Reservar
                         </button>
                     </div>
-                    {assign var=subs value=sub_apartamentos[$k]}
-                    {foreach from=subs key=i item=apt name=apts}
+                    
+                    {foreach from=sub_apartamentos[$k] key=i item=apt name=apts}
                         <div class="option">
                             {if $apt['pension'] && $apt['pension'] != ''}
                                     <h5>{$apt['pension']}</h5>
