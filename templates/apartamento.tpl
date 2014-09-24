@@ -36,16 +36,16 @@
                     <div class="media">
                         <div class="pull-left">
                             {*<img class="media-object" src="tmp/habitacion.jpg" alt="">*}
-                            {*<div class="flexslider">
+                            <div class="flexslider">
                                 <ul class="slides">
                                 {foreach from=$apartamento['imagenes'] item=imagen}
                                   <li class="slide">
-                                      <img class="media-object" src="{$imagen}" alt="{$apartamento['titulo']}">
-                                      <img src="{$imagen}" alt="{$apartamento['titulo']}">  
+                                      <img width="185px" height="103px" class="media-object" src="{$imagen}" alt="{$apartamento['titulo']}">
+                                      {*<img src="{$imagen}" alt="{$apartamento['titulo']}">  *}
                                   </li>
                                 {/foreach}
                                 </ul>
-                            </div>*}
+                            </div>
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading">
