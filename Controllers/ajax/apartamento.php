@@ -592,7 +592,7 @@ if ($hotel) {
             $subaptos[$key] = array();
             $indice = $key;
         } else {
-           $subaptos[$key][] = $apt; 
+           $subaptos[$indice][] = $apt; 
         }
     }
 
