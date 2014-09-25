@@ -6,7 +6,9 @@
 {/block}
 
 {block "style_level" append}
-    <link href="{$template_url}/newdesing/css/booking.css" rel="stylesheet" media="screen">
+    <link href="{$template_url}/newdesing/css/booking.tmp.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="{$template_url}/css/apartamentos.css" />
+    <link rel="stylesheet" type="text/css" href="{$template_url}/admin/assets/css/pages/hoteles.css" />
 {/block}
 
 {block "script_plugins_level" append}
@@ -14,10 +16,11 @@
     <script src="{$template_url}/assets/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.{$lang}.js"></script>
     <script src="{$template_url}/assets/plugins/select2/select2.min.js"></script>
     <script src="{$template_url}/assets/plugins/select2/select2_locale_{$lang}.js"></script>
+    <script src="{$template_url}/admin/assets/plugins/bootstrap-paginator/bootstrap-paginator.min.js" type="text/javascript"></script>
 {/block}
 
 {block "script_level" append}
-    <script src="{$template_url}/newdesing/js/booking.js" type="text/javascript"></script>
+    <script src="{$template_url}/newdesing/js/booking.tmp.js" type="text/javascript"></script>
     <script src="{$template_url}/newdesing/js/contact.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -78,44 +81,44 @@
                 </form>
                 <div id="search-room-container">
                 </div>
-                <div id="contact" class="well-gray" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">
-                </div>
-                {if $hotel->destinoId}
-                    <div id="recommendation-hotels" class="well-white well-divider">
-                        <div class="title">
-                            <h3>{#otros_hoteles_recomendados_zona#}</h3>
-                        </div>
-                        <div class="row booking-prompt">
-                            {foreach from=$hoteles item=h}
-                                {if is_array($h) && $h.id}
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 booking-prompt-item">
-                                        <h3>{$h.nombre}</h3>
-                                        <div class="media">
-                                            <div class="pull-left">
-                                                <img class="media-object" src="{$h.archivo.ruta}" alt="{$h.nombre}">
-                                                <div class="rating">
-                                                    {for $i = 1 to 5}
-                                                        <i class="glyphicon glyphicon-star {if $h->calidad >= $i}full{else}empty{/if}"></i>
-                                                    {/for}
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                {if $h.precio.precioMinimo}
-                                                    <h4 class="media-heading">{#Desde#} {$h.precio.precioMinimo}{$h.moneda.simbolo}</h4>
-                                                    <a href="{if strtotime($h.precio.fin) > time()}{if strpos($h.dominio, 'http') eq FALSE}http://{/if}{$h.dominio}/disponibilidad?inicio={if strtotime($h.precio.inicio) > time()}{$h.precio.inicio|date_format:"%d-%m-%Y"}{else}{date("d-m-Y")}{/if}&salida={$h.precio.fin|date_format:"%d-%m-%Y"}{/if}" class="btn app-btn-pink">
-                                                        {#reservar#|capitalize}
-                                                    </a>
-                                                {else}
-                                                    <a href="{if strpos($h.dominio, 'http') eq FALSE}http://{/if}{$h.dominio}" class="btn app-btn-pink">{#reservar#|capitalize}</a>
-                                                {/if}
-                                            </div>
-                                        </div>
-                                    </div>
-                                {/if}
-                            {/foreach}
-                        </div>
-                    </div>
-                {/if}
+                {*<div id="contact" class="well-gray" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">*}
+                {*</div>*}
+                {*{if $hotel->destinoId}*}
+                    {*<div id="recommendation-hotels" class="well-white well-divider">*}
+                        {*<div class="title">*}
+                            {*<h3>{#otros_hoteles_recomendados_zona#}</h3>*}
+                        {*</div>*}
+                        {*<div class="row booking-prompt">*}
+                            {*{foreach from=$hoteles item=h}*}
+                                {*{if is_array($h) && $h.id}*}
+                                    {*<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 booking-prompt-item">*}
+                                        {*<h3>{$h.nombre}</h3>*}
+                                        {*<div class="media">*}
+                                            {*<div class="pull-left">*}
+                                                {*<img class="media-object" src="{$h.archivo.ruta}" alt="{$h.nombre}">*}
+                                                {*<div class="rating">*}
+                                                    {*{for $i = 1 to 5}*}
+                                                        {*<i class="glyphicon glyphicon-star {if $h->calidad >= $i}full{else}empty{/if}"></i>*}
+                                                    {*{/for}*}
+                                                {*</div>*}
+                                            {*</div>*}
+                                            {*<div class="media-body">*}
+                                                {*{if $h.precio.precioMinimo}*}
+                                                    {*<h4 class="media-heading">{#Desde#} {$h.precio.precioMinimo}{$h.moneda.simbolo}</h4>*}
+                                                    {*<a href="{if strtotime($h.precio.fin) > time()}{if strpos($h.dominio, 'http') eq FALSE}http://{/if}{$h.dominio}/disponibilidad?inicio={if strtotime($h.precio.inicio) > time()}{$h.precio.inicio|date_format:"%d-%m-%Y"}{else}{date("d-m-Y")}{/if}&salida={$h.precio.fin|date_format:"%d-%m-%Y"}{/if}" class="btn app-btn-pink">*}
+                                                        {*{#reservar#|capitalize}*}
+                                                    {*</a>*}
+                                                {*{else}*}
+                                                    {*<a href="{if strpos($h.dominio, 'http') eq FALSE}http://{/if}{$h.dominio}" class="btn app-btn-pink">{#reservar#|capitalize}</a>*}
+                                                {*{/if}*}
+                                            {*</div>*}
+                                        {*</div>*}
+                                    {*</div>*}
+                                {*{/if}*}
+                            {*{/foreach}*}
+                        {*</div>*}
+                    {*</div>*}
+                {*{/if}*}
             </div>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-12 column-xs-divider">
