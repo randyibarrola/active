@@ -66,7 +66,13 @@ var Home = function() {
     };
 
     return {
+        activeTab: null,
+
         init: function() {
+            if(Home.activeTab != null) {
+                $('#tab-home').find('a[href="' + Home.activeTab + '"]').trigger('click');
+            }
+
             initSimpleSearchOffers();
             initFreeOffer();
             initTourBookingForm();            

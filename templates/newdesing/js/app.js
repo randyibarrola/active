@@ -313,9 +313,7 @@ var App = function () {
             var nowTemp = new Date();
             var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
-            var start_check_in = widgetCheckin.val().trim() != ''
-                ? App.parseDate(widgetCheckin.val())
-                : new Date(new Date(now).setDate(now.getDate() + App.configBooking.prevSelling));
+            var start_check_in = new Date(new Date(now).setDate(now.getDate() + App.configBooking.prevSelling));
 
             var checkin = widgetCheckin.datepicker({
                 startDate: start_check_in,
@@ -341,9 +339,7 @@ var App = function () {
                 }).data('datepicker');
 
 
-            var start_check_out = widgetCheckout.val().trim() != ''
-                ? App.parseDate(widgetCheckout.val())
-                : new Date(new Date(start_check_in).setDate(new Date(start_check_in).getDate() + App.configBooking.minSojourn));
+            var start_check_out = new Date(new Date(start_check_in).setDate(new Date(start_check_in).getDate() + App.configBooking.minSojourn));
 
             var checkout = widgetCheckout.datepicker({
                 startDate: start_check_out,
@@ -367,8 +363,8 @@ var App = function () {
                 spanDateDiff.text(parseInt((checkout.getDate().getTime() - checkin.getDate().getTime()) / 86400000));
             };
 
-            checkin.setDate(start_check_in);
-            checkout.setDate(start_check_out);
+            checkin.setDate(widgetCheckin.val().trim() != '' ? App.parseDate(widgetCheckin.val()) : start_check_in);
+            checkout.setDate(widgetCheckout.val().trim() != '' ? App.parseDate(widgetCheckout.val()) : start_check_out);
 
             if(App.configBooking.agreementEndDate) {
                 var endDateCheckin = new Date(App.parseDate(App.configBooking.agreementEndDate).getTime());

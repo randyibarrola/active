@@ -36,20 +36,20 @@
                 </li>
                 <li class="dropdown app-dropdown-choice">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="dropdown-selected">{$lang}</span> <b class="caret"></b>
+                        <span class="dropdown-selected"><img src="{$template_url}/assets/images/flags/{$lang|lower}.png"> {$lang|upper}</span> <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu pull-right" role="menu">
                         {foreach from = $hotel->idiomas item = idioma}
                             {if $idioma->codigo ne $lang}
                                 {if substr_count($actual_url, '/reservar/') > 0}
-                                    <li data-selected="{$idioma->codigo}">
+                                    <li data-selected="{'<img src="'|htmlspecialchars}{$template_url}{'/assets/images/flags/'}{$idioma->codigo|lower}{'.png">'|htmlspecialchars} {$idioma->codigo|upper}">
                                         <a href="{$base_url}/{$idioma->codigo}/{#disponibilidad_url#}{if $money}/m:{$money}{/if}?inicio={$inicio|date_format:"%d-%m-%Y"}&salida={$salida|date_format:"%d-%m-%Y"}">
                                             <img src="{$template_url}/assets/images/flags/{$idioma->codigo|lower}.png">
                                             {$idioma->codigo|upper}
                                         </a>
                                     </li>
                                 {else}
-                                    <li data-selected="{$idioma->codigo}">
+                                    <li data-selected="{'<img src="'|htmlspecialchars}{$template_url}{'/assets/images/flags/'}{$idioma->codigo|lower}{'.png">'|htmlspecialchars} {$idioma->codigo|upper}">
                                         <a href="{$base_url}/{$idioma->codigo}/{$action_controller}{if $money}/m:{$money}{/if}{$end_actual_url}">
                                             <img src="{$template_url}/assets/images/flags/{$idioma->codigo|lower}.png">
                                             {$idioma->codigo|upper}

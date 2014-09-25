@@ -27,6 +27,7 @@
     <script src="{$template_url}/newdesing/js/contact.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+            Home.activeTab = {if $activeTab}{$activeTab}{else}null{/if};
             Home.init();
             $('#tab-map').click(function(){
                 if($('.gm-style').length == 0)           
@@ -131,7 +132,7 @@
                 </div>
             </section>
             <!-- Begin tabs -->
-            <ul class="nav nav-tabs app-tabs">
+            <ul id="tab-home" class="nav nav-tabs app-tabs">
                 <li class="active">
                     <a href="#details" data-toggle="tab">
                         <i class="glyphicon glyphicon-info-sign tooltips" data-original-title="{#detalles#|capitalize}"></i> <span class="hidden-xs">{#detalles#|capitalize}</span>
@@ -211,11 +212,11 @@
                                     {/if}
                                 {/foreach}
                                 {if $lugares}
-                                    <tr class="lugares_interes">
+                                    <tr>
                                         <td>{#lugares_de_interes#}</td>
                                         <td>
                                             {foreach from=$lugares item=lugar}
-                                                <span class="lugar_interes">{$lugar}</span>
+                                                <span class="label label-default">{$lugar}</span>
                                             {/foreach}
                                         </td>
                                     </tr>
@@ -303,6 +304,20 @@
                     {/if}
                 </div>
                 <div class="tab-pane" id="map">
+                    {if $hotel->destinoId}
+                        <div class="info">
+                            <h2>{$hotel->destino->nombre}</h2>
+                            <div>
+                                {if $hotel->destino->descripcion}
+                                    {if $hotel->destino->descripciones->$lang}
+                                        {$hotel->destino->descripciones->$lang}
+                                    {else}
+                                        {$hotel->destino->descripciones->es}
+                                    {/if}
+                                {/if}
+                            </div>
+                        </div>
+                    {/if}
                     <div id="gmap"></div>
                     <input type="hidden" name="lat" value="{$hotel->direccion->lat}">
                     <input type="hidden" name="lon" value="{$hotel->direccion->lon}">                    

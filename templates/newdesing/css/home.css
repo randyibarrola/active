@@ -454,9 +454,22 @@
     height: 75px;
 }
 
+#home-slider-hotel-carousel .flex-direction-nav a:before,
+#home-slider-tour-carousel .flex-direction-nav a:before {
+    background: none;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+    height: 40px;
+    line-height: inherit;
+    padding: inherit;
+}
+
 #home-slider-hotel-carousel .flex-direction-nav a,
 #home-slider-tour-carousel .flex-direction-nav a {
-    display: none;
+    font-size: 35px;
+    height: 45px;
+    color: #157EB8;
 }
 
 #home-slider-tour-carousel .flex-viewport > .slides > li {
