@@ -52,6 +52,7 @@
           <link href="{$template_url}/css/print.css" rel="stylesheet" type="text/css"/>
         {/block}
 
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed|Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <style type="text/css">
             {if !$showSubPrice}
                 {literal}

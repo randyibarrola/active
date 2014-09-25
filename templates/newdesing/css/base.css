@@ -1,9 +1,9 @@
-@font-face {
-    font-family: 'Gotham Rounded Light';
+/*@font-face {*/
+    /*font-family: 'Gotham Rounded Light';*/
 
-    src: url('fonts/gotham-rounded-light-webfont.eot');
-    src: url('fonts/gotham-rounded-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/gotham-rounded-light-webfont.woff') format('woff'), url('fonts/gotham-rounded-light-webfont.ttf') format('truetype'), url('fonts/gotham-rounded-light-webfont.svg#gotham_roundedlight') format('svg');
-}
+    /*src: url('fonts/gotham-rounded-light-webfont.eot');*/
+    /*src: url('fonts/gotham-rounded-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/gotham-rounded-light-webfont.woff') format('woff'), url('fonts/gotham-rounded-light-webfont.ttf') format('truetype'), url('fonts/gotham-rounded-light-webfont.svg#gotham_roundedlight') format('svg');*/
+/*}*/
 
 @font-face {
     font-family: 'Gotham Rounded Medium';
@@ -15,7 +15,8 @@
 body {
     background: #F5F4F4;
     color: #282828;
-    font-family: "Gotham Rounded Light";
+    /*font-family: "Gotham Rounded Light";*/
+    font-family: 'Open Sans', sans-serif;
 }
 
 div.header {
@@ -25,7 +26,8 @@ div.header {
 div.header > .header-top {
     background: #222222;
     color: #FFFFFF;
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -97,7 +99,8 @@ div.header > div.header-bottom .logo-hotel img {
 }
 
 div.header > div.header-bottom .logo-hotel h1 {
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 0;
@@ -151,7 +154,8 @@ div.footer > div.footer-top .footer-contact > p.logo {
 }
 
 div.footer > div.footer-top .footer-contact address {
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     color: #9A9A9A;
     line-height: 1.2;
     margin-left: 10px;
@@ -202,7 +206,8 @@ div.footer > div.footer-bottom .menu a:hover,
 div.footer > div.footer-bottom .menu a:focus {
     font-size: 11px;
     color: #525252;
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 @media (min-width: 940px) {
@@ -263,7 +268,8 @@ div.footer > div.footer-bottom .menu a:focus {
     background: #C62583;
     border-color: #C62583;
     color: #FFFFFF;
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 12px;
     font-weight: normal;
     padding-top: 3px;
@@ -281,7 +287,8 @@ div.footer > div.footer-bottom .menu a:focus {
     background: #167FB8;
     border-color: #167FB8;
     color: #FFFFFF;
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 12px;
     font-weight: normal;
     padding-top: 3px;
@@ -475,7 +482,8 @@ form.form-inline .tooltips {
 }
 
 form#contact-form p.text-center {
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 form#contact-form input[type="submit"] {
@@ -566,7 +574,8 @@ form#contact-form input[type="submit"] {
 .slider > h1.slider-title {
     margin-top: 0;
     margin-bottom: 20px;
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 24px;
 }
 
@@ -759,7 +768,8 @@ form#contact-form input[type="submit"] {
     color: #FFFFFF;
     padding: 2px 0 2px 10px;
     font-size: 12px;
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 /*** Block UI ***/

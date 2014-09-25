@@ -9,7 +9,8 @@
     font-size: 18px;
     text-transform: uppercase;
     display: block;
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 #simple-search-offers label {
@@ -156,7 +157,8 @@
 }
 
 #home-excursions > h1 {
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     color: #9A9A9A;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -180,7 +182,8 @@
 
 #home-excursions > .list > .item > .price {
     margin-bottom: 0;
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 #home-excursions > .list > .item > .saving {
@@ -223,7 +226,8 @@
 }
 
 #tour-booking-form .price-per-person > p {
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     margin-bottom: 0;
     font-size: 16px;
 }
@@ -242,12 +246,14 @@
 }
 
 #tour-booking-form ol > li > p.title {
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     letter-spacing: -0.5px;
 }
 
 #tour-booking-form ol > li > a.flexible-guaranty {
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     letter-spacing: -1px;
     text-transform: uppercase;
     display: block;
@@ -295,7 +301,8 @@
 }
 
 #tour-booking-form .total-price > p {
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
     margin-bottom: 0;
     font-size: 16px;
 }
@@ -327,7 +334,8 @@
 }
 
 .flags-languages p {
-    font-family: "Gotham Rounded Medium";
+    /*font-family: "Gotham Rounded Medium";*/
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .flags-languages > ul.list-inline {
