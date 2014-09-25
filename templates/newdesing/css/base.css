@@ -19,6 +19,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1,h2,h3, h4{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: bold;
+}
+
 div.header {
     margin-bottom: 15px;
 }
