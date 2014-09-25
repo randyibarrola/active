@@ -15,7 +15,7 @@ var Home = function() {
             });
 
             form.submit(function() {
-                form.triggerHandler('app.event.form.submit.before', []);
+//                form.triggerHandler('app.event.form.submit.before', []);
 
 
             });
