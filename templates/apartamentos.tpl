@@ -124,7 +124,7 @@
         <div class="col-md-3 col-sm-3 col-xs-12 column-xs-divider">
             <div id="booking-info" class="well-white">
                 <div class="booking-info-step step-1 active">
-                    <h4 class="title">{#selecciona_habitacion_1#}</h4>
+                    <h4 class="title">{#selecciona_tu_alojamiento#}</h4>
                     <div class="content">
                         <p>{#no_has_anhadido_alojamiento#}.</p>
                     </div>
