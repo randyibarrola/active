@@ -212,13 +212,13 @@
                                     {/if}
                                 {/foreach}
                                 {if $lugares}
-                                    <tr>
-                                        <td>{#lugares_de_interes#}</td>
-                                        <td>
-                                            {foreach from=$lugares item=lugar}
-                                                <span class="label label-default">{$lugar}</span>
-                                            {/foreach}
-                                        </td>
+                                    <tr class="lugares_interes">
+                                      <td>{#lugares_de_interes#}</td>
+                                      <td>
+                                        {foreach from=$lugares item=lugar}
+                                        <span class="lugar_interes">{$lugar}</span>
+                                        {/foreach}  
+                                      </td>
                                     </tr>
                                 {/if}
                                 </tbody>
