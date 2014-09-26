@@ -1,6 +1,8 @@
 {if $apartamentos|@count gt 0}
     <div id="search-room-filter" class="well-gray">
         {if count($pensiones) > 1}
+            <label class="search-title">{#busqueda#}:</label>
+            <p class="text-center legend">{#los_filtros_te_ayudaran#}</p>
             <label class="control-label">{#tipo_pension#}:</label>
             <select class="select2" id="pension">
                 <option value="0" selected="selected">{#cualquiera#}</option>
