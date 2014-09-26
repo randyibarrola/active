@@ -306,7 +306,7 @@
                 <div class="tab-pane" id="map">
                     {if $hotel->destinoId}
                         <div class="info">
-                            <h2>{$hotel->destino->nombre}</h2>
+                            <h2 class="text-center">{$hotel->destino->nombre}</h2>
                             <div>
                                 {if $hotel->destino->descripcion}
                                     {if $hotel->destino->descripciones->$lang}
