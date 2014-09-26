@@ -80,7 +80,7 @@
     margin-bottom: 20px;
 }
 
-#booking-search-room .head .search-title {
+#booking-search-room .head .search-title, #search-room-container  .search-title{
     font-size: 28px;
     margin-right: 3px;
     font-weight: normal;
