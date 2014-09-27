@@ -35,9 +35,10 @@
 
 #simple-search-offers .app-btn-pink {
     font-size: 16px;
-    letter-spacing: -0.5px;
+    /*letter-spacing: -0.5px;*/
     padding-bottom: 5px;
     padding-top: 5px;
+    font-weight: 600;
 }
 
 #simple-search-offers div.checkbox {
@@ -184,6 +185,7 @@
     margin-bottom: 0;
     /*font-family: "Gotham Rounded Medium";*/
     font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 600;
 }
 
 #home-excursions > .list > .item > .saving {
@@ -462,22 +464,30 @@
     height: 75px;
 }
 
-#home-slider-hotel-carousel .flex-direction-nav a:before,
-#home-slider-tour-carousel .flex-direction-nav a:before {
-    background: none;
+#home-slider-hotel-carousel .flex-direction-nav a:before {
     border-radius: 0;
-    color: inherit;
-    font-size: inherit;
-    height: 40px;
+    font-size: 35px;
+    height: 80px;
     line-height: inherit;
-    padding: inherit;
+    padding: 12px 1px 1px 0;
 }
 
-#home-slider-hotel-carousel .flex-direction-nav a,
-#home-slider-tour-carousel .flex-direction-nav a {
+#home-slider-hotel-carousel .flex-direction-nav a {
     font-size: 35px;
-    height: 45px;
+    height: 75px;
     color: #157EB8;
+    margin: 0;
+    top: 0;
+    text-align: center;
+    width: 30px;
+}
+
+#home-slider-hotel-carousel .flex-direction-nav a.flex-next {
+    right: -4px;
+}
+
+#home-slider-hotel-carousel .flex-direction-nav a.flex-prev {
+    left: -4px;
 }
 
 #home-slider-tour-carousel .flex-viewport > .slides > li {
