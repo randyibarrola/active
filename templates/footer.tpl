@@ -8,7 +8,7 @@
                         <img src="{$template_url}/newdesing/images/logo.png" class="img-responsive" />
                     </p>
                     <address>
-                        {#telefono#}: +0034 914 872 673<br/>
+                        {#telefono#}: {if $hotel->webOficial}{$hotel->telefonoReservas}{else}{$hotel->distribuidor->telefonoReservas}{/if}<br/>
                         {#skype#}: madrid.active<br/>
                         C/Leitariegos, 12, Madrid
                     </address>
