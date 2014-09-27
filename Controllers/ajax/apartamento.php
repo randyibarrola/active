@@ -557,13 +557,7 @@ if ($hotel) {
             $precio_seleccionado = convertFromMonedaToMoneda($precio, $hotel->moneda->codigo, $money);
             $precio_moneda_seleccionada = $currency . $precio_seleccionado;
             $aparts[$k]['precio_moneda_seleccionada'] = $precio_moneda_seleccionada;
-            $aparts[$k]['precio_moneda_seleccionada_especulado'] = $currency . (  $precio_seleccionado + ( ( rand(20,50) * $precio_seleccionado ) / 100 ));
-            
-            var_dump($precio_seleccionado);
-            var_dump($precio_moneda_seleccionada);
-            var_dump($currency . number_format ( ($precio_seleccionado +  ( rand(20,50) * 100 ) / $precio_seleccionado ), 2,',' ,'.')  );
-            var_dump($aparts[$k]);
-            die;
+            $aparts[$k]['precio_moneda_seleccionada_especulado'] = $currency . number_format ( ($precio_seleccionado +  ( rand(20,50) * 100 ) / $precio_seleccionado ), 2,',' ,'.') ;
             
             $precio = $moneda . number_format($precio, 2, ',', ' ');
             $aparts[$k]['precio'] = $precio;
