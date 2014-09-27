@@ -254,7 +254,6 @@ if(!$hotel && !strpos($actualUrl, '/admin-')
     if(isset($_REQUEST['t'])){    
         $smarty->assign('tab', $_REQUEST['t']);        
     }
-
     
     $smarty->assign('hotel',$hotel);
 
