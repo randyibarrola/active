@@ -73,9 +73,9 @@
     <div class="header-bottom">
         <div class="container">
             <div class="logo pull-left logo-hotel">
-                <a href="http://{#sistema_web#}"><img src="{$template_url}/newdesing/images/logo-mini.png" /></a>
+                <a href="{$base_url}/{$lang}/index{$end_url}"><img src="{$template_url}/newdesing/images/logo-mini.png" /></a>
                 {*<h1>{if $hotel->webOficial}{$hotel->nombre}{else}{$hotel->distribuidor->nombreComercial}{/if}</h1>*}
-                <a href="http://{#sistema_web#}"><h1>{$hotel->nombre} </h1></a>
+                <a href="{$base_url}/{$lang}/index{$end_url}"><h1>{$hotel->nombre} </h1></a>
                 <div class="rating">
                     {for $i=1 to 5}
                         <i class="glyphicon glyphicon-star {if $hotel->calidad >= $i}full{else}empty{/if}"></i>
