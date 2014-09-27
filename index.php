@@ -191,11 +191,7 @@ if(!$hotel && !strpos($actualUrl, '/admin-')
       $smarty->assign('noches',ceil(abs(strtotime($salida->format('d-m-Y')) - strtotime(date('d-m-Y'))) / 86400));
     }
 
-    $end_url = '';
-    
-    if(isset($_REQUEST['t'])){        
-        $smarty->assign('tab', $_REQUEST['t']);        
-    }
+    $end_url = '';    
 
     if(isset($_REQUEST['l'])){
         $smarty->assign('lang', $_REQUEST['l']);
@@ -254,6 +250,13 @@ if(!$hotel && !strpos($actualUrl, '/admin-')
             }
         }
     }
+    
+    var_dump($_REQUEST['t']);die;
+    if(isset($_REQUEST['t'])){    
+        var_dump($_REQUEST['t']);
+        $smarty->assign('tab', $_REQUEST['t']);        
+    }
+
     
     $smarty->assign('hotel',$hotel);
 
