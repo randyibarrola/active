@@ -37,6 +37,25 @@ div.header > .header-top {
     font-weight: 600;
 }
 
+div.header-top #operated-by {
+    margin: 0 0 0 140px;
+}
+
+@media(min-width: 728px) and (max-width: 940px) {
+    div.header-top #operated-by {
+        margin: 0 0 0 100px;
+    }
+}
+
+@media(max-width: 728px) {
+    div.header-top #operated-by {
+        color: #525252;
+        margin: 0 0 0 100px;
+        position: absolute;
+        top: 35px;
+    }
+}
+
 div.header > div.header-top ul.list-inline {
     margin-bottom: 0;
 }

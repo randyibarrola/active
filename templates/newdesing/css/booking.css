@@ -687,6 +687,14 @@
     overflow: hidden;
 }
 
+.booking-tour-content .affix-top {
+    position: fixed;
+    top: 0;
+    background: #FFFFFF;
+    z-index: 10;
+    border-bottom-width: 3px;
+}
+
 .booking-tour-content .head > h1 {
     margin: 0;
     font-size: 28px;

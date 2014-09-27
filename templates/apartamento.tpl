@@ -95,32 +95,44 @@
                         <div class="text-right form">
                             <span class="precio_total" style="display: none;"><span>{$apartamento['precio']}</span></span>
                             <form action="{$base_url}/buy{$end_url}/id:{$k}">
-                                <div class="comparison-content">
+                                <div class="comparison-content booking-options">
                                     <div class="oasis-comparison">
-                                        <div class="">
-                                            <img src="{if $hotel->logo}{$hotel->logo->ruta}{else}{$template_url}/images/logo.png{/if}" alt="{$hotel->nombre}" />
-                                            {if $hotel->config->comparacionBooking}
-                                                {$hotel->dominioOficial|replace:"www.":""}
-                                            {/if}
-                                        </div>
-                                        <div class="per-night">
+                                        {*<div class="">*}
+                                            {*<img src="{if $hotel->logo}{$hotel->logo->ruta}{else}{$template_url}/images/logo.png{/if}" alt="{$hotel->nombre}" />*}
+                                            {*{if $hotel->config->comparacionBooking}*}
+                                                {*{$hotel->dominioOficial|replace:"www.":""}*}
+                                            {*{/if}*}
+                                        {*</div>*}
+                                        {*<div class="per-night">*}
 
-                                            <button type="submit">
-                                                <span data-html="true" data-container="body" data-placement="left" data-toggle="popover" data-content="{foreach from=$monedas item=moneda}{if $apartamento['precios'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios'][$moneda->codigo]}</p>{/if}{/foreach}" class="glyphicon glyphicon-info-sign"></span><span>{$apartamento['precio_moneda_seleccionada']}</span>
+                                            {*<button type="submit">*}
+                                                {*<span data-html="true" data-container="body" data-placement="left" data-toggle="popover" data-content="{foreach from=$monedas item=moneda}{if $apartamento['precios'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios'][$moneda->codigo]}</p>{/if}{/foreach}" class="glyphicon glyphicon-info-sign"></span><span>{$apartamento['precio_moneda_seleccionada']}</span>*}
 
-                                                <small>{#por#} {$noches} {#noche_s#}</small>
+                                                {*<small>{#por#} {$noches} {#noche_s#}</small>*}
+                                            {*</button>*}
+                                        {*</div>*}
+                                        <div class="option">
+                                            <h5>{#reserva_por#} {$noches} {#noche_s#}</h5>
+                                            <label class="current-price">{$apartamento['precio_moneda_seleccionada']}</label>
+                                            <label class="old-price">78,20&euro;</label>
+                                            <button type="submit" class="btn app-btn-pink pull-right show-booking-room-modal">
+                                                {#reservar#|capitalize}
                                             </button>
                                         </div>
                                     </div>
 
 
                                     {if $hotel->config->comparacionBooking}
-                                        <div class="booking-comparison">
-                                            <div class="">booking.com</div>
-                                            <div class="per-night" data-html="true" data-container="body" data-placement="left" data-toggle="popover" data-content="{foreach from=$monedas item=moneda}{if $apartamento['precios_sin_descuento'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios_sin_descuento'][$moneda->codigo]}</p>{/if}{/foreach}">
-                                                <span title="sin descuento">{$apartamento['precio_sin_descuento']}</span>
-                                                <small>{#por#} {$noches} {#noche_s#}</small>
-                                            </div>
+                                        {*<div class="booking-comparison">*}
+                                            {*<div class="">booking.com</div>*}
+                                            {*<div class="per-night" data-html="true" data-container="body" data-placement="left" data-toggle="popover" data-content="{foreach from=$monedas item=moneda}{if $apartamento['precios_sin_descuento'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios_sin_descuento'][$moneda->codigo]}</p>{/if}{/foreach}">*}
+                                                {*<span title="sin descuento">{$apartamento['precio_sin_descuento']}</span>*}
+                                                {*<small>{#por#} {$noches} {#noche_s#}</small>*}
+                                            {*</div>*}
+                                        {*</div>*}
+                                        <div class="option">
+                                            <h5>booking.com, {#reserva_por#} {$noches} {#noche_s#}</h5>
+                                            <label class="current-price">{$apartamento['precio_sin_descuento']}</label>
                                         </div>
                                     {/if}
                                 </div>
@@ -158,29 +170,41 @@
                         <div class="text-right form">
                             <span class="precio_total" style="display: none;"><span>{$apartamento['precio']}</span></span>
                             <form action="{$base_url}/{$lang}/buy{$end_url}/id:{$k}">
-                                <div class="comparison-content">
+                                <div class="comparison-content booking-options">
                                     <div class="oasis-comparison">
-                                        <div class="">
-                                            <img src="{if $hotel->logo}{$hotel->logo->ruta}{else}{$template_url}/images/logo.png{/if}" alt="{$hotel->nombre}" /> {if $hotel->config->comparacionBooking}
-                                                {$hotel->dominio|replace:"www.":""}
-                                            {/if}
-                                        </div>
-                                        <div class="per-night">
-                                            <button type="submit" type="submit">
-                                                <span data-html="true" data-container="body" data-placement="left" data-toggle="popover" data-content="{foreach from=$monedas item=moneda}{if $apartamento['precios'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios'][$moneda->codigo]}</p>{/if}{/foreach}" class="glyphicon glyphicon-info-sign"></span><span>{$apartamento['precio_moneda_seleccionada']}</span>
+                                        {*<div class="">*}
+                                            {*<img src="{if $hotel->logo}{$hotel->logo->ruta}{else}{$template_url}/images/logo.png{/if}" alt="{$hotel->nombre}" /> {if $hotel->config->comparacionBooking}*}
+                                                {*{$hotel->dominio|replace:"www.":""}*}
+                                            {*{/if}*}
+                                        {*</div>*}
+                                        {*<div class="per-night">*}
+                                            {*<button type="submit" type="submit">*}
+                                                {*<span data-html="true" data-container="body" data-placement="left" data-toggle="popover" data-content="{foreach from=$monedas item=moneda}{if $apartamento['precios'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios'][$moneda->codigo]}</p>{/if}{/foreach}" class="glyphicon glyphicon-info-sign"></span><span>{$apartamento['precio_moneda_seleccionada']}</span>*}
 
-                                                <small>{#por#} {$noches} {#noche_s#}</small>
+                                                {*<small>{#por#} {$noches} {#noche_s#}</small>*}
+                                            {*</button>*}
+                                        {*</div>*}
+                                        <div class="option">
+                                            <h5>{#reserva_por#} {$noches} {#noche_s#}</h5>
+                                            <label class="current-price">{$apartamento['precio_moneda_seleccionada']}</label>
+                                            <label class="old-price">78,20&euro;</label>
+                                            <button type="submit" class="btn app-btn-pink pull-right show-booking-room-modal">
+                                                {#reservar#|capitalize}
                                             </button>
                                         </div>
                                     </div>
 
                                     {if $hotel->config->comparacionBooking}
-                                        <div class="booking-comparison">
-                                            <div class="">booking.com</div>
-                                            <div class="per-night" data-html="true" data-container="body" data-placement="left" data-toggle="popover" data-content="{foreach from=$monedas item=moneda}{if $apartamento['precios_sin_descuento'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios_sin_descuento'][$moneda->codigo]}</p>{/if}{/foreach}">
-                                                <span>{$apartamento['precio_sin_descuento']}</span>
-                                                <small>{#por#} {$noches} {#noche_s#}</small>
-                                            </div>
+                                        {*<div class="booking-comparison">*}
+                                            {*<div class="">booking.com</div>*}
+                                            {*<div class="per-night" data-html="true" data-container="body" data-placement="left" data-toggle="popover" data-content="{foreach from=$monedas item=moneda}{if $apartamento['precios_sin_descuento'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios_sin_descuento'][$moneda->codigo]}</p>{/if}{/foreach}">*}
+                                                {*<span>{$apartamento['precio_sin_descuento']}</span>*}
+                                                {*<small>{#por#} {$noches} {#noche_s#}</small>*}
+                                            {*</div>*}
+                                        {*</div>*}
+                                        <div class="option">
+                                            <h5>booking.com, {#reserva_por#} {$noches} {#noche_s#}</h5>
+                                            <label class="current-price">{$apartamento['precio_sin_descuento']}</label>
                                         </div>
                                     {/if}
                                 </div>

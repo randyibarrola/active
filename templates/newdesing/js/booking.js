@@ -211,6 +211,29 @@ var Booking = function() {
     };
 
     var initSearchTourList = function() {
+        var affix = $('.booking-tour-content > .head:eq(0)');
+        var affixTop = affix.offset().top;
+        $(document).scroll(function(e){
+            var windowTop = $(window).scrollTop();
+            if(affixTop + 50 < windowTop){
+                if(!affix.hasClass('affix-top')) {
+                    affix.addClass('affix-top');
+                }
+                affix.css('width', affix.parents('.booking-tour-content').eq(0).css('width'))
+            }else{
+                affix.removeClass('affix-top');
+                affix.css('width', 'auto');
+            }
+        });
+
+        $('#booking-tour-form').submit(function() {
+            $('.booking-tour-content').hide();
+            Booking.init(3);
+            $('.booking-confirm-content').show();
+
+            return false;
+        });
+
         var list = $('#search-tour-result');
         list.children('.item').each(function() {
             initSearchTourItem($(this));

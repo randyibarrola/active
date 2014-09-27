@@ -1,6 +1,7 @@
 <div class="header">
     <div class="header-top">
         <div class="container">
+            <label id="operated-by">{#operado_por#} MadridActive</label>
             <ul class="pull-right list-inline">
                 <li>
                     <a href="#" id="display-global-search">

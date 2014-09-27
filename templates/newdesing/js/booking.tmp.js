@@ -192,16 +192,14 @@ var Booking = function() {
             calcularReglas();
         });
 
-        $('.toggle_detalles').click(function(){
+        $('.toggle_detalles').toggle(function() {
             var that = $(this);
-            $(this).parents('.row').find('.descripcion_table').toggle(function(){
-                if($(this).is(':visible')){
-                    that.html('- '+App.getI18n('ocultar_detalle'));
-                }else{
-                    that.html('+ '+App.getI18n('mostrar_detalle'));
-                }
-                return true;
-            });
+            $(this).parents('.row').eq(0).find('.descripcion_table').show();
+            that.html('- '+App.getI18n('ocultar_detalle'));
+        }, function() {
+            var that = $(this);
+            $(this).parents('.row').eq(0).find('.descripcion_table').hide();
+            that.html('+ '+App.getI18n('mostrar_detalle'));
         });
         calcularReglas();
 

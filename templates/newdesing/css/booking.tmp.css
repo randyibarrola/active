@@ -379,26 +379,27 @@ h5.free-cancel {
     padding: 20px 15px 0;
 }
 
-#search-room-result > .item .booking-options .option {
+.booking-options .option {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px dashed #DDDDDD;
+    text-align: left;
 }
 
-#search-room-result > .item .booking-options .option:last-child {
+.booking-options .option:last-child {
     padding-bottom: 0;
     margin-bottom: 0;
     border-bottom: 0;
 }
 
-#search-room-result > .item .booking-options .option > h5 {
+.booking-options .option > h5 {
     /*font-family: "Gotham Rounded Medium";*/
     font-family: 'Ubuntu Condensed', sans-serif;
     margin: 0 0 2px;
 }
 
 
-#search-room-result > .item .booking-options .option > label.current-price {
+.booking-options .option > label.current-price {
     /*font-family: "Gotham Rounded Medium";*/
     font-family: 'Ubuntu Condensed', sans-serif;
     color: #C62583;
@@ -408,7 +409,7 @@ h5.free-cancel {
     font-weight: 500;
 }
 
-#search-room-result > .item .booking-options .option > label.old-price {
+.booking-options .option > label.old-price {
     text-decoration: line-through;
     margin-bottom: 0;
 }
