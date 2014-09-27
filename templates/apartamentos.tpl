@@ -44,7 +44,7 @@
                         <div class="head">
                             <div class="head-text">
                                 <label class="search-title">{#busqueda#}:</label>
-                                <span class="search-text-date">Sáb, 16 de ago de 2014 {#Hasta#|lower} Dom, 17 de ago de 2014</span>
+                                <span class="search-text-date">{$inicio|date_format:"%a, %d %b %Y"} {#Hasta#|lower} {$salida|date_format:"%a, %d %b %Y"}</span>
                             </div>
                             <div class="head-dates">
                                 <button type="button" class="btn app-btn-blue toggle-dates">
@@ -124,7 +124,7 @@
         <div class="col-md-3 col-sm-3 col-xs-12 column-xs-divider">
             <div id="booking-info" class="well-white">
                 <div class="booking-info-step step-1 active">
-                    <h4 class="title">{#selecciona_habitacion_1#}</h4>
+                    <h4 class="title">{#selecciona_tu_alojamiento#}</h4>
                     <div class="content">
                         <p>{#no_has_anhadido_alojamiento#}.</p>
                     </div>

@@ -63,8 +63,7 @@ if($hotel) {
 
             $smarty->assign('excursiones', $destacados);
         }*/
-    }
-
+    }   
 
 $smarty->assign('active_menu', 'home');
 

@@ -663,4 +663,23 @@
 
 #TA_cdswritereviewlg623, #TA_selfserveprop398{
     width:50% !important;
+    float:left;
+}
+
+
+.widWRL, .widSSP{
+    margin: 0 auto !important;
+}
+
+.lugares_interes .lugar_interes{
+    color: #FFF;
+    background: #999;
+    padding: 2px 5px 2px 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-align: left  !important;
+}
+
+#opinions{
+    min-height: 350px;
 }

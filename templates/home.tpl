@@ -212,13 +212,13 @@
                                     {/if}
                                 {/foreach}
                                 {if $lugares}
-                                    <tr>
-                                        <td>{#lugares_de_interes#}</td>
-                                        <td>
-                                            {foreach from=$lugares item=lugar}
-                                                <span class="label label-default">{$lugar}</span>
-                                            {/foreach}
-                                        </td>
+                                    <tr class="lugares_interes">
+                                      <td>{#lugares_de_interes#}</td>
+                                      <td>
+                                        {foreach from=$lugares item=lugar}
+                                        <span class="lugar_interes">{$lugar}</span>
+                                        {/foreach}  
+                                      </td>
                                     </tr>
                                 {/if}
                                 </tbody>
@@ -306,7 +306,7 @@
                 <div class="tab-pane" id="map">
                     {if $hotel->destinoId}
                         <div class="info">
-                            <h2>{$hotel->destino->nombre}</h2>
+                            <h2 class="text-center">{$hotel->destino->nombre}</h2>
                             <div>
                                 {if $hotel->destino->descripcion}
                                     {if $hotel->destino->descripciones->$lang}
