@@ -169,7 +169,8 @@
             <div class="tab-content app-tab-content">
                 <div class="tab-pane active" id="details">
                     <div class="row">
-                        <div class="col-md-10 col-sm-12 text">
+                        {*<div class="col-md-10 col-sm-12 text">*}
+                        <div class="col-md-12 col-sm-12">
                             {if $hotel->descripcionesLargas}
                                 {if $lang}
                                     {$hotel->descripcionesLargas->$lang}
