@@ -70,7 +70,22 @@ var Home = function() {
 
         init: function() {
             if(Home.activeTab != null) {
-                $('#tab-home').find('a[href="' + Home.activeTab + '"]').trigger('click');
+                var tab = "#details";
+                switch(Home.activeTab) {
+                    case 'detalles': tab = '#deatils';
+                        break;
+                    case 'condiciones': tab = '#conditions';
+                        break;
+                    case 'faq': tab = '#faqs';
+                        break;
+                    case 'localizacion': tab = '#map';
+                        break;
+                    case 'contacto': tab = '#contact';
+                        break;
+                    case 'opiniones': tab = '#opinions';
+                        break;
+                }
+                $('#tab-home').find('a[href="' + tab + '"]').trigger('click');
             }
 
             initSimpleSearchOffers();
