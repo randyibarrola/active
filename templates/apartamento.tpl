@@ -167,7 +167,7 @@
                                         </div>
                                         <div class="per-night">
                                             <button type="submit" type="submit">
-                                                <span data-html="true" data-container="body" data-placement="left" data-toggle="popover" data-content="{foreach from=$monedas item=moneda}{if $apartamento['precios'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios'][$moneda->codigo]}</p>{/if}{/foreach}" class="glyphicon glyphicon-info-sign"></span><span>{$apartamento['precio_moneda_seleccionada']}{$apartamento['precio_moneda_seleccionada_especulado']}</span>
+                                                <span data-html="true" data-container="body" data-placement="left" data-toggle="popover" data-content="{foreach from=$monedas item=moneda}{if $apartamento['precios'][$moneda->codigo]}<p>{$moneda->codigo} {$apartamento['precios'][$moneda->codigo]}</p>{/if}{/foreach}" class="glyphicon glyphicon-info-sign"></span><span>{$apartamento['precio_moneda_seleccionada']}</span>
 
                                                 <small>{#por#} {$noches} {#noche_s#}</small>
                                             </button>

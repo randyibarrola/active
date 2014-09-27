@@ -44,7 +44,7 @@
                         <div class="head">
                             <div class="head-text">
                                 <label class="search-title">{#busqueda#}:</label>
-                                <span class="search-text-date">Sáb, 16 de ago de 2014 {#Hasta#|lower} Dom, 17 de ago de 2014</span>
+                                <span class="search-text-date">{$inicio|date_format:"%a, %d %b %Y"} {#Hasta#|lower} Dom, 17 de ago de 2014</span>
                             </div>
                             <div class="head-dates">
                                 <button type="button" class="btn app-btn-blue toggle-dates">
