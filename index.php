@@ -192,6 +192,10 @@ if(!$hotel && !strpos($actualUrl, '/admin-')
     }
 
     $end_url = '';
+    
+    if(isset($_REQUEST['t'])){        
+        $smarty->assign('tab', $_REQUEST['t']);        
+    }
 
     if(isset($_REQUEST['l'])){
         $smarty->assign('lang', $_REQUEST['l']);
