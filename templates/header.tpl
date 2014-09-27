@@ -8,21 +8,20 @@
                     </a>
                 </li>
                 <li class="dropdown app-dropdown-choice">
-                    {#moneda#}
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="dropdown-selected">{$currency}</span> <b class="caret"></b>
+                        <span class="dropdown-selected">{$money} {$currency}</span> <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu pull-right" role="menu">
                         {foreach from = $monedas item = moneda}
                             {if $moneda->codigo ne $money}
                                 {if substr_count($actual_url, '/reservar/') > 0}
-                                    <li data-selected="{$moneda->simbolo}">
+                                    <li data-selected="{$moneda->codigo} {$moneda->simbolo}">
                                         <a href="{$base_url}/{$lang}/{#disponibilidad_url#}/m:{$moneda->codigo}?inicio={$inicio|date_format:"%d-%m-%Y"}&salida={$salida|date_format:"%d-%m-%Y"}">
                                             {$moneda->codigo} {$moneda->simbolo}
                                         </a>
                                     </li>
                                 {else}
-                                    <li data-selected="{$moneda->simbolo}">
+                                    <li data-selected="{$moneda->codigo} {$moneda->simbolo}">
                                         <a href="{$base_url}/{$lang}/{$action_controller}/m:{$moneda->codigo}{$end_actual_url}">
                                             {$moneda->codigo} {$moneda->simbolo}
                                         </a>

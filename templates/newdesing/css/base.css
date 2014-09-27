@@ -34,6 +34,7 @@ div.header > .header-top {
     font-family: 'Ubuntu Condensed', sans-serif;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-weight: 600;
 }
 
 div.header > div.header-top ul.list-inline {
@@ -163,6 +164,7 @@ div.footer > div.footer-top .footer-contact address {
     color: #9A9A9A;
     line-height: 1.2;
     margin-left: 10px;
+    font-weight: 600;
 }
 
 div.footer > div.footer-top .footer-contact ul.list-inline > li {
@@ -212,6 +214,7 @@ div.footer > div.footer-bottom .menu a:focus {
     color: #525252;
     /*font-family: "Gotham Rounded Medium";*/
     font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 600;
 }
 
 @media (min-width: 940px) {
@@ -488,14 +491,16 @@ form.form-inline .tooltips {
 form#contact-form p.text-center {
     /*font-family: "Gotham Rounded Medium";*/
     font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 600;
 }
 
 form#contact-form input[type="submit"] {
     margin-top: 10px;
     font-size: 16px;
-    letter-spacing: -0.5px;
+    /*letter-spacing: -0.5px;*/
     padding-bottom: 5px;
     padding-top: 5px;
+    font-weight: 600;
 }
 
 @media (min-width: 940px) {
