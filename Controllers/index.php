@@ -65,6 +65,7 @@ if($hotel) {
         }*/
     }
 
+    var_dump($hotel);die;
 
 $smarty->assign('active_menu', 'home');
 
