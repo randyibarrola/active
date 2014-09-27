@@ -133,7 +133,7 @@
 
 #details .text {
     /*color: #9A9A9A;*/
-    text-align: justify;
+    /*text-align: justify;*/
 }
 
 #details .social-actions {
@@ -666,8 +666,7 @@
     background: #999;
     padding: 2px 5px 2px 5px;
     margin-bottom: 5px;
-    display: inline-block;
-    text-align: left  !important;
+    display: inline-block;    
 }
 
 #opinions{
