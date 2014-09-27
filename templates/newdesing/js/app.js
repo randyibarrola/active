@@ -363,8 +363,8 @@ var App = function () {
                 spanDateDiff.text(parseInt((checkout.getDate().getTime() - checkin.getDate().getTime()) / 86400000));
             };
 
-            checkin.setDate(widgetCheckin.val().trim() != '' ? App.parseDate(widgetCheckin.val()) : start_check_in);
-            checkout.setDate(widgetCheckout.val().trim() != '' ? App.parseDate(widgetCheckout.val()) : start_check_out);
+            checkin.setDate(widgetCheckin.val().trim() != '' && App.parseDate(widgetCheckin.val()).valueOf() > start_check_in.valueOf() ? App.parseDate(widgetCheckin.val()) : start_check_in);
+            checkout.setDate(widgetCheckout.val().trim() != '' && App.parseDate(widgetCheckout.val()).valueOf() > start_check_out.valueOf() ? App.parseDate(widgetCheckout.val()) : start_check_out);
 
             if(App.configBooking.agreementEndDate) {
                 var endDateCheckin = new Date(App.parseDate(App.configBooking.agreementEndDate).getTime());
