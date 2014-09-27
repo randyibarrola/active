@@ -249,11 +249,9 @@ if(!$hotel && !strpos($actualUrl, '/admin-')
                 }
             }
         }
-    }
+    }    
     
-    var_dump($_REQUEST['t']);die;
     if(isset($_REQUEST['t'])){    
-        var_dump($_REQUEST['t']);
         $smarty->assign('tab', $_REQUEST['t']);        
     }
 
