@@ -147,8 +147,7 @@
                                                     
                                                     {if $excursion->guias}
                                                     <div class="guide-languages">
-                                                        <label><i class="glyphicon glyphicon-user"></i> Guía</label>
-                                                        
+                                                        <p style="margin-bottom: 0 !important;"><label><i class="glyphicon glyphicon-user"></i> Guía</label><p>                                                        
                                                         <ul class="list-inline flags">
                                                             {foreach from=$excursion->guias key=dd item=guia name=guias}{if !$smarty.foreach.guias.first}, {/if}<li><img src="{$template_url}/images/flags/{$dd}.png"></li> {$dd|upper}{/foreach}                                                            
                                                         </ul>
