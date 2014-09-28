@@ -357,7 +357,7 @@
     max-width: 185px;
 }
 
-#reserva-description .flexslider img {
+.reserva-description .flexslider img {
     width: 185px;
     height: 133px !important;
 }
@@ -927,21 +927,21 @@
     margin-left: 20px;
 }
 
-#reserva-description h3{
+.reserva-description h3{
     margin-top: 0px;
 }
-#reserva-description p{
+.reserva-description p{
     margin-bottom: 0px;
     font-size: 13px;
     color: #585858;
 }
-#reserva-description p.lead{
+.reserva-description p.lead{
     font-size: 16px;
     font-weight: normal;
     margin-bottom: 7px;
     float: right;
 }
-#reserva-description h4{
+.reserva-description h4{
      margin-bottom: 2px;
     
      font-size: 15px;
