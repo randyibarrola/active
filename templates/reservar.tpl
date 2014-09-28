@@ -130,234 +130,119 @@
                             </fieldset>
                         </form>
                         <div id="search-tour-result" class="">
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-md-9 col-sm-12 col-xs-12">
-                                    <h5 class="">Excursión Segway</h5>
-                                    <div class="media">
-                                        <div class="pull-left">
-                                            <img class="media-object" src="{$template_url}/newdesing/tmp/excursion.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <p class="description">
-                                                Ten la experiencia del surf durante tus vacaciones en Fuerteventura!
-                                                Protest surfschool ofrece clases.
-                                                <a href="#">[Saber más]</a>
-                                            </p>
-                                            <div class="guide-languages">
-                                                <label><i class="glyphicon glyphicon-user"></i> Guía</label>
-                                                <ul class="list-inline flags">
-                                                    <li>
-                                                        <img src="{$template_url}/assets/images/flags/es.png">
-                                                    </li>
-                                                    <li>
-                                                        <img src="{$template_url}/assets/images/flags/gb.png">
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <a href="#" class="more-info show-booking-tour-form" data-more="Mostrar detalles de la actividad" data-minus="Ocultar detalles de la actividad">
-                                                <span>Mostrar detalles de la actividad</span> <i class="glyphicon glyphicon-chevron-down"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-12 col-xs-12 booking-options">
-                                    <div class="option">
-                                        <h5>desde:</h5>
-                                        <label class="current-price">12,50&euro;</label>
-                                        <label class="old-price">17,20&euro;</label>
-                                        <button class="btn app-btn-pink show-booking-tour-form">
-                                            Lo quiero
-                                        </button>
-                                        <p class="free-cancel">Cancelación GRATUITA</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="more-info-content" style="display: none;">
-                                <div class="well-gray well-divider">
-                                    <form class="booking-add-tour-form form-inline" role="form" action="#" method="post">
-                                        <fieldset>
-                                            <div class="">
-                                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <h4 style="margin-bottom: 0">Escoja una fecha:</h4>
-                                                    <div class="datepicker" data-sync=".selected-date-1" data-start-date="today">
-                                                        <input type="hidden" class="selected-date-1" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label label-hours">Escoge hora de salida:</label>
-                                                        <select class="select2 form-control">
-                                                            <option value="11:30" selected="selected">11:30</option>
-                                                            <option value="14:30">14:30</option>
-                                                            <option value="16:30">16:30</option>
-                                                        </select>
-                                                    </div>
+                            {foreach from=$excursiones item=excursion}
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-12 col-xs-12">
+                                            <h5 class="">{$excursion->nombre}</h5>
+                                            <div class="media">
+                                                <div class="pull-left">
+                                                    <img class="media-object" src="{$service_url}{$excursion->fotos[0]->ruta|replace:'http://':'https://'}" class="reserva-img img-thumbnail" alt="{$excursion->nombre}">
                                                 </div>
-                                                <div class="col-md-6 col-sm-12 col-xs-12 text-right">
-                                                    <h4 style="margin-bottom: 25px;">Completa los datos:</h4>
-                                                    <div class="form-group persons">
-                                                        <label class="control-label">Adultos:</label>
-                                                        <select class="select2 form-control adult-count">
-                                                            <option value="1" selected="selected">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                        </select>
-                                                        <input type="hidden" class="adult-price" value="12.50" />
-                                                        <label class="sub-price"><span>12,50</span>&euro;</label>
+                                                <div class="media-body">
+                                                    <p class="description">
+                                                        {$excursion->descripcionBreve|json_decode:1}
+                                                        <a href="#">[Saber más]</a>
+                                                    </p>
+                                                    {if $excursion->guias}
+                                                    <div class="guide-languages">
+                                                        <label><i class="glyphicon glyphicon-user"></i> {#idioma_guia#}</label>
+                                                        
+                                                        <ul class="list-inline flags">
+                                                            {foreach from=$excursion->guias key=dd item=guia name=guias}{if !$smarty.foreach.guias.first}, {/if}<li><img src="{$template_url}/images/flags/{$dd}.png"></li> {$dd|upper}{/foreach}                                                            
+                                                        </ul>
                                                     </div>
-                                                    <div class="form-group persons">
-                                                        <label class="control-label">Niños:</label>
-                                                        <select class="select2 form-control child-count">
-                                                            <option value="0" selected="selected">0</option>
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                        </select>
-                                                        <input type="hidden" class="child-price" value="5" />
-                                                        <label class="sub-price"><span>0</span>&euro;</label>
-                                                    </div>
-                                                    <h4 style="margin-top: 25px;">Introduce tu código descuento:</h4>
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control discount-code" />
-                                                                                            <span class="input-group-btn">
-                                                                                                <button class="btn app-btn-blue app-upper-text btn-discount-code" type="button">Validar</button>
-                                                                                            </span>
-                                                        </div>
-                                                        <div class="discount-validate" style="display: none;">
-                                                            <label class="sub-price">0</label>
-                                                            <i class="glyphicon glyphicon-remove-circle tooltips" data-original-title="Quitar"></i>
-                                                        </div>
-                                                        <input type="hidden" class="discount" value="0" data-discount-type="percent" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="hidden" class="total-price" />
-                                                        <label class="control-label">Total:</label>
-                                                        <label class="total-price"><span>12,50</span>&euro;</label>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="submit" class="btn app-btn-pink" value="Añadir reserva" />
-                                                    </div>
+                                                    {/if}
+                                                    <a href="#" class="more-info show-booking-tour-form" data-more="Mostrar detalles de la actividad" data-minus="Ocultar detalles de la actividad">
+                                                        <span>Mostrar detalles de la actividad</span> <i class="glyphicon glyphicon-chevron-down"></i>
+                                                    </a>
                                                 </div>
                                             </div>
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-md-9 col-sm-12 col-xs-12">
-                                    <h5 class="">Excursión Segway</h5>
-                                    <div class="media">
-                                        <div class="pull-left">
-                                            <img class="media-object" src="{$template_url}/newdesing/tmp/excursion.jpg" alt="">
                                         </div>
-                                        <div class="media-body">
-                                            <p class="description">
-                                                Ten la experiencia del surf durante tus vacaciones en Fuerteventura!
-                                                Protest surfschool ofrece clases.
-                                                <a href="#">[Saber más]</a>
-                                            </p>
-                                            <div class="guide-languages">
-                                                <label><i class="glyphicon glyphicon-user"></i> Guía</label>
-                                                <ul class="list-inline flags">
-                                                    <li>
-                                                        <img src="{$template_url}/assets/images/flags/es.png">
-                                                    </li>
-                                                    <li>
-                                                        <img src="{$template_url}/assets/images/flags/gb.png">
-                                                    </li>
-                                                </ul>
+                                        <div class="col-md-3 col-sm-12 col-xs-12 booking-options">
+                                            <div class="option">
+                                                <h5>{#desde#}:</h5>
+                                                <label class="current-price">{$excursion->precio_minimo}</label>
+                                                <label class="old-price">17,20&euro;</label>
+                                                <button class="btn app-btn-pink show-booking-tour-form">
+                                                    {#mostrar_detalles#}
+                                                </button>
+                                                <p class="free-cancel">Cancelación GRATUITA</p>
                                             </div>
-                                            <a href="#" class="more-info show-booking-tour-form" data-more="Mostrar detalles de la actividad" data-minus="Ocultar detalles de la actividad">
-                                                <span>Mostrar detalles de la actividad</span> <i class="glyphicon glyphicon-chevron-down"></i>
-                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="more-info-content" style="display: none;">
+                                        <div class="well-gray well-divider">
+                                            <form class="booking-add-tour-form form-inline" role="form" action="#" method="post">
+                                                <fieldset>
+                                                    <div class="">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                                            <h4 style="margin-bottom: 0">Escoja una fecha:</h4>
+                                                            <div class="datepicker" data-sync=".selected-date-1" data-start-date="today">
+                                                                <input type="hidden" class="selected-date-1" />
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label label-hours">Escoge hora de salida:</label>
+                                                                <select class="select2 form-control">
+                                                                    <option value="11:30" selected="selected">11:30</option>
+                                                                    <option value="14:30">14:30</option>
+                                                                    <option value="16:30">16:30</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 text-right">
+                                                            <h4 style="margin-bottom: 25px;">Completa los datos:</h4>
+                                                            <div class="form-group persons">
+                                                                <label class="control-label">Adultos:</label>
+                                                                <select class="select2 form-control adult-count">
+                                                                    <option value="1" selected="selected">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                </select>
+                                                                <input type="hidden" class="adult-price" value="12.50" />
+                                                                <label class="sub-price"><span>12,50</span>&euro;</label>
+                                                            </div>
+                                                            <div class="form-group persons">
+                                                                <label class="control-label">Niños:</label>
+                                                                <select class="select2 form-control child-count">
+                                                                    <option value="0" selected="selected">0</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                </select>
+                                                                <input type="hidden" class="child-price" value="5" />
+                                                                <label class="sub-price"><span>0</span>&euro;</label>
+                                                            </div>
+                                                            <h4 style="margin-top: 25px;">Introduce tu código descuento:</h4>
+                                                            <div class="form-group">
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control discount-code" />
+                                                                                                    <span class="input-group-btn">
+                                                                                                        <button class="btn app-btn-blue app-upper-text btn-discount-code" type="button">Validar</button>
+                                                                                                    </span>
+                                                                </div>
+                                                                <div class="discount-validate" style="display: none;">
+                                                                    <label class="sub-price">0</label>
+                                                                    <i class="glyphicon glyphicon-remove-circle tooltips" data-original-title="Quitar"></i>
+                                                                </div>
+                                                                <input type="hidden" class="discount" value="0" data-discount-type="percent" />
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="hidden" class="total-price" />
+                                                                <label class="control-label">Total:</label>
+                                                                <label class="total-price"><span>12,50</span>&euro;</label>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="submit" class="btn app-btn-pink" value="Añadir reserva" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-12 col-xs-12 booking-options">
-                                    <div class="option">
-                                        <h5>desde:</h5>
-                                        <label class="current-price">12,50&euro;</label>
-                                        <label class="old-price">17,20&euro;</label>
-                                        <button class="btn app-btn-pink show-booking-tour-form">
-                                            Lo quiero
-                                        </button>
-                                        <p class="free-cancel">Cancelación GRATUITA</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="more-info-content" style="display: none;">
-                                <div class="well-gray well-divider">
-                                    <form class="booking-add-tour-form form-inline" role="form" action="#" method="post">
-                                        <fieldset>
-                                            <div class="">
-                                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <h4 style="margin-bottom: 0">Escoja una fecha:</h4>
-                                                    <div class="datepicker" data-sync=".selected-date-2" data-start-date="today">
-                                                        <input type="hidden" class="selected-date-2" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label label-hours">Escoge hora de salida:</label>
-                                                        <select class="select2 form-control">
-                                                            <option value="11:30" selected="selected">11:30</option>
-                                                            <option value="14:30">14:30</option>
-                                                            <option value="16:30">16:30</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12 col-xs-12 text-right">
-                                                    <h4 style="margin-bottom: 25px;">Completa los datos:</h4>
-                                                    <div class="form-group persons">
-                                                        <label class="control-label">Adultos:</label>
-                                                        <select class="select2 form-control adult-count">
-                                                            <option value="1" selected="selected">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                        </select>
-                                                        <input type="hidden" class="adult-price" value="12.50" />
-                                                        <label class="sub-price"><span>12,50</span>&euro;</label>
-                                                    </div>
-                                                    <div class="form-group persons">
-                                                        <label class="control-label">Niños:</label>
-                                                        <select class="select2 form-control child-count">
-                                                            <option value="0" selected="selected">0</option>
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                        </select>
-                                                        <input type="hidden" class="child-price" value="5" />
-                                                        <label class="sub-price"><span>0</span>&euro;</label>
-                                                    </div>
-                                                    <h4 style="margin-top: 25px;">Introduce tu código descuento:</h4>
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control discount-code" />
-                                                                                            <span class="input-group-btn">
-                                                                                                <button class="btn app-btn-blue app-upper-text btn-discount-code" type="button">Validar</button>
-                                                                                            </span>
-                                                        </div>
-                                                        <div class="discount-validate" style="display: none;">
-                                                            <label class="sub-price">0</label>
-                                                            <i class="glyphicon glyphicon-remove-circle tooltips" data-original-title="Quitar"></i>
-                                                        </div>
-                                                        <input type="hidden" class="discount" value="0" data-discount-type="number" />
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="hidden" class="total-price" />
-                                                        <label class="control-label">Total:</label>
-                                                        <label class="total-price"><span>12,50</span>&euro;</label>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="submit" class="btn app-btn-pink" value="Añadir reserva" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                            {/foreach}
                         </div>
                     </div>
                 {/if}
