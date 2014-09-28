@@ -214,6 +214,7 @@ var App = function () {
                 $(this).select2({
                     allowClear: true
                 });
+                $(this).siblings('.select2-container').removeClass('validate[required]');
             });
         }
     };

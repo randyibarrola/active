@@ -207,6 +207,14 @@ var Booking = function() {
                 });
 
                 break;
+            case 3:
+                var bookingConfirmFormModal = $('#send-confirm-modal');
+                bookingConfirmFormModal.modal({
+                    backdrop: "static",
+                    keyboard: false,
+                    show: false
+                });
+                break;
         }
     };
 
@@ -358,6 +366,23 @@ var Booking = function() {
         form.triggerHandler('app.event.form.init', []);
     };
 
+    var initBookingConfirmForm = function() {
+        var form = $('#booking-confirm-form');
+
+        form.submit(function(e){
+            var valid = $(this).validationEngine('validate');
+            if(valid) {
+                $('#send-confirm-modal').modal('show');
+                return true;
+            }
+            else {
+                e.preventDefault();
+                return false;
+            }
+
+        });
+    };
+
     return {
         init: function(step) {
             if(!step)
@@ -376,6 +401,7 @@ var Booking = function() {
                     initSearchTourList();
                     break;
                 case 3:
+                    initBookingConfirmForm();
                     break;
                 default:
                     break;

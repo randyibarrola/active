@@ -328,49 +328,48 @@
 
                 <!-- Formulario de completar reserva -->
                 <div class="booking-confirm-content" style="{if $excursiones && count($excursiones)}display: none{/if}">
-                    <form id="booking-confirm-form" class="form-horizontal" role="form" action="#" method="post">
+                    <form id="booking-confirm-form" class="form-horizontal" role="form" action="{$base_url}/reservar{$end_url}" method="post">
                         <div class="well-white">
                             <div class="head">
-                                <h1>Datos del titular de la habitación <span>(Debe ser mayor de 18 años)</span></h1>
+                                <h1>{#datos_titular_habitacion#} <span>({#debe_ser_mayor_18#})</span></h1>
                             </div>
                             <fieldset>
                                 <p class="fieldset-info">
-                                    <label>Habitación 1:</label> 2 adultos, 1 cama individual
+                                    <label>{$apartamento['titulo']}</label>
                                 </p>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <label class="control-label">Nombre de contacto <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
-                                        <input type="text" class="form-control" placeholder="Nombre y apellidos" />
+                                        <label class="control-label">{#nombre_de_contacto#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
+                                        <input type="text" class="form-control validate[required]" placeholder="{#nombre_y_apellidos#}" name="nombre" value="{$backData['nombre']}" />
                                     </div>
                                     <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <label class="control-label">País de origen</label>
-                                        <select class="select2 form-control">
-                                            <option value="AFG">Afganistán</option>
-                                            <option value="CUB">Cuba</option>
-                                            <option value="ESP" selected="selected">España</option>
-                                            <option value="KOR">Korea</option>
+                                        <label class="control-label">{#pais_origen#}</label>
+                                        <select class="select2 form-control" name="pais">
+                                            {foreach from=$paises item=pais key=key}
+                                                <option value="{$key}" {if (!$backData && $key eq 'ES') || $backData['pais'] eq $key}selected=""{/if}>{$pais}</option>
+                                            {/foreach}
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <label class="control-label">Dirección de correo electrónico <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
-                                        <input type="text" class="form-control" />
+                                        <label class="control-label">{#direccion_correo_electronico#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
+                                        <input type="text" class="form-control validate[required], custom[email]]" name="email" value="{$backData['email']}" />
                                         <div class="help-block">
-                                            <span>Compruébelo, le enviaremos los detalles de su reserva.</span>
+                                            <span>{#compruebe_email#}.</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <label class="control-label">Número de teléfono <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
-                                        <input type="text" class="form-control" />
+                                        <label class="control-label">{#numero_de_telefono#}</label>
+                                        <input type="text" class="form-control" name="telefono" value="{$backData['telefono']}" />
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" value="">
-                                                Selecciona esta casilla si no quiere recibir correos electrónico con ofertas especiales, promociones y otra información.
+                                                <input type="checkbox" value="" name="recibir_ofertas">
+                                                {#recibir_ofertas_promociones#}.
                                             </label>
                                         </div>
                                     </div>
@@ -380,7 +379,7 @@
                         <div class="well-white well-divider">
                             <div class="head">
                                 <h1>
-                                    Tus datos para el pago
+                                    {#tus_datos_para_el_pago#}
                                     <div class="card-logos pull-right">
                                         <img src="{$template_url}/newdesing/images/visa-logos.png" />
                                         <img src="{$template_url}/newdesing/images/godaddy.png" />
@@ -388,66 +387,63 @@
                                 </h1>
                             </div>
                             <div class="well-green-light">
-                                <label>¡Sin cargos de gestión! Tu tarjeta de crédito solo es necesaria porque garantiza tu reserva</label>
+                                <label>{#requiere_tarjeta_de_credito#}</label>
                                 Mercure Madrid Santo Domingo aplica las políticas de cobro según las <a href="#">condiciones de la tarifa seleccionada</a>.
                             </div>
                             <fieldset>
                                 <div class="row">
                                     <div class="col-md-5 col-sm-12 col-xs-12">
-                                        <label class="control-label">Número de tarjeta de débito/crédito <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
-                                        <input type="text" class="form-control" />
+                                        <label class="control-label">{#numero_tarjeta_debito_credito#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
+                                        <input type="text" class="form-control validate[required, custom[customCreditCard]]" name="tarjetaNumero" />
                                     </div>
                                     <div class="col-md-7 col-sm-12 col-xs-12">
-                                        <label class="control-label">Nombre del titular de la tarjeta de crédito <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
-                                        <input type="text" class="form-control" />
+                                        <label class="control-label">{#nombre_titular_de_la_tarjeta#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
+                                        <input type="text" class="form-control validate[required]" name="titular" />
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-5 col-sm-6 col-xs-12">
-                                        <label class="control-label">Fecha de caducidad <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
+                                        <label class="control-label">{#fecha_de_caducidad#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
                                         <div class="caducity-date">
-                                            <select class="select2 form-control" data-placeholder="Mes">
+                                            <select class="select2 form-control validate[required]" data-placeholder="{#mes#}" name="caducidadMes">
                                                 <option value=""></option>
-                                                <option value="Ene">Ene</option>
-                                                <option value="Feb">Feb</option>
-                                                <option value="Mar">Mar</option>
-                                                <option value="Abr">Abr</option>
-                                                <option value="May">May</option>
-                                                <option value="Jun">Jun</option>
-                                                <option value="Jul">Jul</option>
-                                                <option value="Ago">Ago</option>
-                                                <option value="Sep">Sep</option>
-                                                <option value="Oct">Oct</option>
-                                                <option value="Nov">Nov</option>
-                                                <option value="Dic">Dic</option>
+                                                <option value="01">01 - {#enero#}</option>
+                                                <option value="02">02 - {#febrero#}</option>
+                                                <option value="03">03 - {#marzo#}</option>
+                                                <option value="04">04 - {#abril#}</option>
+                                                <option value="05">05 - {#mayo#}</option>
+                                                <option value="06">06 - {#junio#}</option>
+                                                <option value="07">07 - {#julio#}</option>
+                                                <option value="08">08 - {#agosto#}</option>
+                                                <option value="09">09 - {#septiembre#}</option>
+                                                <option value="10">10 - {#octubre#}</option>
+                                                <option value="11">11 - {#noviembre#}</option>
+                                                <option value="12">12 - {#diciembre#}</option>
                                             </select>
                                         </div>
                                         <div class="caducity-date">
-                                            <select class="select2 form-control" data-placeholder="Año">
+                                            <select class="select2 form-control validate[required]" data-placeholder="{#anho#}" name="caducidadAnio">
                                                 <option value=""></option>
-                                                <option value="2014">2014</option>
-                                                <option value="2015">2015</option>
-                                                <option value="2016">2016</option>
-                                                <option value="2017">2017</option>
-                                                <option value="2018">2018</option>
-                                                <option value="2019">2019</option>
+                                                {for $i=$smarty.now|date_format:"%Y" to 2040}
+                                                    <option value="{$i}">{$i}</option>
+                                                {/for}
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-7 col-sm-6 col-xs-12">
                                         <label class="control-label">
-                                            Número de identificación de tarjeta
+                                            {#numero_identificacion_tarjeta#}
                                             <span class="required"><i class="glyphicon glyphicon-star"></i></span>
-                                            <span class="tooltips" data-toggle="tooltip" title="Texto de información"><i class="glyphicon glyphicon-question-sign"></i></span>
+                                            <span class="tooltips" data-toggle="tooltip" title="{#cvv#}"><i class="glyphicon glyphicon-question-sign"></i></span>
                                         </label>
-                                        <input type="text" class="form-control card-number" />
+                                        <input type="text" class="form-control card-number validate[required, custom[integer]]" maxlength="4" name="cvv" />
                                     </div>
                                 </div>
                             </fieldset>
                         </div>
                         <div class="well-white well-divider">
                             <div class="head">
-                                <h1>Política de cancelación y condiciones</h1>
+                                <h1>{#politica_cancelacion_condiciones#}</h1>
                             </div>
                             <fieldset>
                                 <p class="fieldset-info">
@@ -456,31 +452,31 @@
                                 </p>
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <label class="control-label">Peticiones especiales o comentarios para el hotel</label>
-                                        <textarea class="form-control" rows="3"></textarea>
+                                        <label class="control-label">{#peticiones_especiales_o_comentacios_al_hotel#}</label>
+                                        <textarea class="form-control" rows="3" name="peticionesEspeciales">{$backData['peticionesEspeciales']}</textarea>
                                     </div>
                                 </div>
                                 <div class="well-gray well-divider">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value=""> <span class="required"><i class="glyphicon glyphicon-star"></i></span>
-                                            Declaro que acepto el compromiso de pago y que he leido y acepto
-                                            <a href="#">normas y restricciones <i class="glyphicon glyphicon-new-window"></i></a>
-                                            , los <a href="#">términos y condiciones <i class="glyphicon glyphicon-new-window"></i></a>
-                                            y la <a href="#">política de provacidad <i class="glyphicon glyphicon-new-window"></i></a>.
+                                            <input type="checkbox" value="" name="acepto" class="validate[required]"> <span class="required"><i class="glyphicon glyphicon-star"></i></span>
+                                            {#declaro_acepto_pago#}
+                                            <a href="#">{#normas_y_restricciones#} <i class="glyphicon glyphicon-new-window"></i></a>
+                                            , {#los#} <a href="#">{#terminos_y_condiciones#} <i class="glyphicon glyphicon-new-window"></i></a>
+                                            {#y_la#} <a href="#">{#politica_de_privacidad#} <i class="glyphicon glyphicon-new-window"></i></a>.
                                         </label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-5 col-xs-6">
-                                        <input type="submit" class="btn app-btn-pink" value="Finalizar reserva">
+                                        <input type="submit" class="btn app-btn-pink" value="{#finalizar_reserva#}">
                                     </div>
                                 </div>
                                 <div class="row secure-data-info">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <p>
                                             <i class="glyphicon glyphicon-lock"></i>
-                                            Utilizamos procesos de almacenamientos cifrados y transmisión segura para proteger tus datos personales.
+                                            {#utilizamos_procesos_cifrados#}.
                                         </p>
                                     </div>
                                 </div>
@@ -493,32 +489,75 @@
         <div class="col-md-3 col-sm-3 col-xs-12">
             <div id="booking-info" class="well-white">
                 <div class="booking-info-step step-1">
-                    <h4 class="title">1. Selecciona habitación</h4>
+                    <h4 class="title">{#selecciona_habitacion_1#}</h4>
                     <div class="content">
-                        <p><label>Habitación Doble - 1 o 2 camas</label></p>
-                        <p>Llegada: jueves, 16-10-2014</p>
-                        <p>Salida: miércoles, 22-10-2014</p>
-                        <p>6 Noches</p>
-                        <p>Pax: 2 Adulto(s)</p>
-                        <p><label>Solo alojamiento</label></p>
+                        <p><label>{$apartamento['titulo']}</label></p>
+                        <p>{#llegada#}: {$inicio}</p>
+                        <p>{#salida#}: {$salida}</p>
+                        <p>{$noches} {#noches#}</p>
+                        <p>{#Pax#}: {$apartamento['adultos']} {#Adulto_s#} {if $apartamento.ninios}+ {$apartamento.ninios} {#ninio_s#}{/if}</p>
+                        <p><label>{$apartamento['codicion']}</label></p>
                         <div class="pay text-right">
                             <p class="prepay block">
-                                74,50&euro;
-                                <span class="saving">Te ahorras 6,50&euro;</span>
+                                {$apartamento['precioTotal_format']}
+                                <span class="saving">{#te_ahorras#} 6,50&euro;</span>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="booking-info-step step-2 active">
-                    <h4 class="title">2. Actividades y tours</h4>
+                <div class="booking-info-step step-2 {if $excursiones && count($excursiones)}active{/if}">
+                    <h4 class="title">{#actividades_y_tours_2#}</h4>
                     <div class="content">
-                        <p>No has añadido ninguna.</p>
+                        {if $excursiones && count($excursiones)}
+                            <p><label>Tour Madrid Clásico (2H)</label></p>
+                            <p>Pax: 2 Adulto(s)</p>
+                            <div class="pay">
+                                <p>Subtotal:</p>
+                                <p>30,00&euro;</p>
+                            </div>
+                            <div class="pay">
+                                <p>Código descuento:<br/>WELCOME_20</p>
+                                <p>-20,00&euro;</p>
+                            </div>
+                            <div class="pay">
+                                <p>Importe total:</p>
+                                <p>10,00&euro;</p>
+                            </div>
+                            <div class="pay">
+                                <p>Importe a pagar ahora 50%:</p>
+                                <p class="prepay">5,00&euro;</p>
+                            </div>
+                        {else}
+                            <p>{#no_has_anhadido_ninguna#}.</p>
+                        {/if}
                     </div>
                 </div>
-                <div class="booking-info-step step-3">
-                    <h4 class="title">3. Confirmar reserva</h4>
+                <div class="booking-info-step step-3 {if !$excursiones || !count($excursiones)}active{/if}">
+                    <h4 class="title">{#confirmar_reserva_3#}</h4>
                     <div class="content">
+                        <div class="pay">
+                            <p>Importe total:</p>
+                            <p>84,50&euro;</p>
+                        </div>
+                        <div class="pay">
+                            <p>Importe total a pagar ahora:</p>
+                            <p class="prepay">17,55&euro;</p>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{/block}
+
+{block "extra_content" append}
+    <div id="send-confirm-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h1>{#enviando_datos#}...</h1>
+                    <img src="{$template_url}/newdesing/images/ajax-loading.gif">
+                    <p>{#puede_tardar#}. {#disculpe_las_molestias#}.</p>
                 </div>
             </div>
         </div>

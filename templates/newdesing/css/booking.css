@@ -674,11 +674,11 @@
 #booking-confirm-form .caducity-date {
     display: table-cell !important;
     padding-right: 10px;
-    width: 100px;
+    width: 160px;
 }
 
 #booking-confirm-form .caducity-date:last-child {
-    width: 85px;
+    width: 95px;
 }
 
 .booking-tour-content .head {
