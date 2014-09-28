@@ -391,7 +391,7 @@ var Booking = function() {
         });
     };
 
-    var initRoomDetails = function() {
+    var initRoomDetails = function(item) {
         $('#show-room-more-info').toggle(function() {
             $('#room-more-info').show();
             $(this).text('- ' + App.getI18n('ocultar_detalle'));
@@ -418,7 +418,7 @@ var Booking = function() {
                     break;
                 case 2:
                     initSearchTourList();
-                    initRoomDetails();
+                    initRoomDetails($('#room-details'));
                     break;
                 case 3:
                     initBookingConfirmForm();
