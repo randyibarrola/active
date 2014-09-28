@@ -141,11 +141,10 @@
                                                 <div class="pull-left">
                                                     <img class="media-object" src="{$service_url}{$excursion->fotos[0]->ruta|replace:'http://':'https://'}" class="reserva-img img-thumbnail" alt="{$excursion->nombre}">
                                                 </div>
-                                                <div class="media-body">
-                                                    <p class="description">
-                                                        {$descripcion_breve[$lang]}
-                                                        <a href="#">[Saber más]</a>
-                                                    </p>
+                                                <div class="media-body">                                                    
+                                                    {$descripcion_breve[$lang]}
+                                                    <a href="#">[Saber más]</a>
+                                                    
                                                     {if $excursion->guias}
                                                     <div class="guide-languages">
                                                         <label><i class="glyphicon glyphicon-user"></i> {#idioma_guia#}</label>
@@ -163,7 +162,7 @@
                                         </div>
                                         <div class="col-md-3 col-sm-12 col-xs-12 booking-options">
                                             <div class="option">
-                                                <h5>{#desde#}:</h5>
+                                                <h5>desde:</h5>
                                                 <label class="current-price">{$excursion->precio_minimo}</label>
                                                 <label class="old-price">17,20&euro;</label>
                                                 <button class="btn app-btn-pink show-booking-tour-form">
