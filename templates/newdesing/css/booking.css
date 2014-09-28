@@ -352,9 +352,14 @@
     max-width: 185px;
 }
 
-#search-room-result > .item .media .flexslider img {
+#search-room-result > .item .media .flexslider {
+    max-height: 103px;
+    max-width: 185px;
+}
+
+#room-details > .flexslider img {
     width: 185px;
-    height: 103px;
+    height: 128px;
 }
 
 @media (max-width: 728px) {
