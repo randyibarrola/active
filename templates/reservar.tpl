@@ -141,7 +141,7 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <p class="description">
-                                                        {$excursion->descripcionBreve|json_decode:1}
+                                                        {$excursion->descripcionBreve}
                                                         <a href="#">[Saber más]</a>
                                                     </p>
                                                     {if $excursion->guias}
