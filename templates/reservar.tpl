@@ -131,6 +131,8 @@
                         </form>
                         <div id="search-tour-result" class="">
                             {foreach from=$excursiones item=excursion}
+                                {assign var=descripcion_breve value=$excursion->descripcionBreve|json_decode:1}
+                                {assign var=descripcion_extendida value=$excursion->descripcionExtendida|json_decode:1}
                                 <div class="item">
                                     <div class="row">
                                         <div class="col-md-9 col-sm-12 col-xs-12">
@@ -141,7 +143,7 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <p class="description">
-                                                        {$excursion->descripcionBreve}
+                                                        {$descripcion_breve[$lang]}
                                                         <a href="#">[Saber más]</a>
                                                     </p>
                                                     {if $excursion->guias}
