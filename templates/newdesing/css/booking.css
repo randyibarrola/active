@@ -357,9 +357,9 @@
     max-width: 185px;
 }
 
-#room-details > .flexslider img {
+#room-details .flexslider img {
     width: 185px;
-    height: 128px;
+    height: 128px !important;
 }
 
 @media (max-width: 728px) {
