@@ -772,7 +772,7 @@
 }
 
 #search-tour-result > .item .media .media-body .guide-languages {
-    display: table-cell;
+    /*display: table-cell;*/
     width: auto;
     border-bottom: 1px solid #E5E5E5;
     border-top: 1px solid #E5E5E5;
