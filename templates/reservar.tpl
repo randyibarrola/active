@@ -71,8 +71,44 @@
                             <h1>Reserva tu actividad ahora. <span>-20% dto.</span></h1>
                             <form id="booking-tour-form" role="form" action="#" method="get" class="pull-right">
                                 <input type="hidden" name="tour[]" class="booking-tour-form-book" />
-                                <input class="btn app-btn-pink" type="submit" value="Proceder al pago >>" />
+                                <input class="btn app-btn-pink" type="submit" value="{#proceder_pago#} >>" />
                             </form>
+                        </div>
+                        <div id="room-details">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="flexslider">
+                                        <ul class="slides">
+                                            {foreach from=$apartamento['imagenes'] item=imagen}
+                                                <li class="slide">
+                                                    <img src="{$imagen|replace:'http:':'https:'}" alt="{$apartamento['titulo']}">
+                                                </li>
+                                            {/foreach}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <h3 class="text-primary">{$apartamento['titulo']}</h3>
+                                    {if $cantidad > 1}<p class="text-muted">{#cantidad#}: {$cantidad}</p>{/if}
+                                    <p class="text-muted">{#llegada#}: {$inicio} 15:00</p>
+                                    <p class="text-muted">{#salida#}: {$salida} 12:00</p>
+                                    <p class="text-muted">{$noches} {#noche_s#}</p>
+                                    <p class="text-muted">{#Pax#}: {$apartamento['adultos']} {#Adulto_s#} {if $apartamento.ninios}+ {$apartamento.ninios} {#ninio_s#}{/if}</p>
+                                    {if $apartamento['pension']}
+                                        <p class="text-muted"><strong>{$apartamento['pension']}</strong></p>
+                                    {/if}
+                                    <p class="text-muted"><strong>{$apartamento['condicion']}</strong></p>
+                                    <a class="btn btn-primary pull-right btn-xs" id="show-room-more-info">+ {#mostrar_detalles_y_condiciones#}</a>
+                                </div>
+                            </div>
+                            <div class="row" id="room-more-info" style="display: none;">
+                                <div class="col-sm-12">
+                                    <h3 class="text-primary">{#descripcion_del_servicio#}:</h3>
+                                    {foreach from=$cart->apartamentoObj->servicios item=servicio}
+                                        <p>{$servicio}</p>
+                                    {/foreach}
+                                </div>
+                            </div>
                         </div>
                         <form id="booking-search-tour" class="form-inline" role="form" action="#" method="post">
                             <fieldset>
@@ -331,7 +367,12 @@
                     <form id="booking-confirm-form" class="form-horizontal" role="form" action="{$base_url}/reservar{$end_url}" method="post">
                         <div class="well-white">
                             <div class="head">
-                                <h1>{#datos_titular_habitacion#} <span>({#debe_ser_mayor_18#})</span></h1>
+                                <h1>
+                                    {#datos_titular_habitacion#} <span>({#debe_ser_mayor_18#})</span>
+                                    {if $excursiones && count($excursiones)}
+                                        <button id="go-to-tour-list" type="button" class="btn app-btn-pink pull-right"><< {#reserva_actividades#}</button>
+                                    {/if}
+                                </h1>
                             </div>
                             <fieldset>
                                 <p class="fieldset-info">

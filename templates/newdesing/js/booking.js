@@ -236,7 +236,10 @@ var Booking = function() {
 
         $('#booking-tour-form').submit(function() {
             $('.booking-tour-content').hide();
-            Booking.init(3);
+            if(Booking.initStep[2]) {
+                Booking.initStep[2] = false;
+                Booking.init(3);
+            }
             $('.booking-confirm-content').show();
 
             return false;
@@ -381,6 +384,21 @@ var Booking = function() {
             }
 
         });
+
+        $('#go-to-tour-list').click(function() {
+            $('.booking-confirm-content').hide();
+            $('.booking-tour-content').show();
+        });
+    };
+
+    var initRoomDetails = function() {
+        $('#show-room-more-info').toggle(function() {
+            $('#room-more-info').show();
+            $(this).text('- ' + App.getI18n('ocultar_detalle'));
+        }, function() {
+            $('#room-more-info').hide();
+            $(this).text('+ ' + App.getI18n('mostrar_detalle'));
+        });
     };
 
     return {
@@ -399,6 +417,7 @@ var Booking = function() {
                     break;
                 case 2:
                     initSearchTourList();
+                    initRoomDetails();
                     break;
                 case 3:
                     initBookingConfirmForm();
@@ -406,6 +425,8 @@ var Booking = function() {
                 default:
                     break;
             }
-        }
+        },
+
+        initStep: [false, false, true]
     };
 }();
