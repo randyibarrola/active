@@ -183,10 +183,10 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="control-label label-hours">Escoge hora de salida:</label>
-                                                                <select class="select2 form-control">
-                                                                    <option value="11:30" selected="selected">11:30</option>
-                                                                    <option value="14:30">14:30</option>
-                                                                    <option value="16:30">16:30</option>
+                                                                <select class="select2 form-control que_hora" placeholder="HH:mm" name="sesion">
+                                                                    {foreach from=$excursion->horarios item=horario}
+                                                                        <option value="{$horario|date_format:'%H:%M'}">{$horario|date_format:"%H:%M"}</option>
+                                                                    {/foreach}                                                                    
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -224,7 +224,7 @@
                                                             <div class="form-group">
                                                                 <input type="hidden" class="total-price" />
                                                                 <label class="control-label">Total:</label>
-                                                                <label class="total-price"><span>12,50</span>&euro;</label>
+                                                                <label class="total-price"><span>0</span></label>
                                                             </div>
                                                             <div class="form-group">
                                                                 <input type="submit" class="btn app-btn-pink" value="Añadir reserva" />
