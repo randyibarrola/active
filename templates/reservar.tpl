@@ -71,7 +71,7 @@
                             <h1>{#por_reserva_superior_a#} {$regla_cupon->monto|number_format:2:',':' '}&euro; {#obtendras_un_cupon_por_un_valor_de#} <span>{if $regla_cupon->tipoDescuento eq '%'}{$regla_cupon->descuento}{else}{$regla_cupon->descuento|number_format:2:',':' '}{/if}{$regla_cupon->tipoDescuento}</span> {#para_excursiones_transfer_y_mas#}!" <span>{#tu#} <strong>{#codigo#}</strong> {#de_cupon_es#} : <b><strong class="lead">{$cupon->codigo|upper}</strong></b></span></h1>
                             <form id="booking-tour-form" role="form" action="#" method="get" class="pull-right">
                                 <input type="hidden" name="tour[]" class="booking-tour-form-book" />
-                                <input class="btn app-btn-pink" type="submit" value="{#proceder_pago#} >>" />
+                                <input class="btn app-btn-pink" type="submit" value="{#finalizar_reserva#} >>" />
                             </form>
                         </div>
                         <div class="reserva-description">
@@ -192,34 +192,29 @@
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 col-xs-12 text-right">
                                                             <h4 style="margin-bottom: 25px;">Completa los datos:</h4>
-                                                            <div class="form-group persons">
-                                                                <label class="control-label">Adultos:</label>
-                                                                <select class="select2 form-control adult-count">
-                                                                    <option value="1" selected="selected">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                </select>
-                                                                <input type="hidden" class="adult-price" value="12.50" />
-                                                                <label class="sub-price"><span>12,50</span>&euro;</label>
-                                                            </div>
-                                                            <div class="form-group persons">
-                                                                <label class="control-label">Niños:</label>
-                                                                <select class="select2 form-control child-count">
-                                                                    <option value="0" selected="selected">0</option>
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                </select>
-                                                                <input type="hidden" class="child-price" value="5" />
-                                                                <label class="sub-price"><span>0</span>&euro;</label>
-                                                            </div>
+                                                            {foreach from=$excursion->tickets item=ticket name=tickets}
+                                                                {assign var=ticket_nombre value=$ticket->nombre|json_decode:1}
+                                                                <div class="form-group persons">
+                                                                    <label class="control-label">{$ticket_nombre[$lang]}:</label>
+                                                                    <select name="entradas[{$ticket->id}]" precio="{$ticket->total_plano}" class="select2 form-control adult-count">
+                                                                        {foreach from=range(0,15) item=i}
+                                                                        <option value="{$i}" {if $i eq 1}selected{/if}>{$i}</option> 
+                                                                        {/foreach}
+
+                                                                    </select>
+                                                                    
+                                                                    <input type="hidden" class="adult-price" value="12.50" />
+                                                                    <label class="sub-price totalEntradas"><span>{$ticket->total}</span></label>
+                                                                </div>
+                                                            {/foreach}
+                                                            
                                                             <h4 style="margin-top: 25px;">Introduce tu código descuento:</h4>
                                                             <div class="form-group">
                                                                 <div class="input-group">
-                                                                    <input type="text" class="form-control discount-code" />
-                                                                                                    <span class="input-group-btn">
-                                                                                                        <button class="btn app-btn-blue app-upper-text btn-discount-code" type="button">Validar</button>
-                                                                                                    </span>
+                                                                    <input type="text" name="cupon" class="form-control discount-code" />
+                                                                        <span class="input-group-btn">
+                                                                            <button class="btn app-btn-blue app-upper-text btn-discount-code" type="button">Validar</button>
+                                                                        </span>
                                                                 </div>
                                                                 <div class="discount-validate" style="display: none;">
                                                                     <label class="sub-price">0</label>
