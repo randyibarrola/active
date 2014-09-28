@@ -68,7 +68,7 @@
                 {if $excursiones && count($excursiones)}
                     <div class="booking-tour-content">
                         <div class="head">
-                            <h1>{#por_reserva_superior_a#} {$regla_cupon->monto|number_format:2:',':' '}&euro; {#obtendras_un_cupon_por_un_valor_de#} {if $regla_cupon->tipoDescuento eq '%'}{$regla_cupon->descuento}{else}{$regla_cupon->descuento|number_format:2:',':' '}{/if}{$regla_cupon->tipoDescuento} {#para_excursiones_transfer_y_mas#}!" <span>-20% dto.</span></h1>
+                            <h1>{#por_reserva_superior_a#} {$regla_cupon->monto|number_format:2:',':' '}&euro; {#obtendras_un_cupon_por_un_valor_de#} <span>{if $regla_cupon->tipoDescuento eq '%'}{$regla_cupon->descuento}{else}{$regla_cupon->descuento|number_format:2:',':' '}{/if}{$regla_cupon->tipoDescuento}</span> {#para_excursiones_transfer_y_mas#}!" <span>{#tu#} <strong>{#codigo#}</strong> {#de_cupon_es#} : <b><strong class="lead">{$cupon->codigo|upper}</strong></b></span></h1>
                             <form id="booking-tour-form" role="form" action="#" method="get" class="pull-right">
                                 <input type="hidden" name="tour[]" class="booking-tour-form-book" />
                                 <input class="btn app-btn-pink" type="submit" value="{#proceder_pago#} >>" />
