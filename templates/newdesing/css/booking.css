@@ -805,7 +805,7 @@
 }
 
 #search-tour-result > .item .media .more-info {
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0;
     font-size: 12px;
     color: #126998;
