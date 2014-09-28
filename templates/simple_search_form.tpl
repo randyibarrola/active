@@ -1,5 +1,5 @@
 <div class="well-white">
-    <form id="simple-search-offers" class="form-horizontal" role="form" action="{$base_url}/{$lang}/{#disponibilidad_url#}{$end_url}" method="post">
+    <form id="simple-search-offers" class="form-horizontal" role="form" action="{$base_url}/{$lang}/{#disponibilidad_url#}{$end_url}" method="get">
         <fieldset>
             <legend>
                 <span>{#reserva_online#}</span>
