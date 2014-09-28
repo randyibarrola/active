@@ -399,6 +399,7 @@ var Booking = function() {
             $('#room-more-info').hide();
             $(this).text('+ ' + App.getI18n('mostrar_detalle'));
         });
+        App.handleSlider(item.find('.flexslider'));
     };
 
     return {
