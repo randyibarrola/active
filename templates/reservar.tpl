@@ -74,7 +74,7 @@
                                 <input class="btn app-btn-pink" type="submit" value="{#proceder_pago#} >>" />
                             </form>
                         </div>
-                        <div id="room-details">
+                        <div id="reserva-description">
                             <div class="row">
                                 <div class="col-sm-3">
                                     <div class="flexslider">

@@ -418,7 +418,7 @@ var Booking = function() {
                     break;
                 case 2:
                     initSearchTourList();
-                    initRoomDetails($('#room-details'));
+                    initRoomDetails($('#reserva-description'));
                     break;
                 case 3:
                     initBookingConfirmForm();
