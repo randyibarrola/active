@@ -533,7 +533,6 @@ if($hotel) {
                            // }
 
                             $ticket->horarios_json = json_encode($ticket->horario);
-                            var_dump($ticket);die;
                         }
                         $excursion->horarios = $horarios;
                         

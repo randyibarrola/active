@@ -201,8 +201,7 @@
                                                                             <option value="{$i}" {if $i eq 1}selected{/if}>{$i}</option> 
                                                                         {/foreach}
 
-                                                                    </select>
-                                                                    
+                                                                    </select>                                                                    
                                                                     <input type="hidden" class="adult-price" value="{$ticket->total_plano}" />
                                                                     <label class="sub-price totalEntradas"><span>{$ticket->total}</span></label>
                                                                 </div>
