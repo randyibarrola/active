@@ -249,6 +249,134 @@ var Booking = function() {
         list.children('.item').each(function() {
             initSearchTourItem($(this));
         });
+        
+    $(".when-you-go-date").each(function(){
+            fechas = eval($(this).find('input[name=fechasTarifas]').val());
+
+            enables = [];
+            tarifas = [];
+            minDate = [Math.min(),new Date().getFullYear() + '-' + new Date().getMonth() + '-' + new Date().getDate()];
+            if(fechas)
+            for(var f=0;f<fechas.length;f++) {
+                if(!fechas[f] || fechas[f].length == 0)
+                    continue;
+                fecha = fechas[f].split('->');
+                tarifaId = fecha[1];
+                fecha = fecha[0];
+                fecha = fecha.split('/');
+                YEAR = parseInt(fecha[2].trim());
+                MONTH = parseInt(fecha[1].trim()) - 1;
+                DAY = parseInt(fecha[0].trim());
+                /*if(DAY.length == 1)
+                    DAY = '0' + DAY;
+                fecha = YEAR + '-' + MONTH + '-' + DAY;*/
+                /*fecha = new Date(fecha);
+                fecha.setDate(new Date(fecha).getDate() + 1);
+                fecha.setHours(0);*/
+                fecha = new Date(YEAR,MONTH,DAY);
+
+                time = fecha.getTime();
+
+                enables.push(time);
+                if(minDate[0] >= time) {
+                    minDate[0] = time;
+                    minDate[1] = fecha;
+                }
+                if(!tarifas[tarifaId])
+                    tarifas[tarifaId] = [];
+
+                tarifas[tarifaId].push(time);
+            }
+            tarifasFechas = [];
+            tarifasFechas['tarifas'] = tarifas;
+            tarifasFechas['enableDates'] = enables;
+
+            $(this).data(tarifasFechas);
+            $(this).datepicker({
+                language: LANG,
+                beforeShowDay: function (date){
+                    enables = this.data['enableDates'];
+                    return enables.indexOf(date.getTime()) !== -1 ;
+                },
+                show: function(date){
+
+                },
+                data: tarifasFechas,
+                startDate: minDate[1]
+            }).on('changeDate', function(ev){
+                var y = ev.date.getFullYear(),
+                    _m = ev.date.getMonth() + 1,
+                    m = (_m > 9 ? _m : '0'+_m),
+                    _d = ev.date.getDate(),
+                    d = (_d);
+                var when_you_go = MONTHS[_m - 1] + " " + d + ", " + y;
+                tarifas = $(this).data()['tarifas'];
+                tarifa = null;
+
+                _this = $(this).parent();
+                _this = _this.parents('.frmExcursion');
+                $(this).parent().parent().find('.a-que-hora').hide();
+                $(this).parent().parent().find('.completa-datos').show();
+
+                var horarios_validos = [];
+                var select_horario = $(this).parent().parent().find(".a-que-hora select").html('');
+                var tarifas_validas = [];
+
+                _this.find('.tarifa_container').addClass('hidden').find('select').attr('disabled', 'disabled');
+
+                for(var tarifaId in tarifas) {
+                    fechas = tarifas[tarifaId];
+                    if(fechas.indexOf(ev.date.getTime()) !== -1) {
+                        tarifa = tarifaId;
+
+                        $(this).find('input[name=fecha]').val(d + "/" + m + "/" + y);
+
+                        var horarios = JSON.parse($('#tarifa_'+tarifa).val());
+
+                        for (var i = 0; i < horarios.length; i++) {
+                            if(horarios_validos.indexOf(horarios[i])===-1){
+                                horarios_validos.push(horarios[i]);
+                                select_horario.append($('<option></option>').attr("value", horarios[i]).text(horarios[i]));
+                            }
+                        }
+
+                        if(horarios && horarios.length>0){
+                            $(this).parent().parent().find('.a-que-hora').show();
+                            $(this).parent().parent().find(".set-when-you-go").html(when_you_go);
+                            tarifas_validas.push(tarifa);
+                        }else{
+                            //Sin horarios
+                            _this.find('.tarifa_container[tarifa-id="' + tarifa + '"]').addClass('hidden').find('select').attr('disabled', 'disabled');
+                        }
+                    }else{
+                        //Sin fecha disponible
+                        _this.find('.tarifa_container[tarifa-id="' + tarifa + '"]').addClass('hidden').find('select').attr('disabled', 'disabled');
+                    }
+                }
+
+                if(horarios_validos.length===0){
+                    _this.find('.tarifa_container').removeClass('hidden').find('select').removeAttr('disabled');
+                }
+
+                select_horario.off().change(function() {
+                    var horario_seleccionado = $(this).val();
+                    for (var i = 0; i < tarifas_validas.length; i++) {
+                        var horarios = JSON.parse($('#tarifa_'+tarifas_validas[i]).val());
+                        if(horarios.indexOf(horario_seleccionado) !== -1){
+                            _this.find('.tarifa_container[tarifa-id="' + tarifas_validas[i] + '"]').removeClass('hidden').find('select').removeAttr('disabled');
+                        }else{
+                            _this.find('.tarifa_container[tarifa-id="' + tarifas_validas[i] + '"]').addClass('hidden').find('select').attr('disabled', 'disabled');
+                        }
+                    }
+                }).change();
+
+                calcularTotal(_this);
+                _this.find('.cupon-total-content').removeClass('hidden');
+
+            });
+
+            $(this).find('td.day:not(.disabled)').first().click();
+        });        
     };
 
     var initSearchTourItem = function(item) {

@@ -174,6 +174,14 @@
                                     <div class="more-info-content" style="display: none;">
                                         <div class="well-gray well-divider">
                                             <form class="booking-add-tour-form form-inline" role="form" action="#" method="post">
+                                                <input type="hidden" name="precio_apartamento" value="{$apartamento['precioTotal_format']}">
+                                                <input type="hidden" name="tarifaId">
+                                                <input type="hidden" name="eventoId" value="{$excursion->id}">
+                                                <input type="hidden" name="fecha">
+                                                <input type="hidden" name="fechasTarifas" value='[{foreach from=$excursion->tickets item=ticket name=tickets}{foreach from=$ticket->fechas item=fecha name=fechas}{if !$smarty.foreach.tickets.first || !$smarty.foreach.fechas.first},{/if}"{$fecha->fecha|date_format:"%e/%m/%Y"}->{$ticket->id}"{/foreach}{/foreach}]'>
+                                                {foreach from=$excursion->tickets item=ticket}
+                                                <input type="hidden" id="tarifa_{$ticket->id}" value='{$ticket->horarios_json}'>
+                                                {/foreach}
                                                 <fieldset>
                                                     <div class="">
                                                         <div class="col-md-5 col-sm-12 col-xs-12">
