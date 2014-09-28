@@ -1,7 +1,7 @@
 <div class="header">
     <div class="header-top">
         <div class="container">
-            <label id="operated-by">{#operado_por#} MadridActive</label>
+            <label id="operated-by">{#operado_por#} {$hotel->distribuidor->nombreComercial}</label>
             <ul class="pull-right list-inline">
                 <li>
                     <a href="#" id="display-global-search">
@@ -73,9 +73,9 @@
     <div class="header-bottom">
         <div class="container">
             <div class="logo pull-left logo-hotel">
-                <img src="{$template_url}/newdesing/images/logo-mini.png" />
+                <a href="{$base_url}/{$lang}/index{$end_url}"><img src="{$template_url}/newdesing/images/logo-mini.png" /></a>
                 {*<h1>{if $hotel->webOficial}{$hotel->nombre}{else}{$hotel->distribuidor->nombreComercial}{/if}</h1>*}
-                <h1>{$hotel->nombre} </h1>
+                <a href="{$base_url}/{$lang}/index{$end_url}"><h1>{$hotel->nombre} </h1></a>
                 <div class="rating">
                     {for $i=1 to 5}
                         <i class="glyphicon glyphicon-star {if $hotel->calidad >= $i}full{else}empty{/if}"></i>

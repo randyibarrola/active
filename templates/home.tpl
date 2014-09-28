@@ -27,7 +27,7 @@
     <script src="{$template_url}/newdesing/js/contact.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            Home.activeTab = {if $tab}{$tab}{else}null{/if};
+            Home.activeTab = "{if isset($tab)}{$tab}{else}null{/if}";
             Home.init();
             $('#tab-map').click(function(){
                 if($('.gm-style').length == 0)           
