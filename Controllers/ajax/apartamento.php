@@ -566,7 +566,8 @@ if ($hotel) {
     
     $_SESSION['apartamentos'] = $aparts;
 
-    $limit = 2;
+    //$limit = 2;
+    $limit = 3;
 
     if(!count($aparts)) {
         $limit = 10;
