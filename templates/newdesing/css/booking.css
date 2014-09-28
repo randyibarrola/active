@@ -359,7 +359,7 @@
 
 #room-details .flexslider img {
     width: 185px;
-    height: 128px !important;
+    height: 133px !important;
 }
 
 @media (max-width: 728px) {
@@ -702,7 +702,7 @@
 
 .booking-tour-content .head > h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 20px;
     overflow: hidden;
     display: inline-block;
 }
@@ -925,6 +925,27 @@
     text-align: center;
     width: 85px;
     margin-left: 20px;
+}
+
+.reserva-description h3{
+    margin-top: 0px;
+}
+.reserva-description p{
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: #585858;
+}
+.reserva-description p.lead{
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 7px;
+    float: right;
+}
+.reserva-description h4{
+     margin-bottom: 2px;
+    
+     font-size: 15px;
+     margin-top: 0px;
 }
 
 @media (min-width: 940px) {
