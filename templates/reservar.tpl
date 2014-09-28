@@ -176,7 +176,7 @@
                                             <form class="booking-add-tour-form form-inline" role="form" action="#" method="post">
                                                 <fieldset>
                                                     <div class="">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                                        <div class="col-md-5 col-sm-12 col-xs-12">
                                                             <h4 style="margin-bottom: 0">Escoja una fecha:</h4>
                                                             <div class="datepicker" data-sync=".selected-date-1" data-start-date="today">
                                                                 <input type="hidden" class="selected-date-1" />
@@ -190,7 +190,7 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 text-right">
+                                                        <div class="col-md-7 col-sm-12 col-xs-12 text-right">
                                                             <h4 style="margin-bottom: 25px;">Completa los datos:</h4>
                                                             {foreach from=$excursion->tickets item=ticket name=tickets}
                                                                 {assign var=ticket_nombre value=$ticket->nombre|json_decode:1}
@@ -198,12 +198,12 @@
                                                                     <label class="control-label">{$ticket_nombre[$lang]}:</label>
                                                                     <select name="entradas[{$ticket->id}]" precio="{$ticket->total_plano}" class="select2 form-control adult-count">
                                                                         {foreach from=range(0,15) item=i}
-                                                                        <option value="{$i}" {if $i eq 1}selected{/if}>{$i}</option> 
+                                                                            <option value="{$i}" {if $i eq 1}selected{/if}>{$i}</option> 
                                                                         {/foreach}
 
                                                                     </select>
                                                                     
-                                                                    <input type="hidden" class="adult-price" value="12.50" />
+                                                                    <input type="hidden" class="adult-price" value="{$ticket->total_plano}" />
                                                                     <label class="sub-price totalEntradas"><span>{$ticket->total}</span></label>
                                                                 </div>
                                                             {/foreach}
