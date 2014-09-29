@@ -64,16 +64,18 @@
 {block name="main_content" append}
     <div class="row">
         <div class="col-md-9 col-sm-9 col-xs-12">
+            {if $excursiones && count($excursiones)}
+                <div id="booking-tour-head">
+                    <h1>{#por_reserva_superior_a#} {$regla_cupon->monto|number_format:2:',':' '}&euro; {#obtendras_un_cupon_por_un_valor_de#} <span>{if $regla_cupon->tipoDescuento eq '%'}{$regla_cupon->descuento}{else}{$regla_cupon->descuento|number_format:2:',':' '}{/if}{$regla_cupon->tipoDescuento}</span> {#para_excursiones_transfer_y_mas#}!"</br> <span>{#tu#} <strong>{#codigo#}</strong> {#de_cupon_es#} : <b><strong class="lead">{$cupon->codigo|upper}</strong></b></span></h1>
+                    <form id="booking-tour-form" role="form" action="#" method="get" class="pull-right">
+                        <input type="hidden" name="tour[]" class="booking-tour-form-book" />
+                        <input class="btn app-btn-pink" type="submit" value="{#finalizar_reserva#} >>" />
+                    </form>
+                </div>
+            {/if}
             <div id="booking-content" class="{if $excursiones && count($excursiones)}well-white{/if}">
                 {if $excursiones && count($excursiones)}
                     <div class="booking-tour-content">
-                        <div class="head">
-                            <h1>{#por_reserva_superior_a#} {$regla_cupon->monto|number_format:2:',':' '}&euro; {#obtendras_un_cupon_por_un_valor_de#} <span>{if $regla_cupon->tipoDescuento eq '%'}{$regla_cupon->descuento}{else}{$regla_cupon->descuento|number_format:2:',':' '}{/if}{$regla_cupon->tipoDescuento}</span> {#para_excursiones_transfer_y_mas#}!" <span>{#tu#} <strong>{#codigo#}</strong> {#de_cupon_es#} : <b><strong class="lead">{$cupon->codigo|upper}</strong></b></span></h1>
-                            <form id="booking-tour-form" role="form" action="#" method="get" class="pull-right">
-                                <input type="hidden" name="tour[]" class="booking-tour-form-book" />
-                                <input class="btn app-btn-pink" type="submit" value="{#finalizar_reserva#} >>" />
-                            </form>
-                        </div>
                         <div class="reserva-description">
                             <div class="row">
                                 <div class="col-sm-3">
@@ -266,11 +268,15 @@
                                     <label>{$apartamento['titulo']}</label>
                                 </p>
                                 <div class="row">
-                                    <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <label class="control-label">{#nombre_de_contacto#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
-                                        <input type="text" class="form-control validate[required]" placeholder="{#nombre_y_apellidos#}" name="nombre" value="{$backData['nombre']}" />
+                                    <div class="col-md-4 col-sm-12 col-xs-12">
+                                        <label class="control-label">{#nombre#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
+                                        <input type="text" class="form-control validate[required]" name="nombre" value="{$backData['nombre']}" />
                                     </div>
-                                    <div class="col-md-6 col-sm-12 col-xs-12">
+                                    <div class="col-md-4 col-sm-12 col-xs-12">
+                                        <label class="control-label">{#apellido#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
+                                        <input type="text" class="form-control validate[required]" name="apellido" value="{$backData['apellido']}" />
+                                    </div>
+                                    <div class="col-md-4 col-sm-12 col-xs-12">
                                         <label class="control-label">{#pais_origen#}</label>
                                         <select class="select2 form-control" name="pais">
                                             {foreach from=$paises item=pais key=key}
@@ -326,7 +332,7 @@
                                     </div>
                                     <div class="col-md-7 col-sm-12 col-xs-12">
                                         <label class="control-label">{#nombre_titular_de_la_tarjeta#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
-                                        <input type="text" class="form-control validate[required]" name="titular" />
+                                        <input type="text" class="form-control validate[required]" name="titular" readonly="" />
                                     </div>
                                 </div>
                                 <div class="row">

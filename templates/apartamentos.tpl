@@ -80,6 +80,11 @@
                     </fieldset>
                 </form>
                 <div id="search-room-container">
+                    <div id="search-room-load" class="text-center">
+                        <h1>{#buscando_su_mejor_tarifa#}</h1>
+                        <img src="{$template_url}/newdesing/images/ajax-loading.gif">
+                        <p>{#puede_tardar#}. {#disculpe_las_molestias#}.</p>
+                    </div>
                 </div>
                 {*<div id="contact" class="well-gray" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">*}
                 {*</div>*}

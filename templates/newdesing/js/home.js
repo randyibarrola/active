@@ -65,29 +65,28 @@ var Home = function() {
         calculatePrice();
     };
 
+    var initTabs = function() {
+        var tabHolder = $('#tab-home');
+
+        if(Home.activeTab != null) {
+            var tab = tabHolder.find('a[data-push-url="' + Home.activeTab + '"]');
+            tab = tab.length > 0 ? tab.eq(0) : tabHolder.find('a[href="#details"]').eq(0);
+
+            tab.trigger('click');
+        }
+
+        tabHolder.find('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var tab = $(e.target);
+            var url = App.baseUrl + '/' + App.locale + '/index/' + 't:' + tab.attr('data-push-url');
+            history.pushState(url, null, url);
+        });
+    };
+
     return {
         activeTab: null,
 
         init: function() {
-            if(Home.activeTab != null) {
-                var tab = "#details";
-                switch(Home.activeTab) {
-                    case 'detalles': tab = '#deatils';
-                        break;
-                    case 'condiciones': tab = '#conditions';
-                        break;
-                    case 'faq': tab = '#faqs';
-                        break;
-                    case 'localizacion': tab = '#map';
-                        break;
-                    case 'contacto': tab = '#contact';
-                        break;
-                    case 'opiniones': tab = '#opinions';
-                        break;
-                }
-                $('#tab-home').find('a[href="' + tab + '"]').trigger('click');
-            }
-
+            initTabs();
             initSimpleSearchOffers();
             initFreeOffer();
             initTourBookingForm();            

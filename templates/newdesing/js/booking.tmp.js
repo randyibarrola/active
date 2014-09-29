@@ -13,7 +13,7 @@ var Booking = function() {
         form.bind('app.event.form.submit.before', function(e, data) {
             var modal = $('#search-best-prices-modal');
             modal.find('.modal-body > h1').text(App.getI18n('buscando_su_mejor_tarifa'));
-            modal.modal('show');
+//            modal.modal('show');
         });
 
         form.submit(function() {
@@ -48,13 +48,11 @@ var Booking = function() {
 
     var initSearchRoomList = function() {
         var modal = $('#search-best-prices-modal');
-        modal.find('.modal-body > h1').text(App.getI18n('buscando_disponibilidad') + '...');
-        modal.on('shown.bs.modal', function (e) {
-            window.setTimeout(function(){
-                modal.find('.modal-body > h1').text(App.getI18n('calculando_tarifa') + '...');
-            },2300);
-        });
-        modal.modal('show');
+        var load = $('#search-room-load');
+        load.find('h1').text(App.getI18n('buscando_disponibilidad') + '...');
+        window.setTimeout(function(){
+            load.find('h1').text(App.getI18n('calculando_tarifa') + '...');
+        },2300);
 
         $.post(App.baseUrl + '/ajax-apartamento' + App.endUrl, function(data) {
             var container = $('#search-room-container');
@@ -86,8 +84,8 @@ var Booking = function() {
 
             initSuggest();
 
-            modal.off('shown.bs.modal');
-            modal.modal('hide');
+//            modal.off('shown.bs.modal');
+//            modal.modal('hide');
         });
     };
 

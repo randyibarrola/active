@@ -164,7 +164,7 @@ div.footer > div.footer-top .footer-contact {
 }
 
 div.footer > div.footer-top .footer-contact > p {
-    margin-left: 10px;
+    /*margin-left: 10px;*/
 }
 
 div.footer > div.footer-top .footer-contact > p.text-center {
@@ -177,12 +177,16 @@ div.footer > div.footer-top .footer-contact > p.logo {
     margin-bottom: 20px;
 }
 
+div.footer > div.footer-top .footer-contact > p.logo > img {
+    max-width: 100%;
+}
+
 div.footer > div.footer-top .footer-contact address {
     /*font-family: "Gotham Rounded Medium";*/
     font-family: 'Ubuntu Condensed', sans-serif;
     color: #9A9A9A;
     line-height: 1.2;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     font-weight: 600;
 }
 
@@ -580,12 +584,12 @@ form#contact-form input[type="submit"] {
     transition: none;
     height: 25px;
     width: 25px;
-    opacity: 0.9;
+    opacity: 1 !important;
 }
 
 .flexslider:hover .flex-prev,
 .flexslider:hover .flex-next {
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .flexslider .slider-info {

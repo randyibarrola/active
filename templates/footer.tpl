@@ -2,10 +2,10 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-3 footer-contact">
-                    <p class="text-center">{#reserva_gestionada_por#}:</p>
+                <div class="col-md-3 col-sm-3 footer-contact text-center">
+                    <p class="text-center">{#operado_por#} {$hotel->distribuidor->nombreComercial}:</p>
                     <p class="logo">
-                        <img src="{$template_url}/newdesing/images/logo.png" class="img-responsive" />
+                        <img src="{$template_url}/newdesing/images/logo.png" class="" />
                     </p>
                     <address>
                         {#telefono#}: {if $hotel->webOficial}{$hotel->telefonoReservas}{else}{$hotel->distribuidor->telefonoReservas}{/if}<br/>

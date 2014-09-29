@@ -219,7 +219,7 @@ var Booking = function() {
     };
 
     var initSearchTourList = function() {
-        var affix = $('.booking-tour-content > .head:eq(0)');
+        var affix = $('#booking-tour-head');
         var affixTop = affix.offset().top;
         $(document).scroll(function(e){
             var windowTop = $(window).scrollTop();
@@ -227,7 +227,7 @@ var Booking = function() {
                 if(!affix.hasClass('affix-top')) {
                     affix.addClass('affix-top');
                 }
-                affix.css('width', affix.parents('.booking-tour-content').eq(0).css('width'))
+                affix.css('width', affix.siblings('#booking-content').eq(0).css('width'));
             }else{
                 affix.removeClass('affix-top');
                 affix.css('width', 'auto');
@@ -235,12 +235,15 @@ var Booking = function() {
         });
 
         $('#booking-tour-form').submit(function() {
+            affix.hide();
             $('.booking-tour-content').hide();
             if(Booking.initStep[2]) {
                 Booking.initStep[2] = false;
                 Booking.init(3);
             }
-            $('.booking-confirm-content').show();
+            var active = $('.booking-confirm-content');
+            active.show();
+            App.scrollTo(active);
 
             return false;
         });
@@ -500,6 +503,10 @@ var Booking = function() {
     var initBookingConfirmForm = function() {
         var form = $('#booking-confirm-form');
 
+        form.find('input[name="nombre"], input[name="apellido"]').change(function() {
+            form.find('input[name="titular"]:eq(0)').val(form.find('input[name="nombre"]:eq(0)').val().trim() + ' ' + form.find('input[name="apellido"]:eq(0)').val().trim());
+        });
+
         form.submit(function(e){
             var valid = $(this).validationEngine('validate');
             if(valid) {
@@ -515,6 +522,7 @@ var Booking = function() {
 
         $('#go-to-tour-list').click(function() {
             $('.booking-confirm-content').hide();
+            $('#booking-tour-head').show();
             $('.booking-tour-content').show();
         });
     };

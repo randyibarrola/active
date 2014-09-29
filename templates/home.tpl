@@ -134,32 +134,32 @@
             <!-- Begin tabs -->
             <ul id="tab-home" class="nav nav-tabs app-tabs">
                 <li class="active">
-                    <a href="#details" data-toggle="tab">
+                    <a href="#details" data-toggle="tab" data-push-url="detalles">
                         <i class="glyphicon glyphicon-info-sign tooltips" data-original-title="{#detalles#|capitalize}"></i> <span class="hidden-xs">{#detalles#|capitalize}</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#conditions" data-toggle="tab">
+                    <a href="#conditions" data-toggle="tab" data-push-url="condiciones">
                         <i class="glyphicon glyphicon-file tooltips" data-original-title="{#condiciones#|capitalize}"></i> <span class="hidden-xs">{#condiciones#|capitalize}</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#map" data-toggle="tab" id="tab-map">
+                    <a href="#map" data-toggle="tab" id="tab-map"  data-push-url="localizacion">
                         <i class="glyphicon glyphicon-map-marker tooltips" data-original-title="{#localizacion#|capitalize}"></i> <span class="hidden-xs">{#localizacion#|capitalize}</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#opinions" data-toggle="tab">
+                    <a href="#opinions" data-toggle="tab"  data-push-url="opiniones">
                         <i class="glyphicon glyphicon-star tooltips" data-original-title="{#opiniones#|capitalize}"></i> <span class="hidden-xs">{#opiniones#|capitalize}</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#faqs" data-toggle="tab">
+                    <a href="#faqs" data-toggle="tab"  data-push-url="faq">
                         <i class="glyphicon glyphicon-info-sign tooltips" data-original-title="{#faqs#|capitalize}"></i> <span class="hidden-xs">{#faqs#|capitalize}</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#contact" data-toggle="tab">
+                    <a href="#contact" data-toggle="tab" data-push-url="contacto">
                         <i class="glyphicon glyphicon-envelope tooltips" data-original-title="{#contacto#|capitalize}"></i> <span class="hidden-xs">{#contacto#|capitalize}</span>
                     </a>
                 </li>
