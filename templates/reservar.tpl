@@ -404,6 +404,10 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-5 col-xs-6">
+                                        <input type="hidden" id="porcentageCobroAnticipado" value="{$hotel->porcentageCobroAnticipado}">
+                                        <input type="hidden" name="idApartamento" value="{$apartamento['id']}">
+                                        <input type="hidden" name="cantidad" value="{$cantidad}">
+                                        <input type="hidden" name="cartID" value="{$cart->id}">
                                         <input type="submit" class="btn app-btn-pink" value="{#finalizar_reserva#}">
                                     </div>
                                 </div>
