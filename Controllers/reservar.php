@@ -244,7 +244,7 @@ if($hotel) {
             $data_reserva['idiomaId'] = $idioma_actual->id;
             $idReserva = insertReserva($hotel->id, $data_reserva, $data_apartamento, $data_excursiones, $data_user, $data_pago, str_replace(',', '.', (string) $precio));
 
-            var_dump($idReserva);
+
 
             if($idReserva) {
                 $result = array();
@@ -279,18 +279,18 @@ if($hotel) {
                 }
 
                 $body = $smarty->fetch('confirmacionEmail_nodesign.tpl');
-                var_dump($data_user['email']);
+                
                 //generar factura
                 if($cobroAnticipado && $reservacion->estado == 'Aprobada') {
                     $factura = generarFactura($reservacion, $hotel);
                 } else {
                     $factura = 0;
                 }
-                var_dump($data_user['email']);
+
                 $mail = new Core_Mailer();                               
                 /* enviando email al usuario */
                 $enviado = $mail->send_email($data_user['email'], $subject, $body, $factura);
-                var_dump($enviado);die;
+
                 if($factura) {
                     //TODO: eliminar pdf
                     $mail = new Core_Mailer();

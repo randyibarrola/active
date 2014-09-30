@@ -72,11 +72,11 @@ class Core_Mailer {
     protected function config_mailer($mailer) {
         $mailer->Host = trim('smtp.gmail.com');
         $mailer->Port = 465;
-        $mailer->Username = trim('reyniergt@gmail.com');
-        $mailer->Password = trim('t1t0yt1t4');
+        $mailer->Username = trim('booking@madridactive.com');
+        $mailer->Password = trim('666564986Active');
 
-        $mailer->setFrom('reyniergt@gmail.com', 'VikaHotel');
-        $mailer->FromName = trim('VikaHotel');
+        $mailer->setFrom('booking@madridactive.com', 'MadridActive');
+        $mailer->FromName = trim('MadridActive');
     }
 
 
