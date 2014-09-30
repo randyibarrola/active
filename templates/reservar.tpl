@@ -329,6 +329,7 @@
                                     <div class="col-md-5 col-sm-12 col-xs-12">
                                         <label class="control-label">{#numero_tarjeta_debito_credito#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
                                         <input type="text" class="form-control validate[required, custom[customCreditCard]]" name="tarjetaNumero" />
+                                        <input type="hidden" name="tarjetaTipo">
                                     </div>
                                     <div class="col-md-7 col-sm-12 col-xs-12">
                                         <label class="control-label">{#nombre_titular_de_la_tarjeta#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
