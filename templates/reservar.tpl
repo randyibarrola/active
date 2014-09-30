@@ -277,7 +277,7 @@
                                         <input type="text" class="form-control validate[required]" name="apellido" value="{$backData['apellido']}" />
                                     </div>
                                     <div class="col-md-4 col-sm-12 col-xs-12">
-                                        <label class="control-label">{#pais_origen#}</label>
+                                        <label class="control-label">{#pais_de_residencia#}</label>
                                         <select class="select2 form-control" name="pais">
                                             {foreach from=$paises item=pais key=key}
                                                 <option value="{$key}" {if (!$backData && $key eq 'ES') || $backData['pais'] eq $key}selected=""{/if}>{$pais}</option>
@@ -294,7 +294,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <label class="control-label">{#numero_de_telefono#}</label>
+                                        <label class="control-label">{#telefono_movil#}</label>
                                         <input type="text" class="form-control" name="telefono" value="{$backData['telefono']}" />
                                     </div>
                                 </div>
@@ -313,32 +313,33 @@
                         <div class="well-white well-divider">
                             <div class="head">
                                 <h1>
-                                    {#tus_datos_para_el_pago#}
+                                    {#tu_garantia_de_reserva#}
                                     <div class="card-logos pull-right">
-                                        <img src="{$template_url}/newdesing/images/visa-logos.png" />
+                                        <img src="{$template_url}/newdesing/images/master-card.png" />
+                                        <img src="{$template_url}/newdesing/images/visa.png" />
                                         <script type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=GYXVmcV1zSFO0ewxdrrMYEd9oSBPeFYMpJ4mT8NT8To48V7SvEB"></script>
                                     </div>
                                 </h1>
                             </div>
                             <div class="well-green-light">
                                 <label>{#requiere_tarjeta_de_credito#}</label>
-                                Mercure Madrid Santo Domingo aplica las políticas de cobro según las <a href="#">condiciones de la tarifa seleccionada</a>.
+                                {$hotel->nombre} {#aplica_politicas_segun_tarifa#}.
                             </div>
                             <fieldset>
                                 <div class="row">
                                     <div class="col-md-5 col-sm-12 col-xs-12">
-                                        <label class="control-label">{#numero_tarjeta_debito_credito#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
+                                        <label class="control-label">{#numero_tarjeta#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
                                         <input type="text" class="form-control validate[required, custom[customCreditCard]]" name="tarjetaNumero" />
                                         <input type="hidden" name="tarjetaTipo">
                                     </div>
                                     <div class="col-md-7 col-sm-12 col-xs-12">
-                                        <label class="control-label">{#nombre_titular_de_la_tarjeta#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
+                                        <label class="control-label">{#nombre_del_titular#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
                                         <input type="text" class="form-control validate[required]" name="titular" readonly="" />
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-5 col-sm-6 col-xs-12">
-                                        <label class="control-label">{#fecha_de_caducidad#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
+                                        <label class="control-label">{#fecha_de_vencimiento#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
                                         <div class="caducity-date">
                                             <select class="select2 form-control validate[required]" data-placeholder="{#mes#}" name="caducidadMes">
                                                 <option value=""></option>
@@ -367,7 +368,7 @@
                                     </div>
                                     <div class="col-md-7 col-sm-6 col-xs-12">
                                         <label class="control-label">
-                                            {#numero_identificacion_tarjeta#}
+                                            {#cvv#}
                                             <span class="required"><i class="glyphicon glyphicon-star"></i></span>
                                             <span class="tooltips" data-toggle="tooltip" title="{#cvv#}"><i class="glyphicon glyphicon-question-sign"></i></span>
                                         </label>
@@ -377,17 +378,11 @@
                             </fieldset>
                         </div>
                         <div class="well-white well-divider">
-                            <div class="head">
-                                <h1>{#politica_cancelacion_condiciones#}</h1>
-                            </div>
                             <fieldset>
-                                <p class="fieldset-info">
-                                    <label>Tarifa especial no reembolsable</label><br/>
-                                    Esta tarifa de descuento especial no es reembolsable. Si eliges cambiar o cancelar esta reserva, no se te reembolsará el pago.
-                                </p>
+                                <label>{#te_enviaremos_tu_reserva_por_mail_a#}:</label> <span id="send-email">{$backData['email']}</span>
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <label class="control-label">{#peticiones_especiales_o_comentacios_al_hotel#}</label>
+                                        <label class="control-label">{#Peticiones_especiales#}</label>
                                         <textarea class="form-control" rows="3" name="peticionesEspeciales">{$backData['peticionesEspeciales']}</textarea>
                                     </div>
                                 </div>
@@ -395,10 +390,9 @@
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" value="" name="acepto" class="validate[required]"> <span class="required"><i class="glyphicon glyphicon-star"></i></span>
-                                            {#declaro_acepto_pago#}
-                                            <a href="#">{#normas_y_restricciones#} <i class="glyphicon glyphicon-new-window"></i></a>
-                                            , {#los#} <a href="javascript:void(0);" data-toggle="modal" data-target="#book_conditions_modal">{#terminos_y_condiciones#} <i class="glyphicon glyphicon-new-window"></i></a>
-                                            {#y_la#} <a href="javascript:void(0);" data-toggle="modal" data-target="#privacy_policies_modal">{#politica_de_privacidad#} <i class="glyphicon glyphicon-new-window"></i></a>.
+                                            {#entiendo_y_acepto_las#}
+                                            <a href="javascript:void(0);" data-toggle="modal" data-target="#privacy_policies_modal">{#politicas_de_privacidad#} <i class="glyphicon glyphicon-new-window"></i></a>
+                                            {#y_las#} <a href="javascript:void(0);" data-toggle="modal" data-target="#book_conditions_modal">{#condiciones_de_reserva#} <i class="glyphicon glyphicon-new-window"></i></a>.
                                         </label>
                                     </div>
                                 </div>

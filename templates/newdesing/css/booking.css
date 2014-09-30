@@ -600,7 +600,7 @@
 #booking-confirm-form .well-white .head > h1 > .card-logos > img {
     display: inline-block;
     margin-left: 0;
-    max-height: 25px;
+    max-height: 35px;
     vertical-align: bottom;
 }
 
@@ -987,4 +987,8 @@
 .confirm-booking h3.title {
     margin-top: 10px;
     color: #157EB8;
+}
+
+#booking-confirm-form .fieldset-info {
+    margin-top: 0;
 }

@@ -545,6 +545,10 @@ var Booking = function() {
             form.find('input[name="titular"]:eq(0)').val(form.find('input[name="nombre"]:eq(0)').val().trim() + ' ' + form.find('input[name="apellido"]:eq(0)').val().trim());
         });
 
+        form.find('input[name="email"]').change(function() {
+            form.find('#send-email').text($(this).val().trim());
+        });
+
         form.submit(function(e){
             var valid = $(this).validationEngine('validate');
             if(valid) {

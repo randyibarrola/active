@@ -361,12 +361,46 @@ var Booking = function() {
         form.triggerHandler('app.event.form.init', []);
     };
 
+    var affixBookingAbstract = function() {
+        var windowWidth = $(window).width();
+        var bookingContent = $('#bookingContent');
+        var filtersContainerTop = bookingContent.offset().top;
+        var filtersHeight = bookingContent.height();
+        $(window).scroll(function(e){
+            var affix = $('#booking-info');
+            var windowTop = $(window).scrollTop();
+            var limite = affix.offset().top + affix.height() - filtrosHeight;
+            filtrosHeight = bookingContent.height();
+            if(limite > filtrosHeight && windowWidth > 800){
+                if(windowTop >= filtersContainerTop && windowTop<limite){
+                    bookingContent.css({
+                        position:'fixed',
+                        top: '5px'
+                    });
+                }else{
+                    if(windowTop<limite){
+                        bookingContent.css('position','static');
+                    }else{
+                        margin = limite - affix.offset().top;
+                        bookingContent.css({
+                            position: 'absolute',
+                            top: margin
+                        });
+                    }
+                }
+            }else{
+                bookingContent.css('position','static');
+            }
+        });
+    };
+
     return {
         init: function(step) {
             if(!step)
                 step = 1;
 
             initModals(step);
+//            affixBookingAbstract();
 
             switch(step) {
                 case 1:
