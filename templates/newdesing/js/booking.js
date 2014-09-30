@@ -541,11 +541,15 @@ var Booking = function() {
     };
     
     var cardValidation = function(){
+            
             var cards = new Array();
-            $('ul.cards li').each(function(){
+            /*$('ul.cards li').each(function(){
 
                 cards.push($(this).attr('card'));
-            });
+            });*/
+            //ponemos alternativamente los valores fijos pues no estan en el nuevo maquetado
+             cards.push('visa');
+             cards.push('mastercard');
 
             if($('input[name=tarjetaNumero]').length > 0) {
                 $('input[name=tarjetaNumero]').attr('valid-card', false);
