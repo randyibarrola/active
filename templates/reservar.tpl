@@ -329,6 +329,7 @@
                                     <div class="col-md-5 col-sm-12 col-xs-12">
                                         <label class="control-label">{#numero_tarjeta_debito_credito#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
                                         <input type="text" class="form-control validate[required, custom[customCreditCard]]" name="tarjetaNumero" />
+                                        <input type="hidden" name="tarjetaTipo">
                                     </div>
                                     <div class="col-md-7 col-sm-12 col-xs-12">
                                         <label class="control-label">{#nombre_titular_de_la_tarjeta#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>
@@ -403,6 +404,10 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-5 col-xs-6">
+                                        <input type="hidden" id="porcentageCobroAnticipado" value="{$hotel->porcentageCobroAnticipado}">
+                                        <input type="hidden" name="idApartamento" value="{$apartamento['id']}">
+                                        <input type="hidden" name="cantidad" value="{$cantidad}">
+                                        <input type="hidden" name="cartID" value="{$cart->id}">
                                         <input type="submit" class="btn app-btn-pink" value="{#finalizar_reserva#}">
                                     </div>
                                 </div>

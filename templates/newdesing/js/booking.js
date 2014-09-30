@@ -537,6 +537,8 @@ var Booking = function() {
     };
 
     var initBookingConfirmForm = function() {
+        
+        cardValidation();
         var form = $('#booking-confirm-form');
 
         form.find('input[name="nombre"], input[name="apellido"]').change(function() {
@@ -573,6 +575,42 @@ var Booking = function() {
             $(this).text('+ ' + App.getI18n('mostrar_detalle'));
         });
         App.handleSlider(item.find('.flexslider'));
+    };
+    
+    var cardValidation = function(){
+            
+            var cards = new Array();
+            /*$('ul.cards li').each(function(){
+
+                cards.push($(this).attr('card'));
+            });*/
+            //ponemos alternativamente los valores fijos pues no estan en el nuevo maquetado
+             cards.push('visa');
+             cards.push('mastercard');
+
+            if($('input[name=tarjetaNumero]').length > 0) {
+                $('input[name=tarjetaNumero]').attr('valid-card', false);
+                $('input[name=tarjetaNumero]').validateCreditCard(function(ev){
+                        //$(".cards li").addClass("off");
+                        $('input[name=tarjetaNumero]').removeClass('validCreditCard');
+                        if(ev.card_type==null){
+                                $('input[name=tarjetaNumero]').attr('valid-card', false);
+                                $('input[name=tarjetaTipo]').val('');
+                                return
+                        }
+                        //$(".cards ." + ev.card_type.name).removeClass("off");
+                        $('input[name=tarjetaTipo]').val($(".cards ." + ev.card_type.name).attr('title'));
+                        $('input[name=tarjetaTipo]').val(ev.card_type.name);
+                        if(ev.length_valid && ev.luhn_valid) {                
+                             $('input[name=tarjetaNumero]').attr('valid-card', true).addClass('validCreditCard');
+
+                             return true;
+                        }
+                        return false;
+                },
+                {accept:cards}
+                );
+            }
     };
 
     var initConfirmPage = function() {
