@@ -102,12 +102,14 @@
     left: 25px;
     right: auto;
     text-align: left;
+    overflow: hidden;
 }
 
 #booking-search-room .head-dates .toggle-dates-menu input[readonly] {
     background: #FFFFFF;
     cursor: auto;
     margin-bottom: 3px;
+    width: 100%;
 }
 
 #booking-search-room .head-dates .toggle-dates-menu label {

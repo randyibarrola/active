@@ -39,7 +39,7 @@
     <div class="row">
         <div class="col-md-9 col-sm-9 col-xs-12">
             <div id="booking-content" class="well-white">
-                <form id="booking-search-room" class="form-inline" role="form" action="{$base_url}/{$lang}/{#disponibilidad_url#}{$end_url}" method="post">
+                <form id="booking-search-room" class="form-inline" role="form" action="{$base_url}/{$lang}/{#disponibilidad_url#}{$end_url}" method="get">
                     <fieldset>
                         <div class="head">
                             <div class="head-text">

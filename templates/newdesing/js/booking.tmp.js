@@ -64,12 +64,6 @@ var Booking = function() {
                 App.handleSelect2(filters);
                 filterSearchRoomList(filters);
                 initSearchRoomItem();
-
-                var contactHolder = $('#contact');
-                contactHolder.bind('app.event.load.success', function(ev, selector, response, status, xhr) {
-                    Contact.init($(selector).find('#contact-form'));
-                });
-                App.contentAjaxLoad(contactHolder);
             }
             else {
                 var form = $('#booking-search-room');
@@ -77,9 +71,13 @@ var Booking = function() {
                 form.find('.jumbotron:eq(0)').append(formFields.clone());
                 formFields.remove();
                 form.find('.jumbotron:eq(0)').show();
-                container.empty();
-                $('#contact').remove();
+                container.children(':not(#contact, #recommendation-hotels)').remove();
             }
+            var contactHolder = $('#contact');
+            contactHolder.bind('app.event.load.success', function(ev, selector, response, status, xhr) {
+                Contact.init($(selector).find('#contact-form'));
+            });
+            App.contentAjaxLoad(contactHolder);
             initSearchRoomForm();
 
             initSuggest();

@@ -79,13 +79,17 @@
                             <img src="{$template_url}/newdesing/images/master-card.png" />
                         </li>
                         <li>
-                            <img src="{$template_url}/newdesing/images/godaddy.png" />
+                            <script type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=GYXVmcV1zSFO0ewxdrrMYEd9oSBPeFYMpJ4mT8NT8To48V7SvEB"></script>
                         </li>
                         <li>
-                            <img src="{$template_url}/newdesing/images/certified.png" />
+                            <a target="_blank" class="certified_rate" href="http://www.infini-trvl.co.jp/english/">
+                                <img src="{$template_url}/newdesing/images/certified.png" />
+                            </a>
                         </li>
                         <li>
-                            <img src="{$template_url}/newdesing/images/amadeus.png" />
+                            <a class="footer_item_amadeus" target="_blank" href="http://www.amadeus.com/web/amadeus/en_US-US/Hotels/Solutions-&-services/1319576564603-Page-AMAD_SolServIndustrySubsegmentPpal?industrySegment=1259068355773">
+                                <img src="{$template_url}/newdesing/images/amadeus.png" />
+                            </a>
                         </li>
                     </ul>
                 </div>
