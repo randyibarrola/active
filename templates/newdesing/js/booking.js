@@ -215,6 +215,42 @@ var Booking = function() {
                     show: false
                 });
                 break;
+            case 4:
+                var cancelLoadModal = $('#load-cancel-modal');
+                cancelLoadModal.modal({
+                    backdrop: "static",
+                    keyboard: false,
+                    show: false
+                });
+
+                var cancelConfirmModal = $('#cancelar_modal');
+                cancelConfirmModal.modal({
+                    show: false
+                }).on('show.bs.modal', function (e) {
+                    $('#aceptarCancelar').click(function(e){
+                        $('#cancelar_modal').modal('toggle');
+                        cancelLoadModal.modal('show');
+                        var id = $('#idCancelar').val();
+                        $.ajax({
+                            url: App.baseUrl + '/ajax-reserva',
+                            data: {id:id, action:'cancelar'},
+                            type: 'post',
+                            dataType: 'json',
+                            success: function(response) {
+                                cancelLoadModal.modal('hide');
+                                if(response.msg == 'ok') {
+                                    toastr.success(response.data);
+                                    setTimeout(function(){
+                                        window.location = App.baseUrl + '/cancelacion/id:' + id + App.endUrl;
+                                    }, 3000);
+                                } else {
+                                    toastr.error(response.data);
+                                }
+                            }
+                        });
+                    });
+                });
+                break;
         }
     };
 
@@ -515,6 +551,7 @@ var Booking = function() {
             }
             else {
                 e.preventDefault();
+                form.find('.select2-container').removeClass('validate[required]');
                 return false;
             }
 
@@ -538,6 +575,12 @@ var Booking = function() {
         App.handleSlider(item.find('.flexslider'));
     };
 
+    var initConfirmPage = function() {
+        $('#cancelarBtn').click(function(e){
+            $('#cancelar_modal').modal();
+        });
+    };
+
     return {
         init: function(step) {
             if(!step)
@@ -558,6 +601,9 @@ var Booking = function() {
                     break;
                 case 3:
                     initBookingConfirmForm();
+                    break;
+                case 4:
+                    initConfirmPage();
                     break;
                 default:
                     break;

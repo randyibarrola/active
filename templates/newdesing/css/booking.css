@@ -970,3 +970,21 @@
         width: 110px;
     }
 }
+
+.confirm-booking .jumbotron {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.confirm-booking .dl-horizontal > dt {
+    text-align: left;
+}
+
+.confirm-booking h3:not(.title) {
+    margin: 0;
+}
+
+.confirm-booking h3.title {
+    margin-top: 10px;
+    color: #157EB8;
+}

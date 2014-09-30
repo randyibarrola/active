@@ -1,6 +1,6 @@
 <?php
     $reserva = getReserva(decryptId($_GET['r_id']));
-    
+
     if(!$reserva) {
         header('Location:'.$base_url);
     }
