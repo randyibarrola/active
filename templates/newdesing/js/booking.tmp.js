@@ -363,35 +363,54 @@ var Booking = function() {
 
     var affixBookingAbstract = function() {
         var windowWidth = $(window).width();
-        var bookingContent = $('#bookingContent');
-        var filtersContainerTop = bookingContent.offset().top;
-        var filtersHeight = bookingContent.height();
-        $(window).scroll(function(e){
-            var affix = $('#booking-info');
-            var windowTop = $(window).scrollTop();
-            var limite = affix.offset().top + affix.height() - filtrosHeight;
-            filtrosHeight = bookingContent.height();
-            if(limite > filtrosHeight && windowWidth > 800){
-                if(windowTop >= filtersContainerTop && windowTop<limite){
-                    bookingContent.css({
-                        position:'fixed',
-                        top: '5px'
-                    });
-                }else{
-                    if(windowTop<limite){
-                        bookingContent.css('position','static');
-                    }else{
-                        margin = limite - affix.offset().top;
-                        bookingContent.css({
-                            position: 'absolute',
-                            top: margin
-                        });
-                    }
-                }
-            }else{
-                bookingContent.css('position','static');
+        var affix = $('#booking-info');
+
+        $(window).resize(function() {
+            windowWidth = $(window).width();
+            affix.css({
+                width: (affix.parent('div:eq(0)').width()) + 'px'
+            });
+            if(windowWidth <= 728) {
+                affix.css({
+                    position: 'relative',
+                    top: 'inherit'
+                });
             }
         });
+
+        var bookingContent = $('#booking-content');
+
+        $(window).scroll(function(e){
+            var windowTop = $(window).scrollTop();
+            var bookingContentTop = bookingContent.offset().top;
+            var bookingContentHeight = bookingContent.height();
+            var limit = bookingContentTop + bookingContentHeight;
+
+            if(windowWidth > 728) {
+                if(windowTop > bookingContentTop && limit - affix.height() > windowTop){
+                    affix.css({
+                        position: 'fixed',
+                        top: '5px',
+                        width: (affix.parent('div:eq(0)').width()) + 'px'
+                    });
+                }
+                else if(windowTop <= bookingContentTop) {
+                    affix.css({
+                        position: 'relative',
+                        top: 'inherit'
+                    });
+                }
+                else {
+                    affix.css({
+                        position: 'absolute',
+                        overflow: 'hidden',
+                        top: (bookingContentHeight - affix.height()) + 'px'
+                    });
+                }
+            }
+        });
+
+        $(window).trigger('scroll');
     };
 
     return {
@@ -400,7 +419,7 @@ var Booking = function() {
                 step = 1;
 
             initModals(step);
-//            affixBookingAbstract();
+            affixBookingAbstract();
 
             switch(step) {
                 case 1:
