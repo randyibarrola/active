@@ -422,7 +422,7 @@
         <div class="col-md-3 col-sm-3 col-xs-12">
             <div id="booking-info" class="well-white">
                 <div class="booking-info-step step-1">
-                    <h4 class="title">{#selecciona_habitacion_1#}</h4>
+                    <h4 class="title">1. {#selecciona_habitacion_1#}</h4>
                     <div class="content">
                         <p><label>{$apartamento['titulo']}</label></p>
                         <p>{#llegada#}: {$inicio}</p>
@@ -438,6 +438,7 @@
                         </div>
                     </div>
                 </div>
+                {if $excursiones && count($excursiones)}
                 <div class="booking-info-step step-2 {if $excursiones && count($excursiones)}active{/if}">
                     <h4 class="title">2. {#actividades_y_tours_2#}</h4>
                     <div class="content">
@@ -465,6 +466,7 @@
                         {/if}
                     </div>
                 </div>
+                {/if}
                 <div class="booking-info-step step-3 {if !$excursiones || !count($excursiones)}active{/if}">
                     {if $excursiones && count($excursiones)}
                         <h4 class="title">3. {#confirmar_reserva_3#}</h4>
