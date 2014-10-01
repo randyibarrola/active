@@ -21,7 +21,7 @@
                     <p>
                         <img src="{$template_url}/newdesing/images/confirm-booking.png" />
                     </p>
-                    <h1>{#reserva_terminada_con_exito#}.</h1>
+                    <h1>¡{#gracias#}, {$usuario->nombre} {if $reserva->estado eq 'Aprobada'}{#tu_reserva_esta_confirmada#}{else}{#tu_reserva_esta_pendiente_de_aprobacion#}{/if}</h1>
                     <p>{#hemos_enviado_justificante_por_email#}.</p>
                 </div>
                 <div class="row">
