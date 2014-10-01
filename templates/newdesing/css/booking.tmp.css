@@ -13,7 +13,7 @@
 }
 
 #booking-info > .booking-info-step > .content {
-    margin-bottom: 15px;
+    /*margin-bottom: 15px;*/
 }
 
 #booking-info > .booking-info-step > .content p,
@@ -927,4 +927,8 @@ h5.free-cancel {
 
 .room_info_container .pax {
     color: #C62583 !important;
+}
+
+#booking-content {
+    min-height: 500px;
 }

@@ -399,280 +399,280 @@
 </tr>
 
 <!-- ACTIVIDADES FILA A //-->
-<tr>
-<td DIR="LTR" valign="top" align="center" style="width:100% !important; max-width:620px; display:block; outline: none;  padding:10px 0 0 0;">
-<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; align:center; width:600px; padding:0%; background-color: #FFFFFF; position:relative;border: solid 1px #CCCCCC; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;">
-<tr>
-    <td valign="middle" style="padding:0px 10px; height:30px; width:100% !important; max-width:600px; border-bottom: solid 1px #DCDCDC; -webkit-border-radius:8px; -moz-border-radius:8px; border-bottom-left-radius:0; border-bottom-right-radius:0; border-top-left-radius:8px; border-top-right-radius:8px; background-color:#F6F6F6;">
-        <table style="width:100% !important;" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-                <!-- Actividades //-->
-                <td width="470" align="left" valign="middle" style="font-size:18px; font-weight:bold; color:#4E4E4E; text-align:left;">{#te_iteresan_otras_actividades#}:</td>
-            </tr>
-        </table>
-    </td>
-</tr>
+{*<tr>*}
+{*<td DIR="LTR" valign="top" align="center" style="width:100% !important; max-width:620px; display:block; outline: none;  padding:10px 0 0 0;">*}
+{*<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; align:center; width:600px; padding:0%; background-color: #FFFFFF; position:relative;border: solid 1px #CCCCCC; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;">*}
+{*<tr>*}
+    {*<td valign="middle" style="padding:0px 10px; height:30px; width:100% !important; max-width:600px; border-bottom: solid 1px #DCDCDC; -webkit-border-radius:8px; -moz-border-radius:8px; border-bottom-left-radius:0; border-bottom-right-radius:0; border-top-left-radius:8px; border-top-right-radius:8px; background-color:#F6F6F6;">*}
+        {*<table style="width:100% !important;" border="0" cellpadding="0" cellspacing="0">*}
+            {*<tr>*}
+                {*<!-- Actividades //-->*}
+                {*<td width="470" align="left" valign="middle" style="font-size:18px; font-weight:bold; color:#4E4E4E; text-align:left;">{#te_iteresan_otras_actividades#}:</td>*}
+            {*</tr>*}
+        {*</table>*}
+    {*</td>*}
+{*</tr>*}
 
-<!-- Tour A //-->
+{*<!-- Tour A //-->*}
 
-<tr>
-<td valign="top" style="padding:10px 10px 10px 10px;">
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-</td>
-</tr>
-<tr>
-<td valign="top" style="padding:0px 10px 10px 10px;">
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-<tr>
-    <!--  //-->
-    <td align="left" valign="top">
-        <table cellspacing="0" cellpadding="0" border="0">
-            <tr>
-                <td DIR="LTR" align="left" style="padding:10px;">
-                    <table align="left" cellspacing="0" cellpadding="0" border="0" width="250px">
-                        <tr>
+{*<tr>*}
+{*<td valign="top" style="padding:10px 10px 10px 10px;">*}
+{*<table cellspacing="0" cellpadding="0" border="0" width="100%">*}
+{*</td>*}
+{*</tr>*}
+{*<tr>*}
+{*<td valign="top" style="padding:0px 10px 10px 10px;">*}
+{*<table cellspacing="0" cellpadding="0" border="0" width="100%">*}
+{*<tr>*}
+    {*<!--  //-->*}
+    {*<td align="left" valign="top">*}
+        {*<table cellspacing="0" cellpadding="0" border="0">*}
+            {*<tr>*}
+                {*<td DIR="LTR" align="left" style="padding:10px;">*}
+                    {*<table align="left" cellspacing="0" cellpadding="0" border="0" width="250px">*}
+                        {*<tr>*}
 
-                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                                <tr>
-                                    <td align="left" valign="top">
-                                        <table cellspacing="0" cellpadding="0" border="0">
-                                            <tr>
-                                                <!--  //-->
-                                                <td DIR="LTR" align="left" valign="top" width="100">
-                                                    <div style="width: 100px; background:#FFFFFF; background-repeat: no-repeat; padding:3px; border:1px solid #CCCCCC; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: #999999 0 2px 3px 0px; moz-box-shadow: #999999 0 2px 3px 0px; box-shadow: #999999 0 2px 3px 0px;">
-                                                        <img src="http://admin.madridactive.com/templates/images/evento/a683f72eee027eda684a386f5f94a463.jpg" alt="madrid panoramica bus" width="100" height="70" style="display:block; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;" />
-                                                    </div>
-                                                </td>
-                                                <!--  //-->
-                                                <td align="left" valign="top" width="10"></td>
-                                                <td align="left" valign="top">
-                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                        <!--  //-->
-                                                        <tr>
-                                                            <td DIR="LTR" align="left">
+                            {*<table cellspacing="0" cellpadding="0" border="0" width="100%">*}
+                                {*<tr>*}
+                                    {*<td align="left" valign="top">*}
+                                        {*<table cellspacing="0" cellpadding="0" border="0">*}
+                                            {*<tr>*}
+                                                {*<!--  //-->*}
+                                                {*<td DIR="LTR" align="left" valign="top" width="100">*}
+                                                    {*<div style="width: 100px; background:#FFFFFF; background-repeat: no-repeat; padding:3px; border:1px solid #CCCCCC; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: #999999 0 2px 3px 0px; moz-box-shadow: #999999 0 2px 3px 0px; box-shadow: #999999 0 2px 3px 0px;">*}
+                                                        {*<img src="http://admin.madridactive.com/templates/images/evento/a683f72eee027eda684a386f5f94a463.jpg" alt="madrid panoramica bus" width="100" height="70" style="display:block; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;" />*}
+                                                    {*</div>*}
+                                                {*</td>*}
+                                                {*<!--  //-->*}
+                                                {*<td align="left" valign="top" width="10"></td>*}
+                                                {*<td align="left" valign="top">*}
+                                                    {*<table cellspacing="0" cellpadding="0" border="0">*}
+                                                        {*<!--  //-->*}
+                                                        {*<tr>*}
+                                                            {*<td DIR="LTR" align="left">*}
 
-                                                            </td>
-                                                        </tr>
-                                                        <!--  //-->
-                                                        <tr>
-                                                            <td align="left" valign="top" style="padding-top:10px;">Bus panorámico Madrid</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="left" valign="top">
-                                                                Precio desde: 9€
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="left" valign="top" style="font-weight:bold">
-                                                                Ahorra un 25%
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="left" valign="top" style="font-weight:bold; padding-top:10px; color: #ed107f">Contratar ahora</td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
+                                                            {*</td>*}
+                                                        {*</tr>*}
+                                                        {*<!--  //-->*}
+                                                        {*<tr>*}
+                                                            {*<td align="left" valign="top" style="padding-top:10px;">Bus panorámico Madrid</td>*}
+                                                        {*</tr>*}
+                                                        {*<tr>*}
+                                                            {*<td align="left" valign="top">*}
+                                                                {*Precio desde: 9€*}
+                                                            {*</td>*}
+                                                        {*</tr>*}
+                                                        {*<tr>*}
+                                                            {*<td align="left" valign="top" style="font-weight:bold">*}
+                                                                {*Ahorra un 25%*}
+                                                            {*</td>*}
+                                                        {*</tr>*}
+                                                        {*<tr>*}
+                                                            {*<td align="left" valign="top" style="font-weight:bold; padding-top:10px; color: #ed107f">Contratar ahora</td>*}
+                                                        {*</tr>*}
+                                                    {*</table>*}
+                                                {*</td>*}
+                                            {*</tr>*}
+                                        {*</table>*}
+                                    {*</td>*}
+                                {*</tr>*}
+                            {*</table>*}
+                            {*</td>*}
+                        {*</tr>*}
+                    {*</table>*}
+                {*</td>*}
 
-                <!-- TOUR  COLUMN B //-->
-                <td align="left" valign="top" width="20"></td>
-                <!--  //-->
-                <td align="left" valign="top" width="290">
-                    <table cellspacing="0" cellpadding="0" border="0">
-                        <td DIR="LTR" align="left" style="padding:10px;">
-                            <table align="left" cellspacing="0" cellpadding="0" border="0" width="250px">
-                                <tr>
-                                    <td align="left" valign="top" width="250">
-                                        <!--  //-->
-                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                                            <tr>
-                                                <td align="left" valign="top">
-                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                        <tr>
-                                                            <!--  //-->
-                                                            <td DIR="LTR" align="left" valign="top" width="100">
-                                                                <div style="width: 100px; background:#FFFFFF; background-repeat: no-repeat; padding:3px; border:1px solid #CCCCCC; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: #999999 0 2px 3px 0px; moz-box-shadow: #999999 0 2px 3px 0px; box-shadow: #999999 0 2px 3px 0px;">
-                                                                    <img src="http://admin.madridactive.com/templates/images/evento/a683f72eee027eda684a386f5f94a463.jpg" alt="madrid panoramica bus" width="100" height="70" style="display:block; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;" />
-                                                                </div>
-                                                            </td>
-                                                            <!--  //-->
-                                                            <td align="left" valign="top" width="10"></td>
-                                                            <td align="left" valign="top">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <!--  //-->
-                                                                    <tr>
-                                                                        <td DIR="LTR" align="left">
+                {*<!-- TOUR  COLUMN B //-->*}
+                {*<td align="left" valign="top" width="20"></td>*}
+                {*<!--  //-->*}
+                {*<td align="left" valign="top" width="290">*}
+                    {*<table cellspacing="0" cellpadding="0" border="0">*}
+                        {*<td DIR="LTR" align="left" style="padding:10px;">*}
+                            {*<table align="left" cellspacing="0" cellpadding="0" border="0" width="250px">*}
+                                {*<tr>*}
+                                    {*<td align="left" valign="top" width="250">*}
+                                        {*<!--  //-->*}
+                                        {*<table cellspacing="0" cellpadding="0" border="0" width="100%">*}
+                                            {*<tr>*}
+                                                {*<td align="left" valign="top">*}
+                                                    {*<table cellspacing="0" cellpadding="0" border="0">*}
+                                                        {*<tr>*}
+                                                            {*<!--  //-->*}
+                                                            {*<td DIR="LTR" align="left" valign="top" width="100">*}
+                                                                {*<div style="width: 100px; background:#FFFFFF; background-repeat: no-repeat; padding:3px; border:1px solid #CCCCCC; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: #999999 0 2px 3px 0px; moz-box-shadow: #999999 0 2px 3px 0px; box-shadow: #999999 0 2px 3px 0px;">*}
+                                                                    {*<img src="http://admin.madridactive.com/templates/images/evento/a683f72eee027eda684a386f5f94a463.jpg" alt="madrid panoramica bus" width="100" height="70" style="display:block; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;" />*}
+                                                                {*</div>*}
+                                                            {*</td>*}
+                                                            {*<!--  //-->*}
+                                                            {*<td align="left" valign="top" width="10"></td>*}
+                                                            {*<td align="left" valign="top">*}
+                                                                {*<table cellspacing="0" cellpadding="0" border="0">*}
+                                                                    {*<!--  //-->*}
+                                                                    {*<tr>*}
+                                                                        {*<td DIR="LTR" align="left">*}
 
-                                                                        </td>
-                                                                    </tr>
-                                                                    <!--  //-->
-                                                                    <tr>
-                                                                        <td align="left" valign="top" style="padding-top:10px;">Bus panorámico</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td align="left" valign="top">
-                                                                            Precio desde: 9€
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td align="left" valign="top" style="font-weight:bold">
-                                                                            Ahorra un 30%
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td align="left" valign="top" style="font-weight:bold; padding-top:10px; color: #ed107f">Contratar ahora</td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                            </table>
-                        </td>
-
-
-                        <!--  //-->
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </td>
-</tr>
-
-<!-- APP -->
-
-<tr>
-    <td valign="top" align="center" style="width:100% !important; max-width:620px; display:block; outline: none;  padding:10px 0 0 0;">
-        <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; align:center; width:600px; padding:0%; background-color: #f2eaf3; position:relative;border: solid 1px #ead0e2; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;">
-            <!-- WR Header BAr -->
-            <tr>
-                <td DIR="LTR" valign="middle" style="width:100% !important; max-width:600px; height:30px; background-color:#990066;-webkit-border-radius:8px; -moz-border-radius:8px; border-bottom-left-radius:0px; border-bottom-right-radius:0px; border-top-left-radius:8px; border-top-right-radius:8px;">
-
-                    <div>
-                        <table style="width:100% !important; padding:0 10px;" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td  align="left" style="color:#FFF;font-weight:bold;font-size:17px;">Lugares de interés cerca de Catalonia Goya:</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <!--[if gte mso 9]>
-                    </v:textbox>
-                    </v:rect>
-                    <![endif]-->
-                </td>
-            </tr>
-
-            <tr>
-                <td DIR="LTR" align="left" valign="middle" style="padding:10px;font-size:13px;color:#990066;">Descárgate gratis la guía turística de Madrid para Smartphone y Tablet</b>
-                    <a href="#" valign="middle"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_apple.png"/> IOS </a>
-                    <a href="#" valign="middle"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_android.png"/> Android</a>
-
-                </td>
-            </tr>
-        </table>
-    </td>
-</tr>
-
-</tr>
-<!--  //-->
+                                                                        {*</td>*}
+                                                                    {*</tr>*}
+                                                                    {*<!--  //-->*}
+                                                                    {*<tr>*}
+                                                                        {*<td align="left" valign="top" style="padding-top:10px;">Bus panorámico</td>*}
+                                                                    {*</tr>*}
+                                                                    {*<tr>*}
+                                                                        {*<td align="left" valign="top">*}
+                                                                            {*Precio desde: 9€*}
+                                                                        {*</td>*}
+                                                                    {*</tr>*}
+                                                                    {*<tr>*}
+                                                                        {*<td align="left" valign="top" style="font-weight:bold">*}
+                                                                            {*Ahorra un 30%*}
+                                                                        {*</td>*}
+                                                                    {*</tr>*}
+                                                                    {*<tr>*}
+                                                                        {*<td align="left" valign="top" style="font-weight:bold; padding-top:10px; color: #ed107f">Contratar ahora</td>*}
+                                                                    {*</tr>*}
+                                                                {*</table>*}
+                                                            {*</td>*}
+                                                        {*</tr>*}
+                                                    {*</table>*}
+                                                {*</td>*}
+                                            {*</tr>*}
+                                        {*</table>*}
+                                    {*</td>*}
+                            {*</table>*}
+                        {*</td>*}
 
 
-<!-- ACTIVIDADES //-->
-<tr>
-    <td DIR="LTR" valign="top" align="center" style="width:100% !important; max-width:620px; display:block; outline: none;  padding:10px 0 0 0;">
-        <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; align:center; width:600px; padding:0%; background-color: #FFFFFF; position:relative;border: solid 1px #CCCCCC; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;">
-            <tr>
-                <td valign="middle" style="padding:0px 10px; height:30px; width:100% !important; max-width:600px; border-bottom: solid 1px #DCDCDC; -webkit-border-radius:8px; -moz-border-radius:8px; border-bottom-left-radius:0; border-bottom-right-radius:0; border-top-left-radius:8px; border-top-right-radius:8px; background-color:#F6F6F6;">
-                    <table style="width:100% !important;" border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:bold 16px arial,helvetica,sans-serif;"><span">Lugares de interés cercanos a tu estancia:</span></a></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td valign="top" style="padding:10px 10px 10px 10px;">
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        {*<!--  //-->*}
+                        {*</tr>*}
+                    {*</table>*}
+                {*</td>*}
+            {*</tr>*}
+        {*</table>*}
+    {*</td>*}
+{*</tr>*}
 
-                        <tr>
-                            <td valign="top" style="padding:10px 10px 10px 10px;">
-                                <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                        <td valign="top" style="padding:0px 10px 10px 10px;">
-                                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                                                <tr>
+{*<!-- APP -->*}
 
-                                                    <!-- MUSEUM //-->
-                                                    <td align="left" valign="top" width="150">
-                                                        <table cellspacing="0" cellpadding="0" border="0">
-                                                            <tr >
-                                                                <td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_attractions.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>
-                                                                <td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12 px arial,helvetica,sans-serif;"><span style="color:#333">Museo Thyssen</span></a></td>
-                                                            </tr>
-                                                            <tr >
-                                                                <td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_attractions.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>
-                                                                <td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12 px arial,helvetica,sans-serif;"><span style="color:#333">Museo Reina Sofia</span></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_attractions.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>
-                                                                <td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12 px arial,helvetica,sans-serif;"><span style="color:#333">Museo del Prado</span></a></td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                    <!-- POI //-->
-                                                    <td align="left" valign="top" width="150">
-                                                        <table cellspacing="0" cellpadding="0" border="0">
-                                                            <tr >
-                                                                <td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_poi.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>
-                                                                <td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12px arial,helvetica,sans-serif;"><span style="color:#333">Parque del retiro</span></a></td>
-                                                            </tr>
-                                                            <tr >
-                                                                <td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_poi.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>
-                                                                <td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12 px arial,helvetica,sans-serif;"><span style="color:#333">Puerta del sol</span></a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_poi.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>
-                                                                <td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12 px arial,helvetica,sans-serif;"><span style="color:#333">Malasaña</span></a></td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                    <!--  //-->
+{*<tr>*}
+    {*<td valign="top" align="center" style="width:100% !important; max-width:620px; display:block; outline: none;  padding:10px 0 0 0;">*}
+        {*<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; align:center; width:600px; padding:0%; background-color: #f2eaf3; position:relative;border: solid 1px #ead0e2; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;">*}
+            {*<!-- WR Header BAr -->*}
+            {*<tr>*}
+                {*<td DIR="LTR" valign="middle" style="width:100% !important; max-width:600px; height:30px; background-color:#990066;-webkit-border-radius:8px; -moz-border-radius:8px; border-bottom-left-radius:0px; border-bottom-right-radius:0px; border-top-left-radius:8px; border-top-right-radius:8px;">*}
 
-                                                </tr>
-                                            </table>
-                                    <tr>
-                                        <td align="right" valign="middle" style="font-size:12px;color:#333;text-decoration:underline;">Más información en el blog de MadridActive</td>
-                                    </tr>
-                                    </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        </td>
-                        </tr>
+                    {*<div>*}
+                        {*<table style="width:100% !important; padding:0 10px;" border="0" cellpadding="0" cellspacing="0">*}
+                            {*<tr>*}
+                                {*<td  align="left" style="color:#FFF;font-weight:bold;font-size:17px;">Lugares de interés cerca de Catalonia Goya:</td>*}
+                            {*</tr>*}
+                        {*</table>*}
+                    {*</div>*}
+                    {*<!--[if gte mso 9]>*}
+                    {*</v:textbox>*}
+                    {*</v:rect>*}
+                    {*<![endif]-->*}
+                {*</td>*}
+            {*</tr>*}
 
-                    </table>
-                </td>
-            </tr>
+            {*<tr>*}
+                {*<td DIR="LTR" align="left" valign="middle" style="padding:10px;font-size:13px;color:#990066;">Descárgate gratis la guía turística de Madrid para Smartphone y Tablet</b>*}
+                    {*<a href="#" valign="middle"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_apple.png"/> IOS </a>*}
+                    {*<a href="#" valign="middle"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_android.png"/> Android</a>*}
+
+                {*</td>*}
+            {*</tr>*}
+        {*</table>*}
+    {*</td>*}
+{*</tr>*}
+
+{*</tr>*}
+{*<!--  //-->*}
+
+
+{*<!-- ACTIVIDADES //-->*}
+{*<tr>*}
+    {*<td DIR="LTR" valign="top" align="center" style="width:100% !important; max-width:620px; display:block; outline: none;  padding:10px 0 0 0;">*}
+        {*<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; align:center; width:600px; padding:0%; background-color: #FFFFFF; position:relative;border: solid 1px #CCCCCC; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;">*}
+            {*<tr>*}
+                {*<td valign="middle" style="padding:0px 10px; height:30px; width:100% !important; max-width:600px; border-bottom: solid 1px #DCDCDC; -webkit-border-radius:8px; -moz-border-radius:8px; border-bottom-left-radius:0; border-bottom-right-radius:0; border-top-left-radius:8px; border-top-right-radius:8px; background-color:#F6F6F6;">*}
+                    {*<table style="width:100% !important;" border="0" cellpadding="0" cellspacing="0">*}
+                        {*<tr>*}
+                            {*<td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:bold 16px arial,helvetica,sans-serif;"><span">Lugares de interés cercanos a tu estancia:</span></a></td>*}
+                        {*</tr>*}
+                    {*</table>*}
+                {*</td>*}
+            {*</tr>*}
+            {*<tr>*}
+                {*<td valign="top" style="padding:10px 10px 10px 10px;">*}
+                    {*<table cellspacing="0" cellpadding="0" border="0" width="100%">*}
+
+                        {*<tr>*}
+                            {*<td valign="top" style="padding:10px 10px 10px 10px;">*}
+                                {*<table cellspacing="0" cellpadding="0" border="0" width="100%">*}
+                                    {*</td>*}
+                                    {*</tr>*}
+                                    {*<tr>*}
+                                        {*<td valign="top" style="padding:0px 10px 10px 10px;">*}
+                                            {*<table cellspacing="0" cellpadding="0" border="0" width="100%">*}
+                                                {*<tr>*}
+
+                                                    {*<!-- MUSEUM //-->*}
+                                                    {*<td align="left" valign="top" width="150">*}
+                                                        {*<table cellspacing="0" cellpadding="0" border="0">*}
+                                                            {*<tr >*}
+                                                                {*<td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_attractions.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>*}
+                                                                {*<td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12 px arial,helvetica,sans-serif;"><span style="color:#333">Museo Thyssen</span></a></td>*}
+                                                            {*</tr>*}
+                                                            {*<tr >*}
+                                                                {*<td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_attractions.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>*}
+                                                                {*<td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12 px arial,helvetica,sans-serif;"><span style="color:#333">Museo Reina Sofia</span></a></td>*}
+                                                            {*</tr>*}
+                                                            {*<tr>*}
+                                                                {*<td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_attractions.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>*}
+                                                                {*<td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12 px arial,helvetica,sans-serif;"><span style="color:#333">Museo del Prado</span></a></td>*}
+                                                            {*</tr>*}
+                                                        {*</table>*}
+                                                    {*</td>*}
+                                                    {*<!-- POI //-->*}
+                                                    {*<td align="left" valign="top" width="150">*}
+                                                        {*<table cellspacing="0" cellpadding="0" border="0">*}
+                                                            {*<tr >*}
+                                                                {*<td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_poi.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>*}
+                                                                {*<td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12px arial,helvetica,sans-serif;"><span style="color:#333">Parque del retiro</span></a></td>*}
+                                                            {*</tr>*}
+                                                            {*<tr >*}
+                                                                {*<td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_poi.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>*}
+                                                                {*<td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12 px arial,helvetica,sans-serif;"><span style="color:#333">Puerta del sol</span></a></td>*}
+                                                            {*</tr>*}
+                                                            {*<tr>*}
+                                                                {*<td align="left" valign="top"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_poi.gif" width="18" height="18" alt="" border="0" style="display:block;"></a></td>*}
+                                                                {*<td align="left" valign="top" style="padding-left:5px;"><a href="#"style="text-decoration:none; color:#333; font:12 px arial,helvetica,sans-serif;"><span style="color:#333">Malasaña</span></a></td>*}
+                                                            {*</tr>*}
+                                                        {*</table>*}
+                                                    {*</td>*}
+                                                    {*<!--  //-->*}
+
+                                                {*</tr>*}
+                                            {*</table>*}
+                                    {*<tr>*}
+                                        {*<td align="right" valign="middle" style="font-size:12px;color:#333;text-decoration:underline;">Más información en el blog de MadridActive</td>*}
+                                    {*</tr>*}
+                                    {*</td>*}
+                                    {*</tr>*}
+                                {*</table>*}
+                            {*</td>*}
+                        {*</tr>*}
+                        {*</td>*}
+                        {*</tr>*}
+
+                    {*</table>*}
+                {*</td>*}
+            {*</tr>*}
             <!--  //-->
 
-        </table>
-    </td>
-</tr>
+        {*</table>*}
+    {*</td>*}
+{*</tr>*}
 
 </table>
 <tr>

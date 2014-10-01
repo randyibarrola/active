@@ -74,44 +74,44 @@
                 </div>
             {/if}
             <div id="booking-content" class="{if $excursiones && count($excursiones)}well-white{/if}">
-                {if $excursiones && count($excursiones)}
-                    <div class="booking-tour-content">
-                        <div class="reserva-description">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="flexslider">
-                                        <ul class="slides">
-                                            {foreach from=$apartamento['imagenes'] item=imagen}
-                                                <li class="slide">
-                                                    <img src="{$imagen|replace:'http:':'https:'}" alt="{$apartamento['titulo']}">
-                                                </li>
-                                            {/foreach}
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-sm-9">
-                                    <h3 class="text-primary">{$apartamento['titulo']}</h3>
-                                    {if $cantidad > 1}<p class="text-muted">{#cantidad#}: {$cantidad}</p>{/if}
-                                    <p class="text-muted">{#llegada#}: {$inicio} 15:00</p>
-                                    <p class="text-muted">{#salida#}: {$salida} 12:00</p>
-                                    <p class="text-muted">{$noches} {#noche_s#}</p>
-                                    <p class="text-muted">{#Pax#}: {$apartamento['adultos']} {#Adulto_s#} {if $apartamento.ninios}+ {$apartamento.ninios} {#ninio_s#}{/if}</p>
-                                    {if $apartamento['pension']}
-                                        <p class="text-muted"><strong>{$apartamento['pension']}</strong></p>
-                                    {/if}
-                                    <p class="text-muted"><strong>{$apartamento['condicion']}</strong></p>
-                                    <a class="btn btn-primary pull-right btn-xs" id="show-room-more-info">+ {#mostrar_detalles_y_condiciones#}</a>
-                                </div>
-                            </div>
-                            <div class="row" id="room-more-info" style="display: none;">
-                                <div class="col-sm-12">
-                                    <h3 class="text-primary">{#descripcion_del_servicio#}:</h3>
-                                    {foreach from=$cart->apartamentoObj->servicios item=servicio}
-                                        <p>{$servicio}</p>
+                <div class="reserva-description">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    {foreach from=$apartamento['imagenes'] item=imagen}
+                                        <li class="slide">
+                                            <img src="{$imagen|replace:'http:':'https:'}" alt="{$apartamento['titulo']}">
+                                        </li>
                                     {/foreach}
-                                </div>
+                                </ul>
                             </div>
                         </div>
+                        <div class="col-sm-9">
+                            <h3 class="text-primary">{$apartamento['titulo']}</h3>
+                            {if $cantidad > 1}<p class="text-muted">{#cantidad#}: {$cantidad}</p>{/if}
+                            <p class="text-muted">{#llegada#}: {$inicio} 15:00</p>
+                            <p class="text-muted">{#salida#}: {$salida} 12:00</p>
+                            <p class="text-muted">{$noches} {#noche_s#}</p>
+                            <p class="text-muted">{#Pax#}: {$apartamento['adultos']} {#Adulto_s#} {if $apartamento.ninios}+ {$apartamento.ninios} {#ninio_s#}{/if}</p>
+                            {if $apartamento['pension']}
+                                <p class="text-muted"><strong>{$apartamento['pension']}</strong></p>
+                            {/if}
+                            <p class="text-muted"><strong>{$apartamento['condicion']}</strong></p>
+                            <a class="btn btn-primary pull-right btn-xs" id="show-room-more-info">+ {#mostrar_detalles_y_condiciones#}</a>
+                        </div>
+                    </div>
+                    <div class="row" id="room-more-info" style="display: none;">
+                        <div class="col-sm-12">
+                            <h3 class="text-primary">{#descripcion_del_servicio#}:</h3>
+                            {foreach from=$cart->apartamentoObj->servicios item=servicio}
+                                <p>{$servicio}</p>
+                            {/foreach}
+                        </div>
+                    </div>
+                </div>
+                {if $excursiones && count($excursiones)}
+                    <div class="booking-tour-content">
                         <form id="booking-search-tour" class="form-inline" role="form" action="#" method="post">
                             <fieldset>
                                 <div class="well-gray">
@@ -421,67 +421,59 @@
         </div>
         <div class="col-md-3 col-sm-3 col-xs-12">
             <div id="booking-info" class="well-white">
-                <div class="booking-info-step step-1">
-                    <h4 class="title">1. {#selecciona_habitacion_1#}</h4>
+                <div class="booking-info-step step-1 active">
+                    <h4 class="title text-center">{#resumen_de_tu_reserva#}</h4>
                     <div class="content">
                         <p><label>{$apartamento['titulo']}</label></p>
                         <p>{#llegada#}: {$inicio}</p>
                         <p>{#salida#}: {$salida}</p>
                         <p>{$noches} {#noches#}</p>
                         <p>{#Pax#}: {$apartamento['adultos']} {#Adulto_s#} {if $apartamento.ninios}+ {$apartamento.ninios} {#ninio_s#}{/if}</p>
-                        <p><label>{$apartamento['codicion']}</label></p>
+                        {if $apartamento['codicion']}
+                            <p><label>{$apartamento['codicion']}</label></p>
+                        {/if}
                         <div class="pay text-right">
-                            <p class="prepay block">
+                            <p class="block">
                                 {$apartamento['precioTotal_format']}
-                                <span class="saving">{#te_ahorras#} 6,50&euro;</span>
                             </p>
                         </div>
                     </div>
                 </div>
                 {if $excursiones && count($excursiones)}
-                <div class="booking-info-step step-2 {if $excursiones && count($excursiones)}active{/if}">
-                    <h4 class="title">2. {#actividades_y_tours_2#}</h4>
-                    <div class="content">
-                        {if $excursiones && count($excursiones)}
-                            <p><label>Tour Madrid Clásico (2H)</label></p>
-                            <p>Pax: 2 Adulto(s)</p>
-                            <div class="pay">
-                                <p>Subtotal:</p>
-                                <p>30,00&euro;</p>
-                            </div>
-                            <div class="pay">
-                                <p>Código descuento:<br/>WELCOME_20</p>
-                                <p>-20,00&euro;</p>
-                            </div>
-                            <div class="pay">
-                                <p>Importe total:</p>
-                                <p>10,00&euro;</p>
-                            </div>
-                            <div class="pay">
-                                <p>Importe a pagar ahora 50%:</p>
-                                <p class="prepay">5,00&euro;</p>
-                            </div>
-                        {else}
-                            <p>{#no_has_anhadido_ninguna#}.</p>
-                        {/if}
-                    </div>
-                </div>
+                {*<div class="booking-info-step step-2">*}
+                    {*<div class="content">*}
+                        {*{if $excursiones && count($excursiones)}*}
+                            {*<p><label>Tour Madrid Clásico (2H)</label></p>*}
+                            {*<p>Pax: 2 Adulto(s)</p>*}
+                            {*<div class="pay">*}
+                                {*<p>Subtotal:</p>*}
+                                {*<p>30,00&euro;</p>*}
+                            {*</div>*}
+                            {*<div class="pay">*}
+                                {*<p>Código descuento:<br/>WELCOME_20</p>*}
+                                {*<p>-20,00&euro;</p>*}
+                            {*</div>*}
+                            {*<div class="pay">*}
+                                {*<p>Importe total:</p>*}
+                                {*<p>10,00&euro;</p>*}
+                            {*</div>*}
+                            {*<div class="pay">*}
+                                {*<p>Importe a pagar ahora 50%:</p>*}
+                                {*<p class="prepay">5,00&euro;</p>*}
+                            {*</div>*}
+                        {*{else}*}
+                            {*<p>{#no_has_anhadido_ninguna#}.</p>*}
+                        {*{/if}*}
+                    {*</div>*}
+                {*</div>*}
                 {/if}
-                <div class="booking-info-step step-3 {if !$excursiones || !count($excursiones)}active{/if}">
-                    {if $excursiones && count($excursiones)}
-                        <h4 class="title">3. {#confirmar_reserva_3#}</h4>
-                    {else}
-                        <h4 class="title">2. {#confirmar_reserva_3#}</h4>
-                    {/if}
+                <div class="booking-info-step step-3">
+                    <h4 class="title"></h4>
                     <div class="content">
                         <div class="pay">
-                            <p>Importe total:</p>
-                            <p>{$apartamento['precioTotal_format']}</p>
+                            <p class="prepay block">{#Total#}: <span>&euro;17,55</span></p>
                         </div>
-                        <div class="pay">
-                            <p>Importe total a pagar ahora:</p>
-                            <p class="prepay">17,55&euro;</p>
-                        </div>
+                        <div class="text-right">{#impuestos_incluidos#}</div>
                     </div>
                 </div>
             </div>
