@@ -256,7 +256,7 @@
                                 <img class="media-object" src="{$h.archivo.ruta}" alt="{$h.nombre}">
                                 <div class="rating">
                                     {for $i = 1 to 5}
-                                        <i class="glyphicon glyphicon-star {if $h->calidad >= $i}full{else}empty{/if}"></i>
+                                        <i class="glyphicon glyphicon-star {if $h.calidad >= $i}full{else}empty{/if}"></i>
                                     {/for}
                                 </div>
                             </div>

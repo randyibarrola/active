@@ -27,26 +27,28 @@
 
 {foreach from=$hoteles item=h}
 {if is_array($h) && $h.id}
-<div class="hotel_item mix" data-calidad="{$h.calidad}" data-hotel="{$h.nombre}" data-destino="{$h.destino.nombre}" data-lat="{$h.lat}" data-lon="{$h.lon}">
-    <div>
-        <div>
-            <div class="hotel_item_image_container">
-                <a href="{if strpos($h.dominio, 'http') eq FALSE}http://{/if}{$h.dominio}"><img src="{$h.archivo.ruta}"></a>
-                <p class="rating"><span>{for $i=1 to $h.calidad}<span class="glyphicon glyphicon-star"></span>{/for}</span></p>
-            </div>
-            <div class="hotel_item_description_container">
-                <h3><a href="{if strpos($h.dominio, 'http') eq FALSE}http://{/if}{$h.dominio}">{$h.nombre} </a></h3>
-                <h4>{if $h.destino.id}{$h.destino.nombre}{/if}</h4>
-                <p>{if $h.descripcion->$lang}{$h.descripcion->$lang|truncate:180:'...'}{else}{$h.descripcion->es|truncate:180:'...':true}{/if}</p>
-                <div>
-                    {if $h.precio.precioMinimo}
-                    <a class="hotel_desde" href="{if strtotime($h.precio.fin) > time()}{if strpos($h.dominio, 'http') eq FALSE}http://{/if}{$h.dominio}/disponibilidad?inicio={if strtotime($h.precio.inicio) > time()}{$h.precio.inicio|date_format:"%d-%m-%Y"}{else}{date("d-m-Y")}{/if}&salida={$h.precio.fin|date_format:"%d-%m-%Y"}{/if}">Desde {$h.moneda.simbolo}{$h.precio.precioMinimo}</a> 
-                    {/if}
-                    <a class="btn btn-warning btn-xs" href="{if strpos($h.dominio, 'http') eq FALSE}http://{/if}{$h.dominio}">Ver Hotel y reservar</a>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 booking-prompt-item mix">
+        <h3>{$h.nombre}</h3>
+        <div class="media">
+            <div class="pull-left">
+                <img class="media-object" src="{$h.archivo.ruta}" alt="{$h.nombre}">
+                <div class="rating">
+                    {for $i = 1 to 5}
+                        <i class="glyphicon glyphicon-star {if $h.calidad >= $i}full{else}empty{/if}"></i>
+                    {/for}
                 </div>
+            </div>
+            <div class="media-body">
+                {if $h.precio.precioMinimo}
+                    <h4 class="media-heading">{#Desde#} {$h.precio.precioMinimo}{$h.moneda.simbolo}</h4>
+                    <a href="{if strtotime($h.precio.fin) > time()}{if strpos($h.dominio, 'http') eq FALSE}http://{/if}{$h.dominio}/disponibilidad?inicio={if strtotime($h.precio.inicio) > time()}{$h.precio.inicio|date_format:"%d-%m-%Y"}{else}{date("d-m-Y")}{/if}&salida={$h.precio.fin|date_format:"%d-%m-%Y"}{/if}" class="btn app-btn-pink">
+                        {#reservar#|capitalize}
+                    </a>
+                {else}
+                    <a href="{if strpos($h.dominio, 'http') eq FALSE}http://{/if}{$h.dominio}" class="btn app-btn-pink">{#reservar#|capitalize}</a>
+                {/if}
             </div>
         </div>
     </div>
-</div>
 {/if}
 {/foreach}
