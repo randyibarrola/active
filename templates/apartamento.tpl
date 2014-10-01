@@ -222,7 +222,22 @@
     <div id="contact" class="well-gray" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">
     </div>
 {else}
-    {include file="simple_search_form.tpl"}
+    {*<p class="text-center">{#lo_sentimos_en_las_fechas_que_has_buscado#} <strong>{$hotel->nombre}</strong> {#no_tiene_disponibilidad#}</p>*}
+    {*<div class="row hotel_container dontfind">*}
+        {*<div class="row-fluid">*}
+            {*<div class="col-sm-7">*}
+                {*<h2 class="text-center">{#no_encuentras_lo_que_buscas#}</h2>*}
+                {*<p class="text-center legend">{#dejanos_tu_email_y_te_ayudaremos#}</p>*}
+
+            {*</div>*}
+            {*<div class="col-sm-5">*}
+                {*<div class="row-fluid text-center">*}
+                    {*<a href="{$base_url}/{$lang}/{#contacto_url#}" class="btn btn-warning">{#contacta_con_nosotros#} ❯</a>*}
+                {*</div>*}
+            {*</div>*}
+            {*<div class="clearfix"></div>*}
+        {*</div>*}
+    {*</div>*}
 {/if}
 {if $hotel->destinoId}
     <div id="recommendation-hotels" class="well-white well-divider">
