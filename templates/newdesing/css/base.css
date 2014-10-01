@@ -39,6 +39,7 @@ div.header > .header-top {
 
 div.header-top #operated-by {
     margin: 0 0 0 140px;
+    position: absolute;
 }
 
 @media(min-width: 728px) and (max-width: 940px) {
@@ -51,7 +52,6 @@ div.header-top #operated-by {
     div.header-top #operated-by {
         color: #525252;
         margin: 0 0 0 100px;
-        position: absolute;
         top: 35px;
     }
 }
