@@ -124,7 +124,7 @@
                                     <td width="10"></td>
                                     <td width="300" height="60" valign="middle">
                                         <a href="{$base_url}" target="_blank"   style="border:0; outline:none;">
-                                            <img src="{$template_url}/images/logo_s.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
+                                            <img src="{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
                                         </a>
                                     </td>
                                     <td class="hdrPhoneTD" valign="middle">
@@ -158,7 +158,7 @@
                         <!-- b Intro Text //-->
                         <table cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td align="left" valign="top" style="font-weight:bold; font-size:14px;">{#nueva_reserva_lara_establecimiento#}.</td>
+                                <td align="left" valign="top" style="font-weight:bold; font-size:14px;">{#nueva_reserva_para_establecimiento#}.</td>
                             </tr>
                             <tr>
                                 <td DIR="LTR" align="left" valign="top" style="padding-top:10px; font-weight:bold;">{#numero_localizado_la_reserva#}: <span style="font-size:20px; color:#ed107f;">{$reserva->localizador}</span></td>
