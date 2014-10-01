@@ -144,7 +144,7 @@
                 <div class="booking-info-step step-3">
                     {if $excursiones && count($excursiones)}
                         <h4 class="title">3. {#confirmar_reserva_3#}</h4>
-                    {/else}
+                    {else}
                         <h4 class="title">2. {#confirmar_reserva_3#}</h4>
                     {/if}
                     <div class="content">
