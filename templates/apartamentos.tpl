@@ -129,18 +129,24 @@
         <div class="col-md-3 col-sm-3 col-xs-12 column-xs-divider">
             <div id="booking-info" class="well-white">
                 <div class="booking-info-step step-1 active">
-                    <h4 class="title">{#selecciona_tu_alojamiento#}</h4>
+                    <h4 class="title">1. {#selecciona_tu_alojamiento#}</h4>
                     <div class="content">
                         <p>{#no_has_anhadido_alojamiento#}.</p>
                     </div>
                 </div>
+                {if $excursiones && count($excursiones)}
                 <div class="booking-info-step step-2">
-                    <h4 class="title">{#actividades_y_tours_2#}</h4>
+                    <h4 class="title">2. {#actividades_y_tours_2#}</h4>
                     <div class="content">
                     </div>
                 </div>
+                {/if}
                 <div class="booking-info-step step-3">
-                    <h4 class="title">{#confirmar_reserva_3#}</h4>
+                    {if $excursiones && count($excursiones)}
+                        <h4 class="title">3. {#confirmar_reserva_3#}</h4>
+                    {/else}
+                        <h4 class="title">2. {#confirmar_reserva_3#}</h4>
+                    {/if}
                     <div class="content">
                     </div>
                 </div>
