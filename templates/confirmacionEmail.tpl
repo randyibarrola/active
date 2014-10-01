@@ -343,8 +343,8 @@
                 <td align="left" valign="top" style="padding-left:15px;">
                     <table cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                            <td align="left" valign="top" width="21"><a href="{$base_url}/{$lang}/confirmacion/r_id:{reserva->id}/mail:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_cancel.gif" width="18" height="18" alt="{#candelar_reserva#}" border="0" style="display:block;"></a></td>
-                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{reserva->id}/mail:1"   style="text-decoration:none; color:#026DC5;">{#candelar_reserva#}</a></td>
+                            <td align="left" valign="top" width="21"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_cancel.gif" width="18" height="18" alt="{#candelar_reserva#}" border="0" style="display:block;"></a></td>
+                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"   style="text-decoration:none; color:#026DC5;">{#candelar_reserva#}</a></td>
                         </tr>
                     </table>
                 </td>
@@ -352,8 +352,8 @@
                 <td align="left" valign="top" style="padding-left:15px;">
                     <table cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                            <td align="left" valign="top" width="21"><a href="{$base_url}/{$lang}/confirmacion/r_id:{reserva->id}/mail:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_download.gif" width="18" height="18" alt="{#descargar_factura#}" border="0" style="display:block;"></a></td>
-                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{reserva->id}/mail:1"   style="text-decoration:none; color:#026DC5;">{#descargar_factura#}</a></td>
+                            <td align="left" valign="top" width="21"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_download.gif" width="18" height="18" alt="{#descargar_factura#}" border="0" style="display:block;"></a></td>
+                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"   style="text-decoration:none; color:#026DC5;">{#descargar_factura#}</a></td>
                         </tr>
                     </table>
                 </td>
