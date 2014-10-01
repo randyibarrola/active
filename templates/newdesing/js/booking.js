@@ -623,12 +623,65 @@ var Booking = function() {
         });
     };
 
+    var affixBookingAbstract = function() {
+        var windowWidth = $(window).width();
+        var affix = $('#booking-info');
+
+        $(window).resize(function() {
+            windowWidth = $(window).width();
+            affix.css({
+                width: (affix.parent('div:eq(0)').width()) + 'px'
+            });
+            if(windowWidth <= 728) {
+                affix.css({
+                    position: 'relative',
+                    top: 'inherit'
+                });
+            }
+        });
+
+        var bookingContent = $('#booking-content');
+
+        $(window).scroll(function(e){
+            var windowTop = $(window).scrollTop();
+            var bookingContentTop = bookingContent.offset().top;
+            var bookingContentHeight = bookingContent.height();
+            var limit = bookingContentTop + bookingContentHeight;
+
+            if(windowWidth > 728) {
+                if(windowTop > bookingContentTop && limit - affix.height() > windowTop){
+                    affix.css({
+                        position: 'fixed',
+                        top: '5px',
+                        width: (affix.parent('div:eq(0)').width()) + 'px'
+                    });
+                }
+                else if(windowTop <= bookingContentTop) {
+                    affix.css({
+                        position: 'relative',
+                        top: 'inherit'
+                    });
+                }
+                else {
+                    affix.css({
+                        position: 'absolute',
+                        overflow: 'hidden',
+                        top: (bookingContentHeight - affix.height()) + 'px'
+                    });
+                }
+            }
+        });
+
+        $(window).trigger('scroll');
+    };
+
     return {
         init: function(step) {
             if(!step)
                 step = 1;
 
             initModals(step);
+            affixBookingAbstract();
 
             switch(step) {
                 case 1:
