@@ -307,7 +307,9 @@ if(strcmp($action, 'cancelar') == 0) {
                     $smarty->assign('campania',$campania); 
                 }
                 $smarty->assign('hotel', $hotel);
-                $body = $smarty->fetch('cancelacionEmail_nodesign.tpl');
+                //nuevo diseño
+                //$body = $smarty->fetch('cancelacionEmail_nodesign.tpl');
+                $body = $smarty->fetch('cancelacionEmail.tpl');
 
                 $mail = new Core_Mailer();                               
 
