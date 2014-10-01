@@ -219,8 +219,6 @@
         {/if}
     {/foreach}
     <input type="hidden" id="reglas" value='{$reglas}'>
-    <div id="contact" class="well-gray" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">
-    </div>
 {else}
     {*<p class="text-center">{#lo_sentimos_en_las_fechas_que_has_buscado#} <strong>{$hotel->nombre}</strong> {#no_tiene_disponibilidad#}</p>*}
     {*<div class="row hotel_container dontfind">*}
@@ -239,6 +237,10 @@
         {*</div>*}
     {*</div>*}
 {/if}
+
+<div id="contact" class="well-gray" data-href="{$base_url}/{$lang}/{#contacto_url#}{$end_url}">
+</div>
+
 {if $hotel->destinoId}
     <div id="recommendation-hotels" class="well-white well-divider">
         <div class="title">
