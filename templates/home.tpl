@@ -338,6 +338,7 @@
             <!-- End tabs -->
 
             <!-- Begin excursions -->
+            {* Comentareado de momento no va
             <div id="home-excursions" class="well-white well-divider">
                 <h1 class="text-center">¿Qué hacer en mi visita?</h1>
                 <div class="row list">
@@ -379,6 +380,7 @@
                     </div>
                 </div>
             </div>
+            *}
             <!-- End excursions -->
         </div>
     </div>
