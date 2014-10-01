@@ -277,8 +277,10 @@ if($hotel) {
                     $campania = getCampania($hotel->campaniaId);
                     $smarty->assign('campania',$campania); 
                 }
-
-                $body = $smarty->fetch('confirmacionEmail_nodesign.tpl');
+                
+                //nueva maqueta para mail
+                //$body = $smarty->fetch('confirmacionEmail_nodesign.tpl');
+                $body = $smarty->fetch('confirmacionEmail.tpl');
                 
                 //generar factura
                 if($cobroAnticipado && $reservacion->estado == 'Aprobada') {
@@ -305,7 +307,9 @@ if($hotel) {
                 $reserva_url = getReservaUrl($idReserva);
                 $smarty->assign('reserva_url', $reserva_url);
                 
-                $body = $smarty->fetch('reservaEmail_nodesign.tpl');
+                //nueva maqueta para mail
+                //$body = $smarty->fetch('reservaEmail_nodesign.tpl');
+                $body = $smarty->fetch('reservaEmail.tpl');
 
                 if($campania){
                     $subject = 'New Booking ' . $reservacion->localizador . ' [contrato '.$campania->localizador.']';

@@ -570,7 +570,9 @@ if ($hotel) {
     $limit = 3;
 
     if(!count($aparts)) {
-        $limit = 10;
+        //$limit = 10;
+        //cambiado a 3 por el nuevo diseño
+        $limit = 3;
     }
     //guardar busqueda
     $data_busqueda = array(

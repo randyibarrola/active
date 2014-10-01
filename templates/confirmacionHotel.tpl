@@ -15,13 +15,13 @@
 
 {block name="main_content" append}
     <div class="row">
-        <div class="col-md-9 col-sm-9 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12">
             <div id="booking-content" class="well-white confirm-booking">
                 <div class="jumbotron text-center">
                     <p>
                         <img src="{$template_url}/newdesing/images/confirm-booking.png" />
                     </p>
-                    <h1>{#reserva_terminada_con_exito#}.</h1>
+                    <h1>¡{#gracias#}, {$usuario->nombre} {if $reserva->estado eq 'Aprobada'}{#tu_reserva_esta_confirmada#}{else}{#tu_reserva_esta_pendiente_de_aprobacion#}{/if}</h1>
                     <p>{#hemos_enviado_justificante_por_email#}.</p>
                 </div>
                 <div class="row">
@@ -122,26 +122,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-12 column-xs-divider">
-            <div id="booking-info" class="well-white">
-                <div class="booking-info-step step-1 active">
-                    <h4 class="title">{#selecciona_habitacion_1#}</h4>
-                    <div class="content">
-                    </div>
-                </div>
-                <div class="booking-info-step step-2">
-                    <h4 class="title">{#actividades_y_tours_2#}</h4>
-                    <div class="content">
-                    </div>
-                </div>
-                <div class="booking-info-step step-3">
-                    <h4 class="title">{#confirmar_reserva_3#}</h4>
-                    <div class="content">
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div>        
     </div>
 {/block}
 

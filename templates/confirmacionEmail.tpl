@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title></title>
-
+    
+    {literal}
     <style media="all" type="text/css">
         body, td, div {color: #4E4E4E; font-family: Arial, Helvetica, Verdana; font-size:12px;}
         p { margin-bottom:1em; margin-top:0; padding:0; }
@@ -94,7 +95,7 @@
         }
 
     </style>
-
+    {/literal}
 </head>
 <body topmargin="0" rightmargin="0" bottommargin="0" leftmargin="0" style="margin:0px auto; -webkit-font-smoothing: antialiased; width:100% !important;-webkit-text-size-adjust:none;">
 <div class="preheader" style="display: none !important; font-size:1px;">{#gracias_por_utilizar#} MadridActive.com. {#la_reserva_esta_confirmada#}. {#no_es_necesario_realizar_llamada#}.</div>
@@ -124,7 +125,7 @@
                                 <td width="10"></td>
                                 <td width="300" height="60" valign="middle">
                                     <a href="{$base_url}" target="_blank"   style="border:0; outline:none;">
-                                        <img src="{$template_url}/images/logo_s.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
+                                        <img src="{$base_url}/{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
                                     </a>
                                 </td>
                                 <td class="hdrPhoneTD" valign="middle">
@@ -167,7 +168,13 @@
                         <tr>
                             <td align="left" valign="top" style="padding-top:10px;">
                                 <!--  //-->
-                                Te cobraremos un <b>15% (14,25€)</b> de la reserva como garantía. El resto lo pagarás en tu llegada al hotel. Con excepción de la tarifa “No Reembolsable", en este caso el hotel puede cobrar el resto del importe total de la reserva por adelantado.
+                                {if $reserva->alojamiento[0]->porcientoInicial && $reserva->alojamiento[0]->importeInicial}
+                                    <p>{if $reserva->estado eq 'Aprobada'}{#Has_pagado#}{else}{#Pagaras#}{/if} {#un#} <strong>{$reserva->alojamiento[0]->porcientoInicial}%({$reserva->moneda->simbolo}{$reserva->alojamiento[0]->importeInicial|number_format:2:',':' '})</strong> {#de_la_reserva_en_c_d#}.</p>
+                                {else}
+                                    {if $hotel->tipoReserva ne 'online'}
+                                    {#Pagaras_en_tu_llegada_al_hotel#}
+                                    {/if}
+                                {/if}
                                 <!--  //-->
                             </td>
                         </tr>
@@ -203,7 +210,7 @@
     <td DIR="LTR" valign="top" style="padding:10px;">
         <table cellspacing="0" cellpadding="0" border="0" width="100%">
             <tr>
-                <td align="left" valign="top"><a href="#"   style="text-decoration:none; color:#026DC5; font-size:14px; font-weight:bold; "><span style="color:#026DC5">{$reserva->hotel->nombre}</span></a>&nbsp;&nbsp;<img src="http://www.cmykestudio.com/mailmadrid/4stars.png" width="70" height="18" border="0" alt="Stars">
+                <td align="left" valign="top"><a href="#"   style="text-decoration:none; color:#026DC5; font-size:14px; font-weight:bold; "><span style="color:#026DC5">{$reserva->hotel->nombre}</span></a>&nbsp;&nbsp;
                     <!--  //-->
                 </td>
             </tr>
@@ -336,8 +343,8 @@
                 <td align="left" valign="top" style="padding-left:15px;">
                     <table cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                            <td align="left" valign="top" width="21"><a href="http://admin.madridactive.com/es/confirmacion/r_id:55e5fd/mail:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_cancel.gif" width="18" height="18" alt="{#candelar_reserva#}" border="0" style="display:block;"></a></td>
-                            <td align="left" valign="middle"><a href="http://admin.madridactive.com/es/confirmacion/r_id:55e5fd/mail:1"   style="text-decoration:none; color:#026DC5;">{#candelar_reserva#}</a></td>
+                            <td align="left" valign="top" width="21"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_cancel.gif" width="18" height="18" alt="{#candelar_reserva#}" border="0" style="display:block;"></a></td>
+                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"   style="text-decoration:none; color:#026DC5;">{#candelar_reserva#}</a></td>
                         </tr>
                     </table>
                 </td>
@@ -345,8 +352,8 @@
                 <td align="left" valign="top" style="padding-left:15px;">
                     <table cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                            <td align="left" valign="top" width="21"><a href="http://admin.madridactive.com/es/confirmacion/r_id:55e5fd/mail:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_download.gif" width="18" height="18" alt="{#descargar_factura#}" border="0" style="display:block;"></a></td>
-                            <td align="left" valign="middle"><a href="http://admin.madridactive.com/es/confirmacion/r_id:55e5fd/mail:1"   style="text-decoration:none; color:#026DC5;">{#descargar_factura#}</a></td>
+                            <td align="left" valign="top" width="21"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_download.gif" width="18" height="18" alt="{#descargar_factura#}" border="0" style="display:block;"></a></td>
+                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"   style="text-decoration:none; color:#026DC5;">{#descargar_factura#}</a></td>
                         </tr>
                     </table>
                 </td>

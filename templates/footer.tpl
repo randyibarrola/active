@@ -5,7 +5,7 @@
                 <div class="col-md-3 col-sm-3 footer-contact text-center">
                     <p class="text-center">{#operado_por#} {$hotel->distribuidor->nombreComercial}:</p>
                     <p class="logo">
-                        <img src="{$template_url}/newdesing/images/logo.png" class="" />
+                        <img src="{$template_url}/images/logo_m.png" class="" />
                     </p>
                     <address>
                         {#telefono#}: {if $hotel->webOficial}{$hotel->telefonoReservas}{else}{$hotel->distribuidor->telefonoReservas}{/if}<br/>
