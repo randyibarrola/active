@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title></title>
-
+    {literal}
     <style media="all" type="text/css">
         body, td, div {color: #4E4E4E; font-family: Helvetica, Verdana; font-size:12px;}
         p { margin-bottom:1em; margin-top:0; padding:0; }
@@ -94,7 +94,7 @@
         }
 
     </style>
-
+    {/literal}
 </head>
 <body topmargin="0" rightmargin="0" bottommargin="0" leftmargin="0" style="margin:0px auto; -webkit-font-smoothing: antialiased; width:100% !important;-webkit-text-size-adjust:none;">
 <div class="preheader" style="display: none !important; font-size:1px;">{#tu_reserva_ha_sido_cancelada#}.</div>

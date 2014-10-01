@@ -308,8 +308,8 @@ if($hotel) {
                 $smarty->assign('reserva_url', $reserva_url);
                 
                 //nueva maqueta para mail
-                $body = $smarty->fetch('reservaEmail_nodesign.tpl');
-                //$body = $smarty->fetch('reservaEmail.tpl');
+                //$body = $smarty->fetch('reservaEmail_nodesign.tpl');
+                $body = $smarty->fetch('reservaEmail.tpl');
 
                 if($campania){
                     $subject = 'New Booking ' . $reservacion->localizador . ' [contrato '.$campania->localizador.']';
