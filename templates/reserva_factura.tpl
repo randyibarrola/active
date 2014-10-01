@@ -1,5 +1,5 @@
 <div style="width: 500px; font-size: 11px;">
-    <img height="55" src="{$template_url}/images/logo_m.png" ><br>
+    <img height="55" src="{$template_url}/images/logo_b.png" ><br>
     <div style="padding: 10px 0 0 30px;">
         <table style="border: none; width: 80%; color: #3D89CD; font-size: 12px;">
             <tr>
