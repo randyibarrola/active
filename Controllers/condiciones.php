@@ -9,5 +9,8 @@ if($_GET['id']) {
 if(isset($_REQUEST['print']))
     $smarty->assign('print', 1);
 
-$smarty->display('condicionesCompra.tpl');
+if($_GET['v'])
+    $smarty->display('condicionesCompraModal.tpl');
+else
+    $smarty->display('condicionesCompra.tpl');
 ?>

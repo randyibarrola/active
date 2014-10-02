@@ -75,7 +75,7 @@
             {/if}
             {*<div id="booking-content" class="{if $excursiones && count($excursiones)}well-white{/if}">*}
             <div id="booking-content" class="well-white">
-                <div class="reserva-description">
+                <div class="reserva-description {if !$excursiones || !count($excursiones)}well-white{/if}">
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="flexslider">
@@ -258,16 +258,16 @@
                         <div class="well-white">
                             <div class="head">
                                 <h1>
-                                    {#datos_titular_habitacion#} <span>({#debe_ser_mayor_18#})</span>
+                                    Booking Online | {#completa_tus_datos#} <span>({#debe_ser_mayor_18#})</span>
                                     {if $excursiones && count($excursiones)}
-                                        <button id="go-to-tour-list" type="button" class="btn app-btn-pink pull-right"><< {#reserva_actividades#}</button>
+                                        <button id="go-to-tour-list" type="button" class="btn app-btn-pink pull-right" style="margin-bottom: 2px;"><< {#actividades#}</button>
                                     {/if}
                                 </h1>
                             </div>
                             <fieldset>
-                                <p class="fieldset-info">
-                                    <label>{$apartamento['titulo']}</label>
-                                </p>
+                                {*<p class="fieldset-info">*}
+                                    {*<label>{$apartamento['titulo']}</label>*}
+                                {*</p>*}
                                 <div class="row">
                                     <div class="col-md-4 col-sm-12 col-xs-12">
                                         <label class="control-label">{#nombre#} <span class="required"><i class="glyphicon glyphicon-star"></i></span></label>

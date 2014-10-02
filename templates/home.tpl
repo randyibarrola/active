@@ -74,6 +74,16 @@
                     <li>Early check-out</li>
                 </ul>
             </div>*}
+            {if $hotel->logoId}
+                <div id="home-hotel-selection" class="well-white well-divider well-left">
+                    <div class="title no-border">
+                        <h3 class="text-center">{#tu_seleccion#}</h3>
+                    </div>
+                    <div class="text-center">
+                        <img src="{$hotel->logoId}" />
+                    </div>
+                </div>
+            {/if}
             {if $hotel->mostrarHotelesRelacionados && $hotel->relacionados && count($hotel->relacionados) && !$movile}
                 {include file="hotel_prompt.tpl"}
             {/if}

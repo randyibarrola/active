@@ -272,6 +272,10 @@ var Booking = function() {
 
         $('#booking-tour-form').submit(function() {
             affix.hide();
+            var roomDetails = $('.reserva-description:eq(0)');
+            if(!roomDetails.hasClass('well-white')) {
+                roomDetails.addClass('well-white');
+            }
             $('.booking-tour-content').hide();
             if(Booking.initStep[2]) {
                 Booking.initStep[2] = false;
@@ -289,7 +293,7 @@ var Booking = function() {
             initSearchTourItem($(this));
         });
         
-    $(".when-you-go-date").each(function(){
+        $(".when-you-go-date").each(function(){
             fechas = eval($(this).find('input[name=fechasTarifas]').val());
 
             enables = [];
@@ -541,6 +545,8 @@ var Booking = function() {
         cardValidation();
         var form = $('#booking-confirm-form');
 
+        form.find('.select2-container').removeClass('validate[required]');
+
         form.find('input[name="nombre"], input[name="apellido"]').change(function() {
             form.find('input[name="titular"]:eq(0)').val(form.find('input[name="nombre"]:eq(0)').val().trim() + ' ' + form.find('input[name="apellido"]:eq(0)').val().trim());
         });
@@ -550,6 +556,7 @@ var Booking = function() {
         });
 
         form.submit(function(e){
+            form.find('.select2-container').removeClass('validate[required]');
             var valid = $(this).validationEngine('validate');
             if(valid) {
                 $('#send-confirm-modal').modal('show');
@@ -557,13 +564,13 @@ var Booking = function() {
             }
             else {
                 e.preventDefault();
-                form.find('.select2-container').removeClass('validate[required]');
                 return false;
             }
 
         });
 
         $('#go-to-tour-list').click(function() {
+            $('.reserva-description:eq(0)').removeClass('well-white');
             $('.booking-confirm-content').hide();
             $('#booking-tour-head').show();
             $('.booking-tour-content').show();

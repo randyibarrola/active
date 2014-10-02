@@ -283,6 +283,10 @@ div.footer > div.footer-bottom .menu a:focus {
     padding-bottom: 15px;
 }
 
+.well-left .no-border {
+    border-bottom: 0 !important;
+}
+
 .well-left .title h3 {
     font-size: 18px;
     text-transform: uppercase;

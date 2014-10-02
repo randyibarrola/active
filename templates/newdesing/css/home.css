@@ -682,3 +682,14 @@
 #opinions{
     min-height: 350px;
 }
+
+#home-hotel-selection img {
+    max-width: 230px;
+    max-height: 125px;
+}
+
+@media(max-width: 1170px) {
+    #home-hotel-selection img {
+        width: 100%;
+    }
+}

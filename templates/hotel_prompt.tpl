@@ -1,4 +1,4 @@
-<div class="well-white well-divider well-left">
+<div class="well-white {if !$hotel->logoId}well-divider{/if} well-left">
     <div class="title">
         <h3>{#otros_hoteles_recomendados#}</h3>
     </div>
