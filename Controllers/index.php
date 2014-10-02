@@ -64,8 +64,7 @@ if($hotel) {
             $smarty->assign('excursiones', $destacados);
         }*/
     }   
-var_dump($hotel);die;
-    
+
 $smarty->assign('active_menu', 'home');
 
 $smarty->display('home.tpl');
