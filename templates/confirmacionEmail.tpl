@@ -124,6 +124,7 @@
                             <tr>
                                 <td width="10"></td>
                                 <td width="300" height="60" valign="middle">
+                                    {$base_url}/{$template_url}/images/logo_m.png
                                     <a href="{$base_url}" target="_blank"   style="border:0; outline:none;">
                                         <img src="{$base_url}/{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
                                     </a>
@@ -233,11 +234,11 @@
                                 <table cellspacing="0" cellpadding="0" border="0">
                                     <tr>
                                         <!--  //-->
-                                        <td DIR="LTR" align="left" valign="top" width="100">
+                                        {*<td DIR="LTR" align="left" valign="top" width="100">
                                             <div style="width: 100px; background:#FFFFFF; background-repeat: no-repeat; padding:3px; border:1px solid #CCCCCC; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: #999999 0 2px 3px 0px; moz-box-shadow: #999999 0 2px 3px 0px; box-shadow: #999999 0 2px 3px 0px;">
                                                 <img src="http://www.vikahotel.com/templates/images/apartamentos/17960c11911f5cc3c3f81539f77e0645.jpg" alt="{$reserva->hotel->nombre}" width="100" height="70" style="display:block; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;" />
                                             </div>
-                                        </td>
+                                        </td>*}
                                         <!--  //-->
                                         <td align="left" valign="top" width="10"></td>
                                         <td align="left" valign="top">
