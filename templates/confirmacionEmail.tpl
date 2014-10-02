@@ -326,7 +326,7 @@
                         <!--  //-->
                         <tr>
                             <td align="left" valign="top" width="21"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_print.gif" width="18" height="18" alt="{#imprimir_reserva#}" border="0" style="display:block;"></a></td>
-                            <td align="left" valign="middle"><a href="#"   style="text-decoration:none; color:#026DC5;">{#imprimir_reserva#}</a></td>
+                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/print:1"   style="text-decoration:none; color:#026DC5;">{#imprimir_reserva#}</a></td>
                         </tr>
                         <!--  //-->
                     </table>
@@ -335,8 +335,8 @@
                 <td align="left" valign="top" style="padding-left:15px;">
                     <table cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                            <td align="left" valign="top" width="21"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_directions.gif" width="18" height="18" alt="{#ver_direccion_gmap#}" border="0" style="display:block;"></a></td>
-                            <td align="left" valign="middle"><a href="#"   style="text-decoration:none; color:#026DC5;">{#ver_direccion_gmap#}</a></td>
+                            <td align="left" valign="top" width="21"><a href="#"  ><img src="https://www.google.com/maps/preview?q=loc:{$hotel->direccion->lat},{$hotel->direccion->lon}" width="18" height="18" alt="{#ver_direccion_gmap#}" border="0" style="display:block;"></a></td>
+                            <td align="left" valign="middle"><a href="https://www.google.com/maps/preview?q=loc:{$hotel->direccion->lat},{$hotel->direccion->lon}"   style="text-decoration:none; color:#026DC5;">{#ver_direccion_gmap#}</a></td>
                         </tr>
                     </table>
 
@@ -352,8 +352,8 @@
                 <td align="left" valign="top" style="padding-left:15px;">
                     <table cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                            <td align="left" valign="top" width="21"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_download.gif" width="18" height="18" alt="{#descargar_factura#}" border="0" style="display:block;"></a></td>
-                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"   style="text-decoration:none; color:#026DC5;">{#descargar_factura#}</a></td>
+                            <td align="left" valign="top" width="21"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/print:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_download.gif" width="18" height="18" alt="{#descargar_factura#}" border="0" style="display:block;"></a></td>
+                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/print:1"   style="text-decoration:none; color:#026DC5;">{#descargar_factura#}</a></td>
                         </tr>
                     </table>
                 </td>

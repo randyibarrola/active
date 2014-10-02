@@ -16,7 +16,7 @@
             <div class="book-confirmation-inner">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h2><img height="50" src="{$template_url}/images/logo_s.png"></h2>
+                        <h2><img height="50" src="{$template_url}/images/logo_b.png"></h2>
                     </div>
                     <div class="col-xs-6">
                         <div class="panel panel-primary">
