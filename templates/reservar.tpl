@@ -74,7 +74,7 @@
                 </div>
             {/if}
             <div id="booking-content" class="{if $excursiones && count($excursiones)}well-white{/if}">
-                <div class="reserva-description">
+                <div class="reserva-description" stye="background-color:#fff;">
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="flexslider">
@@ -98,7 +98,7 @@
                                 <p class="text-muted"><strong>{$apartamento['pension']}</strong></p>
                             {/if}
                             <p class="text-muted"><strong>{$apartamento['condicion']}</strong></p>
-                            <a class="btn btn-primary pull-right btn-xs" id="show-room-more-info">+ {#mostrar_detalles_y_condiciones#}</a>
+                            <a styel="margin-left:15px;" class="btn btn-primary pull-right btn-xs" id="show-room-more-info">+ {#mostrar_detalles_y_condiciones#}</a>
                         </div>
                     </div>
                     <div class="row" id="room-more-info" style="display: none;">
