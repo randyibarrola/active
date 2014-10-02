@@ -123,10 +123,9 @@
                         <table align="center" height="60" border="0" cellpadding="0" cellspacing="0" style="width:100%; max-width:620px; padding:0; position:relative;">
                             <tr>
                                 <td width="10"></td>
-                                <td width="300" height="60" valign="middle">
-                                    {$base_url}/{$template_url}/images/logo_m.png
+                                <td width="300" height="60" valign="middle">                                    
                                     <a href="{$base_url}" target="_blank"   style="border:0; outline:none;">
-                                        <img src="{$base_url}/{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
+                                        <img src="{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
                                     </a>
                                 </td>
                                 <td class="hdrPhoneTD" valign="middle">
@@ -251,7 +250,7 @@
                                                 </tr>
                                                 <!--  //-->
                                                 <tr>
-                                                    <td align="left" valign="top" style="padding-top:10px;">{$hotel->direccion->descripcion}</td>
+                                                    <td align="left" valign="top" style="">{$hotel->direccion->descripcion}</td>
                                                 </tr>
                                                 <tr>
                                                     <td align="left" valign="top">
