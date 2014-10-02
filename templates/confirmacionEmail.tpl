@@ -252,14 +252,7 @@
                                                 <tr>
                                                     <td align="left" valign="top" style="">{$hotel->direccion->descripcion}</td>
                                                 </tr>
-                                                <tr>
-                                                    <td align="left" valign="top">
-                                                        28001, Madrid
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left" valign="top">España</td>
-                                                </tr>
+                                                
                                                 <tr>
                                                     <td align="left" valign="top">
                                                         <a href="{$hotel->emailReservas}" class="email" style="text-decoration:none; color:#666;"><span dir="ltr" style="color:#666;">{$hotel->emailReservas}</span></a>
