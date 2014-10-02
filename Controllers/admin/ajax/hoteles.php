@@ -23,7 +23,8 @@ if(strcmp($action, 'filter') == 0) {
     if(isset($_POST['hotelId']))
         $hotelId = $_POST['hotelId'];
     
-    $hoteles = getHotelesCampaniasActivas($term, ((isset($_POST['paginar_otros'])) ? 0 : $start), 10, $hotelId, $_POST);
+    //$hoteles = getHotelesCampaniasActivas($term, ((isset($_POST['paginar_otros'])) ? 0 : $start), 10, $hotelId, $_POST);
+    $hoteles = getHotelesCampaniasActivas($term, ((isset($_POST['paginar_otros'])) ? 0 : $start), 9, $hotelId, $_POST);
     
     if(count($hoteles) == 4) {
         foreach ($hoteles as $hotel) {
