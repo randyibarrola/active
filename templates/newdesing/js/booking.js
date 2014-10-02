@@ -569,7 +569,7 @@ var Booking = function() {
             $('.booking-tour-content').show();
         });
         
-        App.handleSlider($('.reserva-description').find('.flexslider'));
+        initRoomDetails($('.reserva-description'));        
     };
 
     var initRoomDetails = function(item) {
