@@ -276,6 +276,7 @@ var Booking = function() {
             if(!roomDetails.hasClass('well-white')) {
                 roomDetails.addClass('well-white');
             }
+            $('#booking-content').removeClass('well-white');
             $('.booking-tour-content').hide();
             if(Booking.initStep[2]) {
                 Booking.initStep[2] = false;
@@ -571,6 +572,10 @@ var Booking = function() {
 
         $('#go-to-tour-list').click(function() {
             $('.reserva-description:eq(0)').removeClass('well-white');
+            var bookingContent = $('#booking-content');
+            if(!bookingContent.hasClass('well-white')) {
+                bookingContent.addClass('well-white');
+            }
             $('.booking-confirm-content').hide();
             $('#booking-tour-head').show();
             $('.booking-tour-content').show();

@@ -74,7 +74,7 @@
                 </div>
             {/if}
             {*<div id="booking-content" class="{if $excursiones && count($excursiones)}well-white{/if}">*}
-            <div id="booking-content" class="well-white">
+            <div id="booking-content" class="{if $excursiones && count($excursiones)}well-white{/if}">
                 <div class="reserva-description {if !$excursiones || !count($excursiones)}well-white{/if}">
                     <div class="row">
                         <div class="col-sm-3">

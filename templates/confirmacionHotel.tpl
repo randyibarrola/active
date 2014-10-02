@@ -107,7 +107,7 @@
                         {#Consulta_las_condiciones_de_compra#}:</br>
                         {if $hotel->condiciones}
                             {foreach from=$hotel->condiciones item=condicion}
-                                <a href="{$vikahotel_url}/condiciones/id:{dechex($condicion->id*9999)}/v:modal" data-toggle="modal" data-target="#condition-{dechex($condicion->id*9999)}-modal">
+                                <a href="{$base_url}/condiciones/id:{dechex($condicion->id*9999)}/v:modal" data-toggle="modal" data-target="#condition-{dechex($condicion->id*9999)}-modal">
                                     <h3 class="title">{if $condicion->nombres->$lang}{$condicion->nombres->$lang}{else}{$condicion->nombres->es}{/if}</h3>
                                 </a><br>
                                 <div id="condition-{dechex($condicion->id*9999)}-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
