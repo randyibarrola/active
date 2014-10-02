@@ -124,7 +124,7 @@
                                 <td width="10"></td>
                                 <td width="300" height="60" valign="middle">
                                     <a href="{$base_url}" target="_blank"   style="border:0; outline:none;">
-                                        <img src="{$base_url}/{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
+                                        <img src="{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
                                     </a>
                                 </td>
                                 <td class="hdrPhoneTD" valign="middle">

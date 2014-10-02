@@ -568,6 +568,8 @@ var Booking = function() {
             $('#booking-tour-head').show();
             $('.booking-tour-content').show();
         });
+        
+        initRoomDetails($('.reserva-description'));        
     };
 
     var initRoomDetails = function(item) {

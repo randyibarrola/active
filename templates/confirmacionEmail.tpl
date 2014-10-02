@@ -123,9 +123,9 @@
                         <table align="center" height="60" border="0" cellpadding="0" cellspacing="0" style="width:100%; max-width:620px; padding:0; position:relative;">
                             <tr>
                                 <td width="10"></td>
-                                <td width="300" height="60" valign="middle">
+                                <td width="300" height="60" valign="middle">                                    
                                     <a href="{$base_url}" target="_blank"   style="border:0; outline:none;">
-                                        <img src="{$base_url}/{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
+                                        <img src="{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
                                     </a>
                                 </td>
                                 <td class="hdrPhoneTD" valign="middle">
@@ -233,11 +233,11 @@
                                 <table cellspacing="0" cellpadding="0" border="0">
                                     <tr>
                                         <!--  //-->
-                                        <td DIR="LTR" align="left" valign="top" width="100">
+                                        {*<td DIR="LTR" align="left" valign="top" width="100">
                                             <div style="width: 100px; background:#FFFFFF; background-repeat: no-repeat; padding:3px; border:1px solid #CCCCCC; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: #999999 0 2px 3px 0px; moz-box-shadow: #999999 0 2px 3px 0px; box-shadow: #999999 0 2px 3px 0px;">
                                                 <img src="http://www.vikahotel.com/templates/images/apartamentos/17960c11911f5cc3c3f81539f77e0645.jpg" alt="{$reserva->hotel->nombre}" width="100" height="70" style="display:block; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;" />
                                             </div>
-                                        </td>
+                                        </td>*}
                                         <!--  //-->
                                         <td align="left" valign="top" width="10"></td>
                                         <td align="left" valign="top">
@@ -250,16 +250,9 @@
                                                 </tr>
                                                 <!--  //-->
                                                 <tr>
-                                                    <td align="left" valign="top" style="padding-top:10px;">{$hotel->direccion->descripcion}</td>
+                                                    <td align="left" valign="top" style="">{$hotel->direccion->descripcion}</td>
                                                 </tr>
-                                                <tr>
-                                                    <td align="left" valign="top">
-                                                        28001, Madrid
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left" valign="top">España</td>
-                                                </tr>
+                                                
                                                 <tr>
                                                     <td align="left" valign="top">
                                                         <a href="{$hotel->emailReservas}" class="email" style="text-decoration:none; color:#666;"><span dir="ltr" style="color:#666;">{$hotel->emailReservas}</span></a>
@@ -326,7 +319,7 @@
                         <!--  //-->
                         <tr>
                             <td align="left" valign="top" width="21"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_print.gif" width="18" height="18" alt="{#imprimir_reserva#}" border="0" style="display:block;"></a></td>
-                            <td align="left" valign="middle"><a href="#"   style="text-decoration:none; color:#026DC5;">{#imprimir_reserva#}</a></td>
+                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/print:1"   style="text-decoration:none; color:#026DC5;">{#imprimir_reserva#}</a></td>
                         </tr>
                         <!--  //-->
                     </table>
@@ -335,8 +328,8 @@
                 <td align="left" valign="top" style="padding-left:15px;">
                     <table cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                            <td align="left" valign="top" width="21"><a href="#"  ><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_directions.gif" width="18" height="18" alt="{#ver_direccion_gmap#}" border="0" style="display:block;"></a></td>
-                            <td align="left" valign="middle"><a href="#"   style="text-decoration:none; color:#026DC5;">{#ver_direccion_gmap#}</a></td>
+                            <td align="left" valign="top" width="21"><a href="#"  ><img src="https://www.google.com/maps/preview?q=loc:{$hotel->direccion->lat},{$hotel->direccion->lon}" width="18" height="18" alt="{#ver_direccion_gmap#}" border="0" style="display:block;"></a></td>
+                            <td align="left" valign="middle"><a href="https://www.google.com/maps/preview?q=loc:{$hotel->direccion->lat},{$hotel->direccion->lon}"   style="text-decoration:none; color:#026DC5;">{#ver_direccion_gmap#}</a></td>
                         </tr>
                     </table>
 
@@ -352,8 +345,8 @@
                 <td align="left" valign="top" style="padding-left:15px;">
                     <table cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                            <td align="left" valign="top" width="21"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_download.gif" width="18" height="18" alt="{#descargar_factura#}" border="0" style="display:block;"></a></td>
-                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1"   style="text-decoration:none; color:#026DC5;">{#descargar_factura#}</a></td>
+                            <td align="left" valign="top" width="21"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/print:1"  target="_blank"><img src="http://www.cmykestudio.com/mailmadrid/mail_icon_download.gif" width="18" height="18" alt="{#descargar_factura#}" border="0" style="display:block;"></a></td>
+                            <td align="left" valign="middle"><a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/print:1"   style="text-decoration:none; color:#026DC5;">{#descargar_factura#}</a></td>
                         </tr>
                     </table>
                 </td>

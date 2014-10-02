@@ -73,7 +73,8 @@
                     </form>
                 </div>
             {/if}
-            <div id="booking-content" class="{if $excursiones && count($excursiones)}well-white{/if}">
+            {*<div id="booking-content" class="{if $excursiones && count($excursiones)}well-white{/if}">*}
+            <div id="booking-content" class="well-white">
                 <div class="reserva-description">
                     <div class="row">
                         <div class="col-sm-3">
@@ -471,7 +472,7 @@
                     <h4 class="title"></h4>
                     <div class="content">
                         <div class="pay">
-                            <p class="prepay block">{#Total#}: <span>&euro;17,55</span></p>
+                            <p class="prepay block">{#Total#}: <span>{$apartamento['precioTotal_format']}</span></p>
                         </div>
                         <div class="text-right">{#impuestos_incluidos#}</div>
                     </div>
