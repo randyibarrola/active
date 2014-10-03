@@ -311,12 +311,6 @@ var Booking = function() {
                 YEAR = parseInt(fecha[2].trim());
                 MONTH = parseInt(fecha[1].trim()) - 1;
                 DAY = parseInt(fecha[0].trim());
-                /*if(DAY.length == 1)
-                    DAY = '0' + DAY;
-                fecha = YEAR + '-' + MONTH + '-' + DAY;*/
-                /*fecha = new Date(fecha);
-                fecha.setDate(new Date(fecha).getDate() + 1);
-                fecha.setHours(0);*/
                 fecha = new Date(YEAR,MONTH,DAY);
 
                 time = fecha.getTime();
@@ -337,7 +331,7 @@ var Booking = function() {
 
             $(this).data(tarifasFechas);
             $(this).datepicker({
-                language: LANG,
+                language: App.locale,
                 beforeShowDay: function (date){
                     enables = this.data['enableDates'];
                     return enables.indexOf(date.getTime()) !== -1 ;
@@ -353,7 +347,7 @@ var Booking = function() {
                     m = (_m > 9 ? _m : '0'+_m),
                     _d = ev.date.getDate(),
                     d = (_d);
-                var when_you_go = MONTHS[_m - 1] + " " + d + ", " + y;
+                var when_you_go = App.get('months')[_m - 1] + " " + d + ", " + y;
                 tarifas = $(this).data()['tarifas'];
                 tarifa = null;
 
@@ -421,6 +415,42 @@ var Booking = function() {
 
             $(this).find('td.day:not(.disabled)').first().click();
         });        
+    };
+
+    var moneyConverter = function(cant) {
+        var c = parseFloat(cant).toFixed(2);
+        c = App.currency + ("" + c).replace(".", ",");
+        return c;
+    };
+
+    var convertMoney = function(price){
+        return parseFloat(price*App.changeTax).toFixed(2);
+    };
+
+    var calcularTotal = function(_this) {
+        precio = 0;
+        _this.find('select[name^="entradas"]:not(:disabled)').each(function(){
+            precio += (parseFloat($(this).attr('precio')) * parseFloat($(this).val()));
+        });
+        if(parseFloat(_this.find('[name=xdec]').val()) > 0) {
+            desc = parseFloat(_this.find('[name=xdec]').val());
+            if(desc < 0) desc *= -1;
+            descType = _this.find('[name=xtype]').val();
+            //console.log(descType, (descType == '%'));
+            precio -= ((descType == '%') ? (precio * desc / 100) : desc);
+            if(precio < 0)
+                precio = 0;
+        }
+
+        _this.find('.subtotal-cell label.precio_total').html(moneyConverter(precio)+' <span class="subprice">('+App.userCurrency+convertMoney(precio)+')</span>');
+        _this.find('.subtotal-cell input[name=total]').val(precio);
+        _this.find('.subtotal-cell input[name=total_format]').val(moneyConverter(precio));
+
+        if(precio == 0) {
+            _this.find('input[type=submit]').prop('disabled', true);
+        } else {
+            _this.find('input[type=submit]').prop('disabled', false);
+        }
     };
 
     var initSearchTourItem = function(item) {

@@ -535,8 +535,8 @@ var App = function () {
             App.property[key] = value;
         },
 
-        get: function(key) {
-            return App.property[key] ? App.i18n[key] : undefined;
+        get: function(key, _default) {
+            return App.property[key] ? App.property[key] : (_default ? _default : undefined);
         },
 
         handleSlider: function(selector, type) {

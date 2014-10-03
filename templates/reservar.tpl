@@ -176,23 +176,22 @@
                                     </div>
                                     <div class="more-info-content" style="display: none;">
                                         <div class="well-gray well-divider">
-                                            <form class="booking-add-tour-form form-inline" role="form" action="#" method="post">
-                                                <input type="hidden" name="precio_apartamento" value="{$apartamento['precioTotal_format']}">
-                                                <input type="hidden" name="tarifaId">
-                                                <input type="hidden" name="eventoId" value="{$excursion->id}">
-                                                <input type="hidden" name="fecha">
-                                                <input type="hidden" name="fechasTarifas" value='[{foreach from=$excursion->tickets item=ticket name=tickets}{foreach from=$ticket->fechas item=fecha name=fechas}{if !$smarty.foreach.tickets.first || !$smarty.foreach.fechas.first},{/if}"{$fecha->fecha|date_format:"%e/%m/%Y"}->{$ticket->id}"{/foreach}{/foreach}]'>
-                                                {foreach from=$excursion->tickets item=ticket}
-                                                <input type="hidden" id="tarifa_{$ticket->id}" value='{$ticket->horarios_json}'>
-                                                {/foreach}
+                                            <form class="booking-add-tour-form form-inline frmExcursion" role="form" action="#" method="post">
                                                 <fieldset>
                                                     <div class="">
                                                         <div class="col-md-5 col-sm-12 col-xs-12">
                                                             <h4 style="margin-bottom: 0">Escoja una fecha:</h4>
-                                                            <div class="datepicker" data-sync=".selected-date-1" data-start-date="today">
-                                                                <input type="hidden" class="selected-date-1" />
+                                                            <div class="when-you-go-date" data-date-week-start="1">
+                                                                <input type="hidden" name="precio_apartamento" value="{$apartamento['precioTotal_format']}">
+                                                                <input type="hidden" name="tarifaId">
+                                                                <input type="hidden" name="eventoId" value="{$excursion->id}">
+                                                                <input type="hidden" name="fecha">
+                                                                <input type="hidden" name="fechasTarifas" value='[{foreach from=$excursion->tickets item=ticket name=tickets}{foreach from=$ticket->fechas item=fecha name=fechas}{if !$smarty.foreach.tickets.first || !$smarty.foreach.fechas.first},{/if}"{$fecha->fecha|date_format:"%e/%m/%Y"}->{$ticket->id}"{/foreach}{/foreach}]'>
+                                                                {foreach from=$excursion->tickets item=ticket}
+                                                                    <input type="hidden" id="tarifa_{$ticket->id}" value='{$ticket->horarios_json}'>
+                                                                {/foreach}
                                                             </div>
-                                                            <div class="form-group">
+                                                            <div class="form-group a-que-hora">
                                                                 <label class="control-label label-hours">Escoge hora de salida:</label>
                                                                 <select class="select2 form-control que_hora" placeholder="HH:mm" name="sesion">
                                                                     {foreach from=$excursion->horarios item=horario}
