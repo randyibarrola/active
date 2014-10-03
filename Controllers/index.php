@@ -34,6 +34,7 @@ if($hotel) {
     
     
     $archivo = getHotelLogotipo($hotel->id);
+    var_dump($archivo);die;
     $smarty->assign('logotipo',$archivo);
     
     $faq = getFaq(1);

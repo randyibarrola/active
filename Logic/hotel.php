@@ -1474,8 +1474,8 @@ function getHotelLogotipo($idHotel) {
                 
             }
             
-        }             
-        var_dump($archivo);die;
+        }            
+
         return $archivo ;        
         
     } catch (Exception $e) {
