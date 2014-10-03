@@ -470,98 +470,98 @@ var Booking = function() {
         });
 
         var form = item.find('.booking-add-tour-form').eq(0);
-        form.bind('app.event.form.init', function(e, data) {
-            var widgetAdultCount = form.find('select.adult-count').eq(0);
-            var widgetChildCount = form.find('select.child-count').eq(0);
-            var totalPriceText = form.find('label.total-price').eq(0);
-            var widgetDiscount = form.find('input.discount').eq(0);
-            if(widgetDiscount.attr('value') == undefined) {
-                widgetDiscount.val(0);
-            }
-            var btnDiscountCode = form.find('button.btn-discount-code').eq(0);
-            var widgetDiscountCode = form.find('input.discount-code').eq(0);
-
-            widgetAdultCount.change(function() {
-                var widget = $(this);
-                var subPriceText = $(this).siblings('.sub-price').eq(0);
-                var basicPrice = parseFloat($(this).siblings('.adult-price').eq(0).val());
-                subPriceText.find('span').eq(0).text(App.formatPrice(parseInt(widget.val()) * basicPrice));
-
-                changeTotalPrice();
-            });
-
-            widgetChildCount.change(function() {
-                var widget = $(this);
-                var subPriceText = $(this).siblings('.sub-price').eq(0);
-                var basicPrice = parseFloat($(this).siblings('.child-price').eq(0).val());
-                subPriceText.find('span').eq(0).text(App.formatPrice(parseInt(widget.val()) * basicPrice));
-
-                changeTotalPrice();
-            });
-
-            widgetDiscount.change(function() {
-                changeTotalPrice();
-            });
-
-            btnDiscountCode.click(function() {
-                if(widgetDiscountCode.val().trim() != "") {
-                    var holder = $(this).parents('.input-group').eq(0);
-                    var validateHolder = holder.siblings('.discount-validate').eq(0);
-                    var removeCode = validateHolder.find('i').eq(0);
-
-                    // La variable data debe obtenerse mediante una petición ajax con el formato siguiente:
-                    var data = {
-                        valid: true,
-                        type: 'percent',
-                        value: 10,
-                        msgError: 'Código incorrecto'
-                    };
-
-                    if(data.valid) {
-                        widgetDiscount.val(data.value);
-                        widgetDiscount.data('discount-type', data.type);
-                        validateHolder.find('label').eq(0).text("-" + App.formatPrice(data.value) + (data.type == 'number' ? App.currency : '%'));
-                        validateHolder.prepend($('<span></span>').addClass('code').text(widgetDiscountCode.val() + ':'));
-                        holder.hide();
-                        validateHolder.show();
-
-                        removeCode.unbind('click').click(function() {
-                            widgetDiscount.val(0);
-                            widgetDiscountCode.val('');
-                            validateHolder.find('span.code').remove();
-                            validateHolder.hide();
-                            holder.show();
-
-                            changeTotalPrice();
-                        });
-
-                        changeTotalPrice();
-                    }
-                }
-            });
-
-            var changeTotalPrice = function() {
-                var basicAdultPrice = parseFloat(widgetAdultCount.siblings('.adult-price').eq(0).val());
-                var countAdult = parseInt(widgetAdultCount.val());
-                var basicChildPrice = parseFloat(widgetChildCount.siblings('.child-price').eq(0).val());
-                var countChild = parseInt(widgetChildCount.val());
-
-                var basicTotalPrice = (countAdult * basicAdultPrice) + (countChild * basicChildPrice);
-                var discountPrice = widgetDiscount.data('discount-type') && widgetDiscount.data('discount-type') == 'percent' && parseFloat(widgetDiscount.val()) != 0
-                    ? parseFloat(widgetDiscount.val()) * basicTotalPrice / 100
-                    : basicTotalPrice - parseFloat(widgetDiscount.val());
-
-                totalPriceText.find('span').eq(0).text(App.formatPrice(discountPrice));
-            };
-
-            changeTotalPrice();
-
-            form.submit(function() {
-                form.triggerHandler('app.event.form.submit.success', []);
-
-                return false;
-            });
-        });
+//        form.bind('app.event.form.init', function(e, data) {
+//            var widgetAdultCount = form.find('select.adult-count').eq(0);
+//            var widgetChildCount = form.find('select.child-count').eq(0);
+//            var totalPriceText = form.find('label.total-price').eq(0);
+//            var widgetDiscount = form.find('input.discount').eq(0);
+//            if(widgetDiscount.attr('value') == undefined) {
+//                widgetDiscount.val(0);
+//            }
+//            var btnDiscountCode = form.find('button.btn-discount-code').eq(0);
+//            var widgetDiscountCode = form.find('input.discount-code').eq(0);
+//
+//            widgetAdultCount.change(function() {
+//                var widget = $(this);
+//                var subPriceText = $(this).siblings('.sub-price').eq(0);
+//                var basicPrice = parseFloat($(this).siblings('.adult-price').eq(0).val());
+//                subPriceText.find('span').eq(0).text(App.formatPrice(parseInt(widget.val()) * basicPrice));
+//
+//                changeTotalPrice();
+//            });
+//
+//            widgetChildCount.change(function() {
+//                var widget = $(this);
+//                var subPriceText = $(this).siblings('.sub-price').eq(0);
+//                var basicPrice = parseFloat($(this).siblings('.child-price').eq(0).val());
+//                subPriceText.find('span').eq(0).text(App.formatPrice(parseInt(widget.val()) * basicPrice));
+//
+//                changeTotalPrice();
+//            });
+//
+//            widgetDiscount.change(function() {
+//                changeTotalPrice();
+//            });
+//
+//            btnDiscountCode.click(function() {
+//                if(widgetDiscountCode.val().trim() != "") {
+//                    var holder = $(this).parents('.input-group').eq(0);
+//                    var validateHolder = holder.siblings('.discount-validate').eq(0);
+//                    var removeCode = validateHolder.find('i').eq(0);
+//
+//                    // La variable data debe obtenerse mediante una petición ajax con el formato siguiente:
+//                    var data = {
+//                        valid: true,
+//                        type: 'percent',
+//                        value: 10,
+//                        msgError: 'Código incorrecto'
+//                    };
+//
+//                    if(data.valid) {
+//                        widgetDiscount.val(data.value);
+//                        widgetDiscount.data('discount-type', data.type);
+//                        validateHolder.find('label').eq(0).text("-" + App.formatPrice(data.value) + (data.type == 'number' ? App.currency : '%'));
+//                        validateHolder.prepend($('<span></span>').addClass('code').text(widgetDiscountCode.val() + ':'));
+//                        holder.hide();
+//                        validateHolder.show();
+//
+//                        removeCode.unbind('click').click(function() {
+//                            widgetDiscount.val(0);
+//                            widgetDiscountCode.val('');
+//                            validateHolder.find('span.code').remove();
+//                            validateHolder.hide();
+//                            holder.show();
+//
+//                            changeTotalPrice();
+//                        });
+//
+//                        changeTotalPrice();
+//                    }
+//                }
+//            });
+//
+//            var changeTotalPrice = function() {
+//                var basicAdultPrice = parseFloat(widgetAdultCount.siblings('.adult-price').eq(0).val());
+//                var countAdult = parseInt(widgetAdultCount.val());
+//                var basicChildPrice = parseFloat(widgetChildCount.siblings('.child-price').eq(0).val());
+//                var countChild = parseInt(widgetChildCount.val());
+//
+//                var basicTotalPrice = (countAdult * basicAdultPrice) + (countChild * basicChildPrice);
+//                var discountPrice = widgetDiscount.data('discount-type') && widgetDiscount.data('discount-type') == 'percent' && parseFloat(widgetDiscount.val()) != 0
+//                    ? parseFloat(widgetDiscount.val()) * basicTotalPrice / 100
+//                    : basicTotalPrice - parseFloat(widgetDiscount.val());
+//
+//                totalPriceText.find('span').eq(0).text(App.formatPrice(discountPrice));
+//            };
+//
+//            changeTotalPrice();
+//
+//            form.submit(function() {
+//                form.triggerHandler('app.event.form.submit.success', []);
+//
+//                return false;
+//            });
+//        });
 
         form.bind('app.event.form.submit.success', function(e, data) {
             //Aquí se agrega el tour a la reserva. De momento solo se elimina el tour de la lista.
