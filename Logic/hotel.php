@@ -1461,4 +1461,27 @@ function getSimpleHotel($idHotel) {
         return false;
     }
 }
+
+function getHotelLogotipo($idHotel) {
+    try {        
+        
+        $archivo = null;
+        $hotel = DAOFactory::getHotelDAO()->load($idHotel);  
+        
+        if($hotel){ 
+            if($hotel->logoId){
+                $archivo = DAOFactory::getArchivoDAO()->load($hotel->logoId);
+                
+            }
+            
+        }            
+
+        return $archivo ;        
+        
+    } catch (Exception $e) {
+        return false;
+    }
+}
+
+
 ?>
