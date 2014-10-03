@@ -1471,11 +1471,11 @@ function getHotelLogotipo($idHotel) {
         if($hotel){ 
             if($hotel->logoId){
                 $archivo = DAOFactory::getArchivoDAO()->load($hotel->logoId);
-                var_dump($archivo);die;
+                
             }
             
-        }   
-          
+        }             
+        var_dump($archivo);die;
         return $archivo ;        
         
     } catch (Exception $e) {
