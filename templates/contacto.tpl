@@ -70,7 +70,7 @@
                 <div class="checkbox" id="">
                     <label>
                         <input type="checkbox" value="" name="acepto" checked="checked" class="validate[required]">
-                        {#acepto_politica_privacidad_y_datos#}. <span class="required">(*)</span>
+                        <a href="javascript:void(0);" data-toggle="modal" data-target="#privacidad_modal" data-content="privacidad">{#acepto_politica_privacidad_y_datos#}.</a> <span class="required">(*)</span>
                     </label>
                 </div>
             </div>

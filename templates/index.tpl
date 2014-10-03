@@ -197,7 +197,7 @@
                     App.endUrl = "{$end_url}";
                     App.changeTax = {$moneda->tasaCambio}
                     App.userCurrency = "{$currency}";
-                    App.configBooking.prevSelling = {if $hotel->ventaAnticipada}{$hotel->ventaAnticipada}{else}4{/if};
+                    App.configBooking.prevSelling = {if $hotel->ventaAnticipada}{$hotel->ventaAnticipada}{else}0{/if};
                     App.configBooking.dateStopSelling = new Array({if $hotel->fechas}{foreach from=$hotel->fechas item=f name=f}{if !$smarty.foreach.f.first},{/if}'{$f->fecha|date_format:"%d-%m-%Y"}'{/foreach}{/if});
                     App.configBooking.minSojourn = {if $hotel->estanciaMinima}{$hotel->estanciaMinima}{else}4{/if};
                     App.configBooking.agreementEndDate = {if $hotel->finContrato}"{$hotel->finContrato|date_format:"%d-%m-%Y"}"{else}false{/if};

@@ -88,13 +88,15 @@ var App = function () {
         var map = {};
         var items = [];
         var selectedItem = {};
+        var loadingSource = false;
 
         widgetTypeahead.typeahead({
             source: function(query, process) {
                 items = [];
                 map = {};
 
-                if(query.trim() != '') {
+                if(query.trim() != '' && !loadingSource) {
+                    loadingSource = true;
                     $.ajax({
                         url: App.baseUrl + '/admin-ajax-hoteles',
                         type: 'post',
@@ -110,8 +112,9 @@ var App = function () {
                                 items = [widgetTypeahead.data("noresult")];
                             }
 
-                            console.log(items.toSource());
+//                            console.log(items.toSource());
 
+                            loadingSource = false;
                             widgetSelectedItem.val('');
                             process(items);
                         },

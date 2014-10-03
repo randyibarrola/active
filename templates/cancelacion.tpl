@@ -97,7 +97,7 @@
                         {if $hotel->condiciones}
                             {foreach from=$hotel->condiciones item=condicion}
                                 <a href="{$base_url}/condiciones/id:{dechex($condicion->id*9999)}/v:modal" data-toggle="modal" data-target="#condition-{dechex($condicion->id*9999)}-modal">
-                                    <h3 class="title">{if $condicion->nombres->$lang}{$condicion->nombres->$lang}{else}{$condicion->nombres->es}{/if}</h3>
+                                    <h3 class="title">{if $condicion->nombres->$lang}{$condicion->nombres->$lang}{else}{$condicion->nombres->es}{/if} <i class="glyphicon glyphicon-new-window" style="font-size: 14px"></i></h3>
                                 </a><br>
                                 <div id="condition-{dechex($condicion->id*9999)}-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog">

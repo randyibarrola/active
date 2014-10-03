@@ -114,7 +114,7 @@
                                         <div class="option">
                                             <h5>{#reserva_por#} {$noches} {#noche_s#}</h5>
                                             <label class="current-price">{$apartamento['precio_moneda_seleccionada']}</label>
-                                            <label class="old-price">{$apartamento['precio_moneda_seleccionada_especulado']}&euro;</label>
+                                            <label class="old-price">{$apartamento['precio_moneda_seleccionada_especulado']}</label>
                                             <button type="submit" class="btn app-btn-pink pull-right show-booking-room-modal">
                                                 {#reservar#|capitalize}
                                             </button>
@@ -187,7 +187,7 @@
                                         <div class="option">
                                             <h5>{#reserva_por#} {$noches} {#noche_s#}</h5>
                                             <label class="current-price">{$apartamento['precio_moneda_seleccionada']}</label>
-                                            <label class="old-price">{$apartamento['precio_moneda_seleccionada_especulado']}&euro;</label>
+                                            <label class="old-price">{$apartamento['precio_moneda_seleccionada_especulado']}</label>
                                             <button type="submit" class="btn app-btn-pink pull-right show-booking-room-modal">
                                                 {#reservar#|capitalize}
                                             </button>
