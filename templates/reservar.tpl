@@ -231,10 +231,12 @@
                                                                 </div>
                                                                 <input type="hidden" class="discount" value="0" data-discount-type="percent" />
                                                             </div>
-                                                            <div class="form-group">
+                                                            <div class="form-group subtotal-cell">
                                                                 <input type="hidden" class="total-price" />
+                                                                <input type="hidden" name="total_format">
+                                                                <input type="hidden" name="total">
                                                                 <label class="control-label">Total:</label>
-                                                                <label class="total-price"><span>0</span></label>
+                                                                <label class="total-price precio_total"><span>0</span></label>
                                                             </div>
                                                             <div class="form-group">
                                                                 <input type="submit" class="btn app-btn-pink" value="Añadir reserva" />
