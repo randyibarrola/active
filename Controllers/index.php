@@ -32,10 +32,8 @@ if($hotel) {
     $condiciones = getAllHotelCondiciones($hotel->id);
     $smarty->assign('condiciones',$condiciones);
     
-    
-    $archivo = getHotelLogotipo($hotel->id);
-    var_dump($archivo);die;
-    $smarty->assign('logotipo',$archivo);
+    $logotipo = getHotelLogotipo($hotel->id);    
+    $smarty->assign('logotipo',$logotipo);
     
     $faq = getFaq(1);
     $contenido = json_decode($faq->contenido);
