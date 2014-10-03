@@ -212,7 +212,7 @@
                                                                         {/foreach}
 
                                                                     </select>                                                                    
-                                                                    <input type="hidden" class="adult-price" value="{$ticket->total_plano}" />
+                                                                    <input type="hidden" class="adult-price totalEntradasHidden" value="{$ticket->total_plano}" />
                                                                     <label class="sub-price totalEntradas"><span>{$ticket->total}</span></label>
                                                                 </div>
                                                             {/foreach}
