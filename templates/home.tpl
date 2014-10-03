@@ -80,7 +80,7 @@
                         <h3 class="text-center">{#tu_seleccion#}</h3>
                     </div>
                     <div class="text-center">
-                        <img src="{$logotipo['ruta']}" />
+                        <img src="{$logotipo->ruta}" />
                     </div>
                 </div>
             {/if}
