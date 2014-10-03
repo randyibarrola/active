@@ -1466,7 +1466,8 @@ function getHotelLogotipo($idHotel) {
     try {        
         
         $archivo = null;
-        $hotel = DAOFactory::getHotelDAO()->load($idHotel);        
+        $hotel = DAOFactory::getHotelDAO()->load($idHotel);  
+        var_dump($hotel->logoId);die;
         if($hotel){ 
             if($hotel->logoId){
                 $archivo = DAOFactory::getArchivoDAO()->load($hotel->logoId);
