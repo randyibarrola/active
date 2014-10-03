@@ -80,7 +80,7 @@
                         <h3 class="text-center">{#tu_seleccion#}</h3>
                     </div>
                     <div class="text-center">
-                        <img src="{$hotel->logoId}" />
+                        <img src="{$logotipo->url}" />
                     </div>
                 </div>
             {/if}
