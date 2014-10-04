@@ -608,6 +608,7 @@ if ($hotel) {
     $smarty->assign('monedas', $monedas);
     $smarty->assign('apartamentos', $aparts);
     $smarty->assign('sub_apartamentos', $subaptos);
+    $smarty->assign('money', $money);
 
     $smarty->assign('reglas', json_encode($hotel->config->reglas));
 

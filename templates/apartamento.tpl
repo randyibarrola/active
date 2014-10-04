@@ -70,7 +70,7 @@
                 <input type="hidden" name="pension" value="{$apartamento['pension']}">
                 <input type="hidden" name="pax" value="{$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}">
                 <div class="row room_info_container">
-                    <div class="col-md-7">
+                    <div class="col-md-{if $money eq 'RUB'}7{else}8{/if}">
                         {if $apartamento['pension'] && $apartamento['pension'] != ''}
                             <h5>{$apartamento['pension']}</h5>
                         {else}
@@ -91,7 +91,7 @@
                             <p class="text-left by_this_booking cupon">✓ {#por_esta_reserva_superior_a#} <span class="monto_regla"><strong>{$apartamento['precio']}</strong></span> {#obtendras_un_cupon_por_un_valor_de#} <strong><span class="descuento_regla">20,00€</span> </strong>{#para_excursiones_Trasfer_y_mas#}</p>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-{if $money eq 'RUB'}5{else}4{/if}">
                         <div class="text-right form">
                             <span class="precio_total" style="display: none;"><span>{$apartamento['precio']}</span></span>
                             <form action="{$base_url}/buy{$end_url}/id:{$k}">
@@ -147,7 +147,7 @@
                 <input type="hidden" name="pension" value="{$apartamento['pension']}">
                 <input type="hidden" name="pax" value="{$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}">
                 <div class="row room_info_container">
-                    <div class="col-md-8">
+                    <div class="col-md-{if $money eq 'RUB'}7{else}8{/if}">
                         {if $apartamento['pension'] && $apartamento['pension'] != ''}
                             <h5>{$apartamento['pension']}</h5>
                         {/if}
@@ -166,7 +166,7 @@
                             <p class="text-left by_this_booking cupon">✓ {#por_esta_reserva_superior_a#} <span class="monto_regla"><strong>{$apartamento['precio']}</strong></span> {#obtendras_un_cupon_por_un_valor_de#} <strong><span class="descuento_regla">20,00€</span> </strong>{#para_excursiones_Trasfer_y_mas#}</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-{if $money eq 'RUB'}5{else}4{/if}">
                         <div class="text-right form">
                             <span class="precio_total" style="display: none;"><span>{$apartamento['precio']}</span></span>
                             <form action="{$base_url}/{$lang}/buy{$end_url}/id:{$k}">
