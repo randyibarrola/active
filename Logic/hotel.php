@@ -1021,13 +1021,13 @@ function getHotelById($id, $convertirMonedas = true){
                             $h->precioMinimo = $precioMinimo[0];
                             $h->logo = $logoHotel ;                         
                         }                            
-                        var_dump($logoHotel->ruta);
+                       
                         $h->campania = DAOFactory::getCampaniaDAO()->load($h->campaniaId);
                         if(strlen($logoHotel->ruta) > 0){
                             $relacionados[] = $h;
                         }
                     }
-                }die;
+                } echo '<pre>';var_dump($relacionados);die;
                 $hotel->relacionados = $relacionados;                
             }
         }
