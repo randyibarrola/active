@@ -118,7 +118,7 @@
                                                 <td width="5"></td>
                                                 <td width="300" height="60" valign="middle">
                                                     <a href="{$base_url}" target="_blank"   style="border:0; outline:none;">
-                                                        <img src="{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
+                                                        <img src="{$template_url}/images/logo_m.png" alt="Madridactive.com" width="200" height="66" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
                                                     </a>
                                                 </td>
                                                 <td class="hdrPhoneTD" valign="middle">
@@ -268,8 +268,8 @@
                     <td style="margin-bottom:15px">
                         <p style="text-align:center; font-size:11px; color:#026DC5">
                             {#si_deseas_cancelar_o_ver_los_detalles_de_tu_reserva#}, {#sigue_el_enlace#}:
-                            <a href="{$base_url}/{$lang}/cancelacion/id:{$reserva->id}/mail:1{$end_url}" style="text-decoration: none; color: #026DC5; font-size: 11px;">
-                                <span style="color:#026DC5">{$base_url}/{$lang}/cancelacion/id:{$reserva->id}/mail:1{$end_url}</span>
+                            <a href="{$base_url}/{$lang}/cancelacion/id:{$reserva->id}{$end_url}" style="text-decoration: none; color: #026DC5; font-size: 11px;">
+                                <span style="color:#026DC5">{$base_url}/{$lang}/cancelacion/id:{$reserva->id}{$end_url}</span>
                             </a>
                         </p>
                     </td>

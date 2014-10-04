@@ -118,7 +118,7 @@
                                                 <td width="5"></td>
                                                 <td width="300" height="60" valign="middle">
                                                     <a href="{$base_url}" target="_blank"   style="border:0; outline:none;">
-                                                        <img src="{$template_url}/images/logo_m.png" alt="Madridactive.com" width="300" height="60" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
+                                                        <img src="{$template_url}/images/logo_m.png" alt="Madridactive.com" width="200" height="66" style="display:block; outline:none;border:0; vertical-align:middle; text-decoration:none; font-family: Arial; color: #FFFFFF; font-size: 30px; line-height:30px;" />
                                                     </a>
                                                 </td>
                                                 <td class="hdrPhoneTD" valign="middle">
@@ -157,7 +157,7 @@
                                     <table dir="ltr" style="font-size:14px; width:100%">
                                         <tr>
                                             <td style="padding-bottom:5px;">
-                                                <strong style="font-size:16px">¡{#Gracias#}, {$usuario['nombre']}! {#Tu_reserva_con_localizador#} {$reserva->localizador} {#esta#} {if $reserva->estado eq 'Aprobada'}{#confirmada#}{else}{#pendiente_de_confirmacion#}{/if}.</strong>
+                                                <strong style="font-size:16px">¡{#_Gracias_#}, {$usuario['nombre']}! {#Tu_reserva_con_localizador#} {$reserva->localizador} {#esta#} {if $reserva->estado eq 'Aprobada'}{#confirmada#}{else}{#pendiente_de_confirmacion#}{/if}.</strong>
                                             </td>
                                         </tr>
                                         <tr>
@@ -229,7 +229,7 @@
                                                 <a href="https://www.google.com/maps/preview?q=loc:{$hotel->direccion->lat},{$hotel->direccion->lon}" style="text-decoration: none; color: #026DC5; font-size: 17px; font-weight: 100; margin-left: 7px; margin-right:7px;">
                                                     <span style="color: #026DC5">{#ver_direccion_gmap#}</span>
                                                 </a>
-                                                <a href="{$vikahotel_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1{$end_url}" style="text-decoration: none; color: #026DC5; font-size: 17px; font-weight: 100; margin-left: 7px; margin-right:7px">
+                                                <a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1{$end_url}" style="text-decoration: none; color: #026DC5; font-size: 17px; font-weight: 100; margin-left: 7px; margin-right:7px">
                                                     <span style="color: #026DC5">{#cancelar_o_ver_detalles_de_reserva#}</span>
                                                 </a>
                                             </td>
@@ -291,8 +291,8 @@
                     <td style="margin-bottom:15px">
                         <p style="text-align:center; font-size:11px; color:#026DC5">
                             {#si_deseas_cancelar_o_ver_los_detalles_de_tu_reserva#}, {#sigue_el_enlace#}:
-                            <a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1{$end_url}" style="text-decoration: none; color: #026DC5; font-size: 11px;">
-                                <span style="color:#026DC5">{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1{$end_url}</span>
+                            <a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}{$end_url}" style="text-decoration: none; color: #026DC5; font-size: 11px;">
+                                <span style="color:#026DC5">{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}{$end_url}</span>
                             </a>
                         </p>
                     </td>
