@@ -1027,7 +1027,7 @@ function getHotelById($id, $convertirMonedas = true){
                             $relacionados[] = $h;
                         }
                     }
-                } echo '<pre>';var_dump($relacionados);die;
+                } 
                 $hotel->relacionados = $relacionados;                
             }
         }
