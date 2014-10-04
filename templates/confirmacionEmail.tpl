@@ -267,6 +267,11 @@
                                                 <p style="">
                                                     <strong>{#salida#}: {$salida|date_format:"%e/%m/%Y"}</strong>
                                                 </p>
+                                                {if $reserva->peticionesEspeciales && strlen(trim($reserva->peticionesEspeciales))}
+                                                <p style="">
+                                                    <strong>{#Peticiones_especiales#}: {$salida|date_format:"%e/%m/%Y"}</strong>
+                                                </p>  
+                                                {/if}  
                                             </td>
                                         </tr>
                                         <tr>
