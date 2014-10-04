@@ -52,7 +52,7 @@
                     </dl>
                 {/if}
                 {if $reserva->cart->apto->servicios}
-                    <div class="row margenEspecial">
+                    <div class="row margen">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             {foreach from=$reserva->cart->apto->servicios item=servicio}
                                 <p>{str_replace('\n', '<br>', $servicio)}</p>
