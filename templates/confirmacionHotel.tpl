@@ -24,7 +24,7 @@
                     <h1>¡{#gracias#}, {$usuario->nombre} {if $reserva->estado eq 'Aprobada'}{#tu_reserva_esta_confirmada#}{else}{#tu_reserva_esta_pendiente_de_aprobacion#}{/if}</h1>
                     <p>{#hemos_enviado_justificante_por_email#}.</p>
                 </div>
-                <div class="row">
+                <div class="row margen">
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <dl class="dl-horizontal">
                             <dt>{#numero_de_reserva#}</dt>
@@ -55,13 +55,13 @@
                     </div>
                 </div>
                 {if $reserva->peticionesEspeciales && strlen(trim($reserva->peticionesEspeciales))}
-                    <dl class="dl-horizontal">
+                    <dl class="dl-horizontal margenEspecial">
                         <dt>{#Peticiones_especiales#}</dt>
                         <dd>{$reserva->peticionesEspeciales}</dd>
                     </dl>
                 {/if}
                 {if $reserva->cart->apto->servicios}
-                    <div class="row">
+                    <div class="row margen">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             {foreach from=$reserva->cart->apto->servicios item=servicio}
                                 <p>{str_replace('\n', '<br>', $servicio)}</p>
@@ -69,8 +69,8 @@
                         </div>
                     </div>
                 {/if}
-                <h3 class="title">{#informacion_del_pago#}</h3>
-                <div class="row">
+                <h3 class="title margenEspecial">{#informacion_del_pago#}</h3>
+                <div class="row margen">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <h3>{if count($reserva->pagos) && $reserva->pagos[0]->importe}{if $reserva->estado eq 'Aprobada'}{#cobramos_de_tu_tarjeta#}{else}{#cobraremos_de_tu_tarjeta#}{/if} {$reserva->moneda->simbolo}{$reserva->pagos[0]->importe|number_format:2:",":''} {#en_concepto_de#}{else}{#en_tu_llegada_a_hotel#} {$hotel->nombre} {#pagaras#}{/if}:</h3>
                         {if $hotel->tipoReserva}
@@ -102,7 +102,7 @@
                         {/if}
                     </div>
                 </div>
-                <div class="row">
+                <div class="row margen">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         {#Consulta_las_condiciones_de_compra#}:</br>
                         {if $hotel->condiciones}

@@ -157,7 +157,7 @@
                                     <table dir="ltr" style="font-size:14px; width:100%">
                                         <tr>
                                             <td style="padding-bottom:5px;">
-                                                <strong style="font-size:16px">¡{#_Gracias_#}, {$usuario['nombre']}! {#Tu_reserva_con_localizador#} {$reserva->localizador} {#esta#} {if $reserva->estado eq 'Aprobada'}{#confirmada#}{else}{#pendiente_de_confirmacion#}{/if}.</strong>
+                                                <strong style="font-size:16px">{#_Gracias_#} {$usuario['nombre']}! {#Tu_reserva_con_localizador#} {$reserva->localizador} {#esta#} {if $reserva->estado eq 'Aprobada'}{#confirmada#}{else}{#pendiente_de_confirmacion#}{/if}.</strong>
                                             </td>
                                         </tr>
                                         <tr>
@@ -229,7 +229,7 @@
                                                 <a href="https://www.google.com/maps/preview?q=loc:{$hotel->direccion->lat},{$hotel->direccion->lon}" style="text-decoration: none; color: #026DC5; font-size: 17px; font-weight: 100; margin-left: 7px; margin-right:7px;">
                                                     <span style="color: #026DC5">{#ver_direccion_gmap#}</span>
                                                 </a>
-                                                <a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1{$end_url}" style="text-decoration: none; color: #026DC5; font-size: 17px; font-weight: 100; margin-left: 7px; margin-right:7px">
+                                                <a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}{$end_url}" style="text-decoration: none; color: #026DC5; font-size: 17px; font-weight: 100; margin-left: 7px; margin-right:7px">
                                                     <span style="color: #026DC5">{#cancelar_o_ver_detalles_de_reserva#}</span>
                                                 </a>
                                             </td>
@@ -273,7 +273,7 @@
                                             <td>
                                                 {if $reserva->cart->apto->servicios}
                                                     {foreach from=$reserva->cart->apto->servicios item=servicio}
-                                                        <p style="margin-bottom: 0">{str_replace('\n', '<br>', $servicio)}</p>
+                                                        <p style="margin-bottom: 7px;">{str_replace('\n', '<br>', $servicio)}</p>
                                                     {/foreach}
                                                 {/if}
                                             </td>
@@ -286,7 +286,7 @@
                     </td>
                 </tr>
             </table>
-            <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#FFFFFF; width:620px; margin:0px auto; padding:0; position:relative; margin-top:10px; border-top:solid 1px #CCCCCC; font-size:10px !important; padding:10px; color:color: #026DC5;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#FFFFFF; width:620px; margin:0px auto; padding:0; position:relative; margin-top:10px; border-top:solid 1px #CCCCCC; font-size:10px !important; padding:10px; color: #026DC5;">
                 <tr>
                     <td style="margin-bottom:15px">
                         <p style="text-align:center; font-size:11px; color:#026DC5">
