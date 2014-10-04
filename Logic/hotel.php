@@ -1023,8 +1023,9 @@ function getHotelById($id, $convertirMonedas = true){
                         }                            
                         
                         $h->campania = DAOFactory::getCampaniaDAO()->load($h->campaniaId);
-                        if($logoHotel->ruta)
+                        if(strlen($logoHotel->ruta) > 0){
                             $relacionados[] = $h;
+                        }
                     }
                 }
                 $hotel->relacionados = $relacionados;                
