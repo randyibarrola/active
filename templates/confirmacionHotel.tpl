@@ -36,8 +36,8 @@
                             <dt>{#noches#}</dt>
                             <dd>{$noches}</dd>
                             <dt>{#Pax#}</dt>
-                            <dd>{$cart->apto->adultos} {#Adulto_s#} {if $cart->apto->ninios}+ {$cart->apto->ninios} {#ninio_s#}{/if}</dd>
-                        </dl>
+                            <dd>{$cart->apto->adultos} {#Adulto_s#} {if $cart->apto->ninios}+ {$cart->apto->ninios} {#ninio_s#}{/if}</dd> 
+                        </dl>                      
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <dl class="dl-horizontal">
@@ -53,13 +53,16 @@
                             <dd>{$reserva->moneda->simbolo} {$reserva->total|number_format:2:',':'.'}</dd>
                         </dl>
                     </div>
+                    {if $reserva->peticionesEspeciales && strlen(trim($reserva->peticionesEspeciales))}
+                    <div class="col-md-12 col-sm-12 col-xs-12">                        
+                        <dl class="dl-horizontal">
+                            <dt>{#Peticiones_especiales#}</dt>
+                            <dd>{$reserva->peticionesEspeciales}</dd>
+                        </dl>
+                    </div>
+                    {/if}  
                 </div>
-                {if $reserva->peticionesEspeciales && strlen(trim($reserva->peticionesEspeciales))}
-                    <dl class="dl-horizontal margenEspecial">
-                        <dt>{#Peticiones_especiales#}</dt>
-                        <dd>{$reserva->peticionesEspeciales}</dd>
-                    </dl>
-                {/if}
+
                 {if $reserva->cart->apto->servicios}
                     <div class="row margen">
                         <div class="col-md-12 col-sm-12 col-xs-12">

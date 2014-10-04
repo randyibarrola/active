@@ -15,7 +15,7 @@
                     <h1>¡{#ok#}, {$usuario->nombre} {#tu_reserva_fue_cancelada#}.</h1>
                     <p>{#hemos_enviado_justificante_por_email#}.</p>
                 </div>
-                <div class="row">
+                <div class="row margen">
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <dl class="dl-horizontal">
                             <dt>{#numero_de_reserva#}</dt>
@@ -46,13 +46,13 @@
                     </div>
                 </div>
                 {if $reserva->peticionesEspeciales && strlen(trim($reserva->peticionesEspeciales))}
-                    <dl class="dl-horizontal">
+                    <dl class="dl-horizontal margenEspecial">
                         <dt>{#Peticiones_especiales#}</dt>
                         <dd>{$reserva->peticionesEspeciales}</dd>
                     </dl>
                 {/if}
                 {if $reserva->cart->apto->servicios}
-                    <div class="row">
+                    <div class="row margenEspecial">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             {foreach from=$reserva->cart->apto->servicios item=servicio}
                                 <p>{str_replace('\n', '<br>', $servicio)}</p>
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 {/if}
-                <div class="row">
+                <div class="row margen">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         {if $hotel->tipoReserva}
                             {assign var=$precio value=$apartamento->precioUnitario}
@@ -91,7 +91,7 @@
                         {/if}
                     </div>
                 </div>
-                <div class="row">
+                <div class="row margen">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         {#Consulta_las_condiciones_de_compra#}:</br>
                         {if $hotel->condiciones}

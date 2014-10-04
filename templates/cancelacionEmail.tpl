@@ -250,7 +250,7 @@
                                             <td>
                                                 {if $reserva->cart->apto->servicios}
                                                     {foreach from=$reserva->cart->apto->servicios item=servicio}
-                                                        <p style="margin-bottom: 0">{str_replace('\n', '<br>', $servicio)}</p>
+                                                        <p style="margin-bottom: 7px;">{str_replace('\n', '<br>', $servicio)}</p>
                                                     {/foreach}
                                                 {/if}
                                             </td>
@@ -263,7 +263,7 @@
                     </td>
                 </tr>
             </table>
-            <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#FFFFFF; width:620px; margin:0px auto; padding:0; position:relative; margin-top:10px; border-top:solid 1px #CCCCCC; font-size:10px !important; padding:10px; color:color: #026DC5;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#FFFFFF; width:620px; margin:0px auto; padding:0; position:relative; margin-top:10px; border-top:solid 1px #CCCCCC; font-size:10px !important; padding:10px; color: #026DC5;">
                 <tr>
                     <td style="margin-bottom:15px">
                         <p style="text-align:center; font-size:11px; color:#026DC5">
