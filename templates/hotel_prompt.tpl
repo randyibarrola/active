@@ -5,7 +5,7 @@
     <div id="home-prompt-scroll" class="scroll-content">
         {foreach from=$hotel->relacionados item=r name=r}
             {if $smarty.foreach.r.iteration <= 10}
-                {if ($r->logo->ruta | count_characters) > 0}
+                {if ($r->logo->ruta|count_characters) gt 0}
                     <div class="home-prompt-item">
                         <h3>{$r->nombre}</h3>
                         <div class="media">
