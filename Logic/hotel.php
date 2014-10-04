@@ -1014,7 +1014,7 @@ function getHotelById($id, $convertirMonedas = true){
                     if($h->id != $hotel->id) {
                         $precioMinimo = DAOFactory::getHotelPrecioDAO()->queryByHotelId($h->id);
                         $logoHotel = getHotelLogo($h->id);
-                        if($precioMinimo && count($precioMinimo) && $logoHotel ){
+                        if($precioMinimo && count($precioMinimo) ){
                             $precio_minimo_val = $precioMinimo[0]->precioMinimo;
                             $precio_moneda_seleccionada = convertFromMonedaToMoneda($precio_minimo_val, $hotel->moneda->codigo, $money);
                             $precioMinimo[0]->precioMinimo = $precio_moneda_seleccionada;
@@ -1023,7 +1023,8 @@ function getHotelById($id, $convertirMonedas = true){
                         }                            
                         
                         $h->campania = DAOFactory::getCampaniaDAO()->load($h->campaniaId);
-                        $relacionados[] = $h;
+                        if($logoHotel)
+                            $relacionados[] = $h;
                     }
                 }
                 $hotel->relacionados = $relacionados;                
