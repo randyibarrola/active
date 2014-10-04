@@ -246,7 +246,7 @@
                                                 </p>
                                                 {if $reserva->peticionesEspeciales && strlen(trim($reserva->peticionesEspeciales))}
                                                 <p style="">
-                                                    <strong>{#Peticiones_especiales#}: {$salida|date_format:"%e/%m/%Y"}</strong>
+                                                    <strong>{#Peticiones_especiales#}: {$reserva->peticionesEspeciales}</strong>
                                                 </p>  
                                                 {/if}                                                 
                                             </td>

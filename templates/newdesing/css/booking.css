@@ -997,9 +997,16 @@
     min-height: 500px;
 }
 
-.prepay .sub-price {
-    font-size: 19px; 
+.prepay p.block .sub-price {
+    font-size: 12px; 
     font-weight: normal;
+    margin-left: 2px;
+}
+
+.pay .sub-price {
+    font-size: 15px; 
+    font-weight: normal;
+    margin-left: 4px;
 }
 
 .margen{margin: 0 100px;}

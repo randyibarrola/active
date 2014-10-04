@@ -437,6 +437,9 @@
                         <div class="pay text-right">
                             <p class="block">
                                 {$apartamento['precioTotal_format']}
+                                {if $moneda neq $hotel->moneda->id} 
+                                    <span class="sub-price">({$apartamento['precioTotal_format_usuario']})</span>
+                                {/if}
                             </p>
                         </div>
                     </div>
@@ -473,7 +476,7 @@
                     <h4 class="title"></h4>
                     <div class="content">
                         <div class="pay">
-                            <p class="prepay block">{#Total#}: <span>{$apartamento['precioTotal_format']}</span><span class="sub-price">({$apartamento['precioTotal_format_usuario']})</span></p>
+                            <p class="prepay block">{#Total#}: <span>{$apartamento['precioTotal_format']}</span>{if $moneda neq $hotel->moneda->id} <span class="sub-price">({$apartamento['precioTotal_format_usuario']})</span>{/if}</p>
                         </div>
                         <div class="text-right">{#impuestos_incluidos#}</div>
                     </div>
