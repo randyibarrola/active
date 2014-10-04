@@ -1023,7 +1023,7 @@ function getHotelById($id, $convertirMonedas = true){
                         }                            
                         
                         $h->campania = DAOFactory::getCampaniaDAO()->load($h->campaniaId);
-                        if($logoHotel->url)
+                        if($logoHotel->ruta)
                             $relacionados[] = $h;
                     }
                 }
