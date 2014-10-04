@@ -996,3 +996,8 @@
 #booking-content {
     min-height: 500px;
 }
+
+.prepay .sub-price {
+    font-size: 19px; 
+    font-weight: normal;
+}
