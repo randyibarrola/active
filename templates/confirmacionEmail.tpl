@@ -291,8 +291,8 @@
                     <td style="margin-bottom:15px">
                         <p style="text-align:center; font-size:11px; color:#026DC5">
                             {#si_deseas_cancelar_o_ver_los_detalles_de_tu_reserva#}, {#sigue_el_enlace#}:
-                            <a href="{$vikahotel_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1{$end_url}" style="text-decoration: none; color: #026DC5; font-size: 11px;">
-                                <span style="color:#026DC5">{$vikahotel_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1{$end_url}</span>
+                            <a href="{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1{$end_url}" style="text-decoration: none; color: #026DC5; font-size: 11px;">
+                                <span style="color:#026DC5">{$base_url}/{$lang}/confirmacion/r_id:{$reserva->id}/mail:1{$end_url}</span>
                             </a>
                         </p>
                     </td>
