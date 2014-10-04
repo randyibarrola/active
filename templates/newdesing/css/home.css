@@ -669,6 +669,7 @@
 
 .widWRL, .widSSP{
     margin: 0 auto !important;
+    width: 100% !important;
 }
 
 .lugares_interes .lugar_interes{

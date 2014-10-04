@@ -333,8 +333,7 @@
                     <input type="hidden" name="lat" value="{$hotel->direccion->lat}">
                     <input type="hidden" name="lon" value="{$hotel->direccion->lon}">                    
                 </div>
-                <div class="tab-pane" id="opinions">
-                    {$hotel->contenidoHtml}
+                <div class="tab-pane" id="opinions">                    
                     {if $hotel->tripAdvisor}
                         {$hotel->tripAdvisor}
                     {/if}
