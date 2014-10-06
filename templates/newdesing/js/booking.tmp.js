@@ -199,6 +199,16 @@ var Booking = function() {
         });
         calcularReglas();
 
+        $('.popover-services').each(function() {
+            var target = $(this);
+            target.popover({
+                html: true,
+                placement: 'right',
+                trigger: 'hover',
+                container: '#' + target.parents('.room_info_container:eq(0)').attr('id')
+            });
+        });
+
         App.handleSlider($('.flexslider'));
     };
 

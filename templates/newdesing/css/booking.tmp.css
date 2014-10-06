@@ -932,3 +932,35 @@ h5.free-cancel {
 #booking-content {
     min-height: 500px;
 }
+
+.popover-services {
+    color: #157EB8;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#search-room-container .popover {
+    background: #F2F1F1 !important;
+    border: 1px solid #157EB8;
+    border-radius: 0;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+#search-room-container .popover > .arrow {
+    display: none !important;
+}
+
+#search-room-container .popover .popover-content {
+    color: #525252;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+@media (min-width: 940px) {
+    #search-room-container .popover {
+        max-width: 500px;
+    }
+}

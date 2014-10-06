@@ -46,22 +46,22 @@
                     </div>
                     <div class="col-md-9">
                         <p>{$apartamento['descripcion']}</p>
-                        <p><a type="button" class="btn btn-primary btn-xs pull-left toggle_detalles">+ {#mostrar_detalle#}</a></p>
+                        {*<p><a type="button" class="btn btn-primary btn-xs pull-left toggle_detalles">+ {#mostrar_detalle#}</a></p>*}
                         <br class="clear" />
-                        <table class="table table-striped table-hover descripcion_table">
-                            <thead>
-                            <tr>
-                                <th>{#descripcion_del_servicio#}</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {foreach from=$apartamento['servicios'] item=servicio}
-                                <tr>
-                                    <td>{$servicio}</td>
-                                </tr>
-                            {/foreach}
-                            </tbody>
-                        </table>
+                        {*<table class="table table-striped table-hover descripcion_table">*}
+                            {*<thead>*}
+                            {*<tr>*}
+                                {*<th>{#descripcion_del_servicio#}</th>*}
+                            {*</tr>*}
+                            {*</thead>*}
+                            {*<tbody>*}
+                            {*{foreach from=$apartamento['servicios'] item=servicio}*}
+                                {*<tr>*}
+                                    {*<td>{$servicio}</td>*}
+                                {*</tr>*}
+                            {*{/foreach}*}
+                            {*</tbody>*}
+                        {*</table>*}
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                 <input type="hidden" name="condicion" value="{$apartamento['condicion']}">
                 <input type="hidden" name="pension" value="{$apartamento['pension']}">
                 <input type="hidden" name="pax" value="{$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}">
-                <div class="row room_info_container">
+                <div class="row room_info_container" id="popover-holder-{$apartamento@iteration}">
                     <div class="col-md-{if $money eq 'RUB'}7{else}8{/if}">
                         {if $apartamento['pension'] && $apartamento['pension'] != ''}
                             <h5>{$apartamento['pension']}</h5>
@@ -80,7 +80,10 @@
                             {#Max#}: {$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}
                         </p>
                         {if $apartamento['condicion'] != ''}
-                            <h5 class="free-cancel">{$apartamento['condicion']}</h5>
+                            <h5 class="free-cancel">
+                                {$apartamento['condicion']}
+                                <i class="glyphicon glyphicon-question-sign popover-services" data-toggle="popover" data-content="{foreach from=$apartamento['servicios'] item=servicio}{$servicio}{/foreach}"></i>
+                            </h5>
                         {/if}
                         {if $apartamento.descuento}
                             <div class="publicitary-text">
@@ -146,7 +149,7 @@
                 <input type="hidden" name="condicion" value="{$apartamento['condicion']}">
                 <input type="hidden" name="pension" value="{$apartamento['pension']}">
                 <input type="hidden" name="pax" value="{$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}">
-                <div class="row room_info_container">
+                <div class="row room_info_container" id="popover-holder-{$apartamento@iteration}">
                     <div class="col-md-{if $money eq 'RUB'}7{else}8{/if}">
                         {if $apartamento['pension'] && $apartamento['pension'] != ''}
                             <h5>{$apartamento['pension']}</h5>
@@ -155,7 +158,10 @@
                             {#Max#}: {$apartamento['adultos']} {#Adulto_s#} {if $apartamento['ninios']}+ {$apartamento['ninios']} {#niho_s#}{/if}
                         </p>
                         {if $apartamento['condicion'] != ''}
-                            <h5 class="free-cancel">{$apartamento['condicion']}</h5>
+                            <h5 class="free-cancel">
+                                {$apartamento['condicion']}
+                                <i class="glyphicon glyphicon-question-sign popover-services" data-toggle="popover" data-content="{foreach from=$apartamento['servicios'] item=servicio}{$servicio}{/foreach}"></i>
+                            </h5>
                         {/if}
                         {if $apartamento.descuento}
                             <div class="publicitary-text promotion-text">
